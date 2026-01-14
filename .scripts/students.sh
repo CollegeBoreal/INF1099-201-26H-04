@@ -3,9 +3,9 @@
 # Combined array: each entry = "student_id|github_id|avatar_id"
 STUDENTS=(
 "300141550|emeraudesantu|211749528"
-"300141567|octocat|583231"
+"300141567|arsprod2001|169725025"
 "300146667|djaberbenyezza|205994773"
-"300148210|octocat|583231"
+"300148210|zianiferiel|233097107"
 "300148450|adjaoud-git|205994730"
 "300150205|blbsblm|205994753"
 "300150293|octocat|583231"
