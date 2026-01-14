@@ -1,22 +1,4 @@
-Student: 300141550, GitHub: octocat, Avatar: 583231
-Student: 300141567, GitHub: octocat, Avatar: 583231
-Student: 300146667, GitHub: octocat, Avatar: 583231
-Student: 300148210, GitHub: octocat, Avatar: 583231
-Student: 300148450, GitHub: octocat, Avatar: 583231
-Student: 300150205, GitHub: octocat, Avatar: 583231
-Student: 300150293, GitHub: octocat, Avatar: 583231
-Student: 300150399, GitHub: octocat, Avatar: 583231
-Student: 300150417, GitHub: octocat, Avatar: 583231
-Student: 300150527, GitHub: octocat, Avatar: 583231
-Student: 300150562, GitHub: octocat, Avatar: 583231
-Student: 300151469, GitHub: octocat, Avatar: 583231
-Student: 300151492, GitHub: octocat, Avatar: 583231
-Student: 300151825, GitHub: octocat, Avatar: 583231
-Student: 300151833, GitHub: octocat, Avatar: 583231
-Student: 300153476, GitHub: octocat, Avatar: 583231
-Student: 300153747, GitHub: octocat, Avatar: 583231
-Student: 300154718, GitHub: octocat, Avatar: 583231
-# Participation au 14-01-2026 10:08
+# Participation au 14-01-2026 10:09
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
