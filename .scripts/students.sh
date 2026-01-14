@@ -22,3 +22,8 @@ STUDENTS=(
 "300154718|octocat|583231"
 )
 
+## Example: iterate and access each part
+#for entry in "${STUDENTS[@]}"; do
+  #IFS='|' read -r STUDENT_ID GITHUB_ID AVATAR <<< "$entry"
+  #echo "Student: $STUDENT_ID, GitHub: $GITHUB_ID, Avatar: $AVATAR"
+#done
