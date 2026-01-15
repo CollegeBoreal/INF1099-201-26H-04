@@ -1,0 +1,38 @@
+name: Participations
+
+on: [push]
+
+jobs:
+  presence:
+    name: presence de fichiers pour la participation
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install jq
+        run: brew install jq
+
+      - name: Use jq
+        run: echo '{"name":"GitHub"}' | jq '.name'
+    
+      - shell: bash
+        run: |
+          ##
+          ## Evaluating chapter 0.PlanDeCours
+          ## 
+          echo "Evaluating chapter 0.PlanDeCours Participation"
+          cd 0.PlanDeCours
+          bash .scripts/run.sh
+          cd ..
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Vérification de la participation" -a
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
