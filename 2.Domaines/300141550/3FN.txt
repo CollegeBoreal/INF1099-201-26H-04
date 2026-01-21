@@ -1,11 +1,19 @@
-Client (0,N) —— PASSE —— (1,1) Commande 
-CLIENT (1,N) —— POSSEDE —— (1,1) ADRESSE
-ADRESSE (0,N) —— LIVRAISON_A —— (1,1) COMMANDE
-CATEGORIE (1,N) —— CLASSE —— (1,1) PLAT
-PAYS_ORIGINE (0,N) —— ORIGINE —— (1,1) PLAT
-COMMANDE (1,N) —— CONTIENT —— (1,1) LIGNE_COMMANDE
-PLAT (0,N) —— EST_COMMANDE_DANS —— (1,1) LIGNE_COMMANDE
-COMMANDE (1,1) —— EST_PAYEE_PAR —— (1,1) PAIEMENT
-COMMANDE (0,1) —— DONNE_LIEU_A —— (1,1) LIVRAISON
-LIVREUR (1,N) —— EFFECTUE —— (1,1) LIVRAISON
+Client (Nom, Prénom, Post-nom, Téléphone, Email)
 
+Adresse (Numéro_rue, Rue, Ville, Province, Pays)
+
+Plat (Nom_plat, Description, Prix, Statut)
+
+Catégorie (Nom_catégorie)
+
+Pays_Origine (Nom_pays)
+
+Commande (Date_commande, Quantité, Statut_commande)
+
+Ligne_Commande (Quantité, Prix_unitaire)
+
+Paiement (Date_paiement, Montant, Mode_paiement, Statut_paiement)
+
+Livraison (Date_livraison, Statut_livraison, Frais_livraison)
+
+Livreur (Nom, Prénom, Post-nom, Téléphone, Email)
