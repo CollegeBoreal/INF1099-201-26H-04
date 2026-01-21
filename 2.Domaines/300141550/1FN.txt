@@ -1,13 +1,3 @@
-Entites 
 
-- Client 
-- Adresse 
-- Plat 
-- Catégorie
-- Pays_Origine
-- Commande 
-- Ligne_Commande
-- Paiment
-- Livraison 
-- Livreur
+ Client, Adresse, Plat, Catégorie, Pays_Origine, Commande, Ligne_Commande, Paiment, Livraison, Livreur
 
