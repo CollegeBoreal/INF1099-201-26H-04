@@ -25,6 +25,13 @@ jobs:
           cd 0.PlanDeCours
           bash .scripts/run.sh
           cd ..
+          ##
+          ## Evaluating chapter 2.IDE
+          ## 
+          echo "Evaluating chapter 0.PlanDeCours Participation"
+          cd 2.Domaines
+          bash .scripts/run.sh
+          cd ..
 
       - name: Commit files
         run: |
