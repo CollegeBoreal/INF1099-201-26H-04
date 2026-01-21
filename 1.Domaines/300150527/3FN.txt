@@ -1,0 +1,37 @@
+3NF – Troisième Forme Normale
+
+Pour atteindre la 3NF, les dépendances transitives ont été éliminées.
+
+La table PAYMENT a été séparée de ORDER.
+
+TABLE : USER
+- userId (PK)
+- userName
+- userPhone
+- userAddress
+
+TABLE : PRODUCT
+- productId (PK)
+- productName
+- productPrice
+
+TABLE : ORDER
+- orderId (PK)
+- orderDate
+- userId (FK)
+
+TABLE : ORDER_ITEM
+- orderId (FK)
+- productId (FK)
+- quantity
+PRIMARY KEY (orderId, productId)
+
+TABLE : PAYMENT
+- paymentId (PK)
+- paymentMethod
+- paymentStatus
+- orderId (FK)
+
+Dans cette forme :
+- Il n’existe aucune dépendance transitive
+- Chaque attribut dépend uniquement de sa clé primaire
