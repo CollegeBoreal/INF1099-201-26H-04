@@ -1,7 +1,7 @@
 
 ---
 
-## 3) Contenu de `1FN.txt` (copie-colle)
+## 3) Contenu de `1FN.txt`  
 👉 1NF = **champs atomiques**, pas de listes dans une colonne, mais il peut rester des dépendances transitives.
 
 ```txt
