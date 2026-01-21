@@ -1,4 +1,4 @@
-# Participation au 21-01-2026 20:55
+# Participation au 21-01-2026 20:57
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -37,7 +37,7 @@
 | 18 | [300151825](../300151825/README.md) :point_right: [FeatFreedy](https://github.com/FeatFreedy) <image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 19 | [300151833](../300151833/README.md) :point_right: [raoufbrs15](https://github.com/raoufbrs15) <image src='https://avatars0.githubusercontent.com/u/109877652?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 20 | [300151841](../300151841/README.md) :point_right: [massi9313](https://github.com/massi9313) <image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| 21 | [300153476](../300153476/README.md) :point_right: [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
+| 21 | [300153476](../300153476/README.md) :point_right: [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | 22 | [300153747](../300153747/README.md) :point_right: [madjou15](https://github.com/madjou15) <image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 23 | [300154718](../300154718/README.md) :point_right: [stephanetidjet](https://github.com/stephanetidjet) <image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | :abacus: | $\frac{1}{24}$ = 4% | $\displaystyle\sum_{i=1}^{24} s_i$ = 1 |
