@@ -1,0 +1,26 @@
+Nom domaine: BetFormula
+
+
+
+
+
+2FN =
+ (
+    Utilisateur(id_user, nom, email, id_ville),
+    Ville(id_ville, nom_ville, code_postal),
+    Pilote(id_pilote, nom_pilote, id_equipe),
+    Equipe(id_equipe, nom_equipe, id_sponsor),
+    Sponsor(id_sponsor, nom_sponsor),
+    Circuit(id_circuit, nom_circuit, ville),
+    Evenement(id_evenement, nom_evenement, date_evenement, id_circuit),
+    Course(id_course, nom_course, date_course, id_evenement),
+    Pari(id_pari, id_user, id_course, id_pilote, montant, resultat)
+)
+
+
+
+
+NOTE: les terme écrie en gras et italique ce sont des clé primaire PK.
+
+
+
