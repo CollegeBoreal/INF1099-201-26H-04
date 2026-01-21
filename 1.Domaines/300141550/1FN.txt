@@ -1,0 +1,11 @@
+Entites 
+
+- Client 
+- Adresse 
+- Plat 
+- Catégorie
+- Commande 
+- Paiment
+- Livraison 
+- Livreur
+
