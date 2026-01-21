@@ -1,0 +1,5 @@
+Client(id_Client, nom, prenom, email)
+Crampon(id_crampon, marque, modele, pointure, couleur, prix)
+Commande(id_commande, date, staut, id_client)
+Ligne_Commande(id_ligne_commande, id_commande, id_crampon, quantite)
+Stock (id_crampon, quantite_diponible)
