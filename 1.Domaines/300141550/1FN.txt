@@ -4,6 +4,7 @@ Entites
 - Adresse 
 - Plat 
 - Catégorie
+- Pays_Origine
 - Commande 
 - Paiment
 - Livraison 
