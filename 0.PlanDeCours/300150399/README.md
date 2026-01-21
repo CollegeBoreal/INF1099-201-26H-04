@@ -12,11 +12,10 @@ Algérien, passionné de pop culture, football et nourriture!
 
 
 
-## Mon image
 
 
 
-![Samurai](images/images.jpg)
+![Mon image](images/images.jpg)
 
 
 
