@@ -1,0 +1,9 @@
+Client (ID_Client, Nom, Prenom, Post_nom, Tel, email) 
+Adresse (ID_Adresse, Numero_rue, Rue, Ville, Province, Pays)
+Plat (ID_Plat, Nom_plat, Description, Prix, Status)
+Categorie (ID_Categorie, Nom_Categorie)
+Pays_Origine (ID_Pays,Nom_Pays) 
+Commande (ID_Commande, Date_Commande, Quantite, Statut_Commande)
+Paiement (ID_Paiement, Date_Paiement, Montant, MOde_Paiement, Statut_Paiement)
+Livraison (ID_Livraion, Date_Livraison, Status_Livraison, Fais_Livraison)
+
