@@ -1,0 +1,66 @@
+========================
+DOMAINE: Plateforme Tournois e-sport
+FORME: 2FN (2NF)
+========================
+
+Objectif 2FN:
+- Chaque attribut non-clé dépend de la clé complète (surtout pour les tables avec PK composée).
+
+PLAYER(
+  player_id PK,
+  pseudo,
+  email
+)
+
+TEAM(
+  team_id PK,
+  team_name
+)
+
+GAME(
+  game_id PK,
+  game_name,
+  game_genre
+)
+
+SPONSOR(
+  sponsor_id PK,
+  sponsor_name,
+  sponsor_phone,
+  sponsor_email
+)
+
+TOURNAMENT(
+  tournament_id PK,
+  tournament_name,
+  start_date,
+  end_date,
+  format,
+  game_id FK -> GAME(game_id),
+  sponsor_id FK -> SPONSOR(sponsor_id)
+)
+
+TEAM_MEMBER(
+  team_id FK -> TEAM(team_id),
+  player_id FK -> PLAYER(player_id),
+  role,
+  PK(team_id, player_id)
+)
+
+MATCH(
+  match_id PK,
+  tournament_id FK -> TOURNAMENT(tournament_id),
+  round,
+  match_datetime
+)
+
+MATCH_TEAM(
+  match_id FK -> MATCH(match_id),
+  team_id FK -> TEAM(team_id),
+  score,
+  PK(match_id, team_id)
+)
+
+Explication:
+- On a séparé GAME et SPONSOR pour ne plus répéter leurs infos dans TOURNAMENT.
+- Les tables à clé composée (TEAM_MEMBER, MATCH_TEAM) n'ont que des attributs dépendant de la clé complète.
