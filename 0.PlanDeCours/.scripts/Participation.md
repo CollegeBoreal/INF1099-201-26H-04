@@ -1,4 +1,4 @@
-# Participation au 21-01-2026 19:56
+# Participation au 21-01-2026 19:58
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -23,7 +23,7 @@
 | 4 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 5 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 6 | [300150293](../300150293/README.md) :point_right: [octocat](https://github.com/octocat) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| 7 | [300150399](../300150399/README.md) :point_right: [chkips](https://github.com/chkips) <image src='https://avatars0.githubusercontent.com/u/195236786?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 7 | [300150399](../300150399/README.md) :point_right: [chkips](https://github.com/chkips) <image src='https://avatars0.githubusercontent.com/u/195236786?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 8 | [300150417](../300150417/README.md) :point_right: [latifmuristaga](https://github.com/latifmuristaga) <image src='https://avatars0.githubusercontent.com/u/212187666?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 9 | [300150527](../300150527/README.md) :point_right: [akrembouraoui](https://github.com/akrembouraoui) <image src='https://avatars0.githubusercontent.com/u/212277460?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 10 | [300150562](../300150562/README.md) :point_right: [isako29](https://github.com/isako29) <image src='https://avatars0.githubusercontent.com/u/205994758?s=460&v=4' width=20 height=20></image> | :x: | :x: |
@@ -34,4 +34,4 @@
 | 15 | [300153476](../300153476/README.md) :point_right: [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 16 | [300153747](../300153747/README.md) :point_right: [madjou15](https://github.com/madjou15) <image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 17 | [300154718](../300154718/README.md) :point_right: [octocat](https://github.com/octocat) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| :abacus: | $\frac{3}{18}$ = 16% | $\displaystyle\sum_{i=1}^{18} s_i$ = 3 |
+| :abacus: | $\frac{4}{18}$ = 22% | $\displaystyle\sum_{i=1}^{18} s_i$ = 4 |
