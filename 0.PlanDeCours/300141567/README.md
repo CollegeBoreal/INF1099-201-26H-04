@@ -3,4 +3,4 @@
 Voici mes images :
 
 ![Image 1](images/bankily.png)
-![Image 2](images/bimbank.jpg)
+![Image 2](images/bimbank.png)
