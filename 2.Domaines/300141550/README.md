@@ -1,4 +1,4 @@
-     Présentation du site Mama Makusa 
+Présentation du site Mama Makusa 
  
 Mama Makusa est une plateforme de vente en ligne spécialisée dans la cuisine africaine, basée à Toronto.
 En lingala, Makusa signifie « cuisine », ce qui reflète l’identité du site : une cuisine africaine authentique, faite comme à la maison.
