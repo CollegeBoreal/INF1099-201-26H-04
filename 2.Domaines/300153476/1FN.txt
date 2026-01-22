@@ -1,15 +1,1 @@
-ENFANT(id_enfant, prenom, nom, age, niveau, id_parent)
-PARENT(id_parent, nom, telephone, email)
-PROFESSEUR(id_professeur, nom, specialite, email)
-COURS(id_cours, titre, langue, niveau, id_professeur)
-SESSION_COURS(id_session, date, heure, jour, id_cours)
-INSCRIPTION(id_inscription, id_enfant, id_cours, date_inscription)
-DEVOIR(id_devoir, titre, description, id_cours)
-SOUMISSION_DEVOIR(id_soumission, id_devoir, id_enfant, date_soumission)
-NOTE(id_note, valeur, commentaire, id_soumission)
-RECOMPENSE(id_recompense, type, description, points)
-ATTRIBUTION_RECOMPENSE(id_attribution, id_enfant, id_recompense, date_attribution)
-CONCOURS(id_concours, titre, date, description)
-PARTICIPATION_CONCOURS(id_participation, id_enfant, id_concours, resultat)
-CHATIA(id_session_chat, id_enfant, date, sujet)
-
+ENFANT, PARENT, PROFESSEUR, COURS, SESSION_COURS, INSCRIPTION, DEVOIR, SOUMISSION_DEVOIR, NOTE, RECOMPENSE, ATTRIBUTION_RECOMPENSE, CONCOURS, PARTICIPATION_CONCOURS, CHATIA
