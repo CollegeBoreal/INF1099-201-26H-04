@@ -1,4 +1,4 @@
-# Participation au 22-01-2026 18:54
+# Participation au 23-01-2026 21:04
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -20,7 +20,7 @@
 | 1 | [300141567](../300141567/README.md) :point_right: [arsprod2001](https://github.com/arsprod2001) <image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 2 | [300142242](../300142242/README.md) :point_right: [yahiiiia](https://github.com/yahiiiia) <image src='https://avatars0.githubusercontent.com/u/131247071?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 3 | [300146667](../300146667/README.md) :point_right: [djaberbenyezza](https://github.com/djaberbenyezza) <image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
-| 4 | [300148210](../300148210/README.md) :point_right: [zianiferiel](https://github.com/zianiferiel) <image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 4 | [300148210](../300148210/README.md) :point_right: [zianiferiel](https://github.com/zianiferiel) <image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 5 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 6 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 7 | [300150271](../300150271/README.md) :point_right: [mazighs](https://github.com/mazighs) <image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
@@ -41,4 +41,4 @@
 | 22 | [300153476](../300153476/README.md) :point_right: [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 23 | [300153747](../300153747/README.md) :point_right: [madjou15](https://github.com/madjou15) <image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 24 | [300154718](../300154718/README.md) :point_right: [stephanetidjet](https://github.com/stephanetidjet) <image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| :abacus: | $\frac{7}{25}$ = 28% | $\displaystyle\sum_{i=1}^{25} s_i$ = 7 |
+| :abacus: | $\frac{6}{25}$ = 24% | $\displaystyle\sum_{i=1}^{25} s_i$ = 6 |
