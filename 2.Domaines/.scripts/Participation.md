@@ -1,4 +1,4 @@
-# Participation au 26-01-2026 22:18
+# Participation au 28-01-2026 01:24
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -22,7 +22,7 @@
 | 3 | [300146667](../300146667/README.md) :point_right: [djaberbenyezza](https://github.com/djaberbenyezza) <image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 4 | [300148210](../300148210/README.md) :point_right: [zianiferiel](https://github.com/zianiferiel) <image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 5 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
-| 6 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
+| 6 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 7 | [300150271](../300150271/README.md) :point_right: [mazighs](https://github.com/mazighs) <image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 8 | [300150293](../300150293/README.md) :point_right: [amir1450](https://github.com/amir1450) <image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 9 | [300150295](../300150295/README.md) :point_right: [lounasallouti1](https://github.com/lounasallouti1) <image src='https://avatars0.githubusercontent.com/u/205994740?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
