@@ -1,0 +1,9 @@
+Membre (ID_Membre, Nom, Prénom, Téléphone, Email)
+
+Adresse (ID_Adresse, Numéro_Rue, Rue, Ville, Code_Postal, #ID_Membre)
+
+Livre (ID_Livre, Titre, Auteur, Catégorie, Année_Publication)
+
+Exemplaire (ID_Exemplaire, Statut, #ID_Livre)
+
+Emprunt (ID_Emprunt, Date_Emprunt, Date_Retour_Prévue, Date_Retour, #ID_Exemplaire, #ID_Membre)
