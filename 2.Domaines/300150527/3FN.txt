@@ -1,0 +1,48 @@
+3ème Forme Normale (3NF)
+
+Passage de la 2NF à la 3NF :
+
+Nous avons supprimé les dépendances transitives.
+
+CLIENT (
+  id_client,
+  nom_client,
+  telephone,
+  adresse
+)
+
+PRODUIT (
+  id_produit,
+  nom_produit,
+  prix,
+  image,
+  description,
+  categorie,
+  stock
+)
+
+COMMANDE (
+  id_commande,
+  id_client,
+  date_commande
+)
+
+DETAIL_COMMANDE (
+  id_detail,
+  id_commande,
+  id_produit,
+  quantite,
+  prix_unitaire
+)
+
+PAIEMENT (
+  id_paiement,
+  id_commande,
+  mode_paiement,
+  montant,
+  statut
+)
+
+Résultat :
+- Aucune dépendance transitive
+- Base de données optimisée

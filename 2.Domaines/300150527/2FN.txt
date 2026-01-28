@@ -1,0 +1,38 @@
+2ème Forme Normale (2NF)
+
+Passage de la 1NF à la 2NF :
+
+Nous avons séparé les données pour éliminer les dépendances partielles.
+
+CLIENT (
+  id_client,
+  nom_client,
+  telephone,
+  adresse
+)
+
+PRODUIT (
+  id_produit,
+  nom_produit,
+  prix,
+  image,
+  description,
+  categorie,
+  stock
+)
+
+COMMANDE (
+  id_commande,
+  id_client,
+  total_commande
+)
+
+DETAIL_COMMANDE (
+  id_commande,
+  id_produit,
+  quantite
+)
+
+Résultat :
+- Chaque champ dépend de sa clé primaire
+- Redondance réduite
