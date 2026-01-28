@@ -139,13 +139,15 @@ docker exec -it INF1099-mysql mysql -u root -p -e "SELECT User, Host FROM mysql.
 ### Charger le schéma
 
 ```powershell
-docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila < "$projectDir\sakila-db\sakila-schema.sql"
+Get-Content "$projectDir\sakila-db\sakila-schema.sql" |
+ docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 ```
 
 ### Charger les données
 
 ```powershell
-docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila < "$projectDir\sakila-db\sakila-data.sql"
+Get-Content "$projectDir\sakila-db\sakila-data.sql" |
+ docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 ```
 
 ---
