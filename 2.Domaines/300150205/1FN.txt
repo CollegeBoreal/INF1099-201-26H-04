@@ -1,0 +1,1 @@
+Client, Adresse_Client, Appareil, Marque, Modèle, IMEI, Panne, Pièce_Rechange, Technicien, Réparation, Ligne_Réparation, Paiement, Garantie
