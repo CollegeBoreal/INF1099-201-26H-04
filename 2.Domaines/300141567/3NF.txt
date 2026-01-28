@@ -1,0 +1,16 @@
+UTILISATEUR( id_utilisateur,nom,prenom,email,telephone)
+
+TICKET(id_ticket,titre,description,date_creation,id_utilisateur,id_categorie,id_statut,id_priorite)
+
+CATEGORIE(id_categorie,libelle)
+
+STATUT(id_statut,libelle)
+
+PRIORITE(id_priorite,niveau
+
+
+TECHNICIEN(id_technicien,nom,prenom,email,id_equipe)
+
+EQUIPE(id_equipe,nom_equipe)
+
+INTERVENTION(id_intervention,date_intervention,commentaire,id_ticket,id_technicien)
