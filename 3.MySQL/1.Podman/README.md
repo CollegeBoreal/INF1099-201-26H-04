@@ -9,7 +9,7 @@ Parfait ! On va ajouter la **version “alias Docker”**, comme ça tes étudia
 Dans **PowerShell Administrateur** :
 
 ```powershell
-choco install podman -y
+choco install podman-desktop -y
 ```
 
 Redémarre PowerShell et vérifie :
