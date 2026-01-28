@@ -1,0 +1,10 @@
+Membre (0,N) —— EFFECTUE —— (1,1) Emprunt
+Membre (1,1) —— POSSÈDE —— (0,N) Carte_Membre
+
+Livre (1,N) —— POSSÈDE —— (1,1) Exemplaire
+Exemplaire (0,N) —— FAIT_L’OBJET —— (1,1) Emprunt
+
+Livre (0,N) —— CLASSÉ_DANS —— (1,1) Catégorie
+
+Emprunt (1,1) —— CONCERNE —— (1,1) Exemplaire
+Emprunt (1,1) —— EST_EFFECTUÉ_PAR —— (1,1) Membre
