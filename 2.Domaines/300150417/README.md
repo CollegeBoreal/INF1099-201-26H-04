@@ -1,68 +1,102 @@
-1. Choix du Domaine
+📌 Présentation du projet
 
-Le domaine choisi est la gestion d’un site de changement de devise en ligne.
-Ce système permet de modéliser le cycle complet depuis l’inscription d’un client, la consultation des taux de change, la conversion d’un montant d’une devise vers une autre, jusqu’au paiement et à l’enregistrement de l’historique des transactions.
+Ce projet consiste à concevoir et modéliser une base de données relationnelle pour un site d’échange de devises en ligne.
+La plateforme permet à des clients de créer un compte, consulter les taux de change, effectuer des conversions entre différentes devises et procéder au paiement des transactions.
+L’objectif principal est d’appliquer les règles de modélisation et de normalisation des bases de données afin d’obtenir une structure cohérente, sans redondance et prête pour une implémentation SQL.
 
-2. Normalisation
-📁 Fichier 1 : 1FN (Première Forme Normale)
+🎯 Objectifs du projet
 
-Dans cette phase, toutes les données sont regroupées dans une structure plate (Flat Table).
-Chaque attribut est atomique.
-Il n’y a pas encore de clés techniques (ID).
+Modéliser un domaine réel et pertinent
 
-Attributs :
+Identifier les entités et leurs relations
 
-Client_Nom, Client_Prenom, Client_Email, Client_Telephone,
-Num_Rue, Rue, Ville, Code_Postal, Pays_Client,
-Devise_Source, Devise_Cible, Taux_Change,
-Montant_Initial, Montant_Converti, Date_Transaction, Statut_Transaction,
-Mode_Paiement, Montant_Paye,
-Nom_Prestataire_Paiement
+Appliquer les formes normales (1FN, 2FN, 3FN)
 
-📁 Fichier 2 : 2FN (Deuxième Forme Normale)
+Éliminer les redondances et les dépendances transitives
 
-Dans cette étape, les entités sont séparées et les relations avec leurs cardinalités sont définies afin d’éliminer les redondances partielles.
+Obtenir une base de données exploitable dans un SGBD relationnel
 
-CLIENT (1,N) —— EFFECTUE —— (1,1) TRANSACTION
-CLIENT (1,1) —— HABITE —— (1,1) ADRESSE
+🧩 Choix du domaine
 
-DEVISE (1,N) —— EST_SOURCE_DE —— (1,1) TRANSACTION
-DEVISE (1,N) —— EST_CIBLE_DE —— (1,1) TRANSACTION
+Le domaine choisi est la gestion d’un site d’échange de devises.
+Ce type de système permet de gérer les clients, les devises, les taux de change mis à jour régulièrement, les transactions de conversion ainsi que les paiements associés.
+Chaque transaction enregistre la devise source, la devise cible, le montant initial, le montant converti et le statut de l’opération.
 
-DEVISE (1,1) —— POSSÈDE —— (1,N) TAUX_CHANGE
+📂 Normalisation
+📁 Première Forme Normale (1FN)
 
-TRANSACTION (1,1) —— EST_PAYÉE_PAR —— (1,1) PAIEMENT
+Dans cette première étape, les données sont regroupées dans une structure plate (Flat Table).
+Tous les attributs sont atomiques et aucune clé technique n’est encore définie.
 
-PAIEMENT (1,1) —— UTILISE —— (1,1) MODE_PAIEMENT
+Exemples d’attributs :
 
-📁 Fichier 3 : 3FN (Troisième Forme Normale)
+Nom du client, prénom, téléphone, email
 
-Dans cette phase finale, les dépendances transitives sont éliminées.
-Les clés primaires (ID) et les clés étrangères (#) sont introduites.
-La structure est prête pour l’implémentation SQL.
+Adresse du client
 
-Tables finales :
+Devise source et devise cible
+
+Taux de change
+
+Montant initial et montant converti
+
+Date et statut de la transaction
+
+Mode de paiement
+
+📁 Deuxième Forme Normale (2FN)
+
+Dans cette phase, les données sont réparties en entités distinctes afin d’éliminer les dépendances partielles.
+Les relations entre les entités sont définies à l’aide de cardinalités logiques (1,1), (1,N) et (0,N).
+
+Les principales entités identifiées sont :
 
 Client
-(ID_Client, Nom, Prénom, Email, Téléphone, Pays)
 
 Adresse
-(ID_Adresse, Num_Rue, Rue, Ville, Code_Postal, #ID_Client)
+
+Compte_Client
 
 Devise
-(ID_Devise, Code_Devise, Nom_Devise, Symbole)
 
 Taux_Change
-(ID_Taux, Valeur_Taux, Date_Mise_A_Jour, #ID_Devise_Source, #ID_Devise_Cible)
 
 Transaction
-(ID_Transaction, Date_Transaction, Montant_Initial, Montant_Converti, Statut, #ID_Client, #ID_Devise_Source, #ID_Devise_Cible)
 
 Paiement
-(ID_Paiement, Montant_Paye, Date_Paiement, #ID_Transaction, #ID_Mode_Paiement)
 
 Mode_Paiement
-(ID_Mode_Paiement, Nom_Mode)
+
+Prestataire_Paiement
+
+Historique_Transaction
+
+📁 Troisième Forme Normale (3FN)
+
+Dans la troisième forme normale, les dépendances transitives sont supprimées.
+Chaque table possède une clé primaire (PK) et les relations sont assurées par des clés étrangères (FK).
+
+📌 Structure finale des entités
+
+Client (ID_Client, Nom, Prénom, Téléphone, Email)
+
+Adresse (ID_Adresse, Numéro_Rue, Rue, Ville, Code_Postal, Pays, #ID_Client)
+
+Compte_Client (ID_Compte, Date_Création, Statut, #ID_Client)
+
+Devise (ID_Devise, Code_Devise, Nom_Devise, Symbole)
+
+Taux_Change (ID_Taux, Valeur_Taux, Date_Mise_À_Jour, #ID_Devise_Source, #ID_Devise_Cible)
+
+Transaction (ID_Transaction, Date_Transaction, Montant_Initial, Montant_Converti, Statut, #ID_Client, #ID_Devise_Source, #ID_Devise_Cible, #ID_Taux)
+
+Paiement (ID_Paiement, Date_Paiement, Montant_Payé, #ID_Transaction, #ID_Mode_Paiement)
+
+Mode_Paiement (ID_Mode_Paiement, Nom_Mode)
+
+Prestataire_Paiement (ID_Prestataire, Nom_Prestataire, Type_Service)
+
+Historique_Transaction (ID_Historique, Date_Action, Action, #ID_Transaction)
 
 ## 📊 Diagramme Entité-Relation
 
