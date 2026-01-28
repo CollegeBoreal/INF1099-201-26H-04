@@ -18,39 +18,50 @@ Le but principal est d'illustrer la **normalisation des données (1NF → 3NF)**
 
 ```mermaid
 erDiagram
-    UTILISATEUR ||--o{ TICKET : "crée"
+    UTILISATEUR ||--o{ TICKET : "soumet"
     CATEGORIE ||--o{ TICKET : "classe"
-    STATUT ||--o{ TICKET : "définit"
-    PRIORITE ||--o{ TICKET : "indique"
+    TECHNICIEN ||--o{ TICKET : "prend_en_charge"
 
-    TICKET ||--o{ INTERVENTION : "génère"
-    TECHNICIEN ||--o{ INTERVENTION : "réalise"
+    TICKET ||--o{ INTERVENTION : "donne_lieu_a"
+    TECHNICIEN ||--o{ INTERVENTION : "effectue"
 
-    EQUIPE ||--o{ TECHNICIEN : "contient"
+    EQUIPE ||--o{ TECHNICIEN : "regroupe"
 
     UTILISATEUR {
-        int id_utilisateur PK
-        string nom
-        string prenom
-        string email
-        string telephone
+        id_utilisateur
+        nom
+        prenom
+        email
+        telephone
     }
 
     TICKET {
-        int id_ticket PK
-        string titre
-        string description
-        date date_creation
-        int id_utilisateur FK
-        int id_categorie FK
-        int id_statut FK
-        int id_priorite FK
+        id_ticket
+        titre
+        description
+        date_creation
     }
 
     TECHNICIEN {
-        int id_technicien PK
-        string nom
-        string prenom
-        string email
-        int id_equipe FK
+        id_technicien
+        nom
+        prenom
+        email
     }
+
+    INTERVENTION {
+        id_intervention
+        date_intervention
+        commentaire
+    }
+
+    CATEGORIE {
+        id_categorie
+        libelle
+    }
+
+    EQUIPE {
+        id_equipe
+        nom_equipe
+    }
+
