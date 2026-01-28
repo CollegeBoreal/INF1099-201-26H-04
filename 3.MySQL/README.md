@@ -185,12 +185,15 @@ docker run -d --name INF1099-mysql -e MYSQL_ROOT_PASSWORD=rootpass -p 3306:3306 
 # Créer la base et l’utilisateur
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "CREATE DATABASE sakila;"
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "GRANT ALL PRIVILEGES ON *.* TO 'etudiants'@'localhost' IDENTIFIED BY 'etudiants_1' WITH GRANT OPTION;"
+```
 
 # Importer le schéma et les données
+
 ```powershell
 Get-Content "$projectDir\sakila-db\sakila-schema.sql" |
   docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 ```
+
 ```powershell
 Get-Content "$projectDir\sakila-db\sakila-data.sql" |
   docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
