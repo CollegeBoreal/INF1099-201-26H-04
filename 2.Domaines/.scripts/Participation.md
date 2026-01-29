@@ -1,4 +1,4 @@
-# Participation au 28-01-2026 21:54
+# Participation au 29-01-2026 05:17
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -34,7 +34,7 @@
 | 15 | [300150524](../300150524/README.md) :point_right: [takieddinechoufa](https://github.com/takieddinechoufa) <image src='https://avatars0.githubusercontent.com/u/206965671?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
 | 16 | [300150527](../300150527/README.md) :point_right: [akrembouraoui](https://github.com/akrembouraoui) <image src='https://avatars0.githubusercontent.com/u/212277460?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 17 | [300150562](../300150562/README.md) :point_right: [isako29](https://github.com/isako29) <image src='https://avatars0.githubusercontent.com/u/205994758?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
-| 18 | [300151292](../300151292/README.md) :point_right: [akahil521](https://github.com/akahil521) <image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image> | :x: | :x: | :x: | :x: | :x: |
+| 18 | [300151292](../300151292/README.md) :point_right: [akahil521](https://github.com/akahil521) <image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 19 | [300151469](../300151469/README.md) :point_right: [Rabia-777](https://github.com/Rabia-777) <image src='https://avatars0.githubusercontent.com/u/206001876?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 20 | [300151492](../300151492/README.md) :point_right: [hacen19](https://github.com/hacen19) <image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | 21 | [300151825](../300151825/README.md) :point_right: [FeatFreedy](https://github.com/FeatFreedy) <image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
