@@ -1,7 +1,3 @@
-Parfait ! On va ajouter la **version “alias Docker”**, comme ça tes étudiants peuvent utiliser les mêmes commandes Docker mais avec Podman. Cela rend la transition facile.
-
----
-
 # Leçon : Podman avec alias Docker + MySQL
 
 ## 1️⃣ Installer Podman (Windows + Chocolatey)
