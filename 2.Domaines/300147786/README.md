@@ -8,6 +8,7 @@ Elle offre la possibilité de créer un profil, publier des annonces de colocati
 
 ## Diagramme Entité-Association
 
-🖼️: Entité=Association
+🖼️: Entité-Association
 <img width="1098" height="629" alt="mermaid" src="https://github.com/user-attachments/assets/9ea387ca-07d9-4b9b-aefa-7d767a6b0b01" />
+
 
