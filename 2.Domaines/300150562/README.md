@@ -58,3 +58,8 @@ Large gamme - Des classiques aux éditions limitées
 Service client dédié aux passionnés
 
 Livraison rapide dans toute l'Europe
+
+
+<img width="6769" height="2325" alt="image" src="https://github.com/user-attachments/assets/b729009c-3197-429e-934e-f89cad325c77" />
+
+
