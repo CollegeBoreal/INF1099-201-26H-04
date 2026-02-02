@@ -20,3 +20,83 @@ et recevoir leurs commandes à domicile grâce à un service de livraison assur�
 Chaque commande est suivie à travers différents statuts (en préparation, payée, livrée, annulée), garantissant un bon suivi du processus de vente.
 
 Mama Makusa s’adresse principalement à la communauté africaine de Toronto ainsi qu’à toute personne souhaitant découvrir la richesse de la gastronomie africaine.
+
+```mermaid
+erDiagram
+    CLIENT ||--o{ COMMANDE : PASSE
+    CLIENT ||--|{ ADRESSE : POSSEDE
+    ADRESSE ||--o{ COMMANDE : LIVRAISON_A
+
+    CATEGORIE ||--|{ PLAT : CLASSE
+    PAYS_ORIGINE ||--o{ PLAT : ORIGINE
+
+    COMMANDE ||--|{ LIGNE_COMMANDE : CONTIENT
+    PLAT ||--o{ LIGNE_COMMANDE : EST_COMMANDE_DANS
+
+    COMMANDE ||--|| PAIEMENT : EST_PAYEE_PAR
+    COMMANDE o|--|| LIVRAISON : DONNE_LIEU_A
+    LIVREUR ||--|{ LIVRAISON : EFFECTUE
+
+    CLIENT {
+        string nom
+        string prenom
+        string post_nom
+        string telephone
+        string email
+    }
+
+    ADRESSE {
+        int numero_rue
+        string rue
+        string ville
+        string province
+        string pays
+    }
+
+    PLAT {
+        string nom_plat
+        string description
+        float prix
+        string statut
+    }
+
+    CATEGORIE {
+        string nom_categorie
+    }
+
+    PAYS_ORIGINE {
+        string nom_pays
+    }
+
+    COMMANDE {
+        date date_commande
+        int quantite
+        string statut_commande
+    }
+
+    LIGNE_COMMANDE {
+        int quantite
+        float prix_unitaire
+    }
+
+    PAIEMENT {
+        date date_paiement
+        float montant
+        string mode_paiement
+        string statut_paiement
+    }
+
+    LIVRAISON {
+        date date_livraison
+        string statut_livraison
+        float frais_livraison
+    }
+
+    LIVREUR {
+        string nom
+        string prenom
+        string post_nom
+        string telephone
+        string email
+    }
+```

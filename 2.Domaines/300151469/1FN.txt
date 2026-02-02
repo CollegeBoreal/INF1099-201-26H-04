@@ -1,0 +1,4 @@
+Candidat_Nom, Candidat_Prenom, Candidat_Email, Candidat_Tel,
+Date_RendezVous, Heure_RendezVous, Lieu, Type_Test,
+Montant_Paiement, Mode_Paiement, Statut_Paiement
+

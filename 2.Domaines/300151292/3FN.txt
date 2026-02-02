@@ -1,0 +1,19 @@
+Utilisateur (Nom, Prénom, Téléphone, Email)
+
+Adresse (Numéro_rue, Rue, Ville, Province, Code_postal)
+
+Catégorie (Nom_catégorie)
+
+Activité (Nom_activité, Description, Durée_minutes)
+
+Coach (Nom, Prénom, Téléphone, Email)
+
+Salle (Nom_salle, Capacité)
+
+Séance (Date_séance, Heure_début, Statut_séance)
+
+Réservation (Date_réservation, Statut_réservation)
+
+Ligne_Réservation (Quantité_places)
+
+Paiement (Date_paiement, Montant, Mode_paiement, Statut_paiement)

@@ -1,0 +1,25 @@
+1ère Forme Normale (1NF)
+
+Au départ, les données de l’application "Ultras Green Army Shop"
+étaient regroupées dans une seule table.
+
+TABLE_COMMANDE_GLOBALE (
+  id_commande,
+  nom_client,
+  telephone_client,
+  adresse_client,
+  nom_produit,
+  prix_produit,
+  quantite,
+  image_produit,
+  mode_paiement,
+  total_commande
+)
+
+Cette table respecte la 1NF car :
+- Tous les attributs sont atomiques
+- Pas de groupes répétitifs
+
+Problèmes :
+- Redondance des données
+- Difficulté de maintenance

@@ -1,78 +1,36 @@
 ========================
-DOMAINE: Plateforme Tournois e-sport
-FORME: 3FN (3NF)
+DOMAINE: Tournois e-sport
+FORME: 3FN
 ========================
-
-Objectif 3FN:
-- Aucun attribut non-clé ne dépend d'un autre attribut non-clé.
-- Chaque attribut dépend uniquement de la clé primaire de sa table.
 
 PLAYER(
   player_id PK,
-  pseudo UNIQUE,
-  email UNIQUE
+  player_name
 )
 
 TEAM(
   team_id PK,
-  team_name UNIQUE
-)
-
-ROLE(
-  role_id PK,
-  role_name UNIQUE
-)
-
-TEAM_MEMBER(
-  team_id FK -> TEAM(team_id),
-  player_id FK -> PLAYER(player_id),
-  role_id FK -> ROLE(role_id),
-  PK(team_id, player_id)
-)
-
-GENRE(
-  genre_id PK,
-  genre_name UNIQUE
-)
-
-GAME(
-  game_id PK,
-  game_name UNIQUE,
-  genre_id FK -> GENRE(genre_id)
-)
-
-SPONSOR(
-  sponsor_id PK,
-  sponsor_name UNIQUE
-)
-
-SPONSOR_CONTACT(
-  sponsor_contact_id PK,
-  sponsor_id FK -> SPONSOR(sponsor_id),
-  phone,
-  email
-)
-
-FORMAT(
-  format_id PK,
-  format_name UNIQUE   -- ex: BO1, BO3, BO5
+  team_name
 )
 
 TOURNAMENT(
   tournament_id PK,
   tournament_name,
   start_date,
-  end_date,
-  format_id FK -> FORMAT(format_id),
-  game_id FK -> GAME(game_id),
-  sponsor_id FK -> SPONSOR(sponsor_id)
+  end_date
 )
 
 MATCH(
   match_id PK,
   tournament_id FK -> TOURNAMENT(tournament_id),
-  round,
-  match_datetime
+  match_date,
+  round
+)
+
+TEAM_PLAYER(
+  team_id FK -> TEAM(team_id),
+  player_id FK -> PLAYER(player_id),
+  PK(team_id, player_id)
 )
 
 MATCH_TEAM(
@@ -82,7 +40,7 @@ MATCH_TEAM(
   PK(match_id, team_id)
 )
 
-Résultat:
-- GAME ne stocke plus directement le texte genre, il référence GENRE.
-- SPONSOR ne stocke plus téléphone/email directement si on veut gérer plusieurs contacts => SPONSOR_CONTACT.
-- FORMAT est séparé pour éviter répétition (BO1/BO3) et respecter 3FN.
+Explication 3FN:
+- Chaque table possède une clé primaire.
+- Les clés étrangères relient les entités.
+- Aucun attribut non-clé ne dépend d’un autre attribut non-clé.

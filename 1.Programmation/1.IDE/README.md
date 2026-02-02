@@ -35,13 +35,13 @@ cd Developer
    :warning: remplacer le `0X` avec le numéro de section
 
    ```sh
-   git clone https://github.com/CollegeBoreal/INF1102-201-26H-0X.git
+   git clone https://github.com/CollegeBoreal/INF1099-201-26H-04.git
    ```
    
 * allez dans le répertoire du cours
 
 ```sh
-cd INF1102-201-26H-0X/1.Programmation/1.IDE
+cd INF1099-201-26H-04/1.Programmation/1.IDE
 ```
 
 ### :two: Créer son premier fichier sous git (utiliser vi)
@@ -163,7 +163,7 @@ git pull --no-edit
    :warning: remplacer le numéro de section `0X`
 
    ```sh
-   cd ~/Developer/INF1102-201-26H-0X/1.Programmation/1.IDE
+   cd ~/Developer/INF1099-201-26H-04/1.Programmation/1.IDE
    ```
 
 2. **Changer l’URL du dépôt distant**
@@ -171,7 +171,7 @@ git pull --no-edit
    :warning: remplacer le numéro de section `0X`
 
    ```sh
-   git remote set-url origin git@github.com:CollegeBoreal/INF1102-201-26H-0X.git
+   git remote set-url origin git@github.com:CollegeBoreal/INF1099-201-26H-04.git
    ```
 
 3. **Vérifier la nouvelle configuration du dépôt distant**
@@ -183,8 +183,8 @@ git pull --no-edit
    Ce qui affiche actuellement :
 
    ```lua
-   origin  git@github.com:CollegeBoreal/INF1102-201-26H-0X.git (fetch)
-   origin  git@github.com:CollegeBoreal/INF1102-201-26H-0X.git (push)
+   origin  git@github.com:CollegeBoreal/INF1099-201-26H-04.git (fetch)
+   origin  git@github.com:CollegeBoreal/INF1099-201-26H-04.git (push)
    ```
 
 ### :six: Créer un fichier dans ce répertoire `(1.IDE)`:

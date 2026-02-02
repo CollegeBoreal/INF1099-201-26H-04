@@ -1,89 +1,21 @@
-
----
-
-## 3) Contenu de `1FN.txt`  
-👉 1NF = **champs atomiques**, pas de listes dans une colonne, mais il peut rester des dépendances transitives.
-
-```txt
 ========================
-DOMAINE: Plateforme Tournois e-sport
-FORME: 1FN (1NF)
+DOMAINE: Tournois e-sport
+FORME: 1FN
 ========================
 
-0) TABLE NON NORMALISÉE (exemple)
-TOURNAMENT_FULL(
-  tournament_id,
+INSCRIPTION(
   tournament_name,
-  game_name,
-  game_genre,
-  sponsor_name,
-  sponsor_phone,
-  sponsor_email,
-  team_id,
   team_name,
-  player_id,
-  player_pseudo,
-  player_email,
-  match_id,
-  match_datetime,
-  round,
-  teamA_id,
-  teamA_score,
-  teamB_id,
-  teamB_score
+  player_name,
+  match_date,
+  score
 )
 
-Problèmes (avant 1FN):
-- Répétitions (mêmes infos joueur/équipe/tournoi sur plusieurs lignes)
-- Dépendances non maîtrisées (sponsor_phone dépend de sponsor_name, etc.)
+Règles 1FN respectées :
+- Chaque colonne contient une seule valeur
+- Pas de liste de joueurs ou de scores dans une cellule
 
-1) VERSION 1FN (valeurs atomiques)
-
-PLAYER(
-  player_id PK,
-  pseudo,
-  email
-)
-
-TEAM(
-  team_id PK,
-  team_name
-)
-
-TOURNAMENT(
-  tournament_id PK,
-  tournament_name,
-  game_name,
-  game_genre,
-  sponsor_name,
-  sponsor_phone,
-  sponsor_email,
-  start_date,
-  end_date,
-  format
-)
-
-TEAM_MEMBER(
-  team_id FK -> TEAM(team_id),
-  player_id FK -> PLAYER(player_id),
-  role,
-  PK(team_id, player_id)
-)
-
-MATCH(
-  match_id PK,
-  tournament_id FK -> TOURNAMENT(tournament_id),
-  round,
-  match_datetime
-)
-
-MATCH_RESULT(
-  match_id FK -> MATCH(match_id),
-  team_id FK -> TEAM(team_id),
-  score,
-  PK(match_id, team_id)
-)
-
-Notes:
-- Ici, c'est 1FN car chaque champ est atomique (pas de liste de joueurs dans une case).
-- Mais TOURNAMENT contient encore game_genre et sponsor_phone/email (pas encore 3FN).
+Limites :
+- player_name dépend de team_name
+- team_name dépend de tournament_name
+- Beaucoup de répétitions

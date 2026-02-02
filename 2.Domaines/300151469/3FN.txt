@@ -1,0 +1,6 @@
+Candidat (ID_Candidat, Nom, Prénom, Email, Téléphone)
+Session (ID_Session, Date, Heure, Type_Test, #ID_Lieu)
+Lieu (ID_Lieu, Nom_Lieu, Adresse)
+RendezVous (ID_RendezVous, #ID_Candidat, #ID_Session, Statut)
+Paiement (ID_Paiement, Montant, Mode_Paiement, Date_Paiement, #ID_RendezVous)
+

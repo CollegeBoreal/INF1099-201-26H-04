@@ -1,0 +1,1 @@
+Client, Adresse_Client, Devise, Taux_Change, Transaction, Paiement, Mode_Paiement, Prestataire_Paiement, Historique_Transaction, Compte_Client

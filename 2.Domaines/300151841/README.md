@@ -34,6 +34,6 @@ du cours.
 
 ## Diagramme Entité / Relation (E/R)
 
-![wait](https://github.com/user-attachments/assets/f58a1aa1-fa76-4bea-9140-7bf9a3a1fdb0)
+![wait](https://github.com/user-attachments/assets/23ff928b-b9ef-4829-9363-aac0d413b8b3)
 
  

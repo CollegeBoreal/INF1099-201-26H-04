@@ -1,0 +1,21 @@
+Passager (Nom, Prenom, Telephone, Email, Numero_passeport)
+
+Adresse (Numero_rue, Rue, Ville, Province, Code_postal, Pays)
+
+Compagnie (Nom_compagnie, Code_IATA, Telephone)
+
+Aeroport (Nom_aeroport, Code_IATA, Ville, Pays)
+
+Porte (Numero_porte, Terminal)
+
+Avion (Modele, Capacite, Immatriculation)
+
+Vol (Numero_vol, Date_vol, Heure_depart, Heure_arrivee, Statut_vol)
+
+Reservation (Date_reservation, Statut_reservation)
+
+Billet (Numero_billet, Classe, Siege)
+
+Paiement (Date_paiement, Montant, Mode_paiement, Statut_paiement)
+
+Bagage (Numero_bagage, Poids_kg, Type_bagage)

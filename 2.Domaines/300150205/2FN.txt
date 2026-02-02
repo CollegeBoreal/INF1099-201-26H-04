@@ -1,0 +1,10 @@
+Client (0,N) —— POSSÈDE —— (1,1) Appareil
+Client (1,N) —— HABITE —— (1,1) Adresse_Client
+Appareil (0,N) —— FAIT_L’OBJET —— (1,1) Réparation
+Marque (1,N) —— FABRIQUE —— (1,1) Modèle
+Modèle (0,N) —— DÉFINIT —— (1,1) Appareil
+Réparation (1,N) —— DÉTAILLE —— (1,1) Ligne_Réparation
+Pièce_Rechange (0,N) —— EST_UTILISÉE_DANS —— (1,1) Ligne_Réparation
+Technicien (1,N) —— EFFECTUE —— (1,1) Réparation
+Réparation (1,1) —— GÉNÈRE —— (1,1) Paiement
+Réparation (0,1) —— ACTIVÉE —— (1,1) Garantie
