@@ -25,5 +25,5 @@ Voir : `3FN.txt`
 Voir : `diagramme_ER.md`
 
 ## Diagramme E/R
-![Diagramme ER](./Image/Diagramme.png)
+![Diagramme ER](./images/Diagramme.png)
 
