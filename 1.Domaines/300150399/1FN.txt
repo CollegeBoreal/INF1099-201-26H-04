@@ -1,0 +1,33 @@
+﻿==============================
+1FN - Table Plate (Non normalisée)
+==============================
+
+Domaine : Site de vente de maillots de football vintage
+
+Dans cette phase, toutes les données sont regroupées dans une structure plate (Flat Table).
+Chaque attribut est atomique et il ny a pas encore didentifiants techniques.
+
+Attributs :
+
+Client_Nom, Client_Prenom, Client_Tel, Client_Email,
+Num_Rue, Rue, Ville, Code_Postal, Pays_Client,
+
+Maillot_Nom, Club, Saison, Taille, Etat_Maillot, Prix_Maillot, Stock,
+
+Commande_Date, Statut_Commande, Quantite, Total_Commande,
+
+Paiement_Date, Montant_Paye, Mode_Paiement, Prestataire_Paiement,
+
+Livraison_Date, Statut_Livraison, Numero_Suivi
+
+Exemples de lignes (flat table) :
+
+Client_Nom | Client_Prenom | Client_Email     | Maillot_Nom             | Club        | Saison | Taille | Etat  | Prix_Maillot | Commande_Date | Statut_Commande | Quantite | Total_Commande | Mode_Paiement | Livraison_Date | Statut_Livraison
+---------- | ------------- | --------------- | ----------------------- | ----------- | ------ | ------ | ----- | ----------- | ------------ | --------------- | -------- | ------------- | ------------ | ------------- | ---------------
+Rahmani    | Chakib        | chakib@mail.com  | Maillot Domicile 1998   | Juventus    | 1998   | M      | Bon   | 120.00      | 2026-02-03   | Payée           | 1        | 120.00        | Visa         | 2026-02-05    | Expédiée
+Ali        | Karim         | ali@mail.com     | Maillot Extérieur 2006  | Real Madrid | 2006   | L      | Neuf  | 200.00      | 2026-02-03   | En attente      | 2        | 400.00        | PayPal       | 2026-02-07    | En préparation
+
+Problèmes :
+- Redondance (infos client répétées sur plusieurs lignes)
+- Mise à jour difficile (club/maillot/stock dispersés)
+- Risque dincohérence (prix, statut, etc.)
