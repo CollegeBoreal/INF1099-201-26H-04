@@ -46,7 +46,7 @@ podman machine start
 podman info
 ```
 
-3️⃣ Installer PostgreSQL dans un conteneur
+## 3️⃣ Installer PostgreSQL dans un conteneur
 
 Commande utilisée pour lancer PostgreSQL :
 ```powershell
@@ -60,24 +60,25 @@ docker run -d `
   postgres:16
 ```
 
-Vérifier que le conteneur est en cours d’exécution
+### Vérifier que le conteneur est en cours d’exécution
 ```powershell
 docker ps
 
 ```
 
-4️⃣ Télécharger la base Sakila (PostgreSQL)
-Télécharger le schéma (tables + relations)
+## 4️⃣ Télécharger la base Sakila (PostgreSQL)
+
+### Télécharger le schéma (tables + relations)
 ```powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-schema.sql" -OutFile "postgres-sakila-schema.sql"
 ```
 
-Télécharger les données (INSERT)
+### Télécharger les données (INSERT)
 ```powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql" -OutFile "postgres-sakila-insert-data.sql"
 ```
 
-5️⃣ Copier les fichiers SQL dans le conteneur PostgreSQL
+## 5️⃣ Copier les fichiers SQL dans le conteneur PostgreSQL
 
 ```powershell
 
@@ -86,13 +87,13 @@ docker cp .\postgres-sakila-insert-data.sql postgres:/data.sql
 
 ```
 
-6️⃣ Importer Sakila dans PostgreSQL
+## 6️⃣ Importer Sakila dans PostgreSQL
 
-Charger le schéma
+### Charger le schéma
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -f /schema.sql
 ```
-Charger les données
+### Charger les données
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -f /data.sql
 ```
@@ -100,17 +101,17 @@ docker exec -it postgres psql -U postgres -d appdb -f /data.sql
 ⚠️ Cette étape peut prendre quelques minutes car il y a beaucoup de données.
 
 
-7️⃣ Vérifier que Sakila est bien chargée
+## 7️⃣ Vérifier que Sakila est bien chargée
 Lister les tables
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -c "\dt"
 ```
-Vérifier le nombre de films
+### Vérifier le nombre de films
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -c "SELECT COUNT(*) FROM film;"
 ```
 
-Exemple de requête (films contenant "Star")
+### Exemple de requête (films contenant "Star")
 
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -c "SELECT title FROM film WHERE title ILIKE '%Star%';"
@@ -121,9 +122,9 @@ docker exec -it postgres psql -U postgres -d appdb -c "SELECT title FROM film WH
 
 
 
-8️⃣ Installer pgAdmin 4 avec Chocolatey
+## 8️⃣ Installer pgAdmin 4 avec Chocolatey
 
-📍 Ouvrir PowerShell en mode Administrateur :
+### 📍 Ouvrir PowerShell en mode Administrateur :
 
 ```powershell
 choco install pgadmin4 -y
@@ -132,7 +133,7 @@ choco install pgadmin4 -y
 Ensuite, ouvrir pgAdmin 4 depuis le menu Démarrer.
 
 
-9️⃣ Connexion PostgreSQL dans pgAdmin 4
+### 9️⃣ Connexion PostgreSQL dans pgAdmin 4
 
 Dans pgAdmin :
 
@@ -153,9 +154,9 @@ Password : postgres
 
 Maintenance database : appdb
 
-🔍 Vérification dans pgAdmin
+## 🔍 Vérification dans pgAdmin
 
-Dans Query Tool :
+###  Dans Query Tool :
 
 
 ```powershell
@@ -167,7 +168,7 @@ Résultat attendu : affichage des films dans la table film.
 ![CAPTURE_pgAdmin4](./images/POOOOST.PNG)
 
 
-✅ Conclusion
+## ✅ Conclusion
 
 Le TP est réussi car :
 
@@ -181,7 +182,7 @@ Les données sont présentes (film = 1000)
 
 pgAdmin se connecte correctement et affiche les données
 
-📌 Commandes utiles PostgreSQL (psql)
+## 📌 Commandes utiles PostgreSQL (psql)
 Commande	Description
 \dt	Liste toutes les tables
 \d film	Affiche la structure de la table film
