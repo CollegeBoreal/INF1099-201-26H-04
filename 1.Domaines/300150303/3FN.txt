@@ -1,0 +1,6 @@
+CLIENT (Nom, Prénom, Téléphone, Email)
+COIFFEUSE (Nom, Spécialité)
+SERVICE (Nom_service, Prix)
+MODELE (Nom_modele, Description)
+RENDEZ_VOUS (Date_rdv, Heure_rdv, id_client, id_coiffeuse, id_service, id_modele)
+PAYEMENT (Date_payement, Montant, Mode_payement, id_rdv)
