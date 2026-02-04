@@ -107,27 +107,24 @@ Les tables actor, film, customer, category, etc. sont présentes.
 
 
 Capture 1 — Podman fonctionnel
-![wait](https://github.com/user-attachments/assets/fef2ac40-5b64-444a-a028-a8c6b1706e67)
-
-
 
 Capture 2 — Machine Podman en cours d’exécution
-![wait](https://github.com/user-attachments/assets/9cf13790-6718-4c58-8c7e-6d79a90d4b20)
 
-Capture 3 — Conteneur MySQL actif
-![wait](https://github.com/user-attachments/assets/efad6fb6-af78-4a3f-b64b-aa02776f465b)
+![wait](https://github.com/user-attachments/assets/06aeae91-95d5-4c59-984e-64ad322d53d9)
 
-Capture 4 — Bases de données MySQL 
-![wait](https://github.com/user-attachments/assets/874814b6-1505-4a5e-8f3e-756dd92f0df6)
+Capture 3 — Conteneur MySQL actif 
+
+Capture 4 — Bases de données MySQL  
 
 Capture 5 — Tables Sakila (preuve finale)
-![wait](https://github.com/user-attachments/assets/3b62460e-ce08-4580-bcf0-d490c22d8f28)
+ 
 
 Capture 6 -connexion sur workbench
-![wait](https://github.com/user-attachments/assets/a315dc97-cacc-43f3-a142-a9b640c4acd3)
+ 
 
 
 ✅ Conclusion
 Le conteneur MySQL fonctionne correctement avec Podman.
 La base de données Sakila a été importée avec succès et est prête pour les exercices SQL du cours INF1099.
+
 
