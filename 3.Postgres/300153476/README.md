@@ -49,6 +49,28 @@ docker run -d `
   -p 5432:5432 `
   -v postgres_data:/var/lib/postgresql/data `
   postgres:16
+```
+---
+
+## 🔎 Explication des paramètres Docker
+
+| Paramètre | Description |
+|------------|-------------|
+| POSTGRES_USER | Utilisateur principal |
+| POSTGRES_PASSWORD | Mot de passe |
+| POSTGRES_DB | Base créée au démarrage |
+| -p 5432:5432 | Mapping du port hôte → conteneur |
+| -v postgres_data | Volume pour persistance |
+
+---
+
+## 🔍 Vérification du fonctionnement
+
+```powershell
+docker ps
+docker logs postgres16
+```
+
 
 
 
