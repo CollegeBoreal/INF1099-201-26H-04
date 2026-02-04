@@ -100,6 +100,10 @@ docker exec -it postgres psql -U postgres -d appdb -f /data.sql
 
 ### Étape 4 : Vérifier que les tables Sakila sont présentes
 
+```bash
+docker exec -it postgres psql -U postgres -d appdb
+```
+
 ```sql
 \dt
 SELECT COUNT(*) FROM film;
