@@ -92,6 +92,57 @@ Suivre le calendrier des disponibilités et aussi les horaires disponibles .
 
 📄 Fichier : `3FN.txt`
 
+---
+
+```mermaid
+erDiagram
+    CLIENT {
+        string Nom
+        string Prénom
+        string Téléphone
+        string Email
+    }
+
+    COIFFEUSE {
+        string Nom
+        string Spécialité
+    }
+
+    SERVICE {
+        string Nom_service
+        float Prix
+    }
+
+    MODELE {
+        string Nom_modele
+        string Description
+    }
+
+    RENDEZ_VOUS {
+        date Date_rdv
+        time Heure_rdv
+        int id_client
+        int id_coiffeuse
+        int id_service
+        int id_modele
+    }
+
+    PAYEMENT {
+        date Date_payement
+        float Montant
+        string Mode_payement
+        int id_rdv
+    }
+
+    CLIENT ||--o{ RENDEZ_VOUS : "prend"
+    COIFFEUSE ||--o{ RENDEZ_VOUS : "réalise"
+    SERVICE ||--o{ RENDEZ_VOUS : "proposé dans"
+    MODELE ||--o{ RENDEZ_VOUS : "pour"
+    RENDEZ_VOUS ||--o{ PAYEMENT : "lié à"
+
+```
+
+
 
 
 ---
