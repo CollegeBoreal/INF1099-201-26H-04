@@ -25,12 +25,12 @@ L’objectif est de comprendre le déploiement d’une base de données conteneu
 
 ---
 ## 📁 Structure du projet
-300153476/
-│
-├── postgres-sakila-schema.sql
-├── postgres-sakila-insert-data.sql
-├── images/
-└── README.md
+| 300153476 | ------------ |
+│ -------- |
+| -------- | postgres-sakila-schema.sql |
+| -------- | postgres-sakila-insert-data.sql |
+| -------- | images/ |
+| -------- | README.md |
 ---
 
 ## 🖥️ Environnement utilisé
@@ -152,5 +152,6 @@ WHERE title ILIKE '%Star%';
 - Exécution de scripts SQL
 - Connexion via interface graphique (pgAdmin)
 - Utilisation de Podman en mode rootless
+
 
 
