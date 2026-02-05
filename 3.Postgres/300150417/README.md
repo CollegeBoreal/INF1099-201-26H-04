@@ -136,25 +136,15 @@ Ensuite, ouvrir pgAdmin 4 depuis le menu Démarrer.
 ### 9️⃣ Connexion PostgreSQL dans pgAdmin 4
 
 Dans pgAdmin :
-{
-  pgAdmin_Configuration: {
-    General: {
-      | Champ | Valeur |
-      |-------|--------|
-      | Name  | Postgres Docker |
-    },
 
-    Connection: {
-      | Champ                 | Valeur    |
-      |-----------------------|-----------|
-      | Host name / address   | localhost |
-      | Port                  | 5432      |
-      | Username              | postgres  |
-      | Password              | postgres  |
-      | Maintenance database  | appdb     |
-    }
-  }
-}
+| Champ                | Valeur          |
+| -------------------- | --------------- |
+| Name                 | Postgres Docker |
+| Host name / address  | localhost       |
+| Port                 | 5432            |
+| Username             | postgres        |
+| Password             | postgres        |
+| Maintenance database | appdb           |
 
 
 ## 🔍 Vérification dans pgAdmin
