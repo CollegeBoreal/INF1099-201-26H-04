@@ -77,6 +77,8 @@ Ce projet démontre ma compréhension de la **modélisation Entité/Relation (E/
 
 > Ce diagramme illustre les liens principaux du système (cours, inscriptions, devoirs, notes, ressources, récompenses, concours, chat IA).
 
+<img src = 'images/Entite Association.png' width = 800 />
+
 ```mermaid
 erDiagram
     PARENT ||--o{ ENFANT : "a"
