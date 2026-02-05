@@ -136,23 +136,18 @@ Ensuite, ouvrir pgAdmin 4 depuis le menu Démarrer.
 ### 9️⃣ Connexion PostgreSQL dans pgAdmin 4
 
 Dans pgAdmin :
-
-Add New Server
-Onglet General
-
-Name : Postgres Docker
-
-Onglet Connection
-
-Host name/address : localhost
-
-Port : 5432
-
-Username : postgres
-
-Password : postgres
-
-Maintenance database : appdb
+{
+  General: {
+    Name: "Postgres Docker"
+  },
+  Connection: {
+    Host: "localhost",
+    Port: 5432,
+    Username: "postgres",
+    Password: "postgres",
+    MaintenanceDatabase: "appdb"
+  }
+}
 
 ## 🔍 Vérification dans pgAdmin
 
