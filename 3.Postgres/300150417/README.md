@@ -137,17 +137,25 @@ Ensuite, ouvrir pgAdmin 4 depuis le menu Démarrer.
 
 Dans pgAdmin :
 {
-  General: {
-    Name: "Postgres Docker"
-  },
-  Connection: {
-    Host: "localhost",
-    Port: 5432,
-    Username: "postgres",
-    Password: "postgres",
-    MaintenanceDatabase: "appdb"
+  pgAdmin_Configuration: {
+    General: {
+      | Champ | Valeur |
+      |-------|--------|
+      | Name  | Postgres Docker |
+    },
+
+    Connection: {
+      | Champ                 | Valeur    |
+      |-----------------------|-----------|
+      | Host name / address   | localhost |
+      | Port                  | 5432      |
+      | Username              | postgres  |
+      | Password              | postgres  |
+      | Maintenance database  | appdb     |
+    }
   }
 }
+
 
 ## 🔍 Vérification dans pgAdmin
 
