@@ -1,7 +1,3 @@
-# Resultat
-<img src="images/Illustration_postgres.png" width="800">
-
----
 # 📦 PostgreSQL Docker + Base de données Sakila
 ---
 
@@ -25,7 +21,10 @@ Ce projet démontre comment :
 L’objectif est de comprendre le déploiement d’une base de données conteneurisée et l’architecture client-serveur.
 
 ---
+# Resultat
+<img src="images/Illustration_postgres.png" width="800">
 
+---
 ## 🖥️ Environnement utilisé
 
 ### 1️⃣ Runtime de conteneur
@@ -70,6 +69,7 @@ docker run -d `
 docker ps
 docker logs postgres16
 ```
+
 
 
 
