@@ -1,0 +1,32 @@
+﻿==============================
+3FN - Structure finale (sans dépendances transitives)
+==============================
+
+Les dépendances transitives sont éliminées.
+Chaque attribut dépend uniquement de la clé primaire de sa table.
+
+Structure finale (3FN) :
+
+Client (ID_Client, Nom, Prenom, Telephone, Email)
+
+Adresse (ID_Adresse, Num_Rue, Rue, Ville, Code_Postal, Pays, #ID_Client)
+
+Club (ID_Club, Nom_Club, Pays_Club)
+
+Categorie_Maillot (ID_Categorie, Nom_Categorie)
+
+Maillot (ID_Maillot, Nom_Maillot, Saison, Taille, Etat_Maillot, Prix, Stock, #ID_Club, #ID_Categorie)
+
+Commande (ID_Commande, Date_Commande, Statut_Commande, Total_Commande, #ID_Client)
+
+Ligne_Commande (ID_Ligne, Quantite, Prix_Unitaire, #ID_Commande, #ID_Maillot)
+
+Paiement (ID_Paiement, Date_Paiement, Montant_Paye, #ID_Commande, #ID_Mode_Paiement, #ID_Prestataire)
+
+Mode_Paiement (ID_Mode_Paiement, Nom_Mode)
+
+Prestataire_Paiement (ID_Prestataire, Nom_Prestataire, Type_Service)
+
+Livraison (ID_Livraison, Date_Expedition, Date_Livraison, Statut_Livraison, Numero_Suivi, #ID_Commande)
+
+Historique_Commande (ID_Historique, Date_Action, Action, #ID_Commande)

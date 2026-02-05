@@ -1,0 +1,50 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    CONTENU DE CHAQUE FORME NORMALE                         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ 1FN - PREMIÈRE FORME NORMALE (11 fichiers)                                 │
+├────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ OBJECTIF : Comprendre la structure plate et ses problèmes                  │
+│                                                                             │
+│ CONTENU :                                                                   │
+│ • Description détaillée de chaque attribut (54 attributs au total)         │
+│ • Type de données, format, validation                                      │
+│ • Exemples concrets de valeurs                                             │
+│ • Problèmes spécifiques à chaque attribut                                  │
+│ • Redondance et anomalies                                                   │
+│                                                                             │
+│ EXEMPLE DE FICHIER :                                                        │
+│ 01_PATIENT.txt contient :                                                   │
+│   - Patient_Nom (définition, exemples, règles)                             │
+│   - Patient_Prenom (définition, exemples, règles)                          │
+│   - Patient_Email (définition, exemples, règles)                           │
+│   - ... tous les attributs Patient ...                                     │
+│   - Problèmes de redondance expliqués                                      │
+│                                                                             │
+│ MOTS-CLÉS : atomicité, redondance, anomalies, flat table                   │
+│                                                                             │
+└────────────────────────────────────────────────────────────────────────────┘
+==============================================================================
+                    PREMIÈRE FORME NORMALE (1FN)
+                Gestion de Boutique de Réparation de Smartphones
+================================================================================
+
+LISTE DES ENTITÉS (Structure Plate - Toutes dans une seule table) :
+
+1. Client
+2. Adresse_Client
+3. Appareil
+4. Marque
+5. Modèle
+6. IMEI
+7. Panne
+8. Pièce_Rechange
+9. Technicien
+10. Réparation
+11. Ligne_Réparation
+12. Paiement
+13. Garantie
+
+================================================================================

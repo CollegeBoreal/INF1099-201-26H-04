@@ -1,0 +1,49 @@
+# 3FN – Troisième Forme Normale  
+## Gestion d’une salle de sport
+
+Dans cette dernière étape, les dépendances transitives sont éliminées.  
+Chaque table possède une **clé primaire (PK)** et les relations sont assurées par des **clés étrangères (FK)**.
+
+## Tables finales
+
+### MEMBRE
+- ID_Membre (PK)
+- Nom
+- Prenom
+- Telephone
+- Email
+- Date_Naissance
+
+### ABONNEMENT
+- ID_Abonnement (PK)
+- Type
+- Prix
+- Date_Debut
+- Date_Fin
+- ID_Membre (FK)
+
+### COACH
+- ID_Coach (PK)
+- Nom
+- Prenom
+- Specialite
+
+### SEANCE
+- ID_Seance (PK)
+- Nom_Seance
+- Date
+- Heure
+- ID_Coach (FK)
+
+### PRESENCE
+- ID_Presence (PK)
+- Statut
+- ID_Membre (FK)
+- ID_Seance (FK)
+
+### PAIEMENT
+- ID_Paiement (PK)
+- Date_Paiement
+- Montant
+- Mode_Paiement
+- ID_Abonnement (FK)
