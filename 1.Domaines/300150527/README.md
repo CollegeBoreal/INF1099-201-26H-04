@@ -84,6 +84,8 @@ Ces relations sont représentées graphiquement dans le diagramme ER.
 
 # 📊 6. Diagramme Entité–Relation (ER) :
 
+<img width="8192" height="6132" alt="diagramme1" src="https://github.com/user-attachments/assets/60b9a2a5-7b7b-42ae-b52c-5f7deabc9db7" />
+
 Un diagramme ER a été généré à l’aide de Mermaid, à partir du schéma SQL.
 Il représente fidèlement :
 
@@ -96,6 +98,13 @@ Il représente fidèlement :
 - Les clés étrangères (FK)
 
 - Les cardinalités entre les entités
+
+<img width="1384" height="1183" alt="diagramme2" src="https://github.com/user-attachments/assets/d87e69a6-2a84-42e1-8634-54a8869c5345" />
+
+---------------------
+
+<img width="3049" height="1953" alt="diagramme3" src="https://github.com/user-attachments/assets/db47cf3e-485f-49f1-9c84-c3f0adb5391e" />
+
 
 -------------------------------------------------
 
@@ -119,4 +128,5 @@ La base de données est prête à être utilisée comme fondation pour une appli
 **Bouraoui Akrem - 300150527**
 **📚 Matière : Base de données**
 **🏫 Projet académique**
+
 
