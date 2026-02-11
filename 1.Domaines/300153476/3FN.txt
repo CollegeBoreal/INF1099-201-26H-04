@@ -1,31 +1,31 @@
-Parent (id_parent PK, Nom, Prénom, Téléphone, Email)
+Parent (id_parent, Nom, Prénom, Téléphone, Email)
 
-Enfant (id_enfant PK, Nom, Prénom, Âge, Niveau, id_parent FK → Parent.id_parent)
+Enfant (id_enfant, Nom, Prénom, Âge, Niveau, #id_parent)
 
-Professeur (id_prof PK, Nom, Prénom, Téléphone, Email, Spécialité)
+Professeur (id_prof, Nom, Prénom, Téléphone, Email, Spécialité)
 
-Cours (id_cours PK, Titre_cours, Langue, Niveau, id_prof FK → Professeur.id_prof)
+Cours (id_cours, Titre_cours, Langue, Niveau, #id_prof)
 
-Session_Cours (id_session PK, Date_session, Heure_session, Durée, Mode_session, id_cours FK → Cours.id_cours)
+Session_Cours (id_session, Date_session, Heure_session, Durée, Mode_session, #id_cours)
 
-Inscription (id_inscription PK, Date_inscription, Statut_inscription, id_enfant FK → Enfant.id_enfant, id_cours FK → Cours.id_cours)
+Inscription (id_inscription, Date_inscription, Statut_inscription, #id_enfant, #id_cours)
 
-Devoir (id_devoir PK, Titre_devoir, Description, Date_limite, id_cours FK → Cours.id_cours)
+Devoir (id_devoir, Titre_devoir, Description, Date_limite, #id_cours)
 
-Soumission_Devoir (id_soumission PK, Date_soumission, Fichier_ou_lien, Commentaire, id_devoir FK → Devoir.id_devoir, id_enfant FK → Enfant.id_enfant)
+Soumission_Devoir (id_soumission, Date_soumission, Fichier_ou_lien, Commentaire, #id_devoir, #id_enfant)
 
-Note (id_note PK, Valeur, Commentaire, Date_correction, id_soumission FK → Soumission_Devoir.id_soumission)
+Note (id_note, Valeur, Commentaire, Date_correction, #id_soumission)
 
-Ressource (id_ressource PK, Titre_ressource, Type_ressource, URL_ressource, id_cours FK → Cours.id_cours)
+Ressource (id_ressource, Titre_ressource, Type_ressource, URL_ressource, #id_cours)
 
-Récompense (id_recompense PK, Nom_récompense, Description, Points)
+Récompense (id_recompense, Nom_récompense, Description, Points)
 
-Attribution_Récompense (id_attribution PK, Date_attribution, Motif, id_enfant FK → Enfant.id_enfant, id_recompense FK → Récompense.id_recompense)
+Attribution_Récompense (id_attribution, Date_attribution, Motif, #id_enfant, #id_recompense)
 
-Concours (id_concours PK, Titre_concours, Date_concours, Description, Prix)
+Concours (id_concours, Titre_concours, Date_concours, Description, Prix)
 
-Participation_Concours (id_participation PK, Résultat, Score, Rang, id_enfant FK → Enfant.id_enfant, id_concours FK → Concours.id_concours)
+Participation_Concours (id_participation, Résultat, Score, Rang, #id_enfant, #id_concours)
 
-Session_ChatIA (id_session_chat PK, Date_session, Sujet, Durée, id_enfant FK → Enfant.id_enfant)
+Session_ChatIA (id_session_chat, Date_session, Sujet, Durée, #id_enfant)
 
-Message_ChatIA (id_message PK, Contenu_message, Rôle, Date_heure, id_session_chat FK → Session_ChatIA.id_session_chat)
+Message_ChatIA (id_message, Contenu_message, Rôle, Date_heure, #id_session_chat)
