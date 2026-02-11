@@ -34,9 +34,10 @@ Création du dossier INF1099 dans Downloads.
 
 Initialisation de la machine Linux Podman puis démarrage.
 
-![Initialisation Podman](screenshots/initalisation%202.PNG)
+<img width="590" height="319" alt="initalisation 2" src="https://github.com/user-attachments/assets/3fe67d6d-28bc-4369-b113-920380213b29" />
 
-![Podman Machine Start](screenshots/podman2.PNG)
+
+<img width="579" height="224" alt="podman2" src="https://github.com/user-attachments/assets/03461386-8323-4476-8ada-99b3e63dddad" />
 
 ---
 
@@ -44,11 +45,13 @@ Initialisation de la machine Linux Podman puis démarrage.
 
 Démarrage du conteneur MySQL avec Docker alias Podman.
 
-![Docker Run MySQL](screenshots/leneecement%203.PNG)
+<img width="948" height="141" alt="leneecement 3" src="https://github.com/user-attachments/assets/ab0b787d-6854-4bdd-bd92-d2a7c1379c2a" />
+
 
 Vérification des logs MySQL :
 
-![Logs MySQL](screenshots/question%206.PNG)
+<img width="449" height="121" alt="question 6" src="https://github.com/user-attachments/assets/fcf3c63d-3aaf-46ff-8a9b-bcd347782d29" />
+
 
 ---
 
@@ -56,7 +59,7 @@ Vérification des logs MySQL :
 
 Création de la base via MySQL dans le conteneur.
 
-![Create Database](screenshots/creation%20la%20base%20de%20donne%20sakila%204.PNG)
+<img width="506" height="123" alt="creation la base de donne sakila 4" src="https://github.com/user-attachments/assets/ab004a60-d190-4632-9760-59af4ea42eef" />
 
 ---
 
@@ -64,7 +67,7 @@ Création de la base via MySQL dans le conteneur.
 
 Création et vérification de l'utilisateur MySQL.
 
-![Create User](screenshots/Étape%205%20–%20Création%20de%20l'utilisateur%20étudian.PNG)
+<img width="668" height="148" alt="Étape 5 – Création de l&#39;utilisateur étudian" src="https://github.com/user-attachments/assets/3e20e815-6de7-4ba9-9628-68e84f8af218" />
 
 ---
 
@@ -72,7 +75,7 @@ Création et vérification de l'utilisateur MySQL.
 
 Validation de la présence des fichiers SQL.
 
-![Fichiers Sakila](screenshots/sakila.PNG)
+<img width="586" height="172" alt="sakila" src="https://github.com/user-attachments/assets/bd3e0dca-03c6-46db-9524-32c42001f729" />
 
 ---
 
@@ -80,7 +83,7 @@ Validation de la présence des fichiers SQL.
 
 Import du fichier sakila-schema.sql et sakila-data.sql.
 
-![Import Sakila](screenshots/question%207%20et%208.PNG)
+<img width="642" height="365" alt="question 7 et 8" src="https://github.com/user-attachments/assets/cdeecc9d-edf2-40e0-a4f7-55b13dcdaefe" />
 
 ---
 
@@ -88,7 +91,7 @@ Import du fichier sakila-schema.sql et sakila-data.sql.
 
 Affichage des tables pour confirmer l’importation réussie.
 
-![Show Tables](screenshots/q9.PNG)
+<img width="960" height="272" alt="q9" src="https://github.com/user-attachments/assets/c68ccbf2-3922-4eef-9d25-5d3a683793f6" />
 
 ---
 
