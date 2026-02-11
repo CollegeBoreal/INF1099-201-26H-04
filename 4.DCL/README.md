@@ -130,6 +130,23 @@ CREATE TABLE tp_dcl.etudiants (
 );
 ```
 
+### 🎯 Rappel fondamental
+
+PostgreSQL fonctionne ainsi :
+
+```
+Cluster
+ ├── Base 1 (postgres)
+ ├── Base 2 (cours)
+ │     └── Schéma tp_dcl
+ │           └── Table etudiants
+ └── Base 3 (appdb)
+```
+
+Un schéma appartient à une base.
+Une table appartient à un schéma.
+Les droits sont liés à la base courante.
+
 ---
 
 ## **2️⃣ Créer des utilisateurs**
