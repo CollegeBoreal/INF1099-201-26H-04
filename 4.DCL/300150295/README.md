@@ -1,60 +1,96 @@
-\# TP PostgreSQL – Gestion des utilisateurs et permissions (DCL)
+📚 TP – DCL (Data Control Language) – PostgreSQL avec Docker
+Nom : Lounas Allouti Cours : INF1099 Session : Hiver 2026 Base de données : PostgreSQL (Docker)
+🎯 Objectif du TP
+Ce TP consiste à :
+* Créer des rôles (utilisateurs)
+* Accorder des privilèges (GRANT)
+* Retirer des privilèges (REVOKE)
+* Tester les permissions
+* Supprimer les rôles (DROP USER)
+* Vérifier la gestion des droits dans PostgreSQL
+🐳 1️⃣ Lancement de PostgreSQL avec Docker
+Commande utilisée :
 
+docker run --name postgres_tp -e POSTGRES_PASSWORD=admin -p 5432:5432 -d postgres
+Vérification :
 
+docker ps
+📸 Capture d’écran – Conteneur Docker actif
+(Insérer capture ici)
+🗄️ 2️⃣ Connexion à PostgreSQL
 
-\## Objectifs
+docker exec -it postgres_tp psql -U postgres
+📸 Capture – Connexion réussie
+(Insérer capture ici)
+🏗️ 3️⃣ Création de la base et du schéma
 
-\- Créer une base de données et un schéma
+CREATE DATABASE cours;
+\c cours
 
-\- Créer des utilisateurs PostgreSQL
+CREATE SCHEMA tp_dcl;
+📸 Capture – Base et schéma créés
+(Insérer capture ici)
+👥 4️⃣ Création des utilisateurs
 
-\- Attribuer des droits avec GRANT
+CREATE USER etudiant WITH PASSWORD '1234';
+CREATE USER professeur WITH PASSWORD '1234';
+📸 Capture – Création des rôles
+(Insérer capture ici)
+📊 5️⃣ Création de la table
 
-\- Retirer des droits avec REVOKE
+CREATE TABLE tp_dcl.etudiants (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(50),
+    moyenne DECIMAL(4,2)
+);
+📸 Capture – Table créée
+(Insérer capture ici)
+🔐 6️⃣ Attribution des privilèges (GRANT)
 
-\- Tester les permissions selon les rôles
+GRANT USAGE ON SCHEMA tp_dcl TO etudiant;
+GRANT SELECT ON tp_dcl.etudiants TO etudiant;
 
-\- Comprendre la gestion des séquences SERIAL
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tp_dcl TO professeur;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA tp_dcl TO professeur;
+📸 Capture – GRANT effectué
+(Insérer capture ici)
+❌ 7️⃣ Retrait des privilèges (REVOKE)
 
-\- Supprimer des utilisateurs avec DROP USER
+REVOKE SELECT ON tp_dcl.etudiants FROM etudiant;
+📸 Capture – REVOKE effectué
+(Insérer capture ici)
+🧪 8️⃣ Test des permissions
+Connexion avec l’utilisateur etudiant :
 
+psql -U etudiant -d cours
+Test :
 
+SELECT * FROM tp_dcl.etudiants;
+Résultat attendu :
 
-\## Étapes du TP
+ERROR: permission denied
+📸 Capture – Permission denied
+(Insérer capture ici)
+🗑️ 9️⃣ Suppression des utilisateurs
+Avant suppression :
 
+REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA tp_dcl FROM professeur;
+REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA tp_dcl FROM professeur;
+REVOKE ALL PRIVILEGES ON SCHEMA tp_dcl FROM professeur;
 
+REVOKE ALL PRIVILEGES ON SCHEMA tp_dcl FROM etudiant;
+REVOKE ALL PRIVILEGES ON DATABASE cours FROM etudiant;
+Puis :
 
-1\. Création de la base `cours` et du schéma `tp\_dcl`
-
-2\. Création de la table `etudiants` et insertion de données de test
-
-3\. Création des utilisateurs `etudiant` (lecture) et `professeur` (lecture + écriture)
-
-4\. Attribution des permissions avec GRANT
-
-5\. Test des permissions avec SELECT, INSERT, UPDATE
-
-6\. Retrait de droits avec REVOKE
-
-7\. Suppression des utilisateurs (DROP USER)
-
-8\. Bonus : création d’un rôle `enseignant` et d’un utilisateur `prof2` avec droits du rôle
-
-9\. Correction des droits sur le schéma et la séquence SERIAL pour le rôle
-
-
-
-\## Commandes principales
-
-\- `CREATE USER`
-
-\- `CREATE ROLE`
-
-\- `GRANT`
-
-\- `REVOKE`
-
-\- `DROP USER`
-
-
+DROP USER etudiant;
+DROP USER professeur;
+📸 Capture – Suppression réussie
+(Insérer capture ici)
+✅ Conclusion
+Ce TP m’a permis de :
+* Comprendre la gestion des rôles dans PostgreSQL
+* Manipuler les commandes GRANT et REVOKE
+* Vérifier les permissions utilisateur
+* Gérer les dépendances avant suppression d’un rôle
+* Utiliser PostgreSQL dans Docker
 
