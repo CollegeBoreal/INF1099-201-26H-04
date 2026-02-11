@@ -25,7 +25,8 @@ Ce TP permet de :
 
 Création du dossier INF1099 dans Downloads.
 
-![Creation dossier](screenshots/q1.PNG)
+<img width="440" height="146" alt="q 1" src="https://github.com/user-attachments/assets/5a03045c-82c4-4dd5-8fdf-5d2091ec7da0" />
+
 
 ---
 
