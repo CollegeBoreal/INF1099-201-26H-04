@@ -1,0 +1,12 @@
+3FN :
+CLIENT(client_id PK)
+COMMANDE(commande_id PK, client_id FK)
+LIGNE_COMMANDE(ligne_id PK, commande_id FK, piece_id FK)
+PIECE(piece_id PK, categorie_id FK)
+CATEGORIE_PIECE(categorie_id PK)
+USINE(usine_id PK)
+ORDRE_FABRICATION(of_id PK, piece_id FK, usine_id FK)
+FOURNISSEUR(fournisseur_id PK)
+APPROVISIONNEMENT(appro_id PK, fournisseur_id FK, piece_id FK)
+ENTREPOT(entrepot_id PK)
+STOCK(stock_id PK, entrepot_id FK, piece_id FK)
