@@ -38,7 +38,7 @@ L’ensemble du processus est automatisable et reproductible.
 
 
 
-\## Environnement utilisé
+## Environnement utilisé
 
 \- Système d’exploitation : Windows  
 
