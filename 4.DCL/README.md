@@ -91,6 +91,9 @@ ls -l fichier.txt
 ## **Prérequis**
 
 * PostgreSQL installé
+```lua
+docker container exec --interactive --tty postgres bash
+```
 * Accès à `psql` ou PgAdmin
 * Une base de test : `cours`
 
