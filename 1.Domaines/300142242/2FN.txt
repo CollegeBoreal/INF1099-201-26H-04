@@ -1,0 +1,14 @@
+2FN (Suppression des dépendances partielles)
+
+Les seules clés composées sont dans ORDER_ITEM : (order_id, product_id)
+
+- quantity dépend de (order_id, product_id)
+- price dépend de (order_id, product_id)
+
+Donc aucune dépendance partielle.
+Le modèle reste identique à la 1FN.
+
+CUSTOMER(id PK, name, email)
+ORDER(id PK, orderDate, status, customer_id FK)
+PRODUCT(id PK, name, price)
+ORDER_ITEM(order_id FK, product_id FK, quantity, price, PK(order_id, product_id))
