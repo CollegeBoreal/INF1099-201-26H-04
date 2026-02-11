@@ -166,10 +166,10 @@ GRANT SELECT ON tp_dcl.etudiants TO etudiant;
 
 -- Professeur : lecture + écriture
 GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
-```
 
 -- Donner les droits sur la séquence
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
+```
 
 ---
 
