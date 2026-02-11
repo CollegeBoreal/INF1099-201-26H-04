@@ -7,7 +7,7 @@
 
 ---
 
-## 🎯 Objectif du TP
+##  Objectif du TP
 
 Ce TP consiste à maîtriser les commandes DCL (Data Control Language) dans PostgreSQL :
 - Créer des rôles (utilisateurs)
@@ -21,9 +21,9 @@ Ce TP consiste à maîtriser les commandes DCL (Data Control Language) dans Post
 
 ---
 
-## 🚀 Installation et configuration
+##  Installation et configuration
 
-### 🐳 1️⃣ Lancement de PostgreSQL avec Docker
+###  1️⃣ Lancement de PostgreSQL avec Docker
 
 Démarrer un conteneur PostgreSQL :
 
@@ -42,9 +42,9 @@ docker ps
 
 ---
 
-## 📝 Étapes du TP
+##  Étapes du TP
 
-### 🗄️ 2️⃣ Connexion à PostgreSQL
+###  2️⃣ Connexion à PostgreSQL
 
 Se connecter au conteneur PostgreSQL :
 
@@ -56,7 +56,7 @@ docker exec -it postgres_tp psql -U postgres
 
 ---
 
-### 🏗️ 3️⃣ Création de la base et du schéma
+###  3️⃣ Création de la base et du schéma
 
 Créer la base de données et le schéma :
 
@@ -72,7 +72,7 @@ CREATE SCHEMA tp_dcl;
 
 ---
 
-### 👥 4️⃣ Création des utilisateurs
+###  4️⃣ Création des utilisateurs
 
 Créer les rôles `etudiant` et `professeur` :
 
@@ -103,7 +103,7 @@ CREATE TABLE tp_dcl.etudiants (
 
 ---
 
-### 🔐 6️⃣ Attribution des privilèges (GRANT)
+###  6️⃣ Attribution des privilèges (GRANT)
 
 #### Privilèges pour l'étudiant (lecture seule)
 
@@ -126,7 +126,7 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA tp_dcl TO professeur;
 
 ---
 
-### ❌ 7️⃣ Retrait des privilèges (REVOKE)
+###  7️⃣ Retrait des privilèges (REVOKE)
 
 Retirer les privilèges de lecture à l'étudiant :
 
@@ -139,7 +139,7 @@ REVOKE SELECT ON tp_dcl.etudiants FROM etudiant;
 
 ---
 
-### 🧪 8️⃣ Test des permissions
+###  8️⃣ Test des permissions
 
 Connexion avec l'utilisateur `etudiant` :
 
@@ -167,7 +167,7 @@ ERROR: permission denied for table etudiants
 
 ---
 
-### 🗑️ 9️⃣ Suppression des utilisateurs
+###  9️⃣ Suppression des utilisateurs
 
 #### Révocation des privilèges avant suppression
 
