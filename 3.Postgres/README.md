@@ -54,8 +54,8 @@ docker run -d `
 ### Étape 2 : Vérifier que PostgreSQL fonctionne
 
 ```bash
-docker ps
-docker logs postgres
+docker container ls
+docker container logs postgres
 ```
 
 ---
