@@ -20,6 +20,9 @@
 # 6️⃣ Supprimer un utilisateur (DROP USER)
 <img width="944" height="333" alt="image" src="https://github.com/user-attachments/assets/2964a582-8735-45b8-bff4-73642233aa6a" />
 
+# Apparition de cours dans AppAdmin4
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ea713cea-7616-4666-8ecd-18f5adee5ebf" />
+
 
 
 
