@@ -53,8 +53,8 @@ Vérifier que le conteneur est actif :
 docker ps
 ```
 
-![Conteneur Docker actif](<img width="932" height="71" alt="image" src="https://github.com/user-attachments/assets/a8d82e1f-402e-48d6-9e3a-465f897c0013" />
-)
+<img width="932" height="71" alt="image" src="https://github.com/user-attachments/assets/7232a3a7-8736-4ac5-8661-e2996242c006" />
+
 
 ---
 
@@ -68,7 +68,7 @@ Se connecter au conteneur PostgreSQL :
 docker exec -it postgres_tp psql -U postgres
 ```
 
-![Connexion réussie](./screenshots/02-connexion.png)
+
 
 ---
 
@@ -83,7 +83,8 @@ CREATE DATABASE cours;
 CREATE SCHEMA tp_dcl;
 ```
 
-![Base et schéma créés](./screenshots/03-base-schema.png)
+<img width="962" height="165" alt="creation bd" src="https://github.com/user-attachments/assets/586cb363-fe51-44a5-a9d0-5a25c9112d8f" />
+
 
 ---
 
@@ -96,7 +97,8 @@ CREATE USER etudiant WITH PASSWORD '1234';
 CREATE USER professeur WITH PASSWORD '1234';
 ```
 
-![Création des rôles](./screenshots/04-creation-roles.png)
+<img width="583" height="119" alt="Créer les utilisateurs" src="https://github.com/user-attachments/assets/e50a69e9-ef2f-4886-85b7-eceb94d8b657" />
+
 
 ---
 
@@ -112,7 +114,8 @@ CREATE TABLE tp_dcl.etudiants (
 );
 ```
 
-![Table créée](./screenshots/05-creation-table.png)
+<img width="656" height="205" alt="Accès à la base et au schéma" src="https://github.com/user-attachments/assets/dd0b673b-fd60-45b5-adbd-a1b8b014a92e" />
+
 
 ---
 
@@ -132,7 +135,10 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tp_dcl TO professeur;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA tp_dcl TO professeur;
 ```
 
-![GRANT effectué](./screenshots/06-grant.png)
+<img width="890" height="93" alt="Droits sur la séquence SERIAL" src="https://github.com/user-attachments/assets/23a07ddd-96f1-462f-810f-bb2c676fbc71" />
+
+
+
 
 ---
 
@@ -144,7 +150,8 @@ Retirer les privilèges de lecture à l'étudiant :
 REVOKE SELECT ON tp_dcl.etudiants FROM etudiant;
 ```
 
-![REVOKE effectué](./screenshots/07-revoke.png)
+<img width="917" height="285" alt="revok prof" src="https://github.com/user-attachments/assets/ff368be8-bbca-4147-8708-d70aaead8c1a" />
+
 
 ---
 
@@ -168,7 +175,11 @@ SELECT * FROM tp_dcl.etudiants;
 ERROR: permission denied for table etudiants
 ```
 
-![Permission denied](./screenshots/08-permission-denied.png)
+<img width="951" height="368" alt="test " src="https://github.com/user-attachments/assets/8dd523a3-ac70-461d-8b8e-3b97f3cc1d75" />
+
+<img width="899" height="372" alt="test prof" src="https://github.com/user-attachments/assets/a287d600-ff8f-4bc3-af92-f335bdf5ab90" />
+
+
 
 ---
 
@@ -198,7 +209,8 @@ DROP USER etudiant;
 DROP USER professeur;
 ```
 
-![Suppression réussie](./screenshots/09-drop-users.png)
+<img width="752" height="749" alt="image" src="https://github.com/user-attachments/assets/80fa552a-32d7-4520-8448-13d3732e2352" />
+
 
 ---
 
@@ -217,19 +229,12 @@ Ce TP m'a permis de :
 
 ---
 
-## 📚 Ressources
 
-- [Documentation PostgreSQL - DCL](https://www.postgresql.org/docs/current/sql-grant.html)
-- [Docker Hub - PostgreSQL](https://hub.docker.com/_/postgres)
-- [Tutoriel PostgreSQL Roles](https://www.postgresql.org/docs/current/user-manag.html)
 
 ---
 
-## 📧 Contact
+
 
 **Lounas Allouti**  
 Cours INF1099 - Hiver 2026
-
 ---
-
-*Dernière mise à jour : Février 2026*
