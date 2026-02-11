@@ -6,7 +6,7 @@
 #
 # --------------------------------------
 
-source ../../.scripts/students.sh --source-only
+source ../.scripts/students.sh --source-only
    
 echo "# Participation au `date +"%d-%m-%Y %H:%M"`"
 echo ""
@@ -36,12 +36,9 @@ echo "|------|----------------------------|------------|----------|"
 i=0
 s=0 # Success
 
-for entry in "${ETUDIANTS[@]}"; do
-
-   IFS='|' read -r id github avatar <<< "$entry"
-
-   URL="[${github}](https://github.com/${github}) <image src='https://avatars0.githubusercontent.com/u/${avatar}?s=460&v=4' width=20 height=20></image>"
-
+for id in "${ETUDIANTS[@]}"
+do
+   URL="[<image src='https://avatars0.githubusercontent.com/u/${AVATARS[$i]}?s=460&v=4' width=20 height=20></image>](https://github.com/${IDS[${i}]})"
    FILE=${id}.md
    OK="| ${i} | [${id}](../${FILE}) ${URL} | :heavy_check_mark: | :heavy_check_mark: |"
    KO_WEB="| ${i} | [${id}](../${FILE}) ${URL} | :heavy_check_mark: | :x: |"

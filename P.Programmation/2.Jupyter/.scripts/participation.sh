@@ -30,29 +30,24 @@ echo "| :x:                | Projet inexistant             |"
 echo ""
 echo "## :a: Présence"
 echo ""
-echo "|:hash:| Boréal :id:                | :id:.md    | :rocket: |"
-echo "|------|----------------------------|------------|----------|"
+echo "|:hash:| Boréal :id:                | :receipt: :id:/RAPPORT.ipynb  |"
+echo "|------|----------------------------|-------------------------------|"
 
 i=0
-s=0 # Success
+s=0
 
-for entry in "${ETUDIANTS[@]}"; do
+for entry in "${STUDENTS[@]}"; do
 
    IFS='|' read -r id github avatar <<< "$entry"
 
    URL="[${github}](https://github.com/${github}) <image src='https://avatars0.githubusercontent.com/u/${avatar}?s=460&v=4' width=20 height=20></image>"
 
-   FILE=${id}.md
-   OK="| ${i} | [${id}](../${FILE}) ${URL} | :heavy_check_mark: | :heavy_check_mark: |"
-   KO_WEB="| ${i} | [${id}](../${FILE}) ${URL} | :heavy_check_mark: | :x: |"
+   FILE=${id}/RAPPORT.ipynb
+   OK="| ${i} | [${id}](../${FILE}) ${URL} | :heavy_check_mark: |"
    KO="| ${i} | [${id}](../${FILE}) ${URL} | :x: |"
    if [ -f "$FILE" ]; then
-       if git log --format=fuller -- ${FILE} | grep Author | grep -q "noreply"; then
-           echo ${KO_WEB}
-       else
-           echo ${OK}
-           let "s++"
-       fi
+       echo ${OK}
+       let "s++"
    else
        echo ${KO}
    fi
@@ -60,6 +55,6 @@ for entry in "${ETUDIANTS[@]}"; do
    COUNT="\$\\frac{${s}}{${i}}$"
    STATS=$(echo "$s*100/$i" | bc)
    SUM="$\displaystyle\sum_{i=1}^{${i}} s_i$"
-done
-
+ done
+ 
 echo "| :abacus: | " ${COUNT} " = " ${STATS}% "|" ${SUM} = ${s} "|"
