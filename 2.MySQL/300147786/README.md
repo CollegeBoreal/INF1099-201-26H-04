@@ -12,7 +12,6 @@ Il présente la mise en place d’un environnement **MySQL** conteneurisé à l�
 - Déployer un conteneur MySQL
 - Créer une base de données et un utilisateur
 - Importer la base de données Sakila
-- Préparer l’environnement pour des exercices SQL
 
 ---
 
@@ -27,6 +26,7 @@ Il présente la mise en place d’un environnement **MySQL** conteneurisé à l�
 
 ## 📁 Schéma de la base de données Sakila
 <img width="968" height="617" alt="sakila" src="https://github.com/user-attachments/assets/d7177f53-c208-4f40-bac0-9b36752d88ff" />
+
 
 
 
