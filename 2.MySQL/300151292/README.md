@@ -34,7 +34,7 @@ Cours : INF1099
 
 Commande :
 
-```powershell
+
 
 podman --version
 
