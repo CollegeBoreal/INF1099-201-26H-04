@@ -219,23 +219,24 @@ Le conteneur MySQL fonctionne correctement avec Podman.
 La base de données Sakila a été importée avec succès et est prête pour les exercices SQL du cours INF1099.
 
 ## 📸 Captures d’écran
+
+
 ## 📸 Captures d’écran
 
 ### Capture 1 — Podman fonctionnel
-![wait](Podman fonctionnel.png)
+![Capture 1](images/1.png)
 
 ### Capture 2 — Machine Podman en cours d’exécution
-![Capture 2](images/2-machine.png)
+![Capture 2](images/2.png)
 
 ### Capture 3 — Conteneur MySQL actif
-![Capture 3](images/3-container.png)
+![Capture 3](images/3.png)
 
 ### Capture 4 — Bases de données MySQL
-![Capture 4](images/4-databases.png)
+![Capture 4](images/4.png)
 
 ### Capture 5 — Tables Sakila (preuve finale)
-![Capture 5](images/5-tables.png)
+![Capture 5](images/5.png)
 
 ### Capture 6 — Connexion sur Workbench
-![Capture 6](images/6-workbench.png)
-
+![Capture 6](images/6.png)
