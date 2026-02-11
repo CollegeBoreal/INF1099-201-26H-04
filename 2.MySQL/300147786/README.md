@@ -25,10 +25,6 @@ Il présente la mise en place d’un environnement **MySQL** conteneurisé à l�
 
 ---
 
-## 📁 Préparation du projet
+## 📁 Schéma de la base de données Sakila
 
-Créer un dossier de travail dans **Downloads** :
 
-```powershell
-$projectDir = "$env:USERPROFILE\Downloads\INF1099"
-New-Item -ItemType Directory -Path $projectDir -Force
