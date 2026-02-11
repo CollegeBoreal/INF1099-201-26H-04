@@ -1,0 +1,38 @@
+﻿==============================
+2FN - Entités, relations et cardinalités
+==============================
+
+Objectif :
+Séparer les informations en entités pour éviter les redondances partielles.
+
+Entités principales :
+- CLIENT
+- ADRESSE
+- CLUB
+- CATEGORIE_MAILLOT
+- MAILLOT
+- COMMANDE
+- LIGNE_COMMANDE
+- PAIEMENT
+- MODE_PAIEMENT
+- PRESTATAIRE_PAIEMENT
+- LIVRAISON
+- HISTORIQUE_COMMANDE
+
+Relations et cardinalités :
+
+CLIENT (1,N)  PASSE  (1,1) COMMANDE
+CLIENT (1,1)  HABITE  (1,N) ADRESSE
+
+COMMANDE (1,1)  CONTIENT  (1,N) LIGNE_COMMANDE
+MAILLOT (1,N)  APPARAIT_DANS  (1,1) LIGNE_COMMANDE
+
+COMMANDE (1,1)  EST_PAYEE_PAR  (1,1) PAIEMENT
+PAIEMENT (1,1)  UTILISE  (1,1) MODE_PAIEMENT
+PAIEMENT (1,1)  PASSE_PAR  (1,1) PRESTATAIRE_PAIEMENT
+
+COMMANDE (1,1)  GENERE  (1,1) LIVRAISON
+COMMANDE (1,1)  GENERE  (0,N) HISTORIQUE_COMMANDE
+
+MAILLOT (1,1)  APPARTIENT_A  (1,1) CLUB
+MAILLOT (1,1)  EST_DE_TYPE  (1,1) CATEGORIE_MAILLOT

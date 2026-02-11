@@ -18,7 +18,7 @@
 - [ ] 🐧 Unix
 
 ```bash
-docker run -d \
+docker container run -d \
   --name postgres \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
@@ -31,7 +31,7 @@ docker run -d \
 - [ ] 🪟 Windows
 
 ```bash
-docker run -d `
+docker container run -d `
   --name postgres `
   -e POSTGRES_USER=postgres `
   -e POSTGRES_PASSWORD=postgres `
@@ -54,8 +54,8 @@ docker run -d `
 ### Étape 2 : Vérifier que PostgreSQL fonctionne
 
 ```bash
-docker ps
-docker logs postgres
+docker container ls
+docker container logs postgres
 ```
 
 ---
@@ -87,21 +87,21 @@ Invoke-WebRequest `
 ### Étape 2 : Copier les fichiers dans le conteneur
 
 ```bash
-docker cp postgres-sakila-schema.sql postgres:/schema.sql
-docker cp postgres-sakila-insert-data.sql postgres:/data.sql
+docker container cp postgres-sakila-schema.sql postgres:/schema.sql
+docker container cp postgres-sakila-insert-data.sql postgres:/data.sql
 ```
 
 ### Étape 3 : Exécuter les fichiers SQL dans PostgreSQL
 
 ```bash
-docker exec -it postgres psql -U postgres -d appdb -f /schema.sql
-docker exec -it postgres psql -U postgres -d appdb -f /data.sql
+docker container exec -it postgres psql -U postgres -d appdb -f /schema.sql
+docker container exec -it postgres psql -U postgres -d appdb -f /data.sql
 ```
 
 ### Étape 4 : Vérifier que les tables Sakila sont présentes
 
 ```bash
-docker exec -it postgres psql -U postgres -d appdb
+docker container exec -it postgres psql -U postgres -d appdb
 ```
 
 ```sql
@@ -277,4 +277,40 @@ SELECT * FROM film WHERE title ILIKE '%star%';
 
 # :books: References
 
+Pour supprimer le conteneur :
 
+```bash
+docker container rm -f postgres
+```
+
+Mais **il faut aussi supprimer le volume** :
+
+```bash
+-v postgres_data:/var/lib/postgresql/data
+```
+
+---
+
+# 🔥 Si tu veux TOUT remettre à zéro
+
+## 1️⃣ Stop + supprimer le conteneur
+
+```bash
+docker container rm -f postgres
+```
+
+## 2️⃣ Supprimer le volume
+
+⚠️ ATTENTION : ça efface toutes les données
+
+```bash
+docker volume rm postgres_data
+```
+
+Vérifie :
+
+```bash
+docker volume ls
+```
+
+---

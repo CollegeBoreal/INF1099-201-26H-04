@@ -1,9 +1,29 @@
-Client (id_client, nom_client, telephone, adresse)
+CompagnieAerienne (id_compagnie, nom, pays, code_IATA)
 
-Produit (id_produit, nom_produit, prix, image, description, categorie, stock)
+Avion (id_avion, modele, capacite, annee_fabrication, #id_compagnie)
 
-Commande (id_commande, id_client, date_commande)
+Terminal (id_terminal, nom, capacite)
 
-Detail_Commande (id_detail, id_commande, id_produit, quantite, prix_unitaire)
+Gate (id_gate, code_gate, #id_terminal)
 
-Paiement (id_paiement, id_commande, mode_paiement, montant, statut)
+Runway (id_runway, code_runway, statut)
+
+Vol (id_vol, numero_vol, date_depart, date_arrivee, origine, destination, #id_avion, #id_gate, #id_runway)
+
+Passager (id_passager, nom, prenom, passeport, nationalite)
+
+Reservation (id_reservation, date_reservation, statut, #id_passager, #id_vol)
+
+Billet (id_billet, numero_siege, classe, #id_reservation)
+
+Bagage (id_bagage, poids, type, #id_passager)
+
+Personnel (id_personnel, nom, prenom, role, service)
+
+ControleSecurite (id_controle, date_controle, statut, #id_passager, #id_personnel)
+
+Maintenance (id_maintenance, date_intervention, type_intervention, cout, #id_avion)
+
+Incident (id_incident, description, type_incident, date_incident, #id_vol)
+
+ServiceSol (id_service, type_service, statut, #id_vol)

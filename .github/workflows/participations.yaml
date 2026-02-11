@@ -26,6 +26,15 @@ jobs:
           bash .scripts/run.sh
           cd ..
           ##
+          ## Evaluating chapter P.Programmation
+          ## 
+          echo "Evaluating chapter P.Programmation Participation"
+          cd P.Programmation/1.IDE
+          bash .scripts/run.sh
+          cd ../2.Jupyter
+          bash .scripts/run.sh
+          cd ../..
+          ##
           ## Evaluating chapter 1.Domaines
           ## 
           echo "Evaluating chapter 1.Domaines Participation"

@@ -1,1 +1,1 @@
-id_commande, nom_client, telephone_client, adresse_client, nom_produit, prix_produit, quantite, image_produit, mode_paiement, total_commande
+CompagnieAerienne, Avion, Terminal, Gate, Runway, Vol, Passager,Reservation, Billet, Bagage, Personnel, ControleSecurite,Maintenance, Incident, ServiceSol
