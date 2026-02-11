@@ -36,7 +36,7 @@ echo "|------|----------------------------|------------|----------|"
 i=0
 s=0 # Success
 
-for entry in "${ETUDIANTS[@]}"; do
+for entry in "${STUDENTS[@]}"; do
 
    IFS='|' read -r id github avatar <<< "$entry"
 
