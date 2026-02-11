@@ -1,0 +1,6 @@
+.client
+.modele
+.payement
+.coiffeuse
+.service
+.rendez-vous

@@ -1,0 +1,2 @@
+1FN (Première Forme Normale)
+ReservationID, ClientNom, ClientTel, CentreNom, CentreAdresse, TerrainNom, TerrainSurface, TerrainTarif, DateMatch, HeureDebut, HeureFin, PaiementMode, PaiementMontant)

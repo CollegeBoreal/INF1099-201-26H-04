@@ -1,0 +1,9 @@
+2FN (Deuxième Forme Normale)
+
+CLIENT(ClientID, Nom, Tel, Email)
+
+TERRAIN(TerrainID, NomTerrain, Surface, Taille, TarifHoraire)
+
+CRENEAU(CreneauID, TerrainID, Date, HeureDebut, HeureFin)
+
+RESERVATION(ReservationID, ClientID, CreneauID, StatutReservation, DateReservation)

@@ -1,4 +1,4 @@
-# Participation au 21-01-2026 11:43
+# Participation au 11-02-2026 18:49
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -14,34 +14,33 @@
 
 ## :a: Présence
 
-|:hash:| Boréal :id:                | :scroll: RAPPORT.ipynb |
-|------|----------------------------|------------------------|
-| 0 | [300133071](../300133071/RAPPORT.ipynb) :point_right: [nelsonwilliam237](https://github.com/nelsonwilliam237) <image src='https://avatars0.githubusercontent.com/u/181301859?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 1 | [300137754](../300137754/RAPPORT.ipynb) :point_right: [josephbeni1](https://github.com/josephbeni1) <image src='https://avatars0.githubusercontent.com/u/174143444?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 2 | [300138205](../300138205/RAPPORT.ipynb) :point_right: [taylor123marc](https://github.com/taylor123marc) <image src='https://avatars0.githubusercontent.com/u/200685761?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 3 | [300138573](../300138573/RAPPORT.ipynb) :point_right: [nourmiri](https://github.com/nourmiri) <image src='https://avatars0.githubusercontent.com/u/185266428?s=460&v=4' width=20 height=20></image> | :x: |
-| 4 | [300141429](../300141429/RAPPORT.ipynb) :point_right: [barrynetwork](https://github.com/barrynetwork) <image src='https://avatars0.githubusercontent.com/u/231347874?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 5 | [300141625](../300141625/RAPPORT.ipynb) :point_right: [Mamefatim14](https://github.com/Mamefatim14) <image src='https://avatars0.githubusercontent.com/u/188626020?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 6 | [300141657](../300141657/RAPPORT.ipynb) :point_right: [leandre00126](https://github.com/leandre00126) <image src='https://avatars0.githubusercontent.com/u/194731088?s=460&v=4' width=20 height=20></image> | :x: |
-| 7 | [300141716](../300141716/RAPPORT.ipynb) :point_right: [nabilaouladbouih](https://github.com/nabilaouladbouih) <image src='https://avatars0.githubusercontent.com/u/125617838?s=460&v=4' width=20 height=20></image> | :x: |
-| 8 | [300141858](../300141858/RAPPORT.ipynb) :point_right: [karimcode24](https://github.com/karimcode24) <image src='https://avatars0.githubusercontent.com/u/205304457?s=460&v=4' width=20 height=20></image> | :x: |
-| 9 | [300142072](../300142072/RAPPORT.ipynb) :point_right: [sigadiarra](https://github.com/sigadiarra) <image src='https://avatars0.githubusercontent.com/u/230452797?s=460&v=4' width=20 height=20></image> | :x: |
-| 10 | [300143951](../300143951/RAPPORT.ipynb) :point_right: [frank17art](https://github.com/frank17art) <image src='https://avatars0.githubusercontent.com/u/205994994?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 11 | [300144176](../300144176/RAPPORT.ipynb) :point_right: [awaworks](https://github.com/awaworks) <image src='https://avatars0.githubusercontent.com/u/223561186?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 12 | [300145405](../300145405/RAPPORT.ipynb) :point_right: [Barry224Sadou](https://github.com/Barry224Sadou) <image src='https://avatars0.githubusercontent.com/u/202224344?s=460&v=4' width=20 height=20></image> | :x: |
-| 13 | [300145940](../300145940/RAPPORT.ipynb) :point_right: [TasnimMarzouki](https://github.com/TasnimMarzouki) <image src='https://avatars0.githubusercontent.com/u/234069235?s=460&v=4' width=20 height=20></image> | :x: |
-| 14 | [300146418](../300146418/RAPPORT.ipynb) :point_right: [IkramSidhoum](https://github.com/IkramSidhoum) <image src='https://avatars0.githubusercontent.com/u/198275764?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 15 | [300146721](../300146721/RAPPORT.ipynb) :point_right: [smailikh](https://github.com/smailikh) <image src='https://avatars0.githubusercontent.com/u/222739217?s=460&v=4' width=20 height=20></image> | :x: |
-| 16 | [300147629](../300147629/RAPPORT.ipynb) :point_right: [zoumarbalde-blip](https://github.com/zoumarbalde-blip) <image src='https://avatars0.githubusercontent.com/u/231347782?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 17 | [300147816](../300147816/RAPPORT.ipynb) :point_right: [HananeZerrouki](https://github.com/HananeZerrouki) <image src='https://avatars0.githubusercontent.com/u/230452383?s=460&v=4' width=20 height=20></image> | :x: |
-| 18 | [300150195](../300150195/RAPPORT.ipynb) :point_right: [amelzourane](https://github.com/amelzourane) <image src='https://avatars0.githubusercontent.com/u/211596474?s=460&v=4' width=20 height=20></image> | :x: |
-| 19 | [300150385](../300150385/RAPPORT.ipynb) :point_right: [belka1996](https://github.com/belka1996) <image src='https://avatars0.githubusercontent.com/u/205994785?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 20 | [300150416](../300150416/RAPPORT.ipynb) :point_right: [hachemsouyadi](https://github.com/hachemsouyadi) <image src='https://avatars0.githubusercontent.com/u/211596263?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 21 | [300150433](../300150433/RAPPORT.ipynb) :point_right: [zakariadjellouli](https://github.com/zakariadjellouli) <image src='https://avatars0.githubusercontent.com/u/211743410?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
-| 22 | [300150485](../300150485/RAPPORT.ipynb) :point_right: [nad1111](https://github.com/nad1111) <image src='https://avatars0.githubusercontent.com/u/205994799?s=460&v=4' width=20 height=20></image> | :x: |
-| 23 | [300150558](../300150558/RAPPORT.ipynb) :point_right: [amirasadouni00](https://github.com/amirasadouni00) <image src='https://avatars0.githubusercontent.com/u/212186770?s=460&v=4' width=20 height=20></image> | :x: |
-| 24 | [300151042](../300151042/RAPPORT.ipynb) :point_right: [hichemhamdi10](https://github.com/hichemhamdi10) <image src='https://avatars0.githubusercontent.com/u/62858035?s=460&v=4' width=20 height=20></image> | :x: |
-| 25 | [300151354](../300151354/RAPPORT.ipynb) :point_right: [massinissamakoudi](https://github.com/massinissamakoudi) <image src='https://avatars0.githubusercontent.com/u/212047331?s=460&v=4' width=20 height=20></image> | :x: |
-| 26 | [300151607](../300151607/RAPPORT.ipynb) :point_right: [oussama-rgb-art](https://github.com/oussama-rgb-art) <image src='https://avatars0.githubusercontent.com/u/205996126?s=460&v=4' width=20 height=20></image> | :x: |
-| 27 | [300151970](../300151970/RAPPORT.ipynb) :point_right: [adissa29](https://github.com/adissa29) <image src='https://avatars0.githubusercontent.com/u/212268227?s=460&v=4' width=20 height=20></image> | :x: |
-| :abacus: | \$\\frac{12}{28}\$ = 42.86% | \$\displaystyle\sum_{i=1}^{28} s_i\$ = 12 |
+|:hash:| Boréal :id:                | :receipt: :id:/RAPPORT.ipynb  |
+|------|----------------------------|-------------------------------|
+| 0 | [300141550](../300141550/RAPPORT.ipynb) [emeraudesantu](https://github.com/emeraudesantu) <image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image> | :x: |
+| 1 | [300141567](../300141567/RAPPORT.ipynb) [arsprod2001](https://github.com/arsprod2001) <image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image> | :x: |
+| 2 | [300142242](../300142242/RAPPORT.ipynb) [yahiiiia](https://github.com/yahiiiia) <image src='https://avatars0.githubusercontent.com/u/131247071?s=460&v=4' width=20 height=20></image> | :x: |
+| 3 | [300146667](../300146667/RAPPORT.ipynb) [djaberbenyezza](https://github.com/djaberbenyezza) <image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image> | :x: |
+| 4 | [300147786](../300147786/RAPPORT.ipynb) [300786147](https://github.com/300786147) <image src='https://avatars0.githubusercontent.com/u/231366133?s=460&v=4' width=20 height=20></image> | :x: |
+| 5 | [300148210](../300148210/RAPPORT.ipynb) [zianiferiel](https://github.com/zianiferiel) <image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image> | :x: |
+| 6 | [300148450](../300148450/RAPPORT.ipynb) [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :x: |
+| 7 | [300150205](../300150205/RAPPORT.ipynb) [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :x: |
+| 8 | [300150271](../300150271/RAPPORT.ipynb) [mazighs](https://github.com/mazighs) <image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image> | :x: |
+| 9 | [300150284](../300150284/RAPPORT.ipynb) [aroua-git](https://github.com/aroua-git) <image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image> | :x: |
+| 10 | [300150293](../300150293/RAPPORT.ipynb) [amir1450](https://github.com/amir1450) <image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image> | :x: |
+| 11 | [300150295](../300150295/RAPPORT.ipynb) [lounasallouti1](https://github.com/lounasallouti1) <image src='https://avatars0.githubusercontent.com/u/205994740?s=460&v=4' width=20 height=20></image> | :x: |
+| 12 | [300150303](../300150303/RAPPORT.ipynb) [jessmaud](https://github.com/jessmaud) <image src='https://avatars0.githubusercontent.com/u/211592293?s=460&v=4' width=20 height=20></image> | :x: |
+| 13 | [300150399](../300150399/RAPPORT.ipynb) [chkips](https://github.com/chkips) <image src='https://avatars0.githubusercontent.com/u/195236786?s=460&v=4' width=20 height=20></image> | :x: |
+| 14 | [300150417](../300150417/RAPPORT.ipynb) [latifmuristaga](https://github.com/latifmuristaga) <image src='https://avatars0.githubusercontent.com/u/212187666?s=460&v=4' width=20 height=20></image> | :x: |
+| 15 | [300150524](../300150524/RAPPORT.ipynb) [takieddinechoufa](https://github.com/takieddinechoufa) <image src='https://avatars0.githubusercontent.com/u/206965671?s=460&v=4' width=20 height=20></image> | :x: |
+| 16 | [300150527](../300150527/RAPPORT.ipynb) [akrembouraoui](https://github.com/akrembouraoui) <image src='https://avatars0.githubusercontent.com/u/212277460?s=460&v=4' width=20 height=20></image> | :x: |
+| 17 | [300150562](../300150562/RAPPORT.ipynb) [isako29](https://github.com/isako29) <image src='https://avatars0.githubusercontent.com/u/205994758?s=460&v=4' width=20 height=20></image> | :x: |
+| 18 | [300151292](../300151292/RAPPORT.ipynb) [akahil521](https://github.com/akahil521) <image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image> | :x: |
+| 19 | [300151469](../300151469/RAPPORT.ipynb) [Rabia-777](https://github.com/Rabia-777) <image src='https://avatars0.githubusercontent.com/u/206001876?s=460&v=4' width=20 height=20></image> | :x: |
+| 20 | [300151492](../300151492/RAPPORT.ipynb) [hacen19](https://github.com/hacen19) <image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image> | :x: |
+| 21 | [300151825](../300151825/RAPPORT.ipynb) [FeatFreedy](https://github.com/FeatFreedy) <image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image> | :x: |
+| 22 | [300151833](../300151833/RAPPORT.ipynb) [raoufbrs15](https://github.com/raoufbrs15) <image src='https://avatars0.githubusercontent.com/u/109877652?s=460&v=4' width=20 height=20></image> | :x: |
+| 23 | [300151841](../300151841/RAPPORT.ipynb) [massi9313](https://github.com/massi9313) <image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image> | :x: |
+| 24 | [300153476](../300153476/RAPPORT.ipynb) [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :x: |
+| 25 | [300153747](../300153747/RAPPORT.ipynb) [madjou15](https://github.com/madjou15) <image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image> | :x: |
+| 26 | [300154718](../300154718/RAPPORT.ipynb) [stephanetidjet](https://github.com/stephanetidjet) <image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image> | :x: |
+| :abacus: |  $\frac{0}{27}$  =  0% | $\displaystyle\sum_{i=1}^{27} s_i$ = 0 |

@@ -1,0 +1,13 @@
+3FN (Troisième Forme Normale)
+
+CENTRE_SPORTIF(CentreID, NomCentre, Adresse, Ville)
+
+TERRAIN(TerrainID, CentreID, NomTerrain, TypeSurface, Taille, TarifHoraire)
+
+CRENEAU(CreneauID, TerrainID, Date, HeureDebut, HeureFin, Statut)
+
+CLIENT(ClientID, Nom, Prenom, Tel, Email)
+
+RESERVATION(ReservationID, ClientID, CreneauID, DateReservation, StatutReservation, MontantTotal)
+
+PAIEMENT(PaiementID, ReservationID, ModePaiement, Montant, DatePaiement, StatutPaiement)

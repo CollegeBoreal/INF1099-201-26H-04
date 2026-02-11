@@ -1,103 +1,132 @@
-# Normalisation de la Base de Données  
-## Projet : Ultras Green Army Shop
+**📘 Projet Base de Données**
+**Système de gestion d’un aéroport**
 
-<img width="1004" height="567" alt="image" src="https://github.com/user-attachments/assets/1cd270bd-ecd1-4787-b319-43b73add5b84" />
-<img width="1004" height="568" alt="image" src="https://github.com/user-attachments/assets/0defeb37-cf7f-4fd2-8c48-0a90fa819607" />
-<img width="1004" height="567" alt="image" src="https://github.com/user-attachments/assets/23217b32-7d6e-4f09-bb69-906ae7dd3356" />
+# 🧾 1. Présentation du projet :
+
+Ce projet consiste à concevoir et implémenter une base de données relationnelle permettant la gestion complète des activités d’un aéroport.
+La base de données couvre plusieurs aspects essentiels tels que :
+
+- Les compagnies aériennes et leurs avions
+- Les vols, pistes (runways) et portes d’embarquement (gates)
+- Les passagers, réservations, billets et bagages
+- Le personnel, la sécurité, la maintenance et les incidents
+- Les services au sol
+
+Le projet a été réalisé en respectant les règles de normalisation (1NF, 2NF, 3NF) afin d’assurer la cohérence, l’intégrité et l’absence de redondance des données.
+
+# 🎯 2. Objectifs du projet :
+
+- Concevoir une base de données structurée et normalisée
+- Appliquer correctement les formes normales (1NF, 2NF, 3NF)
+- Modéliser les relations entre les différentes entités de l’aéroport
+- Garantir l’intégrité référentielle à l’aide des clés primaires et étrangères
+- Fournir un diagramme entité–relation (ER) clair et fidèle au schéma SQL
+
+# 🗂️ 3. Structure de la base de données :
+
+La base de données boreal_aeroport est composée des tables suivantes :
+
+- CompagnieAerienne
+- Avion
+- Terminal
+- Gate
+- Runway
+- Vol
+- Passager
+- Reservation
+- Billet
+- Bagage
+- Personnel
+- ControleSecurite
+- Maintenance
+- Incident
+- ServiceSol
+
+Chaque table possède une clé primaire (ID) et certaines contiennent des clés étrangères permettant de relier les entités entre elles.
+
+# 🧩 4. Normalisation des données :
+
+# 🔹 Première Forme Normale (1NF) :
+
+- Toutes les tables possèdent des attributs atomiques
+- Absence de groupes répétitifs
+- Chaque table est identifiée par une clé primaire
+
+# 🔹 Deuxième Forme Normale (2NF) :
+
+- La base est en 1NF
+- Toutes les dépendances fonctionnelles sont complètes
+- Aucune dépendance partielle (clés primaires simples)
+
+# 🔹 Troisième Forme Normale (3NF) :
+
+- La base est en 2NF
+- Absence de dépendances transitives
+- Les informations sont réparties dans des tables distinctes sans redondance
+
+# 🔗 5. Relations entre les entités :
+
+Les relations entre les tables sont assurées par des clés étrangères, par exemple :
+
+Une compagnie aérienne possède plusieurs avions
+
+Un vol utilise un avion, une porte et une piste
+
+Un passager peut effectuer plusieurs réservations
+
+Une réservation génère un billet
+
+Un avion peut subir plusieurs maintenances
+
+Ces relations sont représentées graphiquement dans le diagramme ER.
+
+-----------------------------------------
+
+# 📊 6. Diagramme Entité–Relation (ER) :
+
+<img width="8192" height="6132" alt="diagramme1" src="https://github.com/user-attachments/assets/60b9a2a5-7b7b-42ae-b52c-5f7deabc9db7" />
+
+Un diagramme ER a été généré à l’aide de Mermaid, à partir du schéma SQL.
+Il représente fidèlement :
+
+- Les entités (tables)
+
+- Les attributs
+
+- Les clés primaires (PK)
+
+- Les clés étrangères (FK)
+
+- Les cardinalités entre les entités
+
+<img width="1384" height="1183" alt="diagramme2" src="https://github.com/user-attachments/assets/d87e69a6-2a84-42e1-8634-54a8869c5345" />
+
+---------------------
+
+<img width="3049" height="1953" alt="diagramme3" src="https://github.com/user-attachments/assets/db47cf3e-485f-49f1-9c84-c3f0adb5391e" />
 
 
-Ce travail présente la conception et la normalisation de la base de données
-de l’application **Ultras Green Army Shop**, développée initialement avec Flutter.
+-------------------------------------------------
 
-L’objectif est d’appliquer les règles de normalisation des bases de données
-(1NF, 2NF et 3NF) et de représenter la structure finale à l’aide d’un
-diagramme Entité/Relation (E/R).
+# 🛠️ 7. Technologies utilisées :
 
---------------
+- MySQL / SQL : création et gestion de la base de données
 
-## 1️⃣ Première Forme Normale (1NF)
+- Mermaid : génération du diagramme entité–relation
 
-Dans la première étape, toutes les informations étaient regroupées
-dans une seule table globale contenant les données du client,
-des produits, de la commande et du paiement.
+--------------------------------------
 
-Cette structure respecte la 1NF car :
-- Tous les attributs contiennent des valeurs atomiques
-- Il n’y a pas de groupes répétitifs
+#  8. Conclusion :
 
-Cependant, cette table présente plusieurs problèmes :
-- Redondance des données
-- Difficulté de mise à jour
-- Risque d’incohérence
+Ce projet permet de démontrer une bonne maîtrise, de la modélisation des bases de données, des formes normales
+des relations entre entités, et de la traduction d’un besoin réel (gestion d’un aéroport) en une base de données 
+fonctionnelle et cohérente.
 
-Les détails sont décrits dans le fichier **1FN.txt**.
+La base de données est prête à être utilisée comme fondation pour une application de gestion aéroportuaire.
 
---------------
+# 📌 Auteur :
+**Bouraoui Akrem - 300150527**
+**📚 Matière : Base de données**
+**🏫 Projet académique**
 
-## 2️⃣ Deuxième Forme Normale (2NF)
-
-Pour passer de la 1NF à la 2NF, les dépendances partielles ont été supprimées
-en séparant les données selon leur dépendance fonctionnelle.
-
-Les informations ont été réparties dans plusieurs tables :
-- CLIENT
-- PRODUIT
-- COMMANDE
-- DETAIL_COMMANDE
-
-Cette étape permet :
-- Une meilleure organisation des données
-- Une réduction de la redondance
-- Une structure plus claire et plus maintenable
-
-Les détails sont décrits dans le fichier **2FN.txt**.
-
--------------
-
-## 3️⃣ Troisième Forme Normale (3NF)
-
-Pour passer de la 2NF à la 3NF, les dépendances transitives ont été éliminées.
-
-Les informations liées au paiement ont été séparées dans une table dédiée,
-et la structure finale respecte entièrement les règles de normalisation.
-
-Les tables finales sont :
-- CLIENT
-- PRODUIT
-- COMMANDE
-- DETAIL_COMMANDE
-- PAIEMENT
-
-Cette structure garantit :
-- La cohérence des données
-- L’absence de redondance
-- Une base de données optimisée
-
-Les détails sont décrits dans le fichier **3FN.txt**.
-
----
-
-## Diagramme Entité / Relation (E/R)
-
-![diagramme2](https://github.com/user-attachments/assets/e839e507-7f84-4a27-8624-30abd7016f81)
-
-----------------
-
-<img width="739" height="528" alt="diagramme1" src="https://github.com/user-attachments/assets/66f8f224-0f75-48f8-b4b9-434fe7d5063f" />
-
-
-Le diagramme E/R représente graphiquement la structure finale de la base
-de données en 3NF, ainsi que les relations entre les différentes entités.
-
-
----
-
-## Conclusion
-
-À travers ce travail, nous avons appliqué de manière progressive
-les formes normales (1NF, 2NF et 3NF) afin d’obtenir une base de données
-bien structurée, cohérente et adaptée à une application e-commerce.
-
-Ce travail permet de mieux comprendre l’importance de la normalisation
-dans la conception des bases de données relationnelles.
 
