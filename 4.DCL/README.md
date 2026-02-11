@@ -174,7 +174,8 @@ GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 Se déconnecter:
 
 ```psql
-\q --quit
+--quit
+\q 
 ```
 
 ---
