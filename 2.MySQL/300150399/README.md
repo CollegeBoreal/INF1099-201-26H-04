@@ -1,8 +1,8 @@
-\# TP INF1099 – Automatisation de la base Sakila avec Docker / Podman
+# TP INF1099 – Automatisation de la base Sakila avec Docker / Podman
 
 
 
-\## Étudiant
+## Étudiant
 
 Nom : Chakib Rahmani  
 
@@ -16,7 +16,7 @@ Sujet : Automatisation du déploiement de la base Sakila avec Docker (Podman) et
 
 
 
-\## Objectif du TP
+## Objectif du TP
 
 L’objectif de ce travail est de mettre en place un environnement MySQL conteneurisé permettant :
 
@@ -56,7 +56,7 @@ L’ensemble du processus est automatisable et reproductible.
 
 
 
-\## Étape 1 – Création du dossier du projet
+## Étape 1 – Création du dossier du projet
 
 Création du dossier INF1099 dans le répertoire Downloads afin de centraliser les fichiers du TP.
 
@@ -68,7 +68,7 @@ Création du dossier INF1099 dans le répertoire Downloads afin de centraliser l
 
 
 
-\## Étape 2 – Initialisation de Podman
+## Étape 2 – Initialisation de Podman
 
 Initialisation et démarrage de la machine virtuelle Podman pour permettre l’exécution des conteneurs Docker.
 
@@ -84,7 +84,7 @@ Initialisation et démarrage de la machine virtuelle Podman pour permettre l’e
 
 
 
-\## Étape 3 – Lancement du conteneur MySQL
+## Étape 3 – Lancement du conteneur MySQL
 
 
 
@@ -104,7 +104,7 @@ docker run -d --name INF1099-mysql -e MYSQL\_ROOT\_PASSWORD=rootpass -p 3306:330
 
 
 
-\## Étape 4 – Création de la base de données Sakila
+## Étape 4 – Création de la base de données Sakila
 
 
 
@@ -130,7 +130,7 @@ docker exec -it INF1099-mysql mysql -u root -p -e "SHOW DATABASES;"
 
 
 
-\## Étape 5 – Création de l’utilisateur etudiants
+## Étape 5 – Création de l’utilisateur etudiants
 
 
 
@@ -156,7 +156,7 @@ docker exec -it INF1099-mysql mysql -u root -p -e "GRANT ALL PRIVILEGES ON sakil
 
 
 
-\## Étape 6 – Importation du schéma Sakila
+## Étape 6 – Importation du schéma Sakila
 
 
 
@@ -172,7 +172,7 @@ Get-Content "$projectDir\\sakila-db\\sakila-schema.sql" | docker exec -i INF1099
 
 
 
-\## Étape 7 – Importation des données Sakila
+## Étape 7 – Importation des données Sakila
 
 
 
@@ -188,7 +188,7 @@ Get-Content "$projectDir\\sakila-db\\sakila-data.sql" | docker exec -i INF1099-m
 
 
 
-\## Étape 8 – Vérification de l’importation
+## Étape 8 – Vérification de l’importation
 
 
 
