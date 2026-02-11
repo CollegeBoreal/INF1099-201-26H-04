@@ -1,64 +1,43 @@
-Yeah, your README is missing key stuff.
+# INF1099 – TP : Manipulation de données avec MySQL et Podman sur Windows
 
-A complete README must include:
+## 📌 Informations
 
-Podman setup commands (machine init/start)
-
-Download + unzip Sakila
-
-Run MySQL container
-
-Create DB + user + privileges
-
-Import schema + data
-
-Verification commands
-
-How to run your script
-
-Screenshots section
-
-Your identity info (name/id/github)
-
-Use this FULL README (copy/paste):
-
-# INF1099 – TP : MySQL Sakila avec Podman (Docker alias)
-
-## 📋 Informations
-
-- **Nom complet** : Yahia Abderrafia
-- **ID étudiant** : 300142242
-- **GitHub** : yahiiiia
-- **Cours** : INF1099
-- **Système** : Windows 11
-- **Technologie** : Podman (WSL)
-- **Base** : MySQL 8.0 + Sakila
+- **Nom complet** : Yahia Abderrafia  
+- **ID étudiant** : 300142242  
+- **GitHub** : yahiiiia  
+- **Cours** : INF1099  
+- **Système** : Windows 11  
+- **Technologie** : Podman (alias Docker)  
+- **Base de données** : MySQL 8.0  
+- **Dataset** : Sakila DB  
 
 ---
 
-## 🎯 Objectifs
+## 🎯 Objectifs du TP
 
-Ce TP consiste à :
-- Configurer Podman sur Windows
-- Lancer un conteneur MySQL 8.0
-- Créer la base `sakila`
-- Créer un utilisateur MySQL
+Ce TP permet de :
+
+- Installer et utiliser Podman sur Windows
+- Démarrer une machine Podman (VM Linux via WSL)
+- Déployer un conteneur MySQL 8.0
+- Créer une base de données `sakila`
+- Créer un utilisateur MySQL `etudiants`
 - Importer le schéma et les données Sakila
-- Vérifier l’importation avec des requêtes SQL
-- Automatiser le processus avec un script bash
+- Vérifier l'importation avec des commandes SQL
+- Automatiser le processus avec un script PowerShell
 
 ---
 
 ## 🛠️ Prérequis
 
-- Windows 10/11 64 bits
+- Windows 10/11 (64 bits)
 - Podman installé
-- WSL activé
+- PowerShell
 - Accès Internet
 
 ---
 
-## 1) Initialiser et démarrer Podman Machine
+## 1) Démarrer Podman Machine
 
 ```powershell
 podman machine init
