@@ -40,7 +40,8 @@ podman --version
 
 podman machine list
 
-<img width="467" height="100" alt="1" src="https://github.com/user-attachments/assets/505651ed-0681-4dbf-a19a-99a86bde4d4a" />
+<img width="467" height="100" alt="1" src="https://github.com/user-attachments/assets/2b80e77b-d737-4ccf-ad05-94a008e58c93" />
+
 
 
 
