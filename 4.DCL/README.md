@@ -68,7 +68,7 @@ ls -l fichier.txt
 | Objectif           | Contrôler qui peut manipuler des données (tables, vues…) | Contrôler qui peut accéder à une ressource (fichier, répertoire…) |
 | Commandes / outils | `GRANT`, `REVOKE`, `CREATE USER`                         | `chmod`, `chown`, `setfacl`, ACL Windows                          |
 | Granularité        | Tables, schémas, colonnes                                | Fichiers, répertoires, services, ports…                           |
-| Exemple            | `GRANT SELECT ON table1 TO etudiant;`                    | `setfacl -m u:alice:r fichier.txt`                                |
+| Exemple            | `GRANT SELECT ON table1 TO etudiant;`                    | `setfacl -m u:ubuntu:r fichier.txt`                               |
 
 💡 **Résumé simple :**
 
