@@ -277,4 +277,40 @@ SELECT * FROM film WHERE title ILIKE '%star%';
 
 # :books: References
 
+Pour supprimer le conteneur :
 
+```bash
+docker container rm -f postgres
+```
+
+Mais **il faut aussi supprimer le volume** :
+
+```bash
+-v postgres_data:/var/lib/postgresql/data
+```
+
+---
+
+# 🔥 Si tu veux TOUT remettre à zéro
+
+## 1️⃣ Stop + supprimer le conteneur
+
+```bash
+docker container rm -f postgres
+```
+
+## 2️⃣ Supprimer le volume
+
+⚠️ ATTENTION : ça efface toutes les données
+
+```bash
+docker volume rm postgres_data
+```
+
+Vérifie :
+
+```bash
+docker volume ls
+```
+
+---
