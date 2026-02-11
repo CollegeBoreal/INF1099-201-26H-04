@@ -1,17 +1,31 @@
-Parent (Nom, Prénom, Téléphone, Email)
-Enfant (Nom, Prénom, Âge, Niveau)
-Professeur (Nom, Prénom, Téléphone, Email, Spécialité)
-Cours (Titre_cours, Langue, Niveau)
-Session_Cours (Date_session, Heure_session, Durée, Mode_session)
-Inscription (Date_inscription, Statut_inscription)
-Devoir (Titre_devoir, Description, Date_limite)
-Soumission_Devoir (Date_soumission, Fichier_ou_lien, Commentaire)
-Note (Valeur, Commentaire, Date_correction)
-Ressource (Titre_ressource, Type_ressource, URL_ressource)
-Récompense (Nom_récompense, Description, Points)
-Attribution_Récompense (Date_attribution, Motif)
-Concours (Titre_concours, Date_concours, Description, Prix)
-Participation_Concours (Résultat, Score, Rang)
-Session_ChatIA (Date_session, Sujet, Durée)
-Message_ChatIA (Contenu_message, Rôle, Date_heure)
+Parent (id_parent PK, Nom, Prénom, Téléphone, Email)
 
+Enfant (id_enfant PK, Nom, Prénom, Âge, Niveau, id_parent FK → Parent.id_parent)
+
+Professeur (id_prof PK, Nom, Prénom, Téléphone, Email, Spécialité)
+
+Cours (id_cours PK, Titre_cours, Langue, Niveau, id_prof FK → Professeur.id_prof)
+
+Session_Cours (id_session PK, Date_session, Heure_session, Durée, Mode_session, id_cours FK → Cours.id_cours)
+
+Inscription (id_inscription PK, Date_inscription, Statut_inscription, id_enfant FK → Enfant.id_enfant, id_cours FK → Cours.id_cours)
+
+Devoir (id_devoir PK, Titre_devoir, Description, Date_limite, id_cours FK → Cours.id_cours)
+
+Soumission_Devoir (id_soumission PK, Date_soumission, Fichier_ou_lien, Commentaire, id_devoir FK → Devoir.id_devoir, id_enfant FK → Enfant.id_enfant)
+
+Note (id_note PK, Valeur, Commentaire, Date_correction, id_soumission FK → Soumission_Devoir.id_soumission)
+
+Ressource (id_ressource PK, Titre_ressource, Type_ressource, URL_ressource, id_cours FK → Cours.id_cours)
+
+Récompense (id_recompense PK, Nom_récompense, Description, Points)
+
+Attribution_Récompense (id_attribution PK, Date_attribution, Motif, id_enfant FK → Enfant.id_enfant, id_recompense FK → Récompense.id_recompense)
+
+Concours (id_concours PK, Titre_concours, Date_concours, Description, Prix)
+
+Participation_Concours (id_participation PK, Résultat, Score, Rang, id_enfant FK → Enfant.id_enfant, id_concours FK → Concours.id_concours)
+
+Session_ChatIA (id_session_chat PK, Date_session, Sujet, Durée, id_enfant FK → Enfant.id_enfant)
+
+Message_ChatIA (id_message PK, Contenu_message, Rôle, Date_heure, id_session_chat FK → Session_ChatIA.id_session_chat)
