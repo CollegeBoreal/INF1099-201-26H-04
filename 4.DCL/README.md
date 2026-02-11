@@ -254,28 +254,6 @@ DROP USER professeur;
 
 ---
 
-## **7️⃣ Bonus pédagogique**
-
-* Créer un rôle `enseignant` pour regrouper plusieurs profs :
-
-```sql
-CREATE ROLE enseignant;
-GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO enseignant;
-
--- Ajouter un utilisateur à ce rôle
-CREATE USER prof2 WITH PASSWORD 'prof2';
-GRANT enseignant TO prof2;
-```
-
-* Vérifier que `prof2` hérite bien des droits :
-
-```sql
-\c - prof2
-INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 88);
-```
-
----
-
 # 🧠 À retenir
 
 1. DCL = **Data Control Language**
