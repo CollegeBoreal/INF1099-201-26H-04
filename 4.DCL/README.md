@@ -171,6 +171,12 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 ```
 
+Se déconnecter:
+
+```psql
+\q --quit
+```
+
 ---
 
 ## **4️⃣ Vérifier les droits**
