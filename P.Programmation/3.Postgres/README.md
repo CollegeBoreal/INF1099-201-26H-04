@@ -102,3 +102,92 @@
 * Les commandes qui commencent par `\` sont des **métacommandes psql**, pas du SQL standard.
 * Les permissions et séquences sont importantes : pour insérer dans une table avec `SERIAL`, il faut donner accès à la **sequence** (`GRANT USAGE, SELECT, UPDATE ON SEQUENCE seq_name TO user;`).
 
+---
+
+# 🔹 **métacommande**
+
+Dans **psql**, `\d` est une **métacommande** qui permet de **décrire un objet** (table, vue, sequence…) dans PostgreSQL.
+
+### 1️⃣ Décrire une table
+
+```sql
+\d nom_table
+```
+
+* Affiche :
+
+  * Les colonnes et leurs types (`id SERIAL`, `nom TEXT`, etc.)
+  * Les clés primaires et étrangères
+  * Les index associés
+
+Exemple :
+
+```sql
+\d tp_dcl.etudiants
+```
+
+Sortie typique :
+
+```
+            Table "tp_dcl.etudiants"
+ Column |  Type   | Collation | Nullable | Default
+--------+---------+-----------+----------+---------
+ id     | integer |           | not null | nextval('etudiants_id_seq'::regclass)
+ nom    | text    |           |          |
+ moyenne| numeric |           |          |
+Indexes:
+    "etudiants_pkey" PRIMARY KEY, btree (id)
+```
+
+---
+
+### 2️⃣ Décrire avec plus de détails
+
+```sql
+\d+ nom_table
+```
+
+* Montre en plus :
+
+  * La **taille de la table**
+  * Les **ACL** (droits sur la table)
+  * Les **séquences** utilisées
+
+---
+
+### 3️⃣ Décrire d’autres objets
+
+* Séquences :
+
+```sql
+\d nom_sequence
+```
+
+* Vues :
+
+```sql
+\d nom_vue
+```
+
+* Tout objet d’un schéma :
+
+```sql
+\d tp_dcl.*
+```
+
+---
+
+# 🔹 Résumé
+
+| Commande      | Signification                                    |
+| ------------- | ------------------------------------------------ |
+| `\d table`    | Décrire la structure de la table                 |
+| `\d+ table`   | Décrire avec plus de détails (ACL, taille, etc.) |
+| `\d schema.*` | Lister tous les objets d’un schéma               |
+
+💡 **Astuce pour étudiants :**
+
+* `\d` = “**describe**”
+* C’est une **métacommande psql**, **pas du SQL standard**.
+* Très utile pour explorer rapidement la structure d’une base avant de faire des `SELECT` ou des `INSERT`.
+
