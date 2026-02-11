@@ -165,6 +165,9 @@ GRANT SELECT ON tp_dcl.etudiants TO etudiant;
 GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
 ```
 
+-- Donner les droits sur la séquence
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
+
 ---
 
 ## **4️⃣ Vérifier les droits**
@@ -179,7 +182,7 @@ Tester :
 
 ```sql
 SELECT * FROM tp_dcl.etudiants;  -- OK
-INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Alice', 85); -- ERREUR
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 85); -- ERREUR
 ```
 
 Se connecter en tant que professeur :
@@ -191,8 +194,8 @@ psql -U professeur -d cours
 Tester :
 
 ```sql
-INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Bob', 90); -- OK
-UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Bob';       -- OK
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Khaled', 90); -- OK
+UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Khaled';       -- OK
 ```
 
 ---
