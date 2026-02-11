@@ -1,3 +1,5 @@
+# laboratoire de contrôle qualité alimentaire
+
 Ce projet représente un système de gestion pour un laboratoire de contrôle qualité alimentaire. Il permet d’assurer le suivi complet des analyses réalisées sur des produits alimentaires, depuis la demande du client jusqu’à la production des résultats, des rapports et de la facturation.
 Le système permet aux clients de :
 créer un compte client,
