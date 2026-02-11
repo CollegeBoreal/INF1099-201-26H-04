@@ -19,22 +19,6 @@ Ce TP consiste à maîtriser les commandes DCL (Data Control Language) dans Post
 
 ---
 
-## 📋 Table des matières
-
-1. [Prérequis](#-prérequis)
-2. [Installation et configuration](#-installation-et-configuration)
-3. [Étapes du TP](#-étapes-du-tp)
-4. [Résultats et captures](#-résultats-et-captures)
-5. [Conclusion](#-conclusion)
-
----
-
-## 🔧 Prérequis
-
-- Docker installé sur votre machine
-- Connaissances de base en SQL
-- Accès à un terminal
-
 ---
 
 ## 🚀 Installation et configuration
