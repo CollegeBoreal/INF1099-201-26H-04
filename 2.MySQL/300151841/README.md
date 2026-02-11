@@ -10,7 +10,7 @@
 
 \## 👤 Étudiant
 
-\- \*\*Nom :\*\* Massi  
+\- \*\*Nom :\*\* Massinissa mameri
 
 \- \*\*Cours :\*\* INF1099  
 
@@ -226,18 +226,22 @@ La base de données Sakila a été importée avec succès et est prête pour les
 
 
 
-Capture 1 — Podman fonctionnel
+Capture 1 — Podman fonctionne
+![wait](https://github.com/user-attachments/assets/af2ec9cf-db9d-413e-9fb8-440204e7f57f)
+
 
 
 
 Capture 2 — Machine Podman en cours d’exécution
+ ![wait](https://github.com/user-attachments/assets/338dbde6-ef8b-4ef8-b85f-eaf1a4916d7d" />)
+
 
 
 
 
 
 Capture 3 — Conteneur MySQL actif
-
+ ![wait](https://github.com/user-attachments/assets/522a6d10-6f2d-4a7f-b656-60d239674d90)
 
 
 
@@ -245,16 +249,20 @@ Capture 3 — Conteneur MySQL actif
 Capture 4 — Bases de données MySQL
 
 
+![wait](https://github.com/user-attachments/assets/d85461f4-0ace-49df-bac0-23d80507fe30)
+
 
 
 
 Capture 5 — Tables Sakila (preuve finale)
 
+ ![wait](https://github.com/user-attachments/assets/759b2fbc-9b49-4454-99f2-8e9417d7d92b)
 
 
 
 
 Capture 6 — connexion sur workbench
+![wait](https://github.com/user-attachments/assets/143e3d18-b17e-4bff-bbd7-2e9b7b50dea9)
 
 
 
