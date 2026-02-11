@@ -53,7 +53,8 @@ Vérifier que le conteneur est actif :
 docker ps
 ```
 
-![Conteneur Docker actif](./screenshots/01-docker-ps.png)
+![Conteneur Docker actif](<img width="932" height="71" alt="image" src="https://github.com/user-attachments/assets/a8d82e1f-402e-48d6-9e3a-465f897c0013" />
+)
 
 ---
 
