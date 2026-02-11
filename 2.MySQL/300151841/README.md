@@ -218,52 +218,24 @@ Le conteneur MySQL fonctionne correctement avec Podman.
 
 La base de données Sakila a été importée avec succès et est prête pour les exercices SQL du cours INF1099.
 
+## 📸 Captures d’écran
+## 📸 Captures d’écran
 
+### Capture 1 — Podman fonctionnel
+![wait](Podman fonctionnel.png)
 
-📸 CAPTURES D’ÉCRAN À METTRE DANS LE README
+### Capture 2 — Machine Podman en cours d’exécution
+![Capture 2](images/2-machine.png)
 
-👉 Très important pour la note
+### Capture 3 — Conteneur MySQL actif
+![Capture 3](images/3-container.png)
 
+### Capture 4 — Bases de données MySQL
+![Capture 4](images/4-databases.png)
 
+### Capture 5 — Tables Sakila (preuve finale)
+![Capture 5](images/5-tables.png)
 
-Capture 1 — Podman fonctionnel
-<img width="955" height="173" alt="Podman fonctionnel" src="https://github.com/user-attachments/assets/7a9b3294-deab-4b84-a50c-146e45d81d10" />
-
-
-
-
-
-Capture 2 — Machine Podman en cours d’exécution
- ![wait](https://github.com/user-attachments/assets/338dbde6-ef8b-4ef8-b85f-eaf1a4916d7d" />)
-
-
-
-
-
-
-Capture 3 — Conteneur MySQL actif
- ![wait](https://github.com/user-attachments/assets/522a6d10-6f2d-4a7f-b656-60d239674d90)
-
-
-
-
-Capture 4 — Bases de données MySQL
-
-
-![wait](https://github.com/user-attachments/assets/d85461f4-0ace-49df-bac0-23d80507fe30)
-
-
-
-
-Capture 5 — Tables Sakila (preuve finale)
-
- ![wait](https://github.com/user-attachments/assets/759b2fbc-9b49-4454-99f2-8e9417d7d92b)
-
-
-
-
-Capture 6 — connexion sur workbench
-![wait](https://github.com/user-attachments/assets/143e3d18-b17e-4bff-bbd7-2e9b7b50dea9)
-
-
+### Capture 6 — Connexion sur Workbench
+![Capture 6](images/6-workbench.png)
 
