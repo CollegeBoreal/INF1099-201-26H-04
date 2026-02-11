@@ -1,0 +1,6 @@
+UTILISATEUR(id_utilisateur, nom, prenom, email, mot_de_passe, telephone, date_inscription)
+PROFIL(id_profil, description, age, genre, ville, budget_max, date_disponibilite, id_utilisateur)
+ANNONCE(id_annonce, type_annonce, ville, loyer, date_disponibilite, description, statut, id_utilisateur)
+PREFERENCE(id_preference, budget_min, budget_max, ville_souhaitee, age_min, age_max, fumeur_accepte, animaux_acceptes, id_utilisateur)
+MATCH(id_match, date_match, statut, id_utilisateur_1, id_utilisateur_2)
+MESSAGE(id_message, contenu, date_envoi, id_match, id_expediteur)

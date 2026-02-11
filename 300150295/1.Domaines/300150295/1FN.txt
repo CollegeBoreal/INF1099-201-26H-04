@@ -1,0 +1,10 @@
+Nom domaine: BetFormula
+
+
+BetFormula est un site web qui permet aux utilisateurs de parier sur des pilotes participant à des courses automobiles. Les utilisateurs peuvent créer un compte, consulter les courses disponibles et placer des paris avec un montant précis.
+
+
+
+
+
+1FN= (Utilisateur, ville, pilote, course, pari, évènement, circuit, équipe, sponsor, montant, résultat, ).
