@@ -1,4 +1,4 @@
-# 📘 Projet de Modélisation de Base de Données (E/R + Normalisation)
+# EduHome – Système de gestion d’apprentissage à domicile
 **Nom :** Ramatoulaye Diallo  
 **Matricule :** 300153476  
 
