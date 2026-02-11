@@ -18,7 +18,7 @@
 - [ ] 🐧 Unix
 
 ```bash
-docker run -d \
+docker container run -d \
   --name postgres \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
@@ -31,7 +31,7 @@ docker run -d \
 - [ ] 🪟 Windows
 
 ```bash
-docker run -d `
+docker container run -d `
   --name postgres `
   -e POSTGRES_USER=postgres `
   -e POSTGRES_PASSWORD=postgres `
@@ -87,21 +87,21 @@ Invoke-WebRequest `
 ### Étape 2 : Copier les fichiers dans le conteneur
 
 ```bash
-docker cp postgres-sakila-schema.sql postgres:/schema.sql
-docker cp postgres-sakila-insert-data.sql postgres:/data.sql
+docker container cp postgres-sakila-schema.sql postgres:/schema.sql
+docker container cp postgres-sakila-insert-data.sql postgres:/data.sql
 ```
 
 ### Étape 3 : Exécuter les fichiers SQL dans PostgreSQL
 
 ```bash
-docker exec -it postgres psql -U postgres -d appdb -f /schema.sql
-docker exec -it postgres psql -U postgres -d appdb -f /data.sql
+docker container exec -it postgres psql -U postgres -d appdb -f /schema.sql
+docker container exec -it postgres psql -U postgres -d appdb -f /data.sql
 ```
 
 ### Étape 4 : Vérifier que les tables Sakila sont présentes
 
 ```bash
-docker exec -it postgres psql -U postgres -d appdb
+docker container exec -it postgres psql -U postgres -d appdb
 ```
 
 ```sql
