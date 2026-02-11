@@ -40,7 +40,8 @@ podman --version
 
 podman machine list
 
-<!-- 👉 PLACE TA CAPTURE ICI : Podman version / machine list -->
+<img width="467" height="100" alt="1" src="https://github.com/user-attachments/assets/505651ed-0681-4dbf-a19a-99a86bde4d4a" />
+
 
 
 
@@ -54,7 +55,8 @@ Set-Alias docker podman
 
 docker --version
 
-<!-- 👉 PLACE TA CAPTURE ICI : Alias Docker -->
+<img width="466" height="56" alt="2" src="https://github.com/user-attachments/assets/5daa8929-3169-49df-9442-d56c45cf5e46" />
+
 
 
 
@@ -66,7 +68,8 @@ Commande :
 
 docker ps
 
-<!-- 👉 PLACE TA CAPTURE ICI : docker ps -->
+<img width="464" height="79" alt="3" src="https://github.com/user-attachments/assets/cc2bcd50-138c-4bb9-b555-e85219673c61" />
+
 
 
 
@@ -78,7 +81,8 @@ Commande :
 
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "SHOW DATABASES;"
 
-<!-- 👉 PLACE TA CAPTURE ICI : SHOW DATABASES -->
+<img width="464" height="158" alt="4" src="https://github.com/user-attachments/assets/5d4e5a48-a460-4a4b-924b-46b1640f76d3" />
+
 
 
 
@@ -90,7 +94,8 @@ Commande :
 
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "SELECT User, Host FROM mysql.user;"
 
-<!-- 👉 PLACE TA CAPTURE ICI : utilisateurs MySQL -->
+<img width="466" height="170" alt="5" src="https://github.com/user-attachments/assets/3406dee4-dfa7-41eb-8dc4-1409237d1cb5" />
+
 
 
 
@@ -102,7 +107,8 @@ Commande :
 
 Get-ChildItem "$env:USERPROFILE\\Downloads\\INF1099\\sakila-db"
 
-<!-- 👉 PLACE TA CAPTURE ICI : fichiers sakila -->
+<img width="461" height="182" alt="6" src="https://github.com/user-attachments/assets/9c656494-49e8-4e0b-b91e-cdd82060c5d4" />
+
 
 
 
@@ -114,7 +120,8 @@ Commande :
 
 docker exec -it INF1099-mysql mysql -u etudiants -petudiants\_1 -e "USE sakila; SHOW TABLES;"
 
-<!-- 👉 PLACE TA CAPTURE ICI : SHOW TABLES -->
+<img width="466" height="377" alt="7" src="https://github.com/user-attachments/assets/f98c4fe6-45ae-4a55-8846-0caa3254bf95" />
+
 
 
 
@@ -126,7 +133,8 @@ Commande :
 
 docker exec -it INF1099-mysql mysql -u etudiants -petudiants\_1 -e "USE sakila; SELECT COUNT(\*) AS nb\_films FROM film;"
 
-<!-- 👉 PLACE TA CAPTURE ICI : COUNT film -->
+<img width="464" height="99" alt="8" src="https://github.com/user-attachments/assets/8065cdda-8063-4294-bfa8-97e1c2745e9e" />
+
 
 
 
@@ -138,7 +146,8 @@ Commande :
 
 docker logs INF1099-mysql
 
-<!-- 👉 PLACE TA CAPTURE ICI : logs MySQL -->
+<img width="464" height="194" alt="9" src="https://github.com/user-attachments/assets/01e109c0-2069-4654-89f3-f6fec30f3c65" />
+
 
 
 
