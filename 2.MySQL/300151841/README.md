@@ -226,8 +226,9 @@ La base de données Sakila a été importée avec succès et est prête pour les
 
 
 
-Capture 1 — Podman fonctionne
-![wait](https://github.com/user-attachments/assets/af2ec9cf-db9d-413e-9fb8-440204e7f57f)
+Capture 1 — Podman fonctionnel
+<img width="955" height="173" alt="Podman fonctionnel" src="https://github.com/user-attachments/assets/7a9b3294-deab-4b84-a50c-146e45d81d10" />
+
 
 
 
