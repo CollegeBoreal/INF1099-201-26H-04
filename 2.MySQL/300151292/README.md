@@ -30,7 +30,7 @@ Cours : INF1099
 
 
 
-\### Podman installé et machine active
+## Podman installé et machine active
 
 Commande :
 
@@ -46,7 +46,7 @@ podman machine list
 
 
 
-Alias Docker → Podman
+## Alias Docker → Podman
 
 Commande :
 
@@ -61,7 +61,7 @@ docker --version
 
 
 
-Conteneur MySQL en cours d’exécution
+## Conteneur MySQL en cours d’exécution
 
 Commande :
 
@@ -74,7 +74,7 @@ docker ps
 
 
 
-Bases de données MySQL
+## Bases de données MySQL
 
 Commande :
 
@@ -87,7 +87,7 @@ docker exec -it INF1099-mysql mysql -u root -prootpass -e "SHOW DATABASES;"
 
 
 
-Utilisateurs MySQL
+## Utilisateurs MySQL
 
 Commande :
 
@@ -100,7 +100,7 @@ docker exec -it INF1099-mysql mysql -u root -prootpass -e "SELECT User, Host FRO
 
 
 
-Fichiers Sakila présents
+## Fichiers Sakila présents
 
 Commande :
 
@@ -113,7 +113,7 @@ Get-ChildItem "$env:USERPROFILE\\Downloads\\INF1099\\sakila-db"
 
 
 
-Tables de la base Sakila
+## Tables de la base Sakila
 
 Commande :
 
@@ -126,7 +126,7 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants\_1 -e "USE sakila; 
 
 
 
-Données importées (nombre de films)
+## Données importées (nombre de films)
 
 Commande :
 
@@ -139,7 +139,7 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants\_1 -e "USE sakila; 
 
 
 
-Logs du conteneur MySQL
+## Logs du conteneur MySQL
 
 Commande :
 
