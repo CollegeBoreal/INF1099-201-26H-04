@@ -1,11 +1,15 @@
 🧪 1️⃣ Objectif
+
 L’objectif de ce TP est de comprendre le fonctionnement du DCL (Data Control Language) dans PostgreSQL, notamment la gestion des utilisateurs et des permissions sur une base, un schéma et une table.
+
 ⚙️ 2️⃣ Préparation de l’environnement
+
 Connexion au conteneur
 
 <img width="771" height="106" alt="image" src="https://github.com/user-attachments/assets/ed7b95ed-452c-433b-92ea-639612b56f8e" />
 
 Connexion à PostgreSQL
+
 <img width="468" height="117" alt="image" src="https://github.com/user-attachments/assets/ad3fc216-ef36-4aaf-bdc3-26e665d5254e" />
 
 🏗 3️⃣ Création de la base et des objets
@@ -15,9 +19,11 @@ Création de la base
 <img width="457" height="30" alt="image" src="https://github.com/user-attachments/assets/026363e5-1c18-41a8-813b-efb1403d6dad" />
 
 Création du schéma et la table
+
 <img width="702" height="240" alt="image" src="https://github.com/user-attachments/assets/cfb3a088-923b-4ba1-929a-8bd9352ab880" />
 
 👤 4️⃣ Création des utilisateurs
+
 <img width="653" height="102" alt="image" src="https://github.com/user-attachments/assets/8c09719a-fdb1-4069-ab5a-f0b70c48d318" />
 
 🔐 5️⃣ Attribution des droits

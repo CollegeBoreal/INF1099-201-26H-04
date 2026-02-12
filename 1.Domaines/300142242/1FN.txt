@@ -1,0 +1,28 @@
+1FN (Attributs atomiques + tables identifiées)
+
+CUSTOMER(
+    id PK,
+    name,
+    email
+)
+
+ORDER(
+    id PK,
+    orderDate,
+    status,
+    customer_id FK -> CUSTOMER(id)
+)
+
+PRODUCT(
+    id PK,
+    name,
+    price
+)
+
+ORDER_ITEM(
+    order_id FK -> ORDER(id),
+    product_id FK -> PRODUCT(id),
+    quantity,
+    price,
+    PK(order_id, product_id)
+)

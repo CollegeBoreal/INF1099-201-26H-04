@@ -1,0 +1,22 @@
+3FN (Suppression des dépendances transitives)
+
+Aucune dépendance transitive détectée :
+
+- Les infos du client (name, email) sont uniquement dans CUSTOMER.
+- Les infos produit (name, price) sont uniquement dans PRODUCT.
+- ORDER contient uniquement ses attributs + customer_id.
+- ORDER_ITEM contient uniquement les attributs liés à la ligne de commande.
+
+Remarque :
+ORDER_ITEM.price représente le prix du produit au moment de la commande (historique).
+
+Schéma final (3FN) :
+
+CUSTOMER(id PK, name, email)
+ORDER(id PK, orderDate, status, customer_id FK -> CUSTOMER(id))
+PRODUCT(id PK, name, price)
+ORDER_ITEM(order_id FK -> ORDER(id),
+           product_id FK -> PRODUCT(id),
+           quantity,
+           price,
+           PK(order_id, product_id))
