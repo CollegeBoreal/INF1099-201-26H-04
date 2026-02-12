@@ -1,0 +1,83 @@
+Client (
+Nom,
+Prenom,
+Telephone,
+Email,
+Adresse
+)
+
+Voiture (
+Immatriculation,
+Marque,
+Modele,
+Annee,
+Couleur,
+Kilometrage,
+Id_categorie
+)
+
+Categorie (
+Nom_categorie,
+Description,
+Tarif_journalier
+)
+
+Agence (
+Nom_agence,
+Adresse,
+Telephone
+)
+
+Reservation (
+Date_reservation,
+Date_debut,
+Date_fin,
+Statut,
+Id_client,
+Immatriculation,
+Id_agence
+)
+
+Contrat_Location (
+Date_contrat,
+Montant_total,
+Statut_contrat,
+Id_reservation
+)
+
+Paiement (
+Date_paiement,
+Montant,
+Mode_paiement,
+Statut_paiement,
+Id_contrat
+)
+
+Retour_Vehicule (
+Date_retour,
+Etat_vehicule,
+Kilometrage_retour,
+Frais_supplementaires,
+Id_contrat
+)
+
+Assurance (
+Type_assurance,
+Description,
+Prix_journalier
+)
+
+Option (
+Nom_option,
+Description,
+Prix_journalier
+)
+
+Ajout_Option (
+Date_ajout,
+Id_contrat,
+Nom_option
+)
+
+Toutes les dépendances transitives ont été éliminées.
+Chaque table représente une seule entité logique.

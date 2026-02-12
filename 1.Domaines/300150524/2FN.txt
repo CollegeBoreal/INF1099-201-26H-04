@@ -1,0 +1,40 @@
+Client (
+Nom_client,
+Prenom_client,
+Telephone_client,
+Email_client,
+Adresse_client
+)
+
+Voiture (
+Marque_voiture,
+Modele_voiture,
+Annee_voiture,
+Immatriculation,
+Categorie
+)
+
+Agence (
+Nom_agence,
+Adresse_agence,
+Telephone_agence
+)
+
+Reservation (
+Date_reservation,
+Date_debut,
+Date_fin,
+Nom_client,
+Immatriculation,
+Nom_agence
+)
+
+Paiement (
+Mode_paiement,
+Statut_paiement,
+Montant_total,
+Date_reservation
+)
+
+Les dépendances partielles ont été éliminées.
+Chaque attribut non-clé dépend entièrement de sa table.

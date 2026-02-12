@@ -1,0 +1,26 @@
+Table_Location_Initiale (
+Nom_client,
+Prenom_client,
+Telephone_client,
+Email_client,
+Adresse_client,
+Marque_voiture,
+Modele_voiture,
+Annee_voiture,
+Immatriculation,
+Categorie,
+Tarif_journalier,
+Nom_agence,
+Adresse_agence,
+Telephone_agence,
+Date_reservation,
+Date_debut,
+Date_fin,
+Montant_total,
+Mode_paiement,
+Statut_paiement
+)
+
+Tous les champs sont atomiques.
+Aucune valeur multiple dans un même champ.
+Chaque enregistrement représente une seule réservation/location.
