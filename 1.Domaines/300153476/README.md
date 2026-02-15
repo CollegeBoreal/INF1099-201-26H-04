@@ -50,34 +50,7 @@ Ce projet démontre ma compréhension de la **modélisation Entité/Relation (E/
 
 ---
 
-## ✅ Modèle relationnel (3FN)
-
-> Remarque : Les clés primaires (PK) et clés étrangères (FK) seront définies lors de l’implémentation SQL.
-
-- **Parent** (Nom, Prénom, Téléphone, Email)  
-- **Enfant** (Nom, Prénom, Âge, Niveau)  
-- **Professeur** (Nom, Prénom, Téléphone, Email, Spécialité)  
-- **Cours** (Titre_cours, Langue, Niveau)  
-- **Session_Cours** (Date_session, Heure_session, Durée, Mode_session)  
-- **Inscription** (Date_inscription, Statut_inscription)  
-- **Devoir** (Titre_devoir, Description, Date_limite)  
-- **Soumission_Devoir** (Date_soumission, Fichier_ou_lien, Commentaire)  
-- **Note** (Valeur, Commentaire, Date_correction)  
-- **Ressource** (Titre_ressource, Type_ressource, URL_ressource)  
-- **Récompense** (Nom_récompense, Description, Points)  
-- **Attribution_Récompense** (Date_attribution, Motif)  
-- **Concours** (Titre_concours, Date_concours, Description, Prix)  
-- **Participation_Concours** (Résultat, Score, Rang)  
-- **Session_ChatIA** (Date_session, Sujet, Durée)  
-- **Message_ChatIA** (Contenu_message, Rôle, Date_heure)
-
----
-
 ## 🧩 Diagramme Entité / Relation (E/R)
-
-> Ce diagramme illustre les liens principaux du système (cours, inscriptions, devoirs, notes, ressources, récompenses, concours, chat IA).
-
-<img src = 'images/Entite Association.png' width = 800 />
 
 ```mermaid
 erDiagram
