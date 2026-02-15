@@ -1,4 +1,4 @@
-# EduHome – Système de gestion d’apprentissage à domicile
+# Projet: EduHome – Système de gestion d’apprentissage à domicile
 **Nom :** Ramatoulaye Diallo  
 **Matricule :** 300153476  
 
