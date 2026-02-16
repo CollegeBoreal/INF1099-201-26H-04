@@ -1,5 +1,3 @@
-<img width="8192" height="7894" alt="digramme ERD" src="https://github.com/user-attachments/assets/aeff263e-a975-4054-a1e4-71cef918ef20" /># ⚽ Football Field Reservation System
-
 Projet académique – INF1099  
 Collège Boréal  
 
@@ -21,8 +19,7 @@ Le système permet :
 
 -------
 
-<img width="8192" height="7894" alt="image" src="https://github.com/user-attachments/assets/12f1c9ae-d350-4ea2-a32e-e1ad03bd048e" />
-
+<img width="8192" height="7894" alt="digramme ERD" src="https://github.com/user-attachments/assets/aeff263e-a975-4054-a1e4-71cef918ef20" /># ⚽ Football Field Reservation System
 
 -------
 
