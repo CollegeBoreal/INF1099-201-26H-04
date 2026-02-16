@@ -1,2 +1,1 @@
-1FN (Première Forme Normale)
-ReservationID, ClientNom, ClientTel, CentreNom, CentreAdresse, TerrainNom, TerrainSurface, TerrainTarif, DateMatch, HeureDebut, HeureFin, PaiementMode, PaiementMontant)
+Client, Centre, Terrain, Disponibilite, Creneau, Reservation, Paiement, Promotion, Equipe, Joueur, Match, Avis, Employe

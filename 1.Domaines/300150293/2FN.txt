@@ -1,9 +1,13 @@
-2FN (Deuxième Forme Normale)
-
-CLIENT(ClientID, Nom, Tel, Email)
-
-TERRAIN(TerrainID, NomTerrain, Surface, Taille, TarifHoraire)
-
-CRENEAU(CreneauID, TerrainID, Date, HeureDebut, HeureFin)
-
-RESERVATION(ReservationID, ClientID, CreneauID, StatutReservation, DateReservation)
+CLIENT (1,N) —— EFFECTUE —— (1,1) RESERVATION
+TERRAIN (1,N) —— PROPOSE —— (1,1) CRENEAU
+CRENEAU (1,N) —— CONCERNE —— (1,1) RESERVATION
+RESERVATION (1,1) —— EST_PAYEE_PAR —— (0,N) PAIEMENT
+CLIENT (1,N) —— CREE —— (1,1) EQUIPE
+EQUIPE (1,N) —— CONTIENT —— (1,1) EQUIPE_JOUEUR
+JOUEUR (1,N) —— PARTICIPE —— (1,1) EQUIPE_JOUEUR
+RESERVATION (0,1) —— DONNE_LIEU_A —— (1,1) MATCH
+EQUIPE (1,N) —— JOUE_COMME_LOCAL —— (1,1) MATCH
+EQUIPE (1,N) —— JOUE_COMME_VISITEUR —— (1,1) MATCH
+PROMOTION (0,N) —— EST_APPLIQUEE_A —— (0,1) RESERVATION
+CLIENT (1,N) —— DONNE —— (1,1) AVIS
+TERRAIN (1,N) —— RECOIT —— (1,1) AVIS

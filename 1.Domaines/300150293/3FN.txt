@@ -1,13 +1,37 @@
-3FN (Troisième Forme Normale)
+CLIENT (id_client PK, nom, prenom, telephone, email, date_inscription, statut)
 
-CENTRE_SPORTIF(CentreID, NomCentre, Adresse, Ville)
+CENTRE (id_centre PK, nom_centre, adresse, ville, telephone, email)
 
-TERRAIN(TerrainID, CentreID, NomTerrain, TypeSurface, Taille, TarifHoraire)
+EMPLOYE (id_employe PK, nom, prenom, role, telephone, email, id_centre FK → CENTRE.id_centre)
 
-CRENEAU(CreneauID, TerrainID, Date, HeureDebut, HeureFin, Statut)
+DISPONIBILITE (id_disponibilite PK, jour_semaine, heure_ouverture, heure_fermeture, id_centre FK → CENTRE.id_centre)
 
-CLIENT(ClientID, Nom, Prenom, Tel, Email)
+TERRAIN (id_terrain PK, nom_terrain, type_surface, taille, tarif_horaire, eclairage, statut, id_centre FK → CENTRE.id_centre)
 
-RESERVATION(ReservationID, ClientID, CreneauID, DateReservation, StatutReservation, MontantTotal)
+CRENEAU (id_creneau PK, date_creneau, heure_debut, heure_fin, statut, id_terrain FK → TERRAIN.id_terrain)
 
-PAIEMENT(PaiementID, ReservationID, ModePaiement, Montant, DatePaiement, StatutPaiement)
+RESERVATION (id_reservation PK, date_reservation, statut_reservation, nb_joueurs, montant_total,
+id_client FK → CLIENT.id_client,
+id_creneau FK → CRENEAU.id_creneau)
+
+PAIEMENT  (id_paiement PK, date_paiement, montant, mode_paiement, statut_paiement, reference_transaction,
+id_reservation FK → RESERVATION.id_reservation)
+
+PROMOTION (id_promotion PK, code, type_remise, valeur, date_debut, date_fin, actif)
+
+RESERVATION_PROMOTION (id_reservation PK/FK → RESERVATION.id_reservation, id_promotion FK → PROMOTION.id_promotion)
+
+EQUIPE (id_equipe PK, nom_equipe, niveau, date_creation, id_client FK → CLIENT.id_client)
+
+JOUEUR (id_joueur PK, nom, prenom, telephone, email)
+
+EQUIPE_JOUEUR (id_equipe PK/FK → EQUIPE.id_equipe, id_joueur PK/FK → JOUEUR.id_joueur, role, date_ajout)
+
+MATCH (id_match PK, score_local, score_visiteur, statut_match,
+id_reservation FK → RESERVATION.id_reservation,
+id_equipe_local FK → EQUIPE.id_equipe,
+id_equipe_visiteur FK → EQUIPE.id_equipe)
+
+AVIS (id_avis PK, note, commentaire, date_avis,
+id_client FK → CLIENT.id_client,
+id_terrain FK → TERRAIN.id_terrain)
