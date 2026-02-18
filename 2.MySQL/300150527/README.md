@@ -129,15 +129,6 @@ docker exec -it INF1099-mysql `
 mysql -u root -prootpass -e "GRANT ALL PRIVILEGES ON *.* TO 'etudiants'@'localhost' WITH GRANT OPTION;"
 ```
 
-Autorisation externe :
-
-```powershell
-docker exec -it INF1099-mysql mysql -u root -prootpass -e "
-CREATE USER IF NOT EXISTS 'etudiants'@'%' IDENTIFIED BY 'etudiants_1';
-GRANT ALL PRIVILEGES ON sakila.* TO 'etudiants'@'%';
-FLUSH PRIVILEGES;"
-```
-
 <img width="979" height="460" alt="8" src="https://github.com/user-attachments/assets/a88c2e47-d5ce-4f00-8aa2-5dd8b31ce917" />
 
 
@@ -264,3 +255,4 @@ Connexion réussie ✔
 * ✅ Script automatisé
 * ✅ Requêtes SQL fonctionnelles
 * ✅ Connexion Workbench validée
+
