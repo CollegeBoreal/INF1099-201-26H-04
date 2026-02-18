@@ -6,7 +6,7 @@
 
 À la fin de ce TP, l’étudiant sera capable de :
 
-1. Installer et configurer [**Podman**](1.Podman) avec alias **Docker** sur Windows
+1. Installer et configurer [**Podman**](.podman) avec alias **Docker** sur Windows
 2. Créer et démarrer la machine Podman (VM Linux)
 3. Lancer un conteneur **MySQL**
 4. Créer une base de données et un utilisateur
