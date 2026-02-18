@@ -192,25 +192,25 @@ CREATE SCHEMA exchange;
 
 Toutes les tables ont été créées dans le schéma exchange :
 
-client
+- client
 
-adresse
+- adresse
 
-compte_client
+- compte_client
 
-devise
+- devise
 
-taux_change
+- taux_change
 
-transaction
+- transaction
 
-paiement
+- paiement
 
-mode_paiement
+- mode_paiement
 
-prestataire_paiement
+- prestataire_paiement
 
-historique_transaction
+- historique_transaction
 
 Vérification :
 ```powershell
@@ -297,7 +297,7 @@ CREATE INDEX idx_paiement_transaction ON exchange.paiement(id_transaction);
 ![image](./images/11.PNG)
 
 
-## Sauvegarde SQL (Dump) (si prof demande)
+## Sauvegarde SQL (Dump) 
 
 Dans PowerShell (hors psql) :
 ```powershell
