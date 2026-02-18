@@ -15,9 +15,13 @@ INF1099 (201) - Administration de base de données
 
 ## :one: [Devoirs](Devoirs)
 
-|  :hash: | Date  | Cours                              | 🎉 Participations                   |
-|---------|-------|:-----------------------------------|:------------------------------------|
-
+|  :hash: | Date   | Cours                           | 🎉 Participations                   |
+|---------|--------|:--------------------------------|:------------------------------------|
+| :one:   | 12-Jan | [0.PlanDeCours](0.PlanDeCours)  | [🎉](0.PlanDeCours/.scripts/Participation.md) |
+| :two:   |        | [1.Domaines](1.Domaines)        | [🎉](1.Domaines/.scripts/Participation.md) 👉  â Noter :x:|
+| :three: |        | [2.MySQL](2.MySQL)              | [🎉](2.MySQL/.scripts/Participation.md) 👉  â Noter :x:|
+| :four:  |        | [3.Postgres](3.Postgres)        | [🎉](3.Postgres/.scripts/Participation.md) 👉  â Noter :x:|
+| :five:  |        | [4.DCL](4.DCL)                  | [🎉](4.DCL/.scripts/Participation.md) 👉  â Noter :x:|
 
 ### :abacus: Évaluation
 
