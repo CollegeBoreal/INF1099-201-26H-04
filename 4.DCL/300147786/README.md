@@ -6,6 +6,8 @@
 
 
 2️⃣ Créer des utilisateurs
+<img width="757" height="181" alt="4" src="https://github.com/user-attachments/assets/0a2bfd6d-7925-4327-be11-74a16f987171" />
+
 
 3️⃣ Donner des droits (GRANT)
 
@@ -14,6 +16,7 @@
 5️⃣ Retirer des droits (REVOKE)
 
 6️⃣ Supprimer un utilisateur (DROP USER)
+
 
 
 
