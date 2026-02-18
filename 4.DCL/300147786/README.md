@@ -15,10 +15,14 @@
 
 
 4️⃣ vérifier les droits
+<img width="999" height="302" alt="8" src="https://github.com/user-attachments/assets/73186982-3ecc-4549-a4cf-e39fc539f336" />
+<img width="970" height="233" alt="9" src="https://github.com/user-attachments/assets/37881791-bbfb-4fe4-b5f4-9a922d54e86a" />
+
 
 5️⃣ Retirer des droits (REVOKE)
 
 6️⃣ Supprimer un utilisateur (DROP USER)
+
 
 
 
