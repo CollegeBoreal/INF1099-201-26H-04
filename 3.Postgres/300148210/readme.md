@@ -8,6 +8,7 @@
 👉 Les captures doivent être placées juste après chaque étape
 
 1️⃣ Installation de PostgreSQL avec Docker
+
 🎯 Objectif
 
 Lancer un serveur PostgreSQL dans un conteneur Docker.

@@ -1,7 +1,9 @@
 
+```powershell
 Invoke-WebRequest `
   https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-schema.sql `
   -OutFile postgres-sakila-schema.sql
+```
 
 Invoke-WebRequest `
   https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql `
