@@ -170,12 +170,12 @@ Exemple :
 
 Une bonne conception de base de données repose sur :
 
-✔ Une analyse rigoureuse des besoins
-✔ Une modélisation claire et normalisée
-✔ Un choix technologique adapté
-✔ Une communication efficace
-✔ Une capacité d’adaptation
-✔ Une justification technique objective
+* Une analyse rigoureuse des besoins
+* Une modélisation claire et normalisée
+* Un choix technologique adapté
+* Une communication efficace
+* Une capacité d’adaptation
+* Une justification technique objective
 
 ---
 
@@ -283,7 +283,7 @@ Trop d’index :
 SELECT * FROM utilisateur;
 ```
 
-✔
+*
 
 ```sql
 SELECT id, nom, email FROM utilisateur;
@@ -416,10 +416,10 @@ Outils :
 
 Une base performante repose sur :
 
-✔ Index bien choisis
-✔ Requêtes optimisées
-✔ Structure cohérente
-✔ Paramétrage serveur adapté
-✔ Surveillance continue
-✔ Justification technique objective
+* Index bien choisis
+* Requêtes optimisées
+* Structure cohérente
+* Paramétrage serveur adapté
+* Surveillance continue
+* Justification technique objective
 
