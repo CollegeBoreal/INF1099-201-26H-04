@@ -4,10 +4,12 @@
 <img width="544" height="141" alt="1" src="https://github.com/user-attachments/assets/694cdff6-59ed-48f6-86b4-3fcf87326086" />
 <img width="719" height="161" alt="2" src="https://github.com/user-attachments/assets/1e65a5d7-091e-465a-bdab-d1ebe372ffaf" />
 <img width="554" height="103" alt="3" src="https://github.com/user-attachments/assets/35c27da6-b455-4ec0-82f3-a33b601889bb" />
+<img width="757" height="181" alt="4" src="https://github.com/user-attachments/assets/0a2bfd6d-7925-4327-be11-74a16f987171" />
 
 
 ## 2️⃣ Créer des utilisateurs
-<img width="757" height="181" alt="4" src="https://github.com/user-attachments/assets/0a2bfd6d-7925-4327-be11-74a16f987171" />
+<img width="962" height="192" alt="5" src="https://github.com/user-attachments/assets/0c910d46-1067-4651-87fb-589052a6ca8a" />
+
 
 
 ## 3️⃣ Donner des droits (GRANT)
@@ -27,6 +29,7 @@
 
 ## 6️⃣ Supprimer un utilisateur (DROP USER)
 <img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
 
 
 
