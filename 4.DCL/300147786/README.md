@@ -20,8 +20,12 @@
 
 
 5️⃣ Retirer des droits (REVOKE)
+<img width="1031" height="320" alt="10-1" src="https://github.com/user-attachments/assets/4d798a33-bff7-4723-9518-bdd8d488d5f3" />
+<img width="787" height="173" alt="10-2-2" src="https://github.com/user-attachments/assets/21caffe7-78ca-4131-aa5f-d54ee3de6820" />
+
 
 6️⃣ Supprimer un utilisateur (DROP USER)
+
 
 
 
