@@ -1,4 +1,4 @@
-# Participation au 18-02-2026 20:00
+# Participation au 18-02-2026 20:26
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -16,7 +16,7 @@
 
 |:hash:| Boréal :id:                | README.md    | images |
 |------|----------------------------|--------------|--------|
-| 0 | [300141550](../300141550/README.md) :point_right: [emeraudesantu](https://github.com/emeraudesantu) <image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 0 | [300141550](../300141550/README.md) :point_right: [emeraudesantu](https://github.com/emeraudesantu) <image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 1 | [300141567](../300141567/README.md) :point_right: [arsprod2001](https://github.com/arsprod2001) <image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 2 | [300142242](../300142242/README.md) :point_right: [yahiiiia](https://github.com/yahiiiia) <image src='https://avatars0.githubusercontent.com/u/131247071?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 3 | [300146667](../300146667/README.md) :point_right: [djaberbenyezza](https://github.com/djaberbenyezza) <image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image> | :x: | :x: |
