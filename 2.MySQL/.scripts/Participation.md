@@ -1,4 +1,4 @@
-# Participation au 18-02-2026 19:12
+# Participation au 18-02-2026 19:13
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -22,7 +22,7 @@
 | 3 | [300146667](../300146667/README.md) :point_right: [djaberbenyezza](https://github.com/djaberbenyezza) <image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 4 | [300147786](../300147786/README.md) :point_right: [300786147](https://github.com/300786147) <image src='https://avatars0.githubusercontent.com/u/231366133?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 5 | [300148210](../300148210/README.md) :point_right: [zianiferiel](https://github.com/zianiferiel) <image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
-| 6 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 6 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 7 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 8 | [300150271](../300150271/README.md) :point_right: [mazighs](https://github.com/mazighs) <image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 9 | [300150284](../300150284/README.md) :point_right: [aroua-git](https://github.com/aroua-git) <image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image> | :x: | :x: |
