@@ -1,0 +1,1006 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict kGiN3E3CDcdr5f6qEnIUZtul3sHgFT6fm7ih0Cgz6fpoZ53KFgSTJF06rUrcqr2
+
+-- Dumped from database version 16.11 (Debian 16.11-1.pgdg13+1)
+-- Dumped by pg_dump version 16.11 (Debian 16.11-1.pgdg13+1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: exchange; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA exchange;
+
+
+ALTER SCHEMA exchange OWNER TO postgres;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: adresse; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.adresse (
+    id_adresse integer NOT NULL,
+    numero_rue character varying(10),
+    rue character varying(100),
+    ville character varying(50),
+    code_postal character varying(20),
+    pays character varying(50),
+    id_client integer NOT NULL
+);
+
+
+ALTER TABLE exchange.adresse OWNER TO postgres;
+
+--
+-- Name: adresse_id_adresse_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.adresse_id_adresse_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.adresse_id_adresse_seq OWNER TO postgres;
+
+--
+-- Name: adresse_id_adresse_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.adresse_id_adresse_seq OWNED BY exchange.adresse.id_adresse;
+
+
+--
+-- Name: client; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.client (
+    id_client integer NOT NULL,
+    nom character varying(50) NOT NULL,
+    prenom character varying(50) NOT NULL,
+    telephone character varying(20),
+    email character varying(100) NOT NULL
+);
+
+
+ALTER TABLE exchange.client OWNER TO postgres;
+
+--
+-- Name: client_id_client_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.client_id_client_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.client_id_client_seq OWNER TO postgres;
+
+--
+-- Name: client_id_client_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.client_id_client_seq OWNED BY exchange.client.id_client;
+
+
+--
+-- Name: compte_client; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.compte_client (
+    id_compte integer NOT NULL,
+    date_creation date DEFAULT CURRENT_DATE NOT NULL,
+    statut character varying(20) NOT NULL,
+    id_client integer NOT NULL
+);
+
+
+ALTER TABLE exchange.compte_client OWNER TO postgres;
+
+--
+-- Name: compte_client_id_compte_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.compte_client_id_compte_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.compte_client_id_compte_seq OWNER TO postgres;
+
+--
+-- Name: compte_client_id_compte_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.compte_client_id_compte_seq OWNED BY exchange.compte_client.id_compte;
+
+
+--
+-- Name: devise; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.devise (
+    id_devise integer NOT NULL,
+    code_devise character(3) NOT NULL,
+    nom_devise character varying(50) NOT NULL,
+    symbole character varying(10)
+);
+
+
+ALTER TABLE exchange.devise OWNER TO postgres;
+
+--
+-- Name: devise_id_devise_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.devise_id_devise_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.devise_id_devise_seq OWNER TO postgres;
+
+--
+-- Name: devise_id_devise_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.devise_id_devise_seq OWNED BY exchange.devise.id_devise;
+
+
+--
+-- Name: historique_transaction; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.historique_transaction (
+    id_historique integer NOT NULL,
+    date_action timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    action character varying(100) NOT NULL,
+    id_transaction integer NOT NULL
+);
+
+
+ALTER TABLE exchange.historique_transaction OWNER TO postgres;
+
+--
+-- Name: historique_transaction_id_historique_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.historique_transaction_id_historique_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.historique_transaction_id_historique_seq OWNER TO postgres;
+
+--
+-- Name: historique_transaction_id_historique_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.historique_transaction_id_historique_seq OWNED BY exchange.historique_transaction.id_historique;
+
+
+--
+-- Name: mode_paiement; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.mode_paiement (
+    id_mode_paiement integer NOT NULL,
+    nom_mode character varying(50) NOT NULL
+);
+
+
+ALTER TABLE exchange.mode_paiement OWNER TO postgres;
+
+--
+-- Name: mode_paiement_id_mode_paiement_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.mode_paiement_id_mode_paiement_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.mode_paiement_id_mode_paiement_seq OWNER TO postgres;
+
+--
+-- Name: mode_paiement_id_mode_paiement_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.mode_paiement_id_mode_paiement_seq OWNED BY exchange.mode_paiement.id_mode_paiement;
+
+
+--
+-- Name: paiement; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.paiement (
+    id_paiement integer NOT NULL,
+    date_paiement timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    montant_paye numeric(12,2) NOT NULL,
+    id_transaction integer NOT NULL,
+    id_mode_paiement integer NOT NULL,
+    id_prestataire integer NOT NULL,
+    CONSTRAINT chk_montant_paye CHECK ((montant_paye > (0)::numeric))
+);
+
+
+ALTER TABLE exchange.paiement OWNER TO postgres;
+
+--
+-- Name: paiement_id_paiement_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.paiement_id_paiement_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.paiement_id_paiement_seq OWNER TO postgres;
+
+--
+-- Name: paiement_id_paiement_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.paiement_id_paiement_seq OWNED BY exchange.paiement.id_paiement;
+
+
+--
+-- Name: prestataire_paiement; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.prestataire_paiement (
+    id_prestataire integer NOT NULL,
+    nom_prestataire character varying(100) NOT NULL,
+    type_service character varying(50)
+);
+
+
+ALTER TABLE exchange.prestataire_paiement OWNER TO postgres;
+
+--
+-- Name: prestataire_paiement_id_prestataire_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.prestataire_paiement_id_prestataire_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.prestataire_paiement_id_prestataire_seq OWNER TO postgres;
+
+--
+-- Name: prestataire_paiement_id_prestataire_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.prestataire_paiement_id_prestataire_seq OWNED BY exchange.prestataire_paiement.id_prestataire;
+
+
+--
+-- Name: taux_change; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.taux_change (
+    id_taux integer NOT NULL,
+    valeur_taux numeric(12,6) NOT NULL,
+    date_mise_a_jour timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    id_devise_source integer NOT NULL,
+    id_devise_cible integer NOT NULL,
+    CONSTRAINT chk_devise_diff CHECK ((id_devise_source <> id_devise_cible)),
+    CONSTRAINT chk_taux_positive CHECK ((valeur_taux > (0)::numeric))
+);
+
+
+ALTER TABLE exchange.taux_change OWNER TO postgres;
+
+--
+-- Name: taux_change_id_taux_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.taux_change_id_taux_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.taux_change_id_taux_seq OWNER TO postgres;
+
+--
+-- Name: taux_change_id_taux_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.taux_change_id_taux_seq OWNED BY exchange.taux_change.id_taux;
+
+
+--
+-- Name: transaction; Type: TABLE; Schema: exchange; Owner: postgres
+--
+
+CREATE TABLE exchange.transaction (
+    id_transaction integer NOT NULL,
+    date_transaction timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    montant_initial numeric(12,2) NOT NULL,
+    montant_converti numeric(12,2) NOT NULL,
+    statut character varying(30) NOT NULL,
+    id_client integer NOT NULL,
+    id_devise_source integer NOT NULL,
+    id_devise_cible integer NOT NULL,
+    id_taux integer NOT NULL,
+    CONSTRAINT chk_montants_positive CHECK (((montant_initial > (0)::numeric) AND (montant_converti > (0)::numeric)))
+);
+
+
+ALTER TABLE exchange.transaction OWNER TO postgres;
+
+--
+-- Name: transaction_id_transaction_seq; Type: SEQUENCE; Schema: exchange; Owner: postgres
+--
+
+CREATE SEQUENCE exchange.transaction_id_transaction_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE exchange.transaction_id_transaction_seq OWNER TO postgres;
+
+--
+-- Name: transaction_id_transaction_seq; Type: SEQUENCE OWNED BY; Schema: exchange; Owner: postgres
+--
+
+ALTER SEQUENCE exchange.transaction_id_transaction_seq OWNED BY exchange.transaction.id_transaction;
+
+
+--
+-- Name: adresse id_adresse; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.adresse ALTER COLUMN id_adresse SET DEFAULT nextval('exchange.adresse_id_adresse_seq'::regclass);
+
+
+--
+-- Name: client id_client; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.client ALTER COLUMN id_client SET DEFAULT nextval('exchange.client_id_client_seq'::regclass);
+
+
+--
+-- Name: compte_client id_compte; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.compte_client ALTER COLUMN id_compte SET DEFAULT nextval('exchange.compte_client_id_compte_seq'::regclass);
+
+
+--
+-- Name: devise id_devise; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.devise ALTER COLUMN id_devise SET DEFAULT nextval('exchange.devise_id_devise_seq'::regclass);
+
+
+--
+-- Name: historique_transaction id_historique; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.historique_transaction ALTER COLUMN id_historique SET DEFAULT nextval('exchange.historique_transaction_id_historique_seq'::regclass);
+
+
+--
+-- Name: mode_paiement id_mode_paiement; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.mode_paiement ALTER COLUMN id_mode_paiement SET DEFAULT nextval('exchange.mode_paiement_id_mode_paiement_seq'::regclass);
+
+
+--
+-- Name: paiement id_paiement; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement ALTER COLUMN id_paiement SET DEFAULT nextval('exchange.paiement_id_paiement_seq'::regclass);
+
+
+--
+-- Name: prestataire_paiement id_prestataire; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.prestataire_paiement ALTER COLUMN id_prestataire SET DEFAULT nextval('exchange.prestataire_paiement_id_prestataire_seq'::regclass);
+
+
+--
+-- Name: taux_change id_taux; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.taux_change ALTER COLUMN id_taux SET DEFAULT nextval('exchange.taux_change_id_taux_seq'::regclass);
+
+
+--
+-- Name: transaction id_transaction; Type: DEFAULT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction ALTER COLUMN id_transaction SET DEFAULT nextval('exchange.transaction_id_transaction_seq'::regclass);
+
+
+--
+-- Data for Name: adresse; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.adresse (id_adresse, numero_rue, rue, ville, code_postal, pays, id_client) FROM stdin;
+1	12	Rue King	Toronto	M5V 1A1	Canada	1
+2	45	Rue Queen	Toronto	M4B 2B2	Canada	2
+3	88	Rue Bloor	Toronto	M3C 3C3	Canada	3
+4	101	Rue Yonge	Toronto	M2D 4D4	Canada	4
+5	22	Rue Front	Toronto	M1E 5E5	Canada	5
+6	17	Rue Lakeshore	Toronto	M6F 6F6	Canada	6
+7	9	Rue Danforth	Toronto	M7G 7G7	Canada	7
+8	63	Rue Bay	Toronto	M8H 8H8	Canada	8
+9	74	Rue Spadina	Toronto	M9J 9J9	Canada	9
+10	99	Rue Dundas	Toronto	M5K 0K0	Canada	10
+\.
+
+
+--
+-- Data for Name: client; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.client (id_client, nom, prenom, telephone, email) FROM stdin;
+1	Rahmani	Chakib	6471112222	chakib@gmail.com
+2	Benali	Sofiane	6473334444	sofiane@gmail.com
+3	Dupont	Marie	4165556666	marie.dupont@gmail.com
+4	Martin	Paul	4377778888	paul.martin@gmail.com
+5	Haddad	Yasmine	9059990000	yasmine@gmail.com
+6	Khelifi	Amine	6471234567	amine@gmail.com
+7	Bouraoui	Akrem	6472223333	akrem@gmail.com
+8	Nathalie	Robert	4168889999	nathalie@gmail.com
+9	Mahfuzur	Rahman	9054445555	mahfuzur@gmail.com
+10	Kero	Slimani	6475556666	kero@gmail.com
+\.
+
+
+--
+-- Data for Name: compte_client; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.compte_client (id_compte, date_creation, statut, id_client) FROM stdin;
+1	2026-01-01	ACTIF	1
+2	2026-01-02	ACTIF	2
+3	2026-01-03	ACTIF	3
+4	2026-01-04	SUSPENDU	4
+5	2026-01-05	ACTIF	5
+6	2026-01-06	ACTIF	6
+7	2026-01-07	ACTIF	7
+8	2026-01-08	ACTIF	8
+9	2026-01-09	INACTIF	9
+10	2026-01-10	ACTIF	10
+\.
+
+
+--
+-- Data for Name: devise; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.devise (id_devise, code_devise, nom_devise, symbole) FROM stdin;
+1	CAD	Dollar Canadien	$
+2	USD	Dollar Am├®ricain	$
+3	EUR	Euro	Ôé¼
+4	GBP	Livre Sterling	┬ú
+5	JPY	Yen Japonais	┬Ñ
+6	CHF	Franc Suisse	CHF
+7	DZD	Dinar Alg├®rien	DA
+8	CNY	Yuan Chinois	┬Ñ
+9	AUD	Dollar Australien	$
+10	MAD	Dirham Marocain	DH
+\.
+
+
+--
+-- Data for Name: historique_transaction; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.historique_transaction (id_historique, date_action, action, id_transaction) FROM stdin;
+1	2026-02-01 10:00:00	Transaction cr├®├®e	1
+2	2026-02-01 10:05:00	Paiement effectu├®	1
+3	2026-02-01 11:00:00	Transaction cr├®├®e	2
+4	2026-02-01 11:05:00	Paiement effectu├®	2
+5	2026-02-02 09:30:00	Transaction cr├®├®e	3
+6	2026-02-02 09:35:00	Paiement effectu├®	3
+7	2026-02-02 15:00:00	Transaction cr├®├®e	4
+8	2026-02-03 08:20:00	Transaction cr├®├®e	5
+9	2026-02-04 14:10:00	Transaction annul├®e	7
+10	2026-02-05 18:30:00	Transaction valid├®e	10
+\.
+
+
+--
+-- Data for Name: mode_paiement; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.mode_paiement (id_mode_paiement, nom_mode) FROM stdin;
+1	Carte bancaire
+2	Virement bancaire
+3	PayPal
+4	Crypto
+5	Apple Pay
+6	Google Pay
+7	Interac
+8	Esp├¿ces
+9	Ch├¿que
+10	Carte pr├®pay├®e
+\.
+
+
+--
+-- Data for Name: paiement; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.paiement (id_paiement, date_paiement, montant_paye, id_transaction, id_mode_paiement, id_prestataire) FROM stdin;
+1	2026-02-01 10:05:00	1000.00	1	1	1
+2	2026-02-01 11:05:00	2000.00	2	3	2
+3	2026-02-02 09:35:00	500.00	3	2	8
+4	2026-02-02 15:05:00	1000.00	4	1	6
+5	2026-02-03 08:25:00	300.00	5	5	4
+6	2026-02-03 12:05:00	700.00	6	4	9
+7	2026-02-04 14:15:00	600.00	7	7	5
+8	2026-02-04 16:05:00	10000.00	8	2	10
+9	2026-02-05 10:50:00	1500.00	9	6	3
+10	2026-02-05 18:35:00	800.00	10	9	7
+\.
+
+
+--
+-- Data for Name: prestataire_paiement; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.prestataire_paiement (id_prestataire, nom_prestataire, type_service) FROM stdin;
+1	Stripe	Paiement en ligne
+2	PayPal	Paiement en ligne
+3	Moneris	Paiement bancaire
+4	Square	Paiement mobile
+5	Interac	Transfert
+6	Visa	Carte bancaire
+7	Mastercard	Carte bancaire
+8	Wise	Transfert international
+9	Revolut	Banque digitale
+10	Western Union	Transfert international
+\.
+
+
+--
+-- Data for Name: taux_change; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.taux_change (id_taux, valeur_taux, date_mise_a_jour, id_devise_source, id_devise_cible) FROM stdin;
+1	0.740000	2026-02-18 17:57:42.318832	1	2
+2	0.680000	2026-02-18 17:57:42.318832	1	3
+3	1.470000	2026-02-18 17:57:42.318832	2	1
+4	0.920000	2026-02-18 17:57:42.318832	2	3
+5	160.500000	2026-02-18 17:57:42.318832	2	5
+6	1.080000	2026-02-18 17:57:42.318832	3	2
+7	1.600000	2026-02-18 17:57:42.318832	3	4
+8	0.007200	2026-02-18 17:57:42.318832	7	2
+9	0.140000	2026-02-18 17:57:42.318832	10	3
+10	0.660000	2026-02-18 17:57:42.318832	9	2
+\.
+
+
+--
+-- Data for Name: transaction; Type: TABLE DATA; Schema: exchange; Owner: postgres
+--
+
+COPY exchange.transaction (id_transaction, date_transaction, montant_initial, montant_converti, statut, id_client, id_devise_source, id_devise_cible, id_taux) FROM stdin;
+1	2026-02-01 10:00:00	1000.00	740.00	PAYEE	1	1	2	1
+2	2026-02-01 11:00:00	2000.00	1360.00	PAYEE	2	1	3	2
+3	2026-02-02 09:30:00	500.00	735.00	PAYEE	3	2	1	3
+4	2026-02-02 15:00:00	1000.00	920.00	EN_ATTENTE	4	2	3	4
+5	2026-02-03 08:20:00	300.00	48150.00	PAYEE	5	2	5	5
+6	2026-02-03 12:00:00	700.00	756.00	PAYEE	6	3	2	6
+7	2026-02-04 14:10:00	600.00	960.00	ANNULEE	7	3	4	7
+8	2026-02-04 16:00:00	10000.00	72.00	PAYEE	8	7	2	8
+9	2026-02-05 10:45:00	1500.00	210.00	PAYEE	9	10	3	9
+10	2026-02-05 18:30:00	800.00	528.00	PAYEE	10	9	2	10
+\.
+
+
+--
+-- Name: adresse_id_adresse_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.adresse_id_adresse_seq', 10, true);
+
+
+--
+-- Name: client_id_client_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.client_id_client_seq', 10, true);
+
+
+--
+-- Name: compte_client_id_compte_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.compte_client_id_compte_seq', 10, true);
+
+
+--
+-- Name: devise_id_devise_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.devise_id_devise_seq', 10, true);
+
+
+--
+-- Name: historique_transaction_id_historique_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.historique_transaction_id_historique_seq', 10, true);
+
+
+--
+-- Name: mode_paiement_id_mode_paiement_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.mode_paiement_id_mode_paiement_seq', 10, true);
+
+
+--
+-- Name: paiement_id_paiement_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.paiement_id_paiement_seq', 10, true);
+
+
+--
+-- Name: prestataire_paiement_id_prestataire_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.prestataire_paiement_id_prestataire_seq', 10, true);
+
+
+--
+-- Name: taux_change_id_taux_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.taux_change_id_taux_seq', 10, true);
+
+
+--
+-- Name: transaction_id_transaction_seq; Type: SEQUENCE SET; Schema: exchange; Owner: postgres
+--
+
+SELECT pg_catalog.setval('exchange.transaction_id_transaction_seq', 10, true);
+
+
+--
+-- Name: adresse adresse_id_client_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.adresse
+    ADD CONSTRAINT adresse_id_client_key UNIQUE (id_client);
+
+
+--
+-- Name: adresse adresse_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.adresse
+    ADD CONSTRAINT adresse_pkey PRIMARY KEY (id_adresse);
+
+
+--
+-- Name: client client_email_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.client
+    ADD CONSTRAINT client_email_key UNIQUE (email);
+
+
+--
+-- Name: client client_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.client
+    ADD CONSTRAINT client_pkey PRIMARY KEY (id_client);
+
+
+--
+-- Name: compte_client compte_client_id_client_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.compte_client
+    ADD CONSTRAINT compte_client_id_client_key UNIQUE (id_client);
+
+
+--
+-- Name: compte_client compte_client_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.compte_client
+    ADD CONSTRAINT compte_client_pkey PRIMARY KEY (id_compte);
+
+
+--
+-- Name: devise devise_code_devise_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.devise
+    ADD CONSTRAINT devise_code_devise_key UNIQUE (code_devise);
+
+
+--
+-- Name: devise devise_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.devise
+    ADD CONSTRAINT devise_pkey PRIMARY KEY (id_devise);
+
+
+--
+-- Name: historique_transaction historique_transaction_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.historique_transaction
+    ADD CONSTRAINT historique_transaction_pkey PRIMARY KEY (id_historique);
+
+
+--
+-- Name: mode_paiement mode_paiement_nom_mode_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.mode_paiement
+    ADD CONSTRAINT mode_paiement_nom_mode_key UNIQUE (nom_mode);
+
+
+--
+-- Name: mode_paiement mode_paiement_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.mode_paiement
+    ADD CONSTRAINT mode_paiement_pkey PRIMARY KEY (id_mode_paiement);
+
+
+--
+-- Name: paiement paiement_id_transaction_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement
+    ADD CONSTRAINT paiement_id_transaction_key UNIQUE (id_transaction);
+
+
+--
+-- Name: paiement paiement_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement
+    ADD CONSTRAINT paiement_pkey PRIMARY KEY (id_paiement);
+
+
+--
+-- Name: prestataire_paiement prestataire_paiement_nom_prestataire_key; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.prestataire_paiement
+    ADD CONSTRAINT prestataire_paiement_nom_prestataire_key UNIQUE (nom_prestataire);
+
+
+--
+-- Name: prestataire_paiement prestataire_paiement_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.prestataire_paiement
+    ADD CONSTRAINT prestataire_paiement_pkey PRIMARY KEY (id_prestataire);
+
+
+--
+-- Name: taux_change taux_change_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.taux_change
+    ADD CONSTRAINT taux_change_pkey PRIMARY KEY (id_taux);
+
+
+--
+-- Name: transaction transaction_pkey; Type: CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction
+    ADD CONSTRAINT transaction_pkey PRIMARY KEY (id_transaction);
+
+
+--
+-- Name: idx_client_email; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_client_email ON exchange.client USING btree (email);
+
+
+--
+-- Name: idx_paiement_transaction; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_paiement_transaction ON exchange.paiement USING btree (id_transaction);
+
+
+--
+-- Name: idx_taux_devise_source_cible; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_taux_devise_source_cible ON exchange.taux_change USING btree (id_devise_source, id_devise_cible);
+
+
+--
+-- Name: idx_transaction_client; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_transaction_client ON exchange.transaction USING btree (id_client);
+
+
+--
+-- Name: idx_transaction_date; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_transaction_date ON exchange.transaction USING btree (date_transaction);
+
+
+--
+-- Name: idx_transaction_devises; Type: INDEX; Schema: exchange; Owner: postgres
+--
+
+CREATE INDEX idx_transaction_devises ON exchange.transaction USING btree (id_devise_source, id_devise_cible);
+
+
+--
+-- Name: adresse fk_adresse_client; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.adresse
+    ADD CONSTRAINT fk_adresse_client FOREIGN KEY (id_client) REFERENCES exchange.client(id_client) ON DELETE CASCADE;
+
+
+--
+-- Name: compte_client fk_compte_client; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.compte_client
+    ADD CONSTRAINT fk_compte_client FOREIGN KEY (id_client) REFERENCES exchange.client(id_client) ON DELETE CASCADE;
+
+
+--
+-- Name: historique_transaction fk_historique_transaction; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.historique_transaction
+    ADD CONSTRAINT fk_historique_transaction FOREIGN KEY (id_transaction) REFERENCES exchange.transaction(id_transaction) ON DELETE CASCADE;
+
+
+--
+-- Name: paiement fk_paiement_mode; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement
+    ADD CONSTRAINT fk_paiement_mode FOREIGN KEY (id_mode_paiement) REFERENCES exchange.mode_paiement(id_mode_paiement);
+
+
+--
+-- Name: paiement fk_paiement_prestataire; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement
+    ADD CONSTRAINT fk_paiement_prestataire FOREIGN KEY (id_prestataire) REFERENCES exchange.prestataire_paiement(id_prestataire);
+
+
+--
+-- Name: paiement fk_paiement_transaction; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.paiement
+    ADD CONSTRAINT fk_paiement_transaction FOREIGN KEY (id_transaction) REFERENCES exchange.transaction(id_transaction) ON DELETE CASCADE;
+
+
+--
+-- Name: taux_change fk_taux_cible; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.taux_change
+    ADD CONSTRAINT fk_taux_cible FOREIGN KEY (id_devise_cible) REFERENCES exchange.devise(id_devise) ON DELETE CASCADE;
+
+
+--
+-- Name: taux_change fk_taux_source; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.taux_change
+    ADD CONSTRAINT fk_taux_source FOREIGN KEY (id_devise_source) REFERENCES exchange.devise(id_devise) ON DELETE CASCADE;
+
+
+--
+-- Name: transaction fk_transaction_cible; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction
+    ADD CONSTRAINT fk_transaction_cible FOREIGN KEY (id_devise_cible) REFERENCES exchange.devise(id_devise);
+
+
+--
+-- Name: transaction fk_transaction_client; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction
+    ADD CONSTRAINT fk_transaction_client FOREIGN KEY (id_client) REFERENCES exchange.client(id_client);
+
+
+--
+-- Name: transaction fk_transaction_source; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction
+    ADD CONSTRAINT fk_transaction_source FOREIGN KEY (id_devise_source) REFERENCES exchange.devise(id_devise);
+
+
+--
+-- Name: transaction fk_transaction_taux; Type: FK CONSTRAINT; Schema: exchange; Owner: postgres
+--
+
+ALTER TABLE ONLY exchange.transaction
+    ADD CONSTRAINT fk_transaction_taux FOREIGN KEY (id_taux) REFERENCES exchange.taux_change(id_taux);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict kGiN3E3CDcdr5f6qEnIUZtul3sHgFT6fm7ih0Cgz6fpoZ53KFgSTJF06rUrcqr2
+
