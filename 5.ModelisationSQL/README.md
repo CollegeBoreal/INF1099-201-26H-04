@@ -1,5 +1,9 @@
 # Modélisation SQL
 
+[:tada: Participation](.scripts/Participation.md)
+
+---
+
 Appliquer les concepts de conception de bases de données pour maximiser l’efficacité
 
 # 🎯 Objectif général
