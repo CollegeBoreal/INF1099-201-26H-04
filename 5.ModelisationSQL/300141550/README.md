@@ -1,24 +1,23 @@
-📘 RAPPORT – MODÉLISATION SQL
+📄 RAPPORT – MODÉLISATION ET OPTIMISATION SQL
 Projet : Base de données Mama Makusa
-🎯 OBJECTIF GÉNÉRAL
+1. Objectif du projet
 
-L’objectif de ce projet est de concevoir une base de données relationnelle pour la plateforme Mama Makusa, spécialisée dans la vente en ligne de cuisine africaine à Toronto.
+L’objectif était de concevoir une base de données relationnelle :
 
-La base de données doit être :
+adaptée aux besoins du site Mama Makusa ;
 
-adaptée aux besoins d’utilisation,
+performante pour les requêtes fréquentes ;
 
-performante,
+évolutive ;
 
-évolutive,
+structurée selon les principes de normalisation ;
 
-structurée de manière optimale,
+justifiée de manière technique et objective.
 
-justifiée de façon objective.
+2. Étapes de modélisation
+2.1 Analyse des besoins
 
-🔹 2.1 Étapes de modélisation d’une base de données
-1️⃣ Analyse des besoins
-Identification des utilisateurs
+Les utilisateurs identifiés sont :
 
 Clients
 
@@ -26,206 +25,165 @@ Livreurs
 
 Administrateur
 
-Données à stocker
+Les principales données à stocker :
 
-Informations clients
+Clients, Adresses
 
-Adresses
+Plats, Catégories, Pays
 
-Plats
-
-Catégories
-
-Pays d’origine
-
-Commandes
-
-Lignes de commande
+Commandes, Lignes de commande
 
 Paiements
 
 Livraisons
 
-Livreurs
+Les règles d’affaires ont été définies clairement (relations 1–N, dépendances logiques), ce qui a permis d’éviter les erreurs de conception.
 
-Règles d’affaires
+2.2 Modélisation conceptuelle
 
-Un client peut avoir plusieurs adresses.
-
-Une commande appartient à un seul client.
-
-Une commande contient plusieurs plats.
-
-Un paiement est lié à une seule commande.
-
-Une livraison est associée à une commande.
-
-Un livreur peut effectuer plusieurs livraisons.
-
-Un plat appartient à une seule catégorie.
-
-Un plat a un seul pays d’origine.
-
-Cette étape a permis de structurer correctement la base et d’éviter les erreurs d’interprétation.
-
-2️⃣ Modélisation conceptuelle
-
-Un diagramme Entité-Relation (ER) a été utilisé afin de représenter :
+Le diagramme Entité–Relation (ER) a été choisi car il permet de représenter clairement :
 
 les entités,
 
 les attributs,
 
-les relations,
+les relations.
 
-les cardinalités.
+Il est particulièrement adapté à une base relationnelle.
 
-Ce choix est justifié car le diagramme ER est le plus adapté pour une base relationnelle avant l’implémentation SQL.
+2.3 Modélisation logique
 
-3️⃣ Modélisation logique
+Les entités ont été transformées en tables avec :
 
-Les entités ont été transformées en tables relationnelles avec :
+clés primaires (id_*) ;
 
-des clés primaires (PRIMARY KEY),
+clés étrangères pour assurer l’intégrité référentielle.
 
-des clés étrangères (FOREIGN KEY),
+La base respecte :
 
-des contraintes d’intégrité.
+1FN (données atomiques) ;
 
-La base respecte la 3e forme normale (3FN) :
+2FN (pas de dépendance partielle) ;
 
-1FN : données atomiques,
+3FN (pas de dépendance transitive).
 
-2FN : aucune dépendance partielle,
+Cela permet de minimiser la redondance et d’assurer la cohérence des données.
 
-3FN : aucune dépendance transitive.
-
-La quantité a été placée dans la table ligne_commande afin d’éviter la redondance dans commande.
-
-4️⃣ Modélisation physique
+3. Choix du SGBD
 
 Le SGBD choisi est PostgreSQL.
 
 Justification :
 
-Données structurées avec relations fortes.
+données fortement relationnelles ;
 
-Transactions sécurisées (paiement).
+besoin de transactions sécurisées (paiements) ;
 
-Respect des propriétés ACID.
+gestion stricte de l’intégrité référentielle ;
 
-Bonne performance sur les jointures.
+performance élevée sur les jointures.
 
-Ce choix est basé sur des critères techniques objectifs.
+Le choix est basé sur des critères techniques et non sur une préférence personnelle.
 
-🔹 Implémentation et tests
+4. Minimisation du dédoublement
 
-Les tables ont été créées avec leurs contraintes respectives.
-Des données ont ensuite été insérées pour permettre les tests.
+Pour éviter la redondance :
 
-<img width="945" height="532" alt="image" src="https://github.com/user-attachments/assets/7fb6b5e4-005e-47ea-b1a1-cc620318521d" />
-<img width="945" height="532" alt="image" src="https://github.com/user-attachments/assets/7fb6b5e4-005e-47ea-b1a1-cc620318521d" />
+séparation Client / Adresse ;
 
+séparation Plat / Catégorie ;
 
-Capture montrant l’exécution des INSERT
+séparation Plat / Pays ;
 
-Capture montrant les données insérées
+utilisation d’une table intermédiaire Ligne_Commande.
 
-Capture montrant les requêtes exécutées
+Cela améliore :
 
-Ces insertions permettent de :
+l’intégrité ;
 
-vérifier le fonctionnement des relations,
+la maintenabilité ;
 
-tester les jointures,
+l’évolutivité.
 
-valider l’intégrité référentielle.
+5. Optimisation des performances
+5.1 Analyse des requêtes
 
-🔹 Plan d’optimisation
-1️⃣ Analyse préalable
+Les requêtes critiques concernent :
 
-Les requêtes critiques identifiées :
+historique des commandes ;
 
-Historique des commandes d’un client,
+plats par catégorie ;
 
-Liste des plats par catégorie,
+suivi des livraisons.
 
-Commandes par date,
+L’outil EXPLAIN ANALYZE permet d’évaluer les performances.
 
-Plats les plus commandés.
+5.2 Indexation
 
-2️⃣ Optimisation par index
+Des index ont été ajoutés sur :
 
-Des index ont été créés sur :
+clés étrangères ;
 
-les clés étrangères,
+colonnes utilisées dans WHERE ;
 
-les colonnes utilisées dans WHERE,
+colonnes utilisées dans JOIN.
 
-les colonnes utilisées dans JOIN,
+Cela améliore significativement la vitesse d’exécution des requêtes.
 
-les colonnes utilisées dans ORDER BY.
+5.3 Bonnes pratiques
 
-Objectif :
+Éviter SELECT *
 
-accélérer les requêtes,
+Utiliser des requêtes optimisées
 
-améliorer les performances,
+Évaluer la possibilité d’une dénormalisation stratégique si nécessaire
 
-réduire le temps d’exécution.
-
-3️⃣ Analyse avec EXPLAIN ANALYZE
-
-Les performances ont été vérifiées à l’aide de :
-
-EXPLAIN ANALYZE
-
-
-📸 INSÉRER ICI LA CAPTURE CORRESPONDANTE DU FICHIER Insertion.docx
-(montrant l’exécution d’une requête avec analyse)
-
-🔹 Importance de la communication
+6. Communication et adaptation
 
 La communication a permis :
 
-de clarifier les règles d’affaires,
+de valider les règles d’affaires ;
 
-d’éviter les erreurs de modélisation,
+de corriger certaines erreurs (ex : emplacement de la quantité) ;
 
-d’assurer la cohérence des relations,
+d’ajuster le modèle de manière itérative.
 
-de faciliter l’évolution du modèle.
+La conception d’une base de données est un processus évolutif.
 
-Une mauvaise clarification aurait pu entraîner des incohérences structurelles.
+7. Conclusion
 
-🔹 Pensée critique et objectivité
+La base de données conçue pour Mama Makusa :
 
-Les décisions ont été prises selon :
+respecte les étapes complètes de modélisation ;
 
-le type de données,
+applique la normalisation jusqu’à la 3FN ;
 
-le besoin de transactions,
+utilise un SGBD adapté aux besoins ;
 
-la performance mesurable,
+intègre une stratégie d’optimisation claire ;
 
-l’évolutivité future.
+repose sur une justification technique objective.
 
-Le choix technologique est justifié par des critères techniques et non par préférence personnelle.
+Les captures d’écran ajoutées à la fin du document démontrent l’implémentation et les tests réalisés.
 
-🎯 CONCLUSION
 
-La base de données Mama Makusa :
+🔎 1️⃣ Vérifier la structure (Justifier la modélisation)
+ <img width="945" height="231" alt="image" src="https://github.com/user-attachments/assets/dbbdcf5e-9271-46c7-b362-8970a1bd01cc" />
 
-respecte les principes de modélisation relationnelle,
 
-est normalisée jusqu’à la 3FN,
+2️⃣ Requêtes fonctionnelles
+ <img width="945" height="179" alt="image" src="https://github.com/user-attachments/assets/5cf38a8b-1a14-4b28-a35f-fe6c32426c12" />
 
-est implémentée correctement dans PostgreSQL,
 
-est testée avec des données réelles,
 
-est optimisée par indexation,
+✅ Détail complet d’une commande
+<img width="945" height="174" alt="image" src="https://github.com/user-attachments/assets/f5b5edfb-4944-4242-9472-bc92578495c3" />
+ 
 
-est justifiée objectivement.
+✅ Plats par catégorie
+ <img width="945" height="175" alt="image" src="https://github.com/user-attachments/assets/1d25b687-cd45-47d2-9f01-e88519f8b10d" />
 
-Elle répond pleinement à l’objectif général du travail demandé.
+
+3️⃣ Requêtes de performance (Justifier l’optimisation)
+
+<img width="945" height="203" alt="image" src="https://github.com/user-attachments/assets/b82eddd5-daf0-4608-901d-3af7cace6c90" />
