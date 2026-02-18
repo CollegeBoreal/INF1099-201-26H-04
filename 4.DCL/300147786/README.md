@@ -10,12 +10,16 @@
 
 
 3️⃣ Donner des droits (GRANT)
+<img width="818" height="85" alt="6" src="https://github.com/user-attachments/assets/432a858c-cd9e-4448-8ec5-be34f9591ccb" />
+<img width="1042" height="299" alt="7" src="https://github.com/user-attachments/assets/c66e3089-4feb-4108-bbcb-3198e5fddc10" />
+
 
 4️⃣ vérifier les droits
 
 5️⃣ Retirer des droits (REVOKE)
 
 6️⃣ Supprimer un utilisateur (DROP USER)
+
 
 
 
