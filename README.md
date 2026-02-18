@@ -19,8 +19,8 @@ INF1099 (201) - Administration de base de données
 |---------|--------|:--------------------------------|:------------------------------------|
 | :one:   | 12-Jan | [0.PlanDeCours](0.PlanDeCours)  | [🎉](0.PlanDeCours/.scripts/Participation.md) |
 | :two:   |        | [1.Domaines](1.Domaines)        | [🎉](1.Domaines/.scripts/Participation.md) 👉  â Noter :x:|
-| :three: |        | [2.MySQL](2.MySQL)              | [🎉](2.MySQL/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération) |
-| :four:  |        | [3.Postgres](3.Postgres)        | [🎉](3.Postgres/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération) |
+| :three: |        | [2.MySQL](2.MySQL)              | [🎉](2.MySQL/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération)/(Administration) |
+| :four:  |        | [3.Postgres](3.Postgres)        | [🎉](3.Postgres/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération)/(Administration) |
 | :five:  |        | [4.DCL](4.DCL)                  | [🎉](4.DCL/.scripts/Participation.md) 👉  â Noter :x:|
 
 ### :abacus: Évaluation
