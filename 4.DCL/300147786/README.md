@@ -5,27 +5,28 @@
 <img width="554" height="103" alt="3" src="https://github.com/user-attachments/assets/35c27da6-b455-4ec0-82f3-a33b601889bb" />
 
 
-2️⃣ Créer des utilisateurs
+## 2️⃣ Créer des utilisateurs
 <img width="757" height="181" alt="4" src="https://github.com/user-attachments/assets/0a2bfd6d-7925-4327-be11-74a16f987171" />
 
 
-3️⃣ Donner des droits (GRANT)
+## 3️⃣ Donner des droits (GRANT)
 <img width="818" height="85" alt="6" src="https://github.com/user-attachments/assets/432a858c-cd9e-4448-8ec5-be34f9591ccb" />
 <img width="1042" height="299" alt="7" src="https://github.com/user-attachments/assets/c66e3089-4feb-4108-bbcb-3198e5fddc10" />
 
 
-4️⃣ vérifier les droits
+## 4️⃣ vérifier les droits
 <img width="999" height="302" alt="8" src="https://github.com/user-attachments/assets/73186982-3ecc-4549-a4cf-e39fc539f336" />
 <img width="970" height="233" alt="9" src="https://github.com/user-attachments/assets/37881791-bbfb-4fe4-b5f4-9a922d54e86a" />
 
 
-5️⃣ Retirer des droits (REVOKE)
+## 5️⃣ Retirer des droits (REVOKE)
 <img width="1031" height="320" alt="10-1" src="https://github.com/user-attachments/assets/4d798a33-bff7-4723-9518-bdd8d488d5f3" />
 <img width="787" height="173" alt="10-2-2" src="https://github.com/user-attachments/assets/21caffe7-78ca-4131-aa5f-d54ee3de6820" />
 
 
-6️⃣ Supprimer un utilisateur (DROP USER)
+## 6️⃣ Supprimer un utilisateur (DROP USER)
 <img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
 
 
 
