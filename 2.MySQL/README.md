@@ -58,7 +58,7 @@ Set-Alias docker podman
 # Pour rendre l'alias permanent
 notepad $PROFILE
 # Ajouter la ligne suivante dans le fichier :
-# Set-Alias docker podman
+Set-Alias docker podman
 ```
 
 ---
