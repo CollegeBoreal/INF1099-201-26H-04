@@ -1,28 +1,32 @@
+📘 RAPPORT – MODÉLISATION SQL
+Projet : Base de données Mama Makusa
 🎯 OBJECTIF GÉNÉRAL
 
-Concevoir une base de données pour Mama Makusa qui soit :
+L’objectif de ce projet est de concevoir une base de données relationnelle pour la plateforme Mama Makusa, spécialisée dans la vente en ligne de cuisine africaine à Toronto.
 
-adaptée aux besoins réels du site
+La base de données doit être :
 
-performante
+adaptée aux besoins d’utilisation,
 
-évolutive
+performante,
 
-structurée de manière optimale
+évolutive,
 
-justifiée objectivement
+structurée de manière optimale,
 
-🔹 2.1 ÉTAPES DE MODÉLISATION
+justifiée de façon objective.
+
+🔹 2.1 Étapes de modélisation d’une base de données
 1️⃣ Analyse des besoins
-🔎 Identification des utilisateurs
+Identification des utilisateurs
 
 Clients
 
 Livreurs
 
-Administrateur du site
+Administrateur
 
-📦 Données à stocker
+Données à stocker
 
 Informations clients
 
@@ -44,7 +48,7 @@ Livraisons
 
 Livreurs
 
-📜 Règles d’affaires
+Règles d’affaires
 
 Un client peut avoir plusieurs adresses.
 
@@ -62,312 +66,166 @@ Un plat appartient à une seule catégorie.
 
 Un plat a un seul pays d’origine.
 
-👉 Cette étape évite les erreurs de conception.
+Cette étape a permis de structurer correctement la base et d’éviter les erreurs d’interprétation.
 
 2️⃣ Modélisation conceptuelle
-Diagramme choisi : ER
 
-Justification :
+Un diagramme Entité-Relation (ER) a été utilisé afin de représenter :
 
-Le diagramme Entité-Relation a été choisi car il permet de représenter clairement :
+les entités,
 
-les entités
+les attributs,
 
-les attributs
+les relations,
 
-les relations
-avant l’implémentation technique.
+les cardinalités.
 
-Il est adapté à une base relationnelle comme PostgreSQL.
+Ce choix est justifié car le diagramme ER est le plus adapté pour une base relationnelle avant l’implémentation SQL.
 
 3️⃣ Modélisation logique
 
-Transformation en tables :
+Les entités ont été transformées en tables relationnelles avec :
 
-Exemple pour COMMANDE :
+des clés primaires (PRIMARY KEY),
 
-COMMANDE
-id_commande (PK)
-id_client (FK)
-id_adresse (FK)
-date_commande
-statut_commande
+des clés étrangères (FOREIGN KEY),
 
-Clés primaires
+des contraintes d’intégrité.
 
-Toutes les tables possèdent une clé primaire (id_...)
+La base respecte la 3e forme normale (3FN) :
 
-Clés étrangères
+1FN : données atomiques,
 
-Relations assurées par :
+2FN : aucune dépendance partielle,
 
-id_client
+3FN : aucune dépendance transitive.
 
-id_plat
-
-id_commande
-
-id_livreur
-etc.
-
-✅ Normalisation
-1FN
-
-Pas de champs multiples
-
-Données atomiques
-
-2FN
-
-Aucune dépendance partielle
-
-Ligne_commande dépend entièrement de (id_commande, id_plat)
-
-3FN
-
-Pas de dépendance transitive
-
-Catégorie et Pays sont séparés
-
-👉 Le modèle respecte la 3FN pour minimiser la redondance.
+La quantité a été placée dans la table ligne_commande afin d’éviter la redondance dans commande.
 
 4️⃣ Modélisation physique
-🎯 Choix du SGBD : PostgreSQL
 
-Justification objective :
-
-Données fortement relationnelles
-
-Transactions sécurisées (paiement)
-
-Contraintes d’intégrité référentielle
-
-Support ACID
-
-Bonne performance sur jointures
-
-Comparaison :
-
-Critère	PostgreSQL	MongoDB
-Relations fortes	✅	❌
-Transactions complexes	✅	Limité
-Intégrité stricte	✅	❌
-
-Donc PostgreSQL est plus adapté.
-
-🔹 2.2 Importance de la communication
-
-Dans le projet Mama Makusa :
-
-Clarification des règles d’affaires
-
-Validation des statuts (commande, paiement, livraison)
-
-Confirmation des relations 1–N
-
-Vérification que la quantité appartient à Ligne_Commande
-
-Sans communication :
-→ erreur de modélisation
-→ incohérence des données
-→ mauvaise performance
-
-La collaboration permet :
-
-cohérence
-
-évolutivité
-
-maintenance future facilitée
-
-🔹 2.3 Choix de l’engin
-
-Type de données : structurées avec relations fortes
-Besoin de transactions : oui (paiement)
-Volume : évolutif
-Requêtes : jointures fréquentes
-
-➡ PostgreSQL recommandé.
-
-🔹 2.4 Minimiser le dédoublement
-
-Techniques utilisées :
-
-Séparation Client / Adresse
-
-Séparation Plat / Catégorie
-
-Séparation Plat / Pays
-
-Table intermédiaire Ligne_Commande
-
-Résultat :
-
-Pas de répétition inutile
-
-Intégrité assurée
-
-Maintenance simplifiée
-
-🔹 2.5 Choix du diagramme
-
-Projet : base relationnelle transactionnelle
-Diagramme utilisé : ER
-
-Pourquoi pas UML ?
-→ UML est plus orienté objet
-
-Pourquoi pas BPMN ?
-→ BPMN sert aux processus métier
-
-Donc ER est le plus adapté.
-
-🔹 2.6 Justification du diagramme
-
-Le diagramme ER :
-
-offre un niveau d’abstraction clair
-
-est compréhensible par développeurs et analystes
-
-facilite l’évolution
-
-prépare à la transformation en tables SQL
-
-🔹 2.7 Adaptation / Itération
-
-Corrections effectuées :
-
-Suppression de la quantité dans COMMANDE
-
-Ajout de clés primaires
-
-Ajout de clés étrangères
-
-Ajout d’index
-
-La conception est itérative et évolutive.
-
-🔹 2.8 Pensée critique
-
-Analyse effectuée :
-
-Comparaison PostgreSQL vs MongoDB
-
-Évaluation normalisation vs performance
-
-Réflexion sur dénormalisation (ex : total_commande)
-
-Anticipation croissance du site
-
-🔹 2.9 Objectivité
-
-Décisions basées sur :
-
-Transactions nécessaires
-
-Relations fortes
-
-Intégrité référentielle
-
-Performance mesurable
-
-Pas de choix basé sur préférence personnelle.
-
-📌 PLAN D’OPTIMISATION APPLIQUÉ À MAMA MAKUSA
-1️⃣ Analyse préalable
-
-Requêtes critiques probables :
-
-Historique des commandes d’un client
-
-Liste des plats par catégorie
-
-Commandes par date
-
-Statut des livraisons
-
-Utilisation de :
-
-EXPLAIN ANALYZE
-
-2️⃣ Indexation
-
-Index recommandés :
-
-CREATE INDEX idx_commande_client ON commande(id_client);
-CREATE INDEX idx_commande_date ON commande(date_commande);
-CREATE INDEX idx_plat_categorie ON plat(id_categorie);
-CREATE INDEX idx_ligne_commande_plat ON ligne_commande(id_plat);
-CREATE INDEX idx_client_email ON client(email);
-
+Le SGBD choisi est PostgreSQL.
 
 Justification :
 
-Accélère jointures
+Données structurées avec relations fortes.
 
-Accélère filtres fréquents
+Transactions sécurisées (paiement).
 
-Optimise recherches client
+Respect des propriétés ACID.
 
-3️⃣ Optimisation des requêtes
+Bonne performance sur les jointures.
 
-✔ Éviter SELECT *
-✔ Utiliser requêtes préparées
-✔ Éviter fonctions sur colonnes indexées
+Ce choix est basé sur des critères techniques objectifs.
 
-4️⃣ Dénormalisation stratégique
+🔹 Implémentation et tests
 
-Option possible :
+Les tables ont été créées avec leurs contraintes respectives.
+Des données ont ensuite été insérées pour permettre les tests.
 
-Ajouter :
-
-total_commande
+<img width="945" height="532" alt="image" src="https://github.com/user-attachments/assets/7fb6b5e4-005e-47ea-b1a1-cc620318521d" />
+<img width="945" height="532" alt="image" src="https://github.com/user-attachments/assets/7fb6b5e4-005e-47ea-b1a1-cc620318521d" />
 
 
-Avantage :
+Capture montrant l’exécution des INSERT
 
-Évite recalcul fréquent
+Capture montrant les données insérées
 
-Accélère affichage
+Capture montrant les requêtes exécutées
 
-Justification nécessaire.
+Ces insertions permettent de :
 
-5️⃣ Partitionnement
+vérifier le fonctionnement des relations,
 
-Si le site devient grand :
+tester les jointures,
 
-Partition par :
+valider l’intégrité référentielle.
 
-date_commande
+🔹 Plan d’optimisation
+1️⃣ Analyse préalable
 
-Améliore performance historique.
+Les requêtes critiques identifiées :
 
-6️⃣ Mise en cache
+Historique des commandes d’un client,
 
-Cache possible :
+Liste des plats par catégorie,
 
-Redis pour plats populaires
+Commandes par date,
 
-Cache applicatif pour catégories
+Plats les plus commandés.
 
-7️⃣ Optimisation physique
+2️⃣ Optimisation par index
 
-SSD recommandé
+Des index ont été créés sur :
 
-Paramètres PostgreSQL ajustés
+les clés étrangères,
 
-Monitoring continu
+les colonnes utilisées dans WHERE,
 
-🎯 RÉSUMÉ FINAL
+les colonnes utilisées dans JOIN,
 
-La base Mama Makusa :
+les colonnes utilisées dans ORDER BY.
 
-✔ Analyse rigoureuse des besoins
-✔ Modélisation ER claire
-✔ Normalisation jusqu’à 3FN
-✔ Choix technologique justifié (PostgreSQL)
-✔ Indexation stratégique
-✔ Plan d’optimisation structuré
-✔ Justification objective
-✔ Capacité d’évolution
+Objectif :
+
+accélérer les requêtes,
+
+améliorer les performances,
+
+réduire le temps d’exécution.
+
+3️⃣ Analyse avec EXPLAIN ANALYZE
+
+Les performances ont été vérifiées à l’aide de :
+
+EXPLAIN ANALYZE
+
+
+📸 INSÉRER ICI LA CAPTURE CORRESPONDANTE DU FICHIER Insertion.docx
+(montrant l’exécution d’une requête avec analyse)
+
+🔹 Importance de la communication
+
+La communication a permis :
+
+de clarifier les règles d’affaires,
+
+d’éviter les erreurs de modélisation,
+
+d’assurer la cohérence des relations,
+
+de faciliter l’évolution du modèle.
+
+Une mauvaise clarification aurait pu entraîner des incohérences structurelles.
+
+🔹 Pensée critique et objectivité
+
+Les décisions ont été prises selon :
+
+le type de données,
+
+le besoin de transactions,
+
+la performance mesurable,
+
+l’évolutivité future.
+
+Le choix technologique est justifié par des critères techniques et non par préférence personnelle.
+
+🎯 CONCLUSION
+
+La base de données Mama Makusa :
+
+respecte les principes de modélisation relationnelle,
+
+est normalisée jusqu’à la 3FN,
+
+est implémentée correctement dans PostgreSQL,
+
+est testée avec des données réelles,
+
+est optimisée par indexation,
+
+est justifiée objectivement.
+
+Elle répond pleinement à l’objectif général du travail demandé.
