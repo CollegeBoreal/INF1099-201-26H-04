@@ -1,0 +1,4 @@
+VENTE
+---------------------------------------------------------
+IdVente (PK) | NomClient | TelClient | AdresseImmeuble |
+Ville | NumAppartement | Surface | Prix | DateVente
