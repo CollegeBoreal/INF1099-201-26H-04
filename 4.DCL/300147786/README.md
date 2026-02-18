@@ -1,4 +1,4 @@
-1️⃣ Préparation
+## 1️⃣ Préparation
 
 <img width="544" height="141" alt="1" src="https://github.com/user-attachments/assets/694cdff6-59ed-48f6-86b4-3fcf87326086" />
 <img width="719" height="161" alt="2" src="https://github.com/user-attachments/assets/1e65a5d7-091e-465a-bdab-d1ebe372ffaf" />
@@ -26,6 +26,7 @@
 
 6️⃣ Supprimer un utilisateur (DROP USER)
 <img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
 
 
 
