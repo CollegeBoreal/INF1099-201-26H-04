@@ -1,5 +1,7 @@
 # PostgreSQL DB 🧻 
 
+[:tada: Participation](.scripts/Participation.md)
+
 ## Objectifs
 
 À la fin de cette leçon, l’étudiant sera capable de :
