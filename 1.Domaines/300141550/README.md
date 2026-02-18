@@ -38,22 +38,30 @@ erDiagram
     LIVREUR ||--|{ LIVRAISON : EFFECTUE
 
     CLIENT {
+        int id_client PK
         string nom
         string prenom
         string post_nom
         string telephone
-        string email
+        string email UNIQUE
+        date date_creation
     }
 
     ADRESSE {
+        int id_adresse PK
+        int id_client FK
         int numero_rue
         string rue
         string ville
         string province
         string pays
+        string code_postal
     }
 
     PLAT {
+        int id_plat PK
+        int id_categorie FK
+        int id_pays FK
         string nom_plat
         string description
         float prix
@@ -61,25 +69,34 @@ erDiagram
     }
 
     CATEGORIE {
-        string nom_categorie
+        int id_categorie PK
+        string nom_categorie UNIQUE
     }
 
     PAYS_ORIGINE {
-        string nom_pays
+        int id_pays PK
+        string nom_pays UNIQUE
     }
 
     COMMANDE {
+        int id_commande PK
+        int id_client FK
+        int id_adresse FK
         date date_commande
-        int quantite
         string statut_commande
+        float total_commande
     }
 
     LIGNE_COMMANDE {
+        int id_commande FK
+        int id_plat FK
         int quantite
         float prix_unitaire
     }
 
     PAIEMENT {
+        int id_paiement PK
+        int id_commande FK
         date date_paiement
         float montant
         string mode_paiement
@@ -87,16 +104,21 @@ erDiagram
     }
 
     LIVRAISON {
+        int id_livraison PK
+        int id_commande FK
+        int id_livreur FK
         date date_livraison
         string statut_livraison
         float frais_livraison
     }
 
     LIVREUR {
+        int id_livreur PK
         string nom
         string prenom
         string post_nom
         string telephone
         string email
     }
+
 ```
