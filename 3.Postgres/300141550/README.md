@@ -5,10 +5,11 @@ Invoke-WebRequest `
   -OutFile postgres-sakila-schema.sql
 ```
 
+```powershell
 Invoke-WebRequest `
   https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql `
   -OutFile postgres-sakila-insert-data.sql
-
+```
 
 
 commande pour entrer dans la base de donnee 
