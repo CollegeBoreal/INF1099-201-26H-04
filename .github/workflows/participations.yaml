@@ -62,6 +62,13 @@ jobs:
           cd 4.DCL
           bash .scripts/run.sh
           cd ..
+          ##
+          ## Evaluating chapter 5.ModelisationSQL
+          ## 
+          echo "Evaluating chapter 5.ModelisationSQL Participation"
+          cd 5.ModelisationSQL
+          bash .scripts/run.sh
+          cd ..
 
       - name: Commit files
         run: |
