@@ -104,6 +104,6 @@ Commande	Description
 \l	Liste des bases
 \du	Liste des utilisateurs
 \q	Quitter
-🔥 Remise à zéro complète
+ Remise à zéro complète
 docker container rm -f postgres
 docker volume rm postgres_data
