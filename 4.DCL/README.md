@@ -1,5 +1,7 @@
 # 4.DCL
 
+[:tada: Participation](.scripts/Participation.md)
+
 ---
 
 # 🔹 DCL = **Data Control Language**
