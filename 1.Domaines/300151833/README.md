@@ -64,7 +64,7 @@ Le système permet de :
 
 Ci-dessous le diagramme conceptuel du système :
 
-![Diagramme ER](A_diagram_of_an_entity-relationship_(ER)_model_for.png)
+![Diagramme ER](A_diagram_of_an_entity-relationship_(ER)_model_for.png.png)
 
 *(Assurez-vous que l’image se trouve dans le même dossier que le fichier README.md)*
 
