@@ -25,6 +25,9 @@
 
 
 6️⃣ Supprimer un utilisateur (DROP USER)
+<img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
+
 
 
 
