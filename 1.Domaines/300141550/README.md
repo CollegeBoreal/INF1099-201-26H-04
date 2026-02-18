@@ -38,18 +38,18 @@ erDiagram
     LIVREUR ||--|{ LIVRAISON : EFFECTUE
 
     CLIENT {
-        int id_client PK
+        int id_client
         string nom
         string prenom
         string post_nom
         string telephone
-        string email UNIQUE
+        string email
         date date_creation
     }
 
     ADRESSE {
-        int id_adresse PK
-        int id_client FK
+        int id_adresse
+        int id_client
         int numero_rue
         string rue
         string ville
@@ -59,9 +59,9 @@ erDiagram
     }
 
     PLAT {
-        int id_plat PK
-        int id_categorie FK
-        int id_pays FK
+        int id_plat
+        int id_categorie
+        int id_pays
         string nom_plat
         string description
         float prix
@@ -69,34 +69,34 @@ erDiagram
     }
 
     CATEGORIE {
-        int id_categorie PK
-        string nom_categorie UNIQUE
+        int id_categorie
+        string nom_categorie
     }
 
     PAYS_ORIGINE {
-        int id_pays PK
-        string nom_pays UNIQUE
+        int id_pays
+        string nom_pays
     }
 
     COMMANDE {
-        int id_commande PK
-        int id_client FK
-        int id_adresse FK
+        int id_commande
+        int id_client
+        int id_adresse
         date date_commande
         string statut_commande
         float total_commande
     }
 
     LIGNE_COMMANDE {
-        int id_commande FK
-        int id_plat FK
+        int id_commande
+        int id_plat
         int quantite
         float prix_unitaire
     }
 
     PAIEMENT {
-        int id_paiement PK
-        int id_commande FK
+        int id_paiement
+        int id_commande
         date date_paiement
         float montant
         string mode_paiement
@@ -104,16 +104,16 @@ erDiagram
     }
 
     LIVRAISON {
-        int id_livraison PK
-        int id_commande FK
-        int id_livreur FK
+        int id_livraison
+        int id_commande
+        int id_livreur
         date date_livraison
         string statut_livraison
         float frais_livraison
     }
 
     LIVREUR {
-        int id_livreur PK
+        int id_livreur
         string nom
         string prenom
         string post_nom
