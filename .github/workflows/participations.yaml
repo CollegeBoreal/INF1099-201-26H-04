@@ -41,6 +41,27 @@ jobs:
           cd 1.Domaines
           bash .scripts/run.sh
           cd ..
+          ##
+          ## Evaluating chapter 2.MySQL
+          ## 
+          echo "Evaluating chapter 2.MySQL Participation"
+          cd 2.MySQL
+          bash .scripts/run.sh
+          cd ..
+          ##
+          ## Evaluating chapter 3.Postgres
+          ## 
+          echo "Evaluating chapter 3.Postgres Participation"
+          cd 3.Postgres
+          bash .scripts/run.sh
+          cd ..
+          ##
+          ## Evaluating chapter 4.DCL
+          ## 
+          echo "Evaluating chapter 4.DCL Participation"
+          cd 4.DCL
+          bash .scripts/run.sh
+          cd ..
 
       - name: Commit files
         run: |
