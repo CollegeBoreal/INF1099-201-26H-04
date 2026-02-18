@@ -1,0 +1,30 @@
+erDiagram
+    CLIENT {
+        int IdClient PK
+        string Nom
+        string Telephone
+    }
+
+    IMMEUBLE {
+        int IdImmeuble PK
+        string Adresse
+        string Ville
+    }
+
+    APPARTEMENT {
+        int IdAppartement PK
+        int NumAppartement
+        float Surface
+        float Prix
+        int IdImmeuble FK
+    }
+
+    VENTE {
+        int IdVente PK
+        date DateVente
+        int IdClient FK
+        int IdAppartement FK
+    }
+
+    CLIENT ||--o{ VENTE : "achete"
+    APPARTEMENT ||--o{ VENTE : "est_vend_
