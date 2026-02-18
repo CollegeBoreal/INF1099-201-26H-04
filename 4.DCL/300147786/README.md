@@ -1,31 +1,5 @@
 1️⃣ Préparation
-Se connecter en tant que superutilisateur :
 
-psql -U postgres
-Créer la base de test :
-
-CREATE DATABASE cours;
-\c cours
-Créer un schéma :
-
-CREATE SCHEMA tp_dcl;
-Créer un tableau pour l'exercice :
-
-CREATE TABLE tp_dcl.etudiants (
-    id SERIAL PRIMARY KEY,
-    nom TEXT,
-    moyenne NUMERIC
-);
-🎯 Rappel fondamental
-PostgreSQL fonctionne ainsi :
-
-Cluster
- ├── Base 1 (postgres)
- ├── Base 2 (cours)
- │     └── Schéma tp_dcl
- │           └── Table etudiants
- └── Base 3 (appdb)
-Un schéma appartient à une base. Une table appartient à un schéma. Les droits sont liés à la base courante.
 
 2️⃣ Créer des utilisateurs
 -- Étudiant simple (lecture)
@@ -76,3 +50,4 @@ SELECT * FROM tp_dcl.etudiants;  -- ERREUR maintenant
 6️⃣ Supprimer un utilisateur (DROP USER)
 DROP USER etudiant;
 DROP USER professeur;
+
