@@ -297,7 +297,7 @@ CREATE INDEX idx_paiement_transaction ON exchange.paiement(id_transaction);
 ![image](./images/11.PNG)
 
 
-## Sauvegarde SQL (Dump) (si prof demande)
+## Sauvegarde SQL (Dump) 
 
 Dans PowerShell (hors psql) :
 ```powershell
