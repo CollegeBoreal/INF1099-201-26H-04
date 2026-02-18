@@ -1,0 +1,17 @@
+Membre (Nom, Prenom, Telephone, Email, Date_inscription)
+
+Adresse (Numero_rue, Rue, Ville, Province, Pays)
+
+Livre (Titre, ISBN, Date_publication, Statut_livre)
+
+Categorie (Nom_categorie)
+
+Auteur (Nom, Prenom, Nationalite)
+
+Emprunt (Date_emprunt, Date_retour_prevue, Statut_emprunt)
+
+Ligne_Emprunt (Quantite)
+
+Paiement (Date_paiement, Montant, Mode_paiement, Statut_paiement)
+
+Employe (Nom, Prenom, Telephone, Email, Poste)
