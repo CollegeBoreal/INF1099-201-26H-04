@@ -1,4 +1,6 @@
-# INF1099 – TP : Manipulation de données avec MySQL et Podman sur Windows
+# Manipulation de données avec MySQL et administration
+
+[:tada: Participation](.scripts/Participation.md)
 
 ## 🎯 Objectifs
 
