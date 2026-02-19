@@ -1,6 +1,6 @@
 ## 📘 Conception d’une Base de Données
 ## 🔹 SAVOIRS
-2.1 Étapes de modélisation
+1.1 Étapes de modélisation
 
 La conception d’une base de données suit un processus structuré :
 
@@ -32,7 +32,7 @@ La conception d’une base de données suit un processus structuré :
 
 👉 Les erreurs proviennent souvent d’un manque de clarification des besoins.
 
-## 2.2 Importance de la communication
+## 1.2 Importance de la communication
 
 - **Une bonne communication permet :**
   - D’éviter les erreurs d’interprétation
@@ -47,13 +47,10 @@ La conception d’une base de données suit un processus structuré :
 
 # 🔹 SAVOIR-FAIRE
 
-## 2.3 Choix du SGBD
+## 1.3 Choix du SGBD
 
 - **Le choix dépend du type de projet :**
   - PostgreSQL : données relationnelles complexes et transactions ACID
-  - MySQL : applications transactionnelles simples
-  - MongoDB : données semi-structurées (JSON)
-  - Cassandra : haute scalabilité distribuée
 
 - **Critères de sélection :**
   - Volume de données
@@ -63,7 +60,7 @@ La conception d’une base de données suit un processus structuré :
 
 ---
 
-## 2.4 Minimiser le dédoublement
+## 1.4 Minimiser le dédoublement
 
 - **Techniques utilisées :**
   - Normalisation (jusqu’à la 3FN)
@@ -77,7 +74,7 @@ La conception d’une base de données suit un processus structuré :
 
 ---
 
-## 2.5 Choix et justification du diagramme
+## 1.5 Choix et justification du diagramme
 
 - **Diagramme recommandé :**
   - Diagramme Entité-Relation (ER) pour l’analyse conceptuelle
@@ -107,6 +104,7 @@ La conception d’une base de données suit un processus structuré :
 
 - **Exemple de justification :**
   - « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relation
+
 
 
 
