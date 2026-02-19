@@ -4,20 +4,31 @@
 
 La conception d’une base de données suit un processus structuré :
 
-1. Analyse des besoins
-Identifier les utilisateurs, les données à stocker et les règles d’affaires. Cette étape est essentielle pour éviter les erreurs de conception.
+- **Analyse des besoins**
+  - Identifier les utilisateurs
+  - Déterminer les données à stocker
+  - Définir les règles d’affaires
+  - Cette étape est essentielle pour éviter les erreurs de conception.
 
-2. Modélisation conceptuelle
-Création d’un diagramme Entité-Relation (ER) pour identifier les entités, leurs attributs et leurs relations.
+- **Modélisation conceptuelle**
+  - Création d’un diagramme Entité-Relation (ER)
+  - Identification des entités, attributs et relations
 
-3. Modélisation logique
-Transformation du modèle ER en tables avec clés primaires et étrangères. Application de la normalisation (1FN, 2FN, 3FN) afin de réduire la redondance.
+- **Modélisation logique**
+  - Transformation du modèle ER en tables
+  - Définition des clés primaires et étrangères
+  - Application de la normalisation (1FN, 2FN, 3FN)
 
-4. Modélisation physique
-Choix du SGBD (PostgreSQL, MySQL, MongoDB), définition des types de données et optimisation (indexation).
+- **Modélisation physique**
+  - Choix du SGBD (PostgreSQL, MySQL, MongoDB)
+  - Définition des types de données
+  - Indexation et optimisation des performances
 
-5. Implémentation et tests
-Création des tables, tests des requêtes et validation avec les utilisateurs.
+- **Implémentation et tests**
+  - Création des tables
+  - Tests des requêtes
+  - Validation avec les utilisateurs
+
 
 👉 Les erreurs proviennent souvent d’un manque de clarification des besoins.
 
@@ -91,6 +102,7 @@ Justifier les choix avec des critères techniques
 
 Exemple :
 « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relationnelle. »
+
 
 
 
