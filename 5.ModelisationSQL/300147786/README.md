@@ -45,62 +45,69 @@ La conception d’une base de données suit un processus structuré :
   - Tout au long du cycle de vie du projet
 
 
-🔹 SAVOIR-FAIRE
-2.3 Choix du SGBD
+# 🔹 SAVOIR-FAIRE
 
-Le choix dépend du type de projet :
+## 2.3 Choix du SGBD
 
-PostgreSQL : données relationnelles complexes, transactions ACID
+- **Le choix dépend du type de projet :**
+  - PostgreSQL : données relationnelles complexes et transactions ACID
+  - MySQL : applications transactionnelles simples
+  - MongoDB : données semi-structurées (JSON)
+  - Cassandra : haute scalabilité distribuée
 
-MySQL : applications transactionnelles simples
+- **Critères de sélection :**
+  - Volume de données
+  - Type de requêtes
+  - Performance attendue
+  - Évolutivité
 
-MongoDB : données semi-structurées (JSON)
+---
 
-Cassandra : haute scalabilité distribuée
+## 2.4 Minimiser le dédoublement
 
-Critères : volume de données, type de requêtes, performance, évolutivité.
+- **Techniques utilisées :**
+  - Normalisation (jusqu’à la 3FN)
+  - Séparation des entités
+  - Utilisation de clés étrangères
+  - Indexation stratégique
 
-2.4 Minimiser le dédoublement
+- **Objectifs :**
+  - Éviter la redondance
+  - Assurer l’intégrité des données
 
-Techniques utilisées :
+---
 
-Normalisation (jusqu’à 3FN)
+## 2.5 Choix et justification du diagramme
 
-Séparation des entités
+- **Diagramme recommandé :**
+  - Diagramme Entité-Relation (ER) pour l’analyse conceptuelle
 
-Clés étrangères
+- **Pourquoi ce choix :**
+  - Représentation claire des entités et relations
+  - Modèle compréhensible avant l’implémentation technique
 
-Indexation stratégique
+- **La justification doit démontrer :**
+  - La clarté du modèle
+  - Le niveau d’abstraction
+  - L’adaptation au public
 
-Objectif : éviter la redondance et assurer l’intégrité des données.
+- **Important :**
+  - La conception est itérative et évolue selon les tests et besoins
 
-2.5 Choix et justification du diagramme
+---
 
-Le diagramme ER est recommandé pour l’analyse conceptuelle car il permet de représenter clairement les entités et leurs relations avant l’implémentation technique.
+# 🔹 SAVOIR-ÊTRE
 
-La justification doit démontrer :
+## Pensée critique et objectivité
 
-La clarté du modèle
+- **Il est important de :**
+  - Comparer plusieurs solutions
+  - Justifier les choix avec des critères techniques
+  - Évaluer les compromis
 
-Son niveau d’abstraction
+- **Exemple de justification :**
+  - « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relation
 
-Son adaptation au public
-
-La conception est itérative : le modèle peut être ajusté selon les tests et les besoins.
-
-🔹 SAVOIR-ÊTRE
-Pensée critique et objectivité
-
-Il est important de :
-
-Comparer plusieurs solutions
-
-Justifier les choix avec des critères techniques
-
-Évaluer les compromis
-
-Exemple :
-« PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relationnelle. »
 
 
 
