@@ -62,6 +62,7 @@ APPARTEMENT(IdAppartement, NumAppartement, Surface, Prix, IdImmeuble)
 VENTE(IdVente, DateVente, IdClient, IdAppartement)
 
 📊 Diagramme Entité / Relation (E/R)
+```mermaid
 erDiagram
     CLIENT {
         int IdClient PK
@@ -93,6 +94,7 @@ erDiagram
     CLIENT ||--o{ VENTE : achete
     APPARTEMENT ||--o{ VENTE : est_vendu_dans
     IMMEUBLE ||--o{ APPARTEMENT : contient
+```
 
 🔗 Relations
 
@@ -116,3 +118,4 @@ Diagramme E/R avec Mermaid
 
 Mazigh Bareche
 Projet académique – Base de données
+
