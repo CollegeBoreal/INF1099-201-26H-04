@@ -32,19 +32,18 @@ La conception d’une base de données suit un processus structuré :
 
 👉 Les erreurs proviennent souvent d’un manque de clarification des besoins.
 
-2.2 Importance de la communication
+## 2.2 Importance de la communication
 
-Une bonne communication permet :
+- **Une bonne communication permet :**
+  - D’éviter les erreurs d’interprétation
+  - D’assurer la cohérence du modèle
+  - De valider les règles d’affaires
+  - De faciliter la maintenance future
 
-D’éviter les erreurs d’interprétation
+- **La collaboration est essentielle :**
+  - Entre analystes, développeurs et utilisateurs
+  - Tout au long du cycle de vie du projet
 
-D’assurer la cohérence du modèle
-
-De valider les règles d’affaires
-
-De faciliter la maintenance
-
-La collaboration est essentielle tout au long du projet.
 
 🔹 SAVOIR-FAIRE
 2.3 Choix du SGBD
@@ -102,6 +101,7 @@ Justifier les choix avec des critères techniques
 
 Exemple :
 « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relationnelle. »
+
 
 
 
