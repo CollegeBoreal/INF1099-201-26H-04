@@ -20,7 +20,7 @@ La conception d’une base de données suit un processus structuré :
   - Application de la normalisation (1FN, 2FN, 3FN)
 
 - **Modélisation physique**
-  - Choix du SGBD (PostgreSQL, MySQL, MongoDB)
+  - Choix du SGBD (PostgreSQ)
   - Définition des types de données
   - Indexation et optimisation des performances
 
@@ -102,6 +102,7 @@ Justifier les choix avec des critères techniques
 
 Exemple :
 « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relationnelle. »
+
 
 
 
