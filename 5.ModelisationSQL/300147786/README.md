@@ -1,4 +1,4 @@
-📘 README – Conception d’une Base de Données
+## 📘 README – Conception d’une Base de Données
 🔹 SAVOIRS
 2.1 Étapes de modélisation
 
@@ -91,3 +91,4 @@ Justifier les choix avec des critères techniques
 
 Exemple :
 « PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relationnelle. »
+
