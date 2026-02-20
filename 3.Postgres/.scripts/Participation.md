@@ -1,4 +1,4 @@
-# Participation au 20-02-2026 21:41
+# Participation au 20-02-2026 21:42
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -36,7 +36,7 @@
 | 17 | [300150562](../300150562/README.md) :point_right: [isako29](https://github.com/isako29) <image src='https://avatars0.githubusercontent.com/u/205994758?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 18 | [300151292](../300151292/README.md) :point_right: [akahil521](https://github.com/akahil521) <image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 19 | [300151469](../300151469/README.md) :point_right: [Rabia-777](https://github.com/Rabia-777) <image src='https://avatars0.githubusercontent.com/u/206001876?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
-| 20 | [300151492](../300151492/README.md) :point_right: [hacen19](https://github.com/hacen19) <image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 20 | [300151492](../300151492/README.md) :point_right: [hacen19](https://github.com/hacen19) <image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 21 | [300151825](../300151825/README.md) :point_right: [FeatFreedy](https://github.com/FeatFreedy) <image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 22 | [300151833](../300151833/README.md) :point_right: [raoufbrs15](https://github.com/raoufbrs15) <image src='https://avatars0.githubusercontent.com/u/109877652?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 23 | [300151841](../300151841/README.md) :point_right: [massi9313](https://github.com/massi9313) <image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image> | :x: | :x: |
