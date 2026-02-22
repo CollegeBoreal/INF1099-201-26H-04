@@ -22,7 +22,7 @@ Avant cette etape, nous avons d'abord demarrer postgres.
 ```powershell
 PS C:\Users\Himok\Developer\INF1099-201-26H-04> podman machine start
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/init.png)
 
 
 - [ ] 🪟 Windows
@@ -38,7 +38,7 @@ docker container run -d `
   postgres:16
 ```
 
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/2.png)
 
 ### Étape 2 : Vérifier que PostgreSQL fonctionne
 
@@ -65,7 +65,7 @@ Invoke-WebRequest `
   https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql `
   -OutFile postgres-sakila-insert-data.sql
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/invoke.png)
 
 
 ### Étape 2 : Copier les fichiers dans le conteneur
@@ -74,7 +74,7 @@ Invoke-WebRequest `
 docker container cp postgres-sakila-schema.sql postgres:/schema.sql
 docker container cp postgres-sakila-insert-data.sql postgres:/data.sql
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/Etape_2.png)
 
 ### Étape 3 : Exécuter les fichiers SQL dans PostgreSQL
 
@@ -82,21 +82,20 @@ docker container cp postgres-sakila-insert-data.sql postgres:/data.sql
 docker container exec -it postgres psql -U postgres -d appdb -f /schema.sql
 docker container exec -it postgres psql -U postgres -d appdb -f /data.sql
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/etape3.png)
 
 ### Étape 4 : Vérifier que les tables Sakila sont présentes
 
 ```bash
 docker container exec -it postgres psql -U postgres -d appdb
 ```
-![Texte alternatif](images/1.png)
 
 ```sql
 \dt
 SELECT COUNT(*) FROM film;
 SELECT COUNT(*) FROM actor;
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/etape4.png)
 
 ---
 
@@ -109,14 +108,14 @@ SELECT COUNT(*) FROM actor;
 ```powershell
 choco install pgadmin4 -y
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/III.png)
 
 ### Étape 3 : Lancer pgAdmin
 
 * Depuis le menu Démarrer → **pgAdmin 4**
 * Ou depuis PowerShell :
 
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/III_3.png)
 
 ---
 
@@ -135,6 +134,9 @@ choco install pgadmin4 -y
    * Username : `postgres`
    * Password : `postgres`
    * Maintenance database : `appdb`
+![Texte alternatif](images/IV_1.png)
+
+---
 
 ### Étape 2 : Explorer la base Sakila
 
@@ -142,7 +144,7 @@ choco install pgadmin4 -y
 * Visualiser les données avec **View/Edit Data**
 * Exécuter vos propres requêtes SQL avec l’éditeur intégré.
 
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/IV_2.png)
 
 ---
 
@@ -160,6 +162,6 @@ SELECT title FROM film WHERE title ILIKE '%Star%';
 SELECT COUNT(*) FROM actor;
 ```
 
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/IV_3.png)
 
 ---
