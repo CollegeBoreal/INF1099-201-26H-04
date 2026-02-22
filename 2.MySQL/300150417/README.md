@@ -60,7 +60,7 @@ docker exec -it INF1099-mysql mysql -u root -p -e "CREATE DATABASE sakila;"
 ```
 
 Vérification :
-```powershell
+```sql
 docker exec -it INF1099-mysql mysql -u root -p -e "SHOW DATABASES;"
 ```
 ![sakila_creation](./images/creeation_base_sakila_5.PNG) 
