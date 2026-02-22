@@ -20,7 +20,7 @@ Se connecter en tant que superutilisateur :
 ```bash
 psql -U postgres
 ```
-
+![Texte alternatif](images/1.png)
 Créer la base de test :
 
 ```sql
@@ -33,7 +33,7 @@ Créer un schéma :
 ```sql
 CREATE SCHEMA tp_dcl;
 ```
-
+![Texte alternatif](images/4.png)
 Créer une table pour l’exercice :
 
 ```sql
@@ -43,7 +43,7 @@ CREATE TABLE tp_dcl.etudiants (
     moyenne NUMERIC
 );
 ```
-
+![Texte alternatif](images/5.png)
 ### 🎯 Rappel fondamental
 
 PostgreSQL fonctionne ainsi :
@@ -72,6 +72,7 @@ CREATE USER etudiant WITH PASSWORD 'etudiant123';
 -- Professeur (lecture/écriture)
 CREATE USER professeur WITH PASSWORD 'prof123';
 ```
+![Texte alternatif](images/6.png)
 
 ---
 
@@ -101,7 +102,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
 -- Donner les droits sur la séquence
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 ```
-
+![Texte alternatif](images/7.png)
 Se déconnecter:
 
 ```psql
@@ -125,6 +126,7 @@ Tester :
 SELECT * FROM tp_dcl.etudiants;  -- OK
 INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 85); -- ERREUR
 ```
+![Texte alternatif](images/8.png)
 
 Se connecter en tant que professeur :
 
@@ -138,6 +140,7 @@ Tester :
 INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Khaled', 90); -- OK
 UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Khaled';       -- OK
 ```
+![Texte alternatif](images/9.png)
 
 ---
 
@@ -154,6 +157,7 @@ Vérifier la modification :
 \c - etudiant
 SELECT * FROM tp_dcl.etudiants;  -- ERREUR maintenant
 ```
+![Texte alternatif](images/10.png)
 
 ---
 
@@ -163,6 +167,7 @@ SELECT * FROM tp_dcl.etudiants;  -- ERREUR maintenant
 DROP USER etudiant;
 DROP USER professeur;
 ```
+![Texte alternatif](images/11.png)
 
 ⚠️ PostgreSQL ne permet pas de supprimer un utilisateur si celui-ci possède encore des objets (tables, schémas). Ici, tout reste dans le schéma `tp_dcl`.
 
