@@ -29,6 +29,8 @@ Si les données s’affichent correctement sans message d’erreur, cela signifi
 <img width="1265" height="315" alt="3" src="https://github.com/user-attachments/assets/03104d91-953c-436d-b4db-714bbde8f167" />
 
 # 🧪 4. Connexion a postgre avec PgAdmin 4
+<img width="1366" height="601" alt="4" src="https://github.com/user-attachments/assets/25d23c4c-9545-40c3-b577-b1fa9213afb8" />
+
 
 
 
