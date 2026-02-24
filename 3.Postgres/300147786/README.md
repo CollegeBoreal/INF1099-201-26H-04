@@ -18,12 +18,17 @@ La structure de la base de données est complète
 L’importation s’est déroulée sans erreur
 
 Le schéma correspond à la configuration prévue
+<img width="748" height="549" alt="2" src="https://github.com/user-attachments/assets/d5950909-e4f2-4501-8843-d929067382bd" />
+
 
 # 🧪 3. Validation des données
 
 Effectuez une requête simple sur une table afin de vérifier que les données sont accessibles.
 
 Si les données s’affichent correctement sans message d’erreur, cela signifie que l’importation est fonctionnelle.
+<img width="1265" height="315" alt="3" src="https://github.com/user-attachments/assets/03104d91-953c-436d-b4db-714bbde8f167" />
+
+
 
 
 
