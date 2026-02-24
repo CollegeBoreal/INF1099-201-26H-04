@@ -34,6 +34,12 @@ Si les données s’affichent correctement sans message d’erreur, cela signifi
 # 🧪 5. Exploration de la base Sakila
 
 
+<img width="1106" height="586" alt="5" src="https://github.com/user-attachments/assets/5600e838-0a79-4137-9245-c7ea73af6fd8" />
+
+<img width="1093" height="545" alt="6" src="https://github.com/user-attachments/assets/a12b9116-c411-4354-b13e-c1e00daac135" />
+
+
+
 
 
 
