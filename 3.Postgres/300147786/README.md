@@ -28,6 +28,11 @@ Effectuez une requête simple sur une table afin de vérifier que les données s
 Si les données s’affichent correctement sans message d’erreur, cela signifie que l’importation est fonctionnelle.
 <img width="1265" height="315" alt="3" src="https://github.com/user-attachments/assets/03104d91-953c-436d-b4db-714bbde8f167" />
 
+# 🧪 4. Connexion a postgre avec PgAdmin 4
+
+
+
+
 
 
 
