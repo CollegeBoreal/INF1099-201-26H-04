@@ -31,6 +31,10 @@ Si les données s’affichent correctement sans message d’erreur, cela signifi
 # 🧪 4. Connexion a postgre avec PgAdmin 4
 <img width="1366" height="601" alt="4" src="https://github.com/user-attachments/assets/25d23c4c-9545-40c3-b577-b1fa9213afb8" />
 
+# 🧪 5. Exploration de la base Sakila
+
+
+
 
 
 
