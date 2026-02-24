@@ -28,7 +28,7 @@ Effectuez une requête simple sur une table afin de vérifier que les données s
 Si les données s’affichent correctement sans message d’erreur, cela signifie que l’importation est fonctionnelle.
 <img width="1265" height="315" alt="3" src="https://github.com/user-attachments/assets/03104d91-953c-436d-b4db-714bbde8f167" />
 
-# 🧪 4. Connexion a postgre avec PgAdmin 4
+# 🧪 4. Utilisation de PgAdmin 4 pour se connecter à PostgreSQL
 <img width="1366" height="601" alt="4" src="https://github.com/user-attachments/assets/25d23c4c-9545-40c3-b577-b1fa9213afb8" />
 
 # 🧪 5. Exploration de la base Sakila
@@ -37,6 +37,7 @@ Si les données s’affichent correctement sans message d’erreur, cela signifi
 <img width="1106" height="586" alt="5" src="https://github.com/user-attachments/assets/5600e838-0a79-4137-9245-c7ea73af6fd8" />
 
 <img width="1093" height="545" alt="6" src="https://github.com/user-attachments/assets/a12b9116-c411-4354-b13e-c1e00daac135" />
+
 
 
 
