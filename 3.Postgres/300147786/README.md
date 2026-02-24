@@ -1,4 +1,4 @@
-🔎 1. Vérification de la base de données
+# 🔎 1. Vérification de la base de données
 
 Assurez-vous que la base de données appdb est bien présente dans votre système de gestion de base de données.
 
@@ -21,3 +21,4 @@ Le schéma correspond à la configuration prévue
 Effectuez une requête simple sur une table afin de vérifier que les données sont accessibles.
 
 Si les données s’affichent correctement sans message d’erreur, cela signifie que l’importation est fonctionnelle.
+
