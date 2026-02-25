@@ -7,8 +7,10 @@
 
 On crée un dossier propre pour le TP.
 
+```powershell
 $projectDir = "$env:USERPROFILE\Downloads\INF1099"
 New-Item -ItemType Directory -Path $projectDir -Force
+```
 
 <img width="949" height="326" alt="Screenshot 2026-02-04 141043" src="https://github.com/user-attachments/assets/55e9cc23-d7a8-48e3-a1c3-f6fcf69e2696" />
 
