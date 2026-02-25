@@ -21,6 +21,13 @@ Une table etudiants est créée dans ce schéma pour servir d’exemple pratique
 
 
 ## 2️⃣ Créer des utilisateurs
+Deux utilisateurs sont créés afin de simuler des rôles différents :
+
+etudiant : accès en lecture seulement
+
+professeur : accès en lecture et écriture
+
+Cette séparation permet d’illustrer le principe de contrôle d’accès basé sur les rôles.
 <img width="962" height="192" alt="5" src="https://github.com/user-attachments/assets/0c910d46-1067-4651-87fb-589052a6ca8a" />
 
 
@@ -42,6 +49,7 @@ Une table etudiants est créée dans ce schéma pour servir d’exemple pratique
 
 ## 6️⃣ Supprimer un utilisateur (DROP USER)
 <img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
 
 
 
