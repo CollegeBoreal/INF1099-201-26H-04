@@ -1,4 +1,4 @@
-# Participation au 25-02-2026 19:11
+# Participation au 25-02-2026 19:58
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -25,7 +25,7 @@
 | 6 | [300148450](../300148450/README.md) :point_right: [adjaoud-git](https://github.com/adjaoud-git) <image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 7 | [300150205](../300150205/README.md) :point_right: [blbsblm](https://github.com/blbsblm) <image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 8 | [300150271](../300150271/README.md) :point_right: [mazighs](https://github.com/mazighs) <image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| 9 | [300150284](../300150284/README.md) :point_right: [aroua-git](https://github.com/aroua-git) <image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 9 | [300150284](../300150284/README.md) :point_right: [aroua-git](https://github.com/aroua-git) <image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 10 | [300150293](../300150293/README.md) :point_right: [amir1450](https://github.com/amir1450) <image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 11 | [300150295](../300150295/README.md) :point_right: [lounasallouti1](https://github.com/lounasallouti1) <image src='https://avatars0.githubusercontent.com/u/205994740?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 12 | [300150303](../300150303/README.md) :point_right: [jessmaud](https://github.com/jessmaud) <image src='https://avatars0.githubusercontent.com/u/211592293?s=460&v=4' width=20 height=20></image> | :x: | :x: |
@@ -43,4 +43,4 @@
 | 24 | [300153476](../300153476/README.md) :point_right: [dialloramatoulayebah](https://github.com/dialloramatoulayebah) <image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 25 | [300153747](../300153747/README.md) :point_right: [madjou15](https://github.com/madjou15) <image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 26 | [300154718](../300154718/README.md) :point_right: [stephanetidjet](https://github.com/stephanetidjet) <image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
-| :abacus: | $\frac{9}{27}$ = 33% | $\displaystyle\sum_{i=1}^{27} s_i$ = 9 |
+| :abacus: | $\frac{10}{27}$ = 37% | $\displaystyle\sum_{i=1}^{27} s_i$ = 10 |

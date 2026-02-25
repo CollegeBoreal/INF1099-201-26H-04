@@ -123,7 +123,7 @@ docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 
 📸 **Progression de l'importation :**
 
-![Importation du schéma Sakila](./images/sakila2.png)
+![Importation du schéma Sakila](./images/show_tables.png)
 
 ---
 
@@ -152,7 +152,7 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants_1 -e "USE sakila; S
 
 📸 **Liste des tables importées :**
 
-![Tables de la base Sakila](./images/show_tables.png)
+![Tables de la base Sakila](./images/creation_de_base_sakila.png)
 
 > ✅ Toutes les tables principales sont bien présentes :
 
@@ -214,5 +214,8 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants_1 -e "USE sakila; S
 **INF1099 — **
 
 </div>
+
+
+
 
 
