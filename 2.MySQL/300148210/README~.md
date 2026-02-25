@@ -3,7 +3,7 @@
 
 <image src="https://github.com/user-attachments/assets/ae7e738e-7422-4e97-9387-89b382ebc4b0" width='50%' height='50%' alt="Screenshot 2026-02-04 141753" > </image>
 
-2️⃣Créer le dossier de travail (Downloads)
+## 2️⃣ Créer le dossier de travail (Downloads)
 
 On crée un dossier propre pour le TP.
 
