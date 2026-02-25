@@ -1,18 +1,36 @@
 ## 1️⃣ **Préparation** 🛠️
 
-La première étape consiste à préparer l’environnement de travail.
+La première étape consiste à mettre en place l’environnement de travail.
 
-On commence par se connecter en tant que superutilisateur PostgreSQL afin d’avoir les privilèges nécessaires pour créer une nouvelle base de données.
+🔐 Connexion initiale
 
-Ensuite :
+Connexion en tant que superutilisateur PostgreSQL
 
-Une base de données nommée cours est créée.
+Obtention des privilèges nécessaires pour configurer la base
 
-On se connecte à cette base.
+🗄️ Création de la base
 
-Un schéma nommé tp_dcl est créé afin d’organiser les objets.
+📦 Création d’une base de données nommée cours
 
-Une table etudiants est créée dans ce schéma pour servir d’exemple pratique.
+🔄 Connexion à cette base pour poursuivre la configuration
+
+🗂️ Organisation avec un schéma
+
+🏷️ Création du schéma tp_dcl
+
+🎯 Organisation logique des objets (tables, séquences, etc.)
+
+📋 Création de la table d’exercice
+
+Dans le schéma tp_dcl, création d’une table etudiants contenant :
+
+🆔 Un identifiant unique
+
+👤 Le nom de l’étudiant
+
+📊 Sa moyenne
+
+✔ L’environnement est maintenant prêt pour la gestion des utilisateurs.
 
 <img width="544" height="141" alt="1" src="https://github.com/user-attachments/assets/694cdff6-59ed-48f6-86b4-3fcf87326086" />
 <img width="719" height="161" alt="2" src="https://github.com/user-attachments/assets/1e65a5d7-091e-465a-bdab-d1ebe372ffaf" />
@@ -88,6 +106,7 @@ Enfin, les comptes etudiant et professeur sont supprimés du système.
 Cette opération permet de nettoyer l’environnement après les tests et illustre la gestion complète du cycle de vie des utilisateurs.
 
 <img width="1218" height="296" alt="11" src="https://github.com/user-attachments/assets/41ccff5f-86a1-48f8-971c-1495f2f8b50c" />
+
 
 
 
