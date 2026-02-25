@@ -84,7 +84,7 @@ docker exec -it INF1099-mysql mysql -u root -p -e "SHOW DATABASES;"
 
 📸 **Résultat :**
 
-![Création de la base Sakila et vérification des bases de données](./images/sakila_creation.png)
+![Création de la base Sakila et vérification des bases de données](./images/base de données Sakila2.png)
 
 > ✅ La base `sakila` apparaît bien dans la liste des bases de données.
 
@@ -214,4 +214,5 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants_1 -e "USE sakila; S
 **INF1099 — **
 
 </div>
+
 
