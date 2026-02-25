@@ -1,7 +1,9 @@
 
 TEST 2 – te connecter à MySQL
-podman exec -it INF1099-mysql mysql -u etudiants -p
 
+```powershell
+podman exec -it INF1099-mysql mysql -u etudiants -p
+```
 Mot de passe :
 etudiants_1
 
