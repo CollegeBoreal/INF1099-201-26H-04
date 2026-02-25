@@ -49,9 +49,11 @@ TP_SQL/
 ├── 📄 dml.sql          ← Insertion, lecture, modification, suppression
 ├── 📄 dcl.sql          ← Gestion des droits
 └── 📁 images/
-    ├── DDL1.PNG ... DDL3.PNG
-    ├── DML1.PNG ... DML4.PNG
-    └── DCL1.PNG ... DCL6.PNG
+    ├── 1.png 
+    ├── 2.png 
+    ├── ...
+    ├── 12.png  
+    └── 13.png  
 ```
 
 > ⚠️ **Ordre d'exécution obligatoire :** `ddl.sql` → `dml.sql` → `dcl.sql`
