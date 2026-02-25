@@ -17,6 +17,9 @@ docker container run -d `
   -v postgres_data:/var/lib/postgresql/data `
   postgres:16
 
+<image src=images/postgres.png width='50%' height='50%' > </image>
+
+
 3. Chargement de la base de données Sakila
 Le processus d'intégration des données s'est déroulé en trois phases :
 
