@@ -1,8 +1,8 @@
-\# TP - Normalisation (1FN, 2FN, 3FN)
+# TP - Normalisation (1FN, 2FN, 3FN)
 
 
 
-\## Fichiers fournis
+## Fichiers fournis
 
 \- 1FN.txt : schéma relationnel en première forme normale
 
