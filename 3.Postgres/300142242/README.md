@@ -8,6 +8,8 @@ Ce travail consistait à déployer un environnement PostgreSQL complet en utilis
 
 2. Déploiement du serveur PostgreSQL
 J'ai utilisé Podman pour lancer une instance PostgreSQL 16 avec une persistance des données via un volume:
+
+```bash
 docker container run -d `
   --name postgres `
   -e POSTGRES_USER=postgres `
@@ -16,6 +18,7 @@ docker container run -d `
   -p 5432:5432 `
   -v postgres_data:/var/lib/postgresql/data `
   postgres:16
+```
 
 <image src=images/postgres.png width='50%' height='50%' > </image>
 
