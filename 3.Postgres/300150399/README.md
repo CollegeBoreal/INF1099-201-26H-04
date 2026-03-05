@@ -119,7 +119,7 @@ Résultat attendu :
 
 ### 📷 Capture
 
-![Tables](./images/2.png)
+![Résultat pgAdmin](./images/3.png)
 
 ---
 
@@ -162,7 +162,8 @@ SELECT * FROM film;
 
 ### 📷 Capture
 
-![Résultat pgAdmin](./images/3.png)
+
+![Tables](./images/2.png)
 
 ---
 
