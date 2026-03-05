@@ -112,7 +112,7 @@ Une fois la commande exécutée, l’invite `postgres=#` apparaît, indiquant qu
 
 
 
-!\[Connexion PostgreSQL](./images/1.png)
+![Connexion PostgreSQL](./images/1.png)
 
 
 
@@ -160,7 +160,7 @@ Cette commande change la base de données active dans \*\*psql\*\* et permet d�
 
 
 
-!\[Création de la base de données](./images/2.png)
+![Création de la base de données](./images/2.png)
 
 
 
@@ -226,7 +226,7 @@ Cette table sera utilisée pour tester les permissions des différents utilisate
 
 
 
-!\[Création du schéma et de la table](./images/3.png)
+![Création du schéma et de la table](./images/3.png)
 
 
 
@@ -282,7 +282,7 @@ Cette commande affiche toutes les lignes de la table `etudiants`.
 
 
 
-!\[Insertion des données](images/4.png)
+![Insertion des données](images/4.png)
 
 
 
@@ -326,7 +326,7 @@ Ces utilisateurs seront ensuite utilisés pour tester les différents niveaux d'
 
 
 
-!\[Création des utilisateurs](images/5.png)
+![Création des utilisateurs](images/5.png)
 
 
 
@@ -402,7 +402,7 @@ Ces permissions permettent de contrôler précisément ce que chaque utilisateur
 
 
 
-!\[Attribution des permissions](images/6.png)
+![Attribution des permissions](images/6.png)
 
 
 
@@ -450,7 +450,7 @@ Le résultat affiche les étudiants déjà enregistrés dans la base de données
 
 
 
-!\[Test SELECT utilisateur étudiant](images/7.png)
+![Test SELECT utilisateur étudiant](images/7.png)
 
 
 
@@ -498,7 +498,7 @@ Cela démontre que les permissions attribuées précédemment fonctionnent corre
 
 
 
-!\[INSERT refusé pour étudiant](images/8.png)
+![INSERT refusé pour étudiant](images/8.png)
 
 
 
@@ -544,7 +544,7 @@ Cette connexion permet de vérifier que cet utilisateur peut effectuer des opér
 
 
 
-!\[Connexion utilisateur professeur](images/9.png)
+![Connexion utilisateur professeur](images/9.png)
 
 
 
@@ -591,7 +591,7 @@ Même si l'utilisateur \*\*professeur\*\* possède les permissions sur la table,
 
 
 
-!\[Erreur de séquence SERIAL](images/10.png)
+![Erreur de séquence SERIAL](images/10.png)
 
 
 
@@ -633,7 +633,7 @@ Après avoir attribué ces permissions, l'utilisateur \*\*professeur\*\* peut ut
 
 
 
-!\[Permission sur la séquence](images/11.png)
+![Permission sur la séquence](images/11.png)
 
 
 
@@ -681,7 +681,7 @@ Cette étape confirme que l'utilisateur \*\*professeur\*\* possède désormais t
 
 
 
-!\[Insertion réussie](images/12.png)
+![Insertion réussie](images/12.png)
 
 
 
@@ -737,7 +737,7 @@ Cette étape démontre que l'utilisateur \*\*professeur\*\* possède bien les pe
 
 
 
-!\[Mise à jour des données](images/13.png)
+![Mise à jour des données](images/13.png)
 
 
 
@@ -785,7 +785,7 @@ Cette étape confirme que les opérations \*\*INSERT\*\* et \*\*UPDATE\*\* effec
 
 
 
-!\[Vérification des données](images/14.png)
+![Vérification des données](images/14.png)
 
 
 
@@ -825,7 +825,7 @@ Cette étape permet de démontrer comment gérer et modifier les permissions des
 
 
 
-!\[Commande REVOKE](images/15.png)
+![Commande REVOKE](images/15.png)
 
 
 
@@ -885,7 +885,7 @@ Cela démontre que la commande \*\*REVOKE\*\* fonctionne correctement et permet 
 
 
 
-!\[Accès refusé après REVOKE](images/16.png)
+![Accès refusé après REVOKE](images/16.png)
 
 
 
@@ -941,7 +941,7 @@ Cette étape montre l'importance de bien gérer les rôles et les permissions da
 
 
 
-!\[Tentative DROP USER](images/17.png)
+![Tentative DROP USER](images/17.png)
 
 
 
@@ -997,7 +997,7 @@ L'utilisation des rôles permet de gérer plus facilement les permissions lorsqu
 
 
 
-!\[Création du rôle enseignant](images/18.png)
+![Création du rôle enseignant](images/18.png)
 
 
 
@@ -1053,7 +1053,7 @@ L'utilisation des rôles permet de gérer plus facilement les permissions lorsqu
 
 
 
-!\[Création du rôle enseignant](images/18.png)
+![Création du rôle enseignant](images/18.png)
 
 
 
@@ -1101,7 +1101,7 @@ Cela permet de gérer plus facilement les droits d'accès lorsque plusieurs util
 
 
 
-!\[Création de l'utilisateur prof2](images/19.png)
+![Création de l'utilisateur prof2](images/19.png)
 
 
 
@@ -1165,7 +1165,7 @@ Cette commande permet aux utilisateurs possédant le rôle \*\*enseignant\*\* d'
 
 
 
-!\[Erreur accès schéma](images/20.png)
+![Erreur accès schéma](images/20.png)
 
 
 
@@ -1229,7 +1229,7 @@ Cette commande permet aux utilisateurs possédant le rôle \*\*enseignant\*\* d'
 
 
 
-!\[Erreur séquence](images/21.png)
+![Erreur séquence](images/21.png)
 
 
 
@@ -1277,7 +1277,7 @@ Cette étape confirme que les permissions attribuées au rôle \*\*enseignant\*\
 
 
 
-!\[Insertion réussie avec prof2](images/22.png)
+![Insertion réussie avec prof2](images/22.png)
 
 
 
@@ -1321,7 +1321,7 @@ Cela confirme que toutes les permissions nécessaires ont été correctement con
 
 
 
-!\[Insertion finale réussie](images/23.png)
+![Insertion finale réussie](images/23.png)
 
 
 
