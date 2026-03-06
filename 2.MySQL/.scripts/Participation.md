@@ -1,4 +1,4 @@
-# Participation au 06-03-2026 08:37
+# Participation au 06-03-2026 08:46
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -28,7 +28,7 @@
 | 9 | [300150284](../300150284/README.md) :point_right: [aroua-git](https://github.com/aroua-git) <image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 10 | [300150293](../300150293/README.md) :point_right: [amir1450](https://github.com/amir1450) <image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 11 | [300150295](../300150295/README.md) :point_right: [lounasallouti1](https://github.com/lounasallouti1) <image src='https://avatars0.githubusercontent.com/u/205994740?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| 12 | [300150303](../300150303/README.md) :point_right: [jessmaud](https://github.com/jessmaud) <image src='https://avatars0.githubusercontent.com/u/211592293?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 12 | [300150303](../300150303/README.md) :point_right: [jessmaud](https://github.com/jessmaud) <image src='https://avatars0.githubusercontent.com/u/211592293?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 13 | [300150399](../300150399/README.md) :point_right: [chkips](https://github.com/chkips) <image src='https://avatars0.githubusercontent.com/u/195236786?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 14 | [300150417](../300150417/README.md) :point_right: [latifmuristaga](https://github.com/latifmuristaga) <image src='https://avatars0.githubusercontent.com/u/212187666?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 15 | [300150524](../300150524/README.md) :point_right: [takieddinechoufa](https://github.com/takieddinechoufa) <image src='https://avatars0.githubusercontent.com/u/206965671?s=460&v=4' width=20 height=20></image> | :x: | :x: |
