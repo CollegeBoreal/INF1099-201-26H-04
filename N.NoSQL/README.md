@@ -33,3 +33,7 @@ flowchart TD
     F --> H
     G --> H
 ```
+
+# References
+
+<image src=images/redis-cache.png width='70%' height='70%' > </image>
