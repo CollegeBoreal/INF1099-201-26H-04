@@ -1,7 +1,6 @@
 🗄️ TP PostgreSQL – Gestion des utilisateurs et permissions (DCL)
-Afficher l'image
-Afficher l'image
-Afficher l'image
+
+
 
 🎯 Objectifs
 Ce TP porte sur la gestion des utilisateurs et des permissions dans PostgreSQL via les commandes DCL (Data Control Language).
@@ -54,7 +53,7 @@ CREATE USER professeur WITH PASSWORD 'prof123';
 
 📸 Capture — Création des utilisateurs et attribution des permissions :
 
-
+<img src="images/Screenshot 2026-02-25 143612.png" width="600">
 
 3️⃣ Attribution des permissions (GRANT)
 3.1 Accès à la base
@@ -71,7 +70,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
 sqlGRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 
 📸 Capture — Initialisation complète (autre terminal) :
-
+<img src="images/Screenshot 2026-02-25 144155.png" width="600">
 
 4️⃣ Test des permissions
 4.1 Connexion en tant qu'étudiant
@@ -114,6 +113,7 @@ DETAIL: Only roles with the CREATEROLE attribute and the ADMIN option on the tar
 
 📸 Capture — Erreur DROP USER + REVOKE :
 
+<img src="images/Screenshot 2026-02-25 144209.png" width="600">
 
 7️⃣ Bonus — Création d'un rôle enseignant
 7.1 Création du rôle et attribution des droits
@@ -141,3 +141,4 @@ CREATE ROLE   -- Créer un rôle réutilisable
 GRANT         -- Attribuer des droits
 REVOKE        -- Retirer des droits
 DROP USER     -- Supprimer un utilisateur (requiert superuser)
+
