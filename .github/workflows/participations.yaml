@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Install jq
-        run: brew install jq
-
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
+
+      - name: Use PowerShell
+        run: pwsh --version
     
       - shell: bash
         run: |
@@ -67,7 +67,7 @@ jobs:
           ## 
           echo "Evaluating chapter 5.ModelisationSQL Participation"
           cd 5.ModelisationSQL
-          bash .scripts/run.sh
+          pwsh .scripts/run.ps1
           cd ..
 
       - name: Commit files
