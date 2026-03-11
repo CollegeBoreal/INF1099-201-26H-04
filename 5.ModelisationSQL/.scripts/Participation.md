@@ -1,4 +1,4 @@
-# Participation au 11-03-2026 18:45
+# Participation au 11-03-2026 18:49
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -39,8 +39,8 @@
 | 20 | [300151492](../300151492/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image>](https://github.com/hacen19) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 21 | [300151825](../300151825/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image>](https://github.com/FeatFreedy) | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | 22 | [300151833](../300151833/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/109877652?s=460&v=4' width=20 height=20></image>](https://github.com/raoufbrs15) | :x: | :x: | :x: | :x: | :x: | :x: |
-| 23 | [300151841](../300151841/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image>](https://github.com/massi9313) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| 23 | [300151841](../300151841/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image>](https://github.com/massi9313) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 24 | [300153476](../300153476/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image>](https://github.com/dialloramatoulayebah) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 25 | [300153747](../300153747/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image>](https://github.com/madjou15) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 26 | [300154718](../300154718/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image>](https://github.com/stephanetidjet) | :x: | :x: | :x: | :x: | :x: | :x: |
-| :abacus: | \$\\frac{2}{27}\$ = 7.41% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 2 |
+| :abacus: | \$\\frac{3}{27}\$ = 11.11% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 3 |
