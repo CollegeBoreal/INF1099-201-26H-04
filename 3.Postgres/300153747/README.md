@@ -15,7 +15,7 @@ Ce projet démontre comment :
 L'objectif est de comprendre le déploiement d'une base de données conteneurisée et l'architecture client-serveur.
 
 📁 Structure du projet
-300153476/
+300153747/
 │
 ├── postgres-sakila-schema.sql
 ├── postgres-sakila-insert-data.sql
@@ -114,5 +114,6 @@ les captures
 <img src="images/Screenshot 2026-02-21 204748.png" width="600">
 <img src="images/etape 4 prostgres.png" width="600">
 <img src="images/instalion de pgADmin.png" width="600">
+
 
 
