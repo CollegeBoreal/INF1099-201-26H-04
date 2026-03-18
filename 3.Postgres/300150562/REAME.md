@@ -20,7 +20,8 @@ public | category       | table | postgres
 public | film           | table | postgres
 public | payment        | table | postgres
 ...
-<img width="462" height="371" alt="image" src="https://github.com/user-attachments/assets/b19cb57c-9b88-4e92-825f-9ca013d25bae" />
+<img width="469" height="365" alt="image" src="https://github.com/user-attachments/assets/b3511521-a871-4c04-b3de-f3644b215ad0" />
+
 
 (21 tables)
 
