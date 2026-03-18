@@ -96,7 +96,7 @@ foreach ($entry in $STUDENTS) {
 
     if (Test-Path $DBSCRIPT) {
         $db = Test-LoadDB $DBSCRIPT
-        # $log = "[:wood:](../$StudentID-db.txt)"
+        $log = "[:wood:](../$StudentID-db.txt)"
     }
 
     Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db | $log |"
