@@ -1,0 +1,6 @@
+Chargement de la base de données...
+ERREUR : fichier DDL.sql introuvable
+ERREUR : fichier DML.sql introuvable
+ERREUR : fichier DCL.sql introuvable
+ERREUR : fichier DQL.sql introuvable
+Chargement terminé.

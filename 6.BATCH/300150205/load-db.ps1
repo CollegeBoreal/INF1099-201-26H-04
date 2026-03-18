@@ -4,8 +4,8 @@
 # #300150205
 # -----------------------------------------------
 
-$Container = "postgres2"
-$Database  = "reparation_smartphones"
+$Container = "postgres-lab"
+$Database  = "ecole"
 $User      = "postgres"
 
 $Files = @(
