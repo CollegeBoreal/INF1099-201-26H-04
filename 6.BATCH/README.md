@@ -59,7 +59,9 @@ DDL → DML → DCL → DQL
 
 Créer un conteneur : (modifier en fonction de ta base)
 
-```bash
+🪟 PowerShell
+
+```powershell
 docker container run -d `
 --name postgres-lab `
 -e POSTGRES_PASSWORD=postgres `
@@ -67,6 +69,18 @@ docker container run -d `
 -p 5432:5432 `
 postgres
 ```
+
+🐧 *nux
+
+```bash
+docker container run -d \
+--name postgres-lab \
+-e POSTGRES_PASSWORD=postgres \
+-e POSTGRES_DB=ecole \
+-p 5432:5432 \
+postgres
+```
+
 
 Vérifier :
 
