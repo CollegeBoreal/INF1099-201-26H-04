@@ -51,11 +51,29 @@ Automatiser le déploiement complet d'une base de données **PostgreSQL** via un
 └── 🖼️  images/         # Captures d'écran du laboratoire
 ```
 
+🖼️ Capture — Structure du projet dans PowerShell
+![wait](https://github.com/user-attachments/assets/3c32a667-fd15-49ad-b6d9-6fdb248a83ac)
+
 ---
 
 ## 🐳 Mise en place
 
-### 1. Lancer le conteneur PostgreSQL
+### 1. Vérifier que Podman est actif
+
+Avant de lancer le conteneur, vérifier que le service Podman fonctionne :
+
+```powershell
+podman ps
+```
+
+🖼️ Capture — Podman actif avec le conteneur PostgreSQL
+ 
+ ![wait](https://github.com/user-attachments/assets/58b696fe-d7fb-48da-8155-639487140f4a)
+
+
+---
+
+### 2. Lancer le conteneur PostgreSQL
 
 ```powershell
 docker run -d `
@@ -66,13 +84,17 @@ docker run -d `
   postgres
 ```
 
-### 2. Vérifier que le conteneur est actif
+### 3. Vérifier que le conteneur est actif
 
 ```powershell
 docker ps
 ```
 
-> ✅ Le conteneur `postgres-lab` doit apparaître avec le statut **Up**.
+🖼️ Capture — Téléchargement de l'image et conteneur PostgreSQL en cours d'exécution
+
+![wait](https://github.com/user-attachments/assets/06896e4b-4fdb-4627-b30a-219ff371ccd8)
+
+> ✅ Le conteneur `postgres-lab` apparaît avec le statut **Up**.
 
 ---
 
@@ -99,6 +121,11 @@ DDL ──► DML ──► DCL ──► DQL
 powershell -ExecutionPolicy Bypass -File .\load-db.ps1
 ```
 
+🖼️ Capture — Exécution du script PowerShell
+
+![wait](https://github.com/user-attachments/assets/82905562-90f1-4765-9839-2dabe15a3367)
+
+
 ---
 
 ## 📊 Vérification des données
@@ -122,15 +149,10 @@ SELECT * FROM esport.team;
 SELECT * FROM esport.player;
 ```
 
----
+🖼️ Capture — Vérification des données dans PostgreSQL
 
-## 📸 Captures d'écran
+![wait](https://github.com/user-attachments/assets/45be60ad-1f3a-4372-8cbd-86bcf625293e)
 
-Les captures se trouvent dans le dossier [`images/`](./images/) et illustrent :
-
-- 🐳 La création et le démarrage du conteneur Docker
-- ⚙️ L'exécution du script PowerShell `load-db.ps1`
-- 🗃️ La vérification des données dans PostgreSQL
 
 ---
 
