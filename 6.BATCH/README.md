@@ -1,5 +1,7 @@
 # :test_tube: Laboratoire BATCH : 
 
+[:tada: Participation](.scripts/Participation.md)
+
 Script `Batch PowerShell` pour charger `PostgreSQL` avec `Docker`
 
 ## Objectifs
@@ -58,8 +60,8 @@ DDL → DML → DCL → DQL
 Créer un conteneur : (modifier en fonction de ta base)
 
 ```bash
-docker run -d `
---name postgres `
+docker container run -d `
+--name postgres-lab `
 -e POSTGRES_PASSWORD=postgres `
 -e POSTGRES_DB=ecole `
 -p 5432:5432 `

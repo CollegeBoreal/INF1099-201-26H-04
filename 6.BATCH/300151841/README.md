@@ -1,163 +1,150 @@
- # 🧪 Lab 6 — Script Batch PowerShell pour charger PostgreSQL avec Docker
+# 🧪 Lab 6 — Automatisation PostgreSQL avec PowerShell & Docker
 
-## 👨‍🎓 Étudiant
-
-**Nom :** Massinissa Mameri
-**Cours :** INF1099 — Bases de données
-**Laboratoire :** Automatisation avec PowerShell et Docker
+> **INF1099 — Bases de données** · Massinissa Mameri
 
 ---
 
-# 🎯 Objectif du laboratoire
+## 📋 Table des matières
 
-L’objectif de ce laboratoire est d’automatiser le chargement d’une base de données PostgreSQL à l’aide d’un script **PowerShell**.
-
-Le script permet d’exécuter plusieurs scripts SQL dans un ordre précis afin de :
-
-* créer la structure de la base de données
-* insérer les données
-* gérer les permissions
-* vérifier les résultats
-
-Les technologies utilisées dans ce laboratoire sont :
-
-* Docker
-* PostgreSQL
-* PowerShell
-* SQL
+- [Objectif](#-objectif)
+- [Technologies](#-technologies)
+- [Structure du projet](#-structure-du-projet)
+- [Mise en place](#-mise-en-place)
+- [Script PowerShell](#️-script-powershell)
+- [Vérification](#-vérification-des-données)
+- [Résultats](#-résultats)
 
 ---
 
-# 📁 Structure du projet
+## 🎯 Objectif
+
+Automatiser le déploiement complet d'une base de données **PostgreSQL** via un script **PowerShell**, en exécutant une série de scripts SQL dans un ordre précis :
+
+| Étape | Fichier | Rôle |
+|-------|---------|------|
+| 1️⃣ | `DDL.sql` | Création du schéma et des tables |
+| 2️⃣ | `DML.sql` | Insertion des données |
+| 3️⃣ | `DCL.sql` | Gestion des utilisateurs et permissions |
+| 4️⃣ | `DQL.sql` | Vérification et requêtes de contrôle |
+
+---
+
+## 🛠 Technologies
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat&logo=databricks&logoColor=white)
+
+---
+
+## 📁 Structure du projet
 
 ```
 6.BATCH/
 │
-├── DDL.sql
-├── DML.sql
-├── DCL.sql
-├── DQL.sql
-├── load-db.ps1
-└── images/
+├── 📄 DDL.sql          # Création du schéma et des tables
+├── 📄 DML.sql          # Insertion des données
+├── 📄 DCL.sql          # Gestion des utilisateurs et permissions
+├── 📄 DQL.sql          # Requêtes de vérification
+├── ⚙️  load-db.ps1     # Script d'automatisation PowerShell
+└── 🖼️  images/         # Captures d'écran du laboratoire
 ```
-
-### Description des fichiers
-
-| Fichier         | Description                                                   |
-| --------------- | ------------------------------------------------------------- |
-| **DDL.sql**     | Création du schéma et des tables                              |
-| **DML.sql**     | Insertion des données                                         |
-| **DCL.sql**     | Gestion des utilisateurs et des permissions                   |
-| **DQL.sql**     | Requêtes SQL pour vérifier les données                        |
-| **load-db.ps1** | Script PowerShell qui automatise l'exécution des fichiers SQL |
 
 ---
 
-# 🐳 Création du conteneur PostgreSQL
+## 🐳 Mise en place
 
-Le conteneur PostgreSQL est créé avec Docker :
+### 1. Lancer le conteneur PostgreSQL
 
-```
+```powershell
 docker run -d `
---name postgres-lab `
--e POSTGRES_PASSWORD=postgres `
--e POSTGRES_DB=ecole `
--p 5432:5432 `
-postgres
+  --name postgres-lab `
+  -e POSTGRES_PASSWORD=postgres `
+  -e POSTGRES_DB=ecole `
+  -p 5432:5432 `
+  postgres
 ```
 
-Vérifier que le conteneur fonctionne :
+### 2. Vérifier que le conteneur est actif
 
-```
+```powershell
 docker ps
 ```
 
+> ✅ Le conteneur `postgres-lab` doit apparaître avec le statut **Up**.
+
 ---
 
-# ⚙️ Script PowerShell
+## ⚙️ Script PowerShell
 
-Le script **load-db.ps1** automatise l’exécution des scripts SQL.
+### Fonctionnement de `load-db.ps1`
 
-Les fichiers sont exécutés dans cet ordre :
-
-```
-DDL → DML → DCL → DQL
-```
-
-Commande pour exécuter le script :
+Le script exécute automatiquement les fichiers SQL dans l'ordre suivant :
 
 ```
+DDL ──► DML ──► DCL ──► DQL
+```
+
+**Étapes du script :**
+
+1. ✔️ Vérifie que le conteneur Docker est actif
+2. ✔️ Vérifie que tous les fichiers SQL sont présents
+3. ✔️ Exécute les scripts SQL dans PostgreSQL
+4. ✔️ Affiche les résultats des requêtes
+
+### Exécution
+
+```powershell
 powershell -ExecutionPolicy Bypass -File .\load-db.ps1
 ```
 
-Le script :
-
-1. Vérifie que le conteneur Docker est actif
-2. Vérifie que les fichiers SQL existent
-3. Exécute les scripts SQL dans PostgreSQL
-4. Affiche les résultats des requêtes
-
 ---
 
-# 📊 Vérification des données
+## 📊 Vérification des données
 
-Connexion à PostgreSQL :
+### Connexion au conteneur
 
-```
+```bash
 docker exec -it postgres-lab psql -U postgres -d ecole
 ```
 
-Exemples de requêtes :
+### Requêtes de vérification
 
-```
+```sql
+-- Vérifier les jeux enregistrés
 SELECT * FROM esport.game;
+
+-- Vérifier les équipes
 SELECT * FROM esport.team;
+
+-- Vérifier les joueurs
 SELECT * FROM esport.player;
 ```
 
-Ces requêtes permettent de vérifier que les données ont été correctement chargées.
+---
+
+## 📸 Captures d'écran
+
+Les captures se trouvent dans le dossier [`images/`](./images/) et illustrent :
+
+- 🐳 La création et le démarrage du conteneur Docker
+- ⚙️ L'exécution du script PowerShell `load-db.ps1`
+- 🗃️ La vérification des données dans PostgreSQL
 
 ---
 
-# 📸 Captures d’écran
+## ✅ Résultats
 
-Les captures d’écran du laboratoire se trouvent dans le dossier :
+Le script PowerShell permet d'automatiser **complètement** le déploiement de la base de données PostgreSQL :
 
-```
-images/
-```
+- 🏗️ Les tables sont créées via `DDL.sql`
+- 📥 Les données sont insérées via `DML.sql`
+- 🔐 Les permissions sont appliquées via `DCL.sql`
+- 🔍 Les résultats sont vérifiés via `DQL.sql`
 
-Elles montrent :
-
-* la création du conteneur Docker
-* l’exécution du script PowerShell
-* la vérification des données dans PostgreSQL
-
-![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/6.BATCH/300151841/images/1_structure_labbatch.png.png)
-
-![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/6.BATCH/300151841/images/2_postgres_actif.png.png)
-
-![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/6.BATCH/300151841/images/03_postgres_container_running.png.png)
-
-![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/6.BATCH/300151841/images/Ex%C3%A9cution%20du%20script.png)
-
-![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/6.BATCH/300151841/images/V%C3%A9rification%20dans%20PostgreSQL.png)
----
-
-# ✅ Résultat
-
-Le script PowerShell permet d’automatiser complètement le déploiement de la base de données PostgreSQL.
-
-Les tables sont créées, les données sont insérées et les permissions sont appliquées automatiquement.
-
-Cette méthode permet de gagner du temps et d’éviter les erreurs lors de l’exécution manuelle des scripts SQL.
+> Cette approche réduit les erreurs humaines et accélère le déploiement répétable d'environnements de base de données.
 
 ---
 
-# 🛠 Technologies utilisées
-
-* Docker
-* PostgreSQL
-* PowerShell
-* SQL
-
+*Cours INF1099 — Bases de données · Massinissa Mameri*

@@ -23,6 +23,7 @@ INF1099 (201) - Administration de base de données
 | :four:  |        | [3.Postgres](3.Postgres)               | [🎉](3.Postgres/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération)/(Administration) |
 | :five:  |        | [4.DCL](4.DCL)                         | [🎉](4.DCL/.scripts/Participation.md) 👉  â Noter :x:|
 | :six:   |        | [5.ModelisationSQL](5.ModelisationSQL) | [🎉](5.ModelisationSQL/.scripts/Participation.md) 👉  â Noter :x:|
+| :seven: |        | [6.BATCH](6.BATCH)                     | [🎉](6.BATCH/.scripts/Participation.md) 👉  â Noter :x:|
 
 ### :abacus: Évaluation
 
@@ -49,12 +50,12 @@ Le déroulement peut être modifié au besoin. La personne étudiante sera avis�
 | Période | Sem | Activités / Thèmes | Commentaires |
 |-|-:|-|-|
 | 12-Jan | 1️⃣ | [0.PlanDeCours](0.PlanDeCours)
-| 19-Jan | 2️⃣ | 
-| 26-Jan | 3️⃣ | 
-| 02-Feb | 4️⃣ | 
-| 09-Feb | 5️⃣ | 
-| 16-Feb | 6️⃣ |
-| 23-Feb | 7️⃣ |
+| 19-Jan | 2️⃣ | [1.Domaines](1.Domaines)
+| 26-Jan | 3️⃣ | [2.MySQL](2.MySQL)
+| 02-Feb | 4️⃣ | [3.Postgres](3.Postgres) 
+| 09-Feb | 5️⃣ | [4.DCL](4.DCL) 
+| 16-Feb | 6️⃣ | [5.ModelisationSQL](5.ModelisationSQL)
+| 23-Feb | 7️⃣ | [6.BATCH](6.BATCH) 
 | 02-Mar | 📚 |
 | 09-Mar | 8️⃣ |
 | 16-Mar | 9️⃣ |
