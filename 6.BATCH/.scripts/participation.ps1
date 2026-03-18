@@ -35,7 +35,7 @@ function Test-LoadDB($scriptPath) {
 . ../.scripts/students.ps1
 
 # Header
-Write-Output "# Participation au $(Get-Date -Format 'dd-MM-yyyy HH:mm')"
+Write-Output "# Participation"
 Write-Output ""
 
 Write-Output "| Table des matières            | Description                                             |"
@@ -55,8 +55,8 @@ Write-Output ""
 Write-Output "## :a: Présence"
 Write-Output ""
 
-Write-Output "|:hash:| Boréal :id: | README.md | images | DDL.sql | DML.sql | DQL.sql | DCL.sql | :mouse_trap: DB"
-Write-Output "|------|-------------|-----------|--------|---------|---------|---------|---------|----|"
+Write-Output "|:hash:| Boréal :id: | README.md | images | DDL.sql | DML.sql | DQL.sql | DCL.sql | :mouse_trap: DB | :wood: log |"
+Write-Output "|------|-------------|-----------|--------|---------|---------|---------|---------|-----------------|------------|"
 
 # Initialize counters
 $i = 0
@@ -92,12 +92,14 @@ foreach ($entry in $STUDENTS) {
 
     $DBSCRIPT = "$StudentID/load-db.ps1"
     $db = ":x:"  # default fail
+    $log = ":x:"  # default fail
 
     if (Test-Path $DBSCRIPT) {
         $db = Test-LoadDB $DBSCRIPT
+        # $log = "[:wood:](../$StudentID-db.txt)"
     }
 
-    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db |"
+    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db | $log |"
 
     # Success if ALL files exist
     if ($r -eq ":heavy_check_mark:" -and

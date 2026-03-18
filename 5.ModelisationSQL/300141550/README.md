@@ -1,190 +1,289 @@
-``` 📄 RAPPORT – MODÉLISATION ET OPTIMISATION SQL ```
+# 📦 Projet : Modélisation et Optimisation d’une Base de Données SQL
 
-Projet : Base de données Mama Makusa
-1. Objectif du projet
+## 👤 Auteur
 
-L’objectif était de concevoir une base de données relationnelle :
+Emeraude Santu
 
-adaptée aux besoins du site Mama Makusa ;
+---
 
-performante pour les requêtes fréquentes ;
+## 🎯 Objectif général
 
-évolutive ;
+Ce projet vise à concevoir une base de données relationnelle :
 
-structurée selon les principes de normalisation ;
+* adaptée aux besoins des utilisateurs
+* performante et optimisée
+* évolutive dans le temps
+* structurée selon les bonnes pratiques
 
-justifiée de manière technique et objective.
+L’objectif est d’appliquer les concepts de **modélisation SQL** afin de maximiser l’efficacité du système.
 
-2. Étapes de modélisation
-2.1 Analyse des besoins
+---
 
-Les utilisateurs identifiés sont :
+## 🧠 Étapes de modélisation d’une base de données
 
-Clients
+### 1️⃣ Analyse des besoins
 
-Livreurs
+Cette étape permet de :
 
-Administrateur
+* Identifier les utilisateurs
+* Déterminer les données à stocker
+* Définir les règles d’affaires
 
-Les principales données à stocker :
+👉 Une analyse précise est essentielle pour éviter les erreurs de conception.
 
-Clients, Adresses
+---
 
-Plats, Catégories, Pays
+### 2️⃣ Modélisation conceptuelle
 
-Commandes, Lignes de commande
+* Création d’un **diagramme Entité-Relation (ER)**
+* Identification des entités, attributs et relations
 
-Paiements
+👉 Cette étape fournit une vision globale du système.
 
-Livraisons
+---
 
-Les règles d’affaires ont été définies clairement (relations 1–N, dépendances logiques), ce qui a permis d’éviter les erreurs de conception.
+### 3️⃣ Modélisation logique
 
-2.2 Modélisation conceptuelle
+* Transformation du modèle en tables relationnelles
+* Définition des clés primaires (PK) et étrangères (FK)
+* Application de la normalisation (1FN, 2FN, 3FN)
 
-Le diagramme Entité–Relation (ER) a été choisi car il permet de représenter clairement :
+👉 Objectif : assurer la cohérence et réduire la redondance.
 
-les entités,
+---
 
-les attributs,
+### 4️⃣ Modélisation physique
 
-les relations.
+* Choix du SGBD (PostgreSQL, MySQL, etc.)
+* Mise en place des index
+* Optimisation des performances
 
-Il est particulièrement adapté à une base relationnelle.
+---
 
-2.3 Modélisation logique
+### 5️⃣ Implémentation et tests
 
-Les entités ont été transformées en tables avec :
+* Création des tables (DDL)
+* Insertion des données (DML)
+* Requêtes de test (DQL)
+* Validation du modèle
 
-clés primaires (id_*) ;
+---
 
-clés étrangères pour assurer l’intégrité référentielle.
+## 🤝 Importance de la communication
 
-La base respecte :
+Une bonne communication permet :
 
-1FN (données atomiques) ;
+* d’éviter les erreurs d’interprétation
+* de valider les règles d’affaires
+* d’assurer la cohérence du modèle
+* de faciliter la maintenance future
 
-2FN (pas de dépendance partielle) ;
+👉 Les erreurs proviennent souvent d’un manque de clarification des besoins.
 
-3FN (pas de dépendance transitive).
+---
 
-Cela permet de minimiser la redondance et d’assurer la cohérence des données.
+## ⚙️ Choix du SGBD
 
-3. Choix du SGBD
+Le choix dépend de plusieurs critères :
 
-Le SGBD choisi est PostgreSQL.
+| Type de données                   | Solution recommandée |
+| --------------------------------- | -------------------- |
+| Données relationnelles complexes  | PostgreSQL           |
+| Données transactionnelles simples | MySQL                |
+| Données semi-structurées          | MongoDB              |
+| Haute scalabilité                 | Apache Cassandra     |
 
-Justification :
+### Critères de sélection :
 
-données fortement relationnelles ;
+* Volume de données
+* Type de requêtes
+* Besoin de transactions (ACID)
+* Performance et évolutivité
 
-besoin de transactions sécurisées (paiements) ;
+---
 
-gestion stricte de l’intégrité référentielle ;
+## 🧱 Réduction de la redondance
 
-performance élevée sur les jointures.
+Techniques utilisées :
 
-Le choix est basé sur des critères techniques et non sur une préférence personnelle.
+* Normalisation (jusqu’à 3FN)
+* Séparation des entités
+* Utilisation de clés étrangères
+* Indexation
 
-4. Minimisation du dédoublement
+### Objectifs :
 
-Pour éviter la redondance :
+* Éviter le dédoublement des données
+* Garantir l’intégrité
+* Améliorer les performances
 
-séparation Client / Adresse ;
+---
 
-séparation Plat / Catégorie ;
+## 📊 Choix du diagramme
 
-séparation Plat / Pays ;
+Le **diagramme Entité-Relation (ER)** a été utilisé.
 
-utilisation d’une table intermédiaire Ligne_Commande.
+### Justification :
 
-Cela améliore :
+* Clarté de représentation
+* Adapté aux bases relationnelles
+* Facile à comprendre
+* Permet une transition vers SQL
 
-l’intégrité ;
+---
 
-la maintenabilité ;
+## 🔄 Approche itérative
 
-l’évolutivité.
+La conception d’une base de données est évolutive :
 
-5. Optimisation des performances
-5.1 Analyse des requêtes
+* Ajustement après tests
+* Correction des anomalies
+* Optimisation des relations
+* Simplification si nécessaire
 
-Les requêtes critiques concernent :
+👉 Un modèle de données n’est jamais figé.
 
-historique des commandes ;
+---
 
-plats par catégorie ;
+## 🧠 Pensée critique
 
-suivi des livraisons.
+La conception nécessite :
 
-L’outil EXPLAIN ANALYZE permet d’évaluer les performances.
+* Évaluation des choix techniques
+* Analyse des performances
+* Comparaison de solutions
+* Anticipation de la croissance des données
 
-5.2 Indexation
+---
 
-Des index ont été ajoutés sur :
+## ⚖️ Justification des choix
 
-clés étrangères ;
+Les décisions doivent être :
 
-colonnes utilisées dans WHERE ;
+* objectives
+* basées sur des critères techniques
+* justifiées par des faits
 
-colonnes utilisées dans JOIN.
+### Exemple :
 
-Cela améliore significativement la vitesse d’exécution des requêtes.
+PostgreSQL est choisi plutôt que MongoDB car :
 
-5.3 Bonnes pratiques
+* les données sont fortement liées
+* le système nécessite des transactions fiables
 
-Éviter SELECT *
+---
 
-Utiliser des requêtes optimisées
+## 📌 Plan d’optimisation de la base de données
 
-Évaluer la possibilité d’une dénormalisation stratégique si nécessaire
+### 1️⃣ Analyse des performances
 
-6. Communication et adaptation
+* Identification des requêtes lentes
+* Utilisation de EXPLAIN / EXPLAIN ANALYZE
+* Analyse des logs
 
-La communication a permis :
+---
 
-de valider les règles d’affaires ;
+### 2️⃣ Optimisation par index
 
-de corriger certaines erreurs (ex : emplacement de la quantité) ;
+#### Index simples :
 
-d’ajuster le modèle de manière itérative.
+* Clés primaires
+* Clés étrangères
+* Colonnes utilisées dans WHERE / JOIN
 
-La conception d’une base de données est un processus évolutif.
+#### Index composites :
 
-7. Conclusion
+* Utilisés pour plusieurs colonnes
 
-La base de données conçue pour Mama Makusa :
+#### Index partiels :
 
-respecte les étapes complètes de modélisation ;
+* Pour filtrer certaines valeurs
 
-applique la normalisation jusqu’à la 3FN ;
+⚠️ Trop d’index peut ralentir les opérations d’écriture.
 
-utilise un SGBD adapté aux besoins ;
+---
 
-intègre une stratégie d’optimisation claire ;
+### 3️⃣ Optimisation des requêtes
 
-repose sur une justification technique objective.
+* Éviter `SELECT *`
+* Réduire les jointures inutiles
+* Simplifier les requêtes
+* Utiliser des requêtes préparées
 
-Les captures d’écran ajoutées à la fin du document démontrent l’implémentation et les tests réalisés.
+---
 
+### 4️⃣ Normalisation et dénormalisation
 
-🔎 1️⃣ Vérifier la structure (Justifier la modélisation)
- <img width="945" height="231" alt="image" src="https://github.com/user-attachments/assets/dbbdcf5e-9271-46c7-b362-8970a1bd01cc" />
+* Normalisation pour éviter la redondance
+* Dénormalisation contrôlée pour améliorer les performances
 
+---
 
-2️⃣ Requêtes fonctionnelles
- <img width="945" height="179" alt="image" src="https://github.com/user-attachments/assets/5cf38a8b-1a14-4b28-a35f-fe6c32426c12" />
+### 5️⃣ Partitionnement
 
+* Division des grandes tables
+* Amélioration des performances
+* Maintenance facilitée
 
+---
 
-✅ Détail complet d’une commande
-<img width="945" height="174" alt="image" src="https://github.com/user-attachments/assets/f5b5edfb-4944-4242-9472-bc92578495c3" />
- 
+### 6️⃣ Mise en cache
 
-✅ Plats par catégorie
- <img width="945" height="175" alt="image" src="https://github.com/user-attachments/assets/1d25b687-cd45-47d2-9f01-e88519f8b10d" />
+* Cache applicatif (Redis, Memcached)
+* Cache interne du SGBD
 
+---
 
-3️⃣ Requêtes de performance (Justifier l’optimisation)
+### 7️⃣ Optimisation physique
 
-<img width="945" height="203" alt="image" src="https://github.com/user-attachments/assets/b82eddd5-daf0-4608-901d-3af7cace6c90" />
+* Paramétrage serveur (mémoire, buffers)
+* Utilisation de SSD
+* Organisation du stockage
+
+---
+
+### 8️⃣ Surveillance continue
+
+* Monitoring CPU / RAM
+* Analyse des performances
+* Suivi de la taille des tables
+
+---
+
+### 9️⃣ Méthodologie d’optimisation
+
+1. Mesurer
+2. Identifier le problème
+3. Analyser
+4. Optimiser
+5. Tester
+6. Comparer
+7. Documenter
+
+---
+
+## 🎯 Résumé stratégique
+
+Une base de données performante repose sur :
+
+* Une modélisation claire et normalisée
+* Des index bien choisis
+* Des requêtes optimisées
+* Une structure cohérente
+* Une surveillance continue
+* Une justification technique objective
+
+---
+
+## ✅ Conclusion
+
+Ce projet met en œuvre les principes fondamentaux de la modélisation et de l’optimisation des bases de données.
+
+Il démontre l’importance :
+
+* d’une bonne analyse des besoins
+* d’une conception structurée
+* d’une optimisation continue
+* d’une prise de décision basée sur des critères techniques
+
+---
