@@ -46,27 +46,27 @@ Commandes principales :
 
 ## ⚙️ 1. Préparation
 
-Connexion à PostgreSQL :
+### Connexion à PostgreSQL
 
+![Connexion PostgreSQL](images/image.png)
 
+### Création de la base
 
-![alt text](image.png)
-Création de la base :
+![Création base](images/image-1.png)
 
-![alt text](image-1.png)
+### Création du schéma
 
-Création du schéma :
+![Création schéma](images/image-2.png)
 
-![alt text](image-2.png)
-Création de la table :
+### Création de la table
 
-![alt text](image-3.png)
+![Création table](images/image-3.png)
 
 ---
 
 ## 👤 2. Création des utilisateurs
 
-![alt text](image-4.png)
+![Création utilisateurs](images/image-4.png)
 
 ---
 
@@ -74,32 +74,33 @@ Création de la table :
 
 ### Accès à la base
 
-![alt text](image-5.png)
+![GRANT connect](images/image-5.png)
 
 ### Accès au schéma
 
-![alt text](image-6.png)
+![GRANT schema](images/image-6.png)
 
 ### Permissions sur la table
 
-![alt text](image-7.png)
+![GRANT table](images/image-7.png)
 
 ### Accès à la séquence
 
-![alt text](image-8.png)
+![GRANT sequence](images/image-8.png)
 
 ---
 
 ## 🧪 4. Vérification des droits
 
-### Connexion étudiant et Test
-![alt text](image-9.png)
+### Connexion étudiant et tests
+
+![Test étudiant](images/image-9.png)
 
 ---
 
-### Connexion professeur et Test
+### Connexion professeur et tests
 
-![alt text](image-10.png)
+![Test professeur](images/image-10.png)
 
 ---
 
@@ -137,6 +138,7 @@ CREATE ROLE lecture;
 GRANT SELECT ON tp_dcl.etudiants TO lecture;
 GRANT lecture TO etudiant;
 ```
+
 ---
 
 **✔️ TP réalisé avec succès**

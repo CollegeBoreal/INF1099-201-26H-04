@@ -35,7 +35,7 @@ function Test-LoadDB($scriptPath) {
 . ../.scripts/students.ps1
 
 # Header
-Write-Output "# Participation au $(Get-Date -Format 'dd-MM-yyyy HH:mm')"
+Write-Output "# Participation"
 Write-Output ""
 
 Write-Output "| Table des matières            | Description                                             |"

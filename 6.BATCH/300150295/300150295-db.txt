@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2026-03-18 14:17:30] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
 [2026-03-18 14:17:30] [INFO] V�rification du conteneur postgres-lab...
 [2026-03-18 14:17:30] [INFO] Conteneur actif detecte
@@ -14,9 +15,31 @@
 [2026-03-18 14:17:30] [INFO] Scripts reussis: 0
 [2026-03-18 14:17:30] [INFO] Scripts en erreur: 4
 [2026-03-18 14:17:30] [INFO] Temps d'execution: 0.175565 secondes
+=======
+[2026-03-18 18:17:08] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
+[2026-03-18 18:17:08] [INFO] V�rification du conteneur postgres-lab...
+[2026-03-18 18:17:08] [INFO] Conteneur actif detecte
+[2026-03-18 18:17:08] [INFO] Debut du chargement des scripts...
+[2026-03-18 18:17:08] [INFO] Traitement de DDL.sql...
+[2026-03-18 18:17:08] [ERROR] ERREUR: Fichier manquant - DDL.sql
+[2026-03-18 18:17:08] [INFO] Traitement de DML.sql...
+[2026-03-18 18:17:08] [ERROR] ERREUR: Fichier manquant - DML.sql
+[2026-03-18 18:17:08] [INFO] Traitement de DCL.sql...
+[2026-03-18 18:17:08] [ERROR] ERREUR: Fichier manquant - DCL.sql
+[2026-03-18 18:17:08] [INFO] Traitement de DQL.sql...
+[2026-03-18 18:17:08] [ERROR] ERREUR: Fichier manquant - DQL.sql
+[2026-03-18 18:17:08] [INFO] === RAPPORT FINAL ===
+[2026-03-18 18:17:08] [INFO] Scripts reussis: 0
+[2026-03-18 18:17:08] [INFO] Scripts en erreur: 4
+[2026-03-18 18:17:08] [INFO] Temps d'execution: 0.110261 secondes
+>>>>>>> e27200365b3c17662fb325e09490c8295f27f918
 
 Resume:
 - Succes: 0
 - Erreurs: 4
+<<<<<<< HEAD
 - Duree: 0.175565s
+=======
+- Duree: 0.110261s
+>>>>>>> e27200365b3c17662fb325e09490c8295f27f918
 - Log: execution.log
