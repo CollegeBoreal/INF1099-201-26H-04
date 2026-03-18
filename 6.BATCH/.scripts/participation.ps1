@@ -1,4 +1,31 @@
 #!/usr/bin/env pwsh
+
+# New function to test DB loading
+function Test-LoadDB($scriptPath) {
+    # Start Postgres container silently
+    $existing = docker ps -a --filter "name=postgres-test" --format "{{.Names}}"
+    if ($existing -ne "postgres-test") {
+        docker run -d -q `
+            --name postgres-test `
+            -e POSTGRES_PASSWORD=postgres `
+            -e POSTGRES_DB=ecole `
+            -p 5432:5432 `
+            postgres | Out-Null
+        Start-Sleep -Seconds 10
+    }
+
+    try {
+        # Run student script silently
+        pwsh $scriptPath *> $null
+        return ":heavy_check_mark:"
+    } catch {
+        return ":x:"
+    } finally {
+        docker stop postgres-test | Out-Null
+        docker rm postgres-test | Out-Null
+    }
+}
+
 # --------------------------------------
 # PowerShell participation script using $STUDENTS array
 # --------------------------------------
@@ -62,7 +89,14 @@ foreach ($entry in $STUDENTS) {
     $dql = Check $DQL
     $dcl = Check $DCL
 
-    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl |"
+    $DBSCRIPT = "$StudentID/load-db.ps1"
+    $db = ":x:"  # default fail
+
+    if (Test-Path $DBSCRIPT) {
+        $db = Test-LoadDB $DBSCRIPT
+    }
+
+    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db |"
 
     # Success if ALL files exist
     if ($r -eq ":heavy_check_mark:" -and
