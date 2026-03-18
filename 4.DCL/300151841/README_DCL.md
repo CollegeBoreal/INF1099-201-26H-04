@@ -47,7 +47,9 @@ Connexion au conteneur PostgreSQL avec l'utilisateur administrateur.
 podman exec -it postgres psql -U postgres
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 1](https://github.com/user-attachments/assets/af6fb5c1-e0f1-4acb-8936-6d9a8a8e023c)
 
 ---
 
@@ -65,7 +67,9 @@ Connexion à la base :
 \c cours
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 2](https://github.com/user-attachments/assets/e99312a7-88a2-40c4-8c7f-48db38f6e79f)
 
 ---
 
@@ -77,7 +81,9 @@ Organisation des objets du TP dans un schéma dédié.
 CREATE SCHEMA tp_dcl;
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 3](https://github.com/user-attachments/assets/6a0a42bf-03bc-48b4-9a4c-6089a0135581)
 
 ---
 
@@ -99,7 +105,9 @@ Vérification de la table :
 \dt tp_dcl.*
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 4](https://github.com/user-attachments/assets/91f5f4c8-17a4-4bf0-9b12-36dea9aead51)
 
 ---
 
@@ -117,7 +125,9 @@ CREATE USER etudiant   WITH PASSWORD 'etudiant123';
 CREATE USER professeur WITH PASSWORD 'prof123';
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 5](https://github.com/user-attachments/assets/8ca28561-125f-407e-a628-ff6be4c84660)
 
 ---
 
@@ -151,7 +161,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 ```
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 6](https://github.com/user-attachments/assets/07431853-8637-4e12-ad0c-697534b7c2f4)
 
 ---
 
@@ -183,7 +195,9 @@ ERROR: permission denied for table etudiants
 
 > L'utilisateur `etudiant` ne peut que **lire** les données, pas les modifier.
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 7](https://github.com/user-attachments/assets/7ad0a869-8e50-4467-a431-44121b9d7bdf)
 
 ---
 
@@ -212,7 +226,9 @@ WHERE nom = 'Khaled';
 
 > L'utilisateur `professeur` a un accès **complet** en lecture et écriture.
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 8](https://github.com/user-attachments/assets/3c0ed324-da7f-48dc-adad-a32daa720472)
 
 ---
 
@@ -242,7 +258,9 @@ ERROR: permission denied for table etudiants
 
 > La permission a bien été révoquée. L'accès est désormais **bloqué**.
 
-> 🖼️ *Capture d'écran disponible dans le dossier `images/`*
+🖼️ Capture d'écran
+
+![Étape 9](https://github.com/user-attachments/assets/961c71a0-483b-4675-86cc-c6dc967a255d)
 
 ---
 
