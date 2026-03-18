@@ -1,22 +1,22 @@
-[2026-03-18 14:31:27] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
-[2026-03-18 14:31:27] [INFO] V�rification du conteneur postgres-lab...
-[2026-03-18 14:31:27] [INFO] Conteneur actif detecte
-[2026-03-18 14:31:27] [INFO] Debut du chargement des scripts...
-[2026-03-18 14:31:27] [INFO] Traitement de DDL.sql...
-[2026-03-18 14:31:27] [ERROR] ERREUR: Fichier manquant - DDL.sql
-[2026-03-18 14:31:27] [INFO] Traitement de DML.sql...
-[2026-03-18 14:31:27] [ERROR] ERREUR: Fichier manquant - DML.sql
-[2026-03-18 14:31:27] [INFO] Traitement de DCL.sql...
-[2026-03-18 14:31:27] [ERROR] ERREUR: Fichier manquant - DCL.sql
-[2026-03-18 14:31:27] [INFO] Traitement de DQL.sql...
-[2026-03-18 14:31:27] [ERROR] ERREUR: Fichier manquant - DQL.sql
-[2026-03-18 14:31:27] [INFO] === RAPPORT FINAL ===
-[2026-03-18 14:31:27] [INFO] Scripts reussis: 0
-[2026-03-18 14:31:27] [INFO] Scripts en erreur: 4
-[2026-03-18 14:31:27] [INFO] Temps d'execution: 0.155042 secondes
+[2026-03-18 18:37:24] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
+[2026-03-18 18:37:24] [INFO] V�rification du conteneur postgres-lab...
+[2026-03-18 18:37:24] [INFO] Conteneur actif detecte
+[2026-03-18 18:37:24] [INFO] Debut du chargement des scripts...
+[2026-03-18 18:37:24] [INFO] Traitement de DDL.sql...
+[2026-03-18 18:37:24] [ERROR] ERREUR: Fichier manquant - DDL.sql
+[2026-03-18 18:37:24] [INFO] Traitement de DML.sql...
+[2026-03-18 18:37:24] [ERROR] ERREUR: Fichier manquant - DML.sql
+[2026-03-18 18:37:24] [INFO] Traitement de DCL.sql...
+[2026-03-18 18:37:24] [ERROR] ERREUR: Fichier manquant - DCL.sql
+[2026-03-18 18:37:24] [INFO] Traitement de DQL.sql...
+[2026-03-18 18:37:24] [ERROR] ERREUR: Fichier manquant - DQL.sql
+[2026-03-18 18:37:24] [INFO] === RAPPORT FINAL ===
+[2026-03-18 18:37:24] [INFO] Scripts reussis: 0
+[2026-03-18 18:37:24] [INFO] Scripts en erreur: 4
+[2026-03-18 18:37:24] [INFO] Temps d'execution: 0.1276852 secondes
 
 Resume:
 - Succes: 0
 - Erreurs: 4
-- Duree: 0.155042s
+- Duree: 0.1276852s
 - Log: execution.log
