@@ -23,8 +23,6 @@ Résultat:
 ```powershell
 docker container ls
 ```
-Résultat:
-![Texte alternatif](images/3.png)
 
 ## 4. Exécuter le script PowerShell
 ```powershell
@@ -47,12 +45,10 @@ Résultat:
 Résultat:
 ![Texte alternatif](images/6.png)
 
-Résultat:
-![Texte alternatif](images/2.png)
 
 ## 7. Requête sur la table client
 ```sql
 SELECT * FROM client;
 ```
 Résultat:
-![Texte alternatif](images/2.png)
+![Texte alternatif](images/7.png)

@@ -60,6 +60,7 @@ Service client dédié aux passionnés
 Livraison rapide dans toute l'Europe
 
 
-<img width="6769" height="2325" alt="image" src="https://github.com/user-attachments/assets/b729009c-3197-429e-934e-f89cad325c77" />
+<img width="5038" height="8191" alt="image" src="https://github.com/user-attachments/assets/76610f07-b28e-4f1b-be7e-5ec2d9657a18" />
+
 
 

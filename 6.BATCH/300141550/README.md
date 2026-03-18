@@ -1,215 +1,142 @@
-# 🧪 Laboratoire BATCH – Automatisation PostgreSQL avec PowerShell et Podman
-
-## 👤 Auteur
-
-Emeraude Santu
-
----
+# 🧪 Laboratoire BATCH – Chargement automatisé PostgreSQL avec Docker
 
 ## 📌 Description
 
-Ce laboratoire consiste à automatiser le chargement d’une base de données PostgreSQL à l’aide d’un script PowerShell.
+Ce projet consiste à automatiser le chargement d’une base de données PostgreSQL à l’aide d’un script PowerShell et de Docker.
 
-L’environnement utilise **Podman** (alternative à Docker) pour exécuter PostgreSQL dans un conteneur, et un script batch permet d’exécuter automatiquement plusieurs fichiers SQL.
+La base de données est basée sur un système de gestion de commandes de plats (clients, commandes, paiements, livraisons, etc.).
 
 ---
 
 ## 🎯 Objectifs
 
-À la fin de ce laboratoire, l’étudiant est capable de :
-
-* Comprendre les différents types de scripts SQL
-* Utiliser Podman pour exécuter PostgreSQL
-* Écrire un script PowerShell d’automatisation
-* Exécuter plusieurs scripts SQL dans un ordre précis
-* Automatiser le déploiement d’une base de données
-
----
-
-## 🧠 Types de scripts SQL
-
-| Type | Description              | Exemple      |
-| ---- | ------------------------ | ------------ |
-| DDL  | Création de la structure | CREATE TABLE |
-| DML  | Manipulation des données | INSERT       |
-| DQL  | Lecture des données      | SELECT       |
-| DCL  | Gestion des droits       | GRANT        |
+* Comprendre les différents types de scripts SQL (DDL, DML, DCL, DQL)
+* Utiliser Docker pour exécuter PostgreSQL
+* Automatiser l’exécution de scripts SQL avec PowerShell
+* Structurer une base de données relationnelle
 
 ---
 
 ## 📁 Structure du projet
 
 ```
-📦 lab-batch/
-├── DDL.sql
-├── DML.sql
-├── DCL.sql
-├── DQL.sql
-└── load-db.ps1
+📁 projet/
+├── DDL.sql        # Création des tables
+├── DML.sql        # Insertion des données
+├── DCL.sql        # Gestion des permissions
+├── DQL.sql        # Requêtes SQL
+└── load-db.ps1    # Script PowerShell
 ```
 
 ---
 
-## 🔄 Ordre d’exécution
+## 🧱 Modèle de données
 
-L’ordre d’exécution est essentiel :
+La base contient les principales entités suivantes :
 
-1. DDL → création des tables
-2. DML → insertion des données
-3. DCL → gestion des droits
-4. DQL → vérification
+* CLIENT
+* ADRESSE
+* COMMANDE
+* LIGNE_COMMANDE
+* PLAT
+* CATEGORIE
+* PAYS_ORIGINE
+* PAIEMENT
+* LIVRAISON
+* LIVREUR
 
----
-
-## 🐳 Environnement : Podman
-
-Ce laboratoire utilise **Podman** au lieu de Docker.
-
-👉 Un alias est intégré dans le script PowerShell pour permettre l’utilisation des commandes Docker avec Podman.
-
-### Initialisation de Podman
-
-```bash
-podman machine init
-podman machine start
-```
+Ces tables sont liées par des clés étrangères pour assurer l’intégrité des données.
 
 ---
 
-## 🚀 Lancement du conteneur PostgreSQL
+## 🐳 Lancement de PostgreSQL avec Docker
+
+### Commande PowerShell
 
 ```bash
-docker container run -d \
---name postgres-lab \
--e POSTGRES_PASSWORD=postgres \
--e POSTGRES_DB=ecole \
--p 5432:5432 \
+docker container run -d `
+--name postgres-lab `
+-e POSTGRES_PASSWORD=postgres `
+-e POSTGRES_DB=ecole `
+-p 5432:5432 `
 postgres
 ```
 
----
+### Vérification
 
-## ⚙️ Script PowerShell
-
-Fichier : `load-db.ps1`
-
-### Fonctionnalités :
-
-* Création automatique d’un alias Docker → Podman
-* Vérification que le conteneur est actif
-* Vérification de l’existence des fichiers SQL
-* Exécution automatique des scripts SQL
-* Génération d’un fichier log (`execution.log`)
-* Mesure du temps d’exécution
+```bash
+docker container ls
+```
 
 ---
 
-## ▶️ Exécution du script
+## ⚙️ Exécution du script
 
 ```bash
 pwsh ./load-db.ps1
 ```
 
-Ou avec paramètre :
+---
 
-```bash
-pwsh ./load-db.ps1 postgres-lab
-```
+## 🔄 Ordre d’exécution des scripts
+
+1. DDL → création des tables
+2. DML → insertion des données
+3. DCL → gestion des accès
+4. DQL → requêtes de vérification
 
 ---
 
-## 🔎 Vérification
+## 📊 Résultats attendus
 
-Connexion au conteneur :
-
-```bash
-docker exec -it postgres-lab psql -U postgres -d ecole
-```
-
-Exemple de requête :
-
-```sql
-SELECT * FROM CLIENT;
-```
+* Tables créées avec succès
+* Données insérées correctement
+* Utilisateur créé avec permissions
+* Requêtes SQL fonctionnelles
 
 ---
 
-## 📄 Fichier de log
+## 🧾 Fichier de log
 
-Un fichier `execution.log` est généré automatiquement et contient :
+Un fichier `execution.log` est généré automatiquement :
 
-* Les étapes exécutées
-* Les résultats SQL
-* Les erreurs éventuelles
-* Le temps total d’exécution
-
----
-
-## 🧠 Explication technique
-
-Le script PowerShell utilise :
-
-* `Get-Content` → lire les fichiers SQL
-* `docker exec` → exécuter dans le conteneur
-* `psql` → client PostgreSQL
-* `Tee-Object` → afficher et enregistrer les logs
+* Contient les résultats des requêtes
+* Permet de vérifier l’exécution du script
+* Utile pour le débogage
 
 ---
 
-## ⚠️ Problèmes courants
+## ⚠️ Gestion des erreurs
 
-### ❌ Podman non démarré
+Le script inclut :
 
-Solution :
-
-```bash
-podman machine start
-```
+* Vérification de l’existence des fichiers SQL
+* Vérification que le conteneur Docker est actif
+* Arrêt automatique en cas d’erreur SQL
 
 ---
 
-### ❌ Conteneur non actif
+## ⏱️ Temps d’exécution
 
-```bash
-docker ps
-```
+Le script affiche le temps total d’exécution à la fin.
 
 ---
 
-### ❌ Fichier SQL manquant
+## ✅ Conclusion
 
-Vérifier la présence des fichiers dans le dossier.
+Ce laboratoire démontre :
 
----
-
-## 🎯 Résultats attendus
-
-Après exécution :
-
-* Tables créées
-* Données insérées
-* Requêtes exécutées
-* Fichier log généré
+* L’automatisation du déploiement d’une base de données
+* L’utilisation combinée de Docker et PowerShell
+* La gestion complète d’un cycle SQL (DDL, DML, DCL, DQL)
 
 ---
 
-## ✅ Avantages de l’automatisation
+## 🚀 Améliorations possibles
 
-* Gain de temps
-* Réduction des erreurs humaines
-* Reproductibilité
-* Déploiement rapide
-
----
-
-## 🧠 Conclusion
-
-Ce laboratoire démontre l’importance de l’automatisation dans la gestion des bases de données.
-
-L’utilisation combinée de **PowerShell** et **Podman** permet de :
-
-* simplifier le déploiement
-* améliorer la productivité
-* garantir la cohérence des opérations
+* Ajouter des contraintes (CHECK, NOT NULL)
+* Créer des index pour optimiser les performances
+* Ajouter des vues (VIEW)
+* Implémenter des triggers
 
 ---

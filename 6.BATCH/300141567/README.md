@@ -57,6 +57,8 @@ postgres
 pwsh ./load-db.ps1 postgres-lab
 ```
 
+![alt text](images/image.png)
+
 ---
 
 ## 📜 Fonctionnement du script
