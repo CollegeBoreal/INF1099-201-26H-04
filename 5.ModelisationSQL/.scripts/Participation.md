@@ -1,4 +1,4 @@
-# Participation au 18-03-2026 18:16
+# Participation au 18-03-2026 18:28
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -16,8 +16,8 @@
 
 |:hash:| Boréal :id: | README.md | images | DDL.sql | DML.sql | DQL.sql | DCL.sql |
 |------|-------------|-----------|--------|---------|---------|---------|---------|
-| 0 | [300141550](../300141550/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image>](https://github.com/emeraudesantu) | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| 1 | [300141567](../300141567/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image>](https://github.com/arsprod2001) | :x: | :x: | :x: | :x: | :x: | :x: |
+| 0 | [300141550](../300141550/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image>](https://github.com/emeraudesantu) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 1 | [300141567](../300141567/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image>](https://github.com/arsprod2001) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 2 | [300142242](../300142242/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/131247071?s=460&v=4' width=20 height=20></image>](https://github.com/yahiiiia) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 3 | [300146667](../300146667/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image>](https://github.com/djaberbenyezza) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 4 | [300147786](../300147786/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/231366133?s=460&v=4' width=20 height=20></image>](https://github.com/300786147) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -43,4 +43,4 @@
 | 24 | [300153476](../300153476/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image>](https://github.com/dialloramatoulayebah) | :x: | :x: | :x: | :x: | :x: | :x: |
 | 25 | [300153747](../300153747/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image>](https://github.com/madjou15) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | 26 | [300154718](../300154718/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image>](https://github.com/stephanetidjet) | :x: | :x: | :x: | :x: | :x: | :x: |
-| :abacus: | \$\\frac{6}{27}\$ = 22.22% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 6 |
+| :abacus: | \$\\frac{8}{27}\$ = 29.63% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 8 |

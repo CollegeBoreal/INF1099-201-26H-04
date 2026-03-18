@@ -1,12 +1,14 @@
- # ---------------------------------------
+# ---------------------------------------
 # Script PowerShell pour charger PostgreSQL
 # ---------------------------------------
 
-$Container = "postgres-lab"
-$Database  = "ecole"
-$User      = "postgres"
+param(
+    [string]$CONTAINER = "postgres-lab",
+    [string]$DATABASE  = "ecole",
+    [string]$USER      = "postgres"
+)
 
-$Files = @(
+$FILES = @(
     "DDL.sql",
     "DML.sql",
     "DCL.sql",
@@ -15,22 +17,20 @@ $Files = @(
 
 Write-Output "Chargement de la base de donnees..."
 
-$containerRunning = docker ps --format "{{.Names}}" | Select-String "^$Container$"
+$containerRunning = docker ps --format "{{.Names}}" | Select-String "^$CONTAINER$"
 
 if (-not $containerRunning) {
-    Write-Output "ERREUR : le conteneur $Container n'est pas actif."
+    Write-Output "ERREUR : le conteneur $CONTAINER n'est pas actif."
     exit
 }
 
-foreach ($file in $Files) {
-
-    if (-not (Test-Path $file)) {
-        Write-Output "ERREUR : fichier manquant : $file"
+foreach ($FILE in $FILES) {
+    if (-not (Test-Path $FILE)) {
+        Write-Output "ERREUR : fichier manquant : $FILE"
         exit
     }
-
-    Write-Output "Execution de $file"
-    Get-Content $file | docker exec -i $Container psql -U $User -d $Database
+    Write-Output "Execution de $FILE"
+    Get-Content $FILE | docker exec -i $CONTAINER psql -U $USER -d $DATABASE
 }
 
 Write-Output "Chargement termine."
