@@ -37,6 +37,6 @@ CREATE USER etudiant_test WITH PASSWORD 'etudiant123';
 
 ### Projet eduhome
 <p align="center">
-  <img src="./images/Travail_reussi.png" width="600" title="DCL">
+  <img src="./images/resultat_grant.png" width="600" title="DCL">
   <br><em>DCL réussie pratique</em>
 </p>
