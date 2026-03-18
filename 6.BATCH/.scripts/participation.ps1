@@ -92,12 +92,14 @@ foreach ($entry in $STUDENTS) {
 
     $DBSCRIPT = "$StudentID/load-db.ps1"
     $db = ":x:"  # default fail
+    $log = ":x:"  # default fail
 
     if (Test-Path $DBSCRIPT) {
         $db = Test-LoadDB $DBSCRIPT
+        # $log = "[:wood:](../$StudentID-db.txt)"
     }
 
-    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db | [$StudentID](../$StudentID-db.txt) |"
+    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db | $log |"
 
     # Success if ALL files exist
     if ($r -eq ":heavy_check_mark:" -and
