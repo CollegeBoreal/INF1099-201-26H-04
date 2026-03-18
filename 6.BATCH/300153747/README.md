@@ -121,6 +121,8 @@ Le script charge automatiquement :
 * les requêtes permettent de tester le système
 
 Tout le processus est automatisé, ce qui évite les erreurs et fait gagner du temps.
+<img src="images/Screenshot 2026-03-18 142004.png" width="600">
+<img src="images/Screenshot 2026-03-18 141942.png" width="600">
 
 ---
 
