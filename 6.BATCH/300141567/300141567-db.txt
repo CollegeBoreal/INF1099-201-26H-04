@@ -1,42 +1,7 @@
-===== Début execution 03/18/2026 15:04:45 =====
-Execution de DDL.sql
-ERROR:  relation "utilisateur" already exists
-ERROR:  relation "categorie" already exists
-ERROR:  relation "equipe" already exists
-ERROR:  relation "technicien" already exists
-ERROR:  relation "ticket" already exists
-ERROR:  relation "intervention" already exists
-Execution de DML.sql
-ERROR:  duplicate key value violates unique constraint "utilisateur_email_key"
-DETAIL:  Key (email)=(amadou@mail.com) already exists.
-INSERT 0 2
-INSERT 0 2
-INSERT 0 1
-INSERT 0 1
-INSERT 0 1
-Execution de DCL.sql
-ERROR:  role "etudiant" already exists
-ERROR:  role "admin" already exists
-ERROR:  database "cours" does not exist
-GRANT
-GRANT
-Execution de DQL.sql
- id_ticket |     titre     |    description     | date_creation | id_utilisateur | id_categorie | id_technicien 
------------+---------------+--------------------+---------------+----------------+--------------+---------------
-         1 | Problème wifi | Connexion instable | 2026-03-18    |              1 |            1 |             1
-         2 | Problème wifi | Connexion instable | 2026-03-18    |              1 |            1 |             1
-(2 rows)
 
-     titre     | nom 
----------------+-----
- Problème wifi | Sow
- Problème wifi | Sow
-(2 rows)
+    Directory: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH
 
-     commentaire     |  nom   
----------------------+--------
- Redémarrage routeur | Diallo
- Redémarrage routeur | Diallo
-(2 rows)
-
-Temps d'execution : 00:00:01.1216773
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+drwxr-xr-x     runner runner     03/18/2026 19:08         4096 [44;1mlog[0m
+ERREUR : fichier manquant DDL.sql
