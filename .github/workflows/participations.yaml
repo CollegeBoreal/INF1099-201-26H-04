@@ -5,16 +5,24 @@ on: [push]
 jobs:
   presence:
     name: presence de fichiers pour la participation
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    # If container isolation is needed
+    # container:
+    #   image: mcr.microsoft.com/powershell
 
     steps:
       - uses: actions/checkout@v1
 
-      - name: Install jq
-        run: brew install jq
+#      - name: Setup tools
+#        run: |
+#          apt-get update
+#          apt-get install -y jq
 
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
+
+      - name: Use PowerShell
+        run: pwsh --version
     
       - shell: bash
         run: |
@@ -67,7 +75,14 @@ jobs:
           ## 
           echo "Evaluating chapter 5.ModelisationSQL Participation"
           cd 5.ModelisationSQL
-          bash .scripts/run.sh
+          pwsh .scripts/run.ps1
+          cd ..
+          ##
+          ## Evaluating chapter 6.BATCH
+          ## 
+          echo "Evaluating chapter 6.BATCH Participation"
+          cd 6.BATCH
+          pwsh .scripts/run.ps1
           cd ..
 
       - name: Commit files
