@@ -14,8 +14,8 @@ jobs:
 
       - name: Setup tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
+          apt-get update
+          apt-get install -y jq
 
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
