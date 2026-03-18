@@ -1,184 +1,215 @@
-# 🧪 Laboratoire PostgreSQL – Automatisation avec PowerShell et Podman
+# 🧪 Laboratoire BATCH – Automatisation PostgreSQL avec PowerShell et Podman
 
-## 📌 Présentation
+## 👤 Auteur
 
-Ce projet démontre comment **automatiser le chargement d’une base de données PostgreSQL** à l’aide d’un **script PowerShell** et d’un **conteneur PostgreSQL exécuté avec Podman**.
-
-Le script permet d’exécuter automatiquement plusieurs fichiers SQL dans le bon ordre afin de :
-
-* créer la structure de la base de données
-* insérer des données
-* gérer les permissions
-* exécuter des requêtes de vérification
-
-Ce laboratoire simule un **déploiement automatisé d’une base de données**, une pratique courante en environnement professionnel.
+Emeraude Santu
 
 ---
 
-# 🎯 Objectifs
+## 📌 Description
 
-À la fin de ce laboratoire, l’étudiant sera capable de :
+Ce laboratoire consiste à automatiser le chargement d’une base de données PostgreSQL à l’aide d’un script PowerShell.
 
-* Comprendre les différents **types de scripts SQL**
-* Exécuter **PostgreSQL dans un conteneur**
-* Automatiser des opérations avec **PowerShell**
-* Charger automatiquement plusieurs scripts SQL
-* Organiser un projet simple d’**automatisation de base de données**
+L’environnement utilise **Podman** (alternative à Docker) pour exécuter PostgreSQL dans un conteneur, et un script batch permet d’exécuter automatiquement plusieurs fichiers SQL.
 
 ---
 
-# 📂 Structure du projet
+## 🎯 Objectifs
 
-```id="fs4yax"
-300141550/
-│
-├── DDL.sql        # Création de la structure de la base de données
-├── DML.sql        # Insertion des données
-├── DCL.sql        # Gestion des rôles et permissions
-├── DQL.sql        # Requêtes pour consulter les données
-└── load-db.ps1    # Script PowerShell d'automatisation
+À la fin de ce laboratoire, l’étudiant est capable de :
+
+* Comprendre les différents types de scripts SQL
+* Utiliser Podman pour exécuter PostgreSQL
+* Écrire un script PowerShell d’automatisation
+* Exécuter plusieurs scripts SQL dans un ordre précis
+* Automatiser le déploiement d’une base de données
+
+---
+
+## 🧠 Types de scripts SQL
+
+| Type | Description              | Exemple      |
+| ---- | ------------------------ | ------------ |
+| DDL  | Création de la structure | CREATE TABLE |
+| DML  | Manipulation des données | INSERT       |
+| DQL  | Lecture des données      | SELECT       |
+| DCL  | Gestion des droits       | GRANT        |
+
+---
+
+## 📁 Structure du projet
+
+```
+📦 lab-batch/
+├── DDL.sql
+├── DML.sql
+├── DCL.sql
+├── DQL.sql
+└── load-db.ps1
 ```
 
 ---
 
-# 🗄 Types de scripts SQL
+## 🔄 Ordre d’exécution
 
-| Type | Signification              | Exemple      |
-| ---- | -------------------------- | ------------ |
-| DDL  | Data Definition Language   | CREATE TABLE |
-| DML  | Data Manipulation Language | INSERT       |
-| DQL  | Data Query Language        | SELECT       |
-| DCL  | Data Control Language      | GRANT        |
+L’ordre d’exécution est essentiel :
 
-### Ordre d'exécution
+1. DDL → création des tables
+2. DML → insertion des données
+3. DCL → gestion des droits
+4. DQL → vérification
 
-Les scripts doivent être exécutés dans l’ordre suivant :
+---
 
-```id="hzvrpj"
-DDL → DML → DCL → DQL
+## 🐳 Environnement : Podman
+
+Ce laboratoire utilise **Podman** au lieu de Docker.
+
+👉 Un alias est intégré dans le script PowerShell pour permettre l’utilisation des commandes Docker avec Podman.
+
+### Initialisation de Podman
+
+```bash
+podman machine init
+podman machine start
 ```
 
 ---
 
-# 🐳 Démarrer PostgreSQL avec Podman
+## 🚀 Lancement du conteneur PostgreSQL
 
-Lancer un conteneur PostgreSQL :
-
-```bash id="csqawf"
-podman run -d \
---name postgres \
+```bash
+docker container run -d \
+--name postgres-lab \
 -e POSTGRES_PASSWORD=postgres \
 -e POSTGRES_DB=ecole \
 -p 5432:5432 \
-docker.io/library/postgres:16
-```
-
-Vérifier que le conteneur fonctionne :
-
-```bash id="b4avgi"
-podman ps
+postgres
 ```
 
 ---
 
-# ⚙ Script PowerShell
+## ⚙️ Script PowerShell
 
-Le fichier **load-db.ps1** permet d’exécuter automatiquement tous les scripts SQL.
+Fichier : `load-db.ps1`
 
-Fonctionnement du script :
+### Fonctionnalités :
 
-* vérifie que chaque fichier SQL existe
-* lit le contenu du fichier
-* envoie le script dans le conteneur PostgreSQL
-* exécute les scripts dans l’ordre défini
-
-Commande utilisée dans le script :
-
-```powershell id="q2q0y4"
-Get-Content $file | podman exec -i $Container psql -U $User -d $Database
-```
+* Création automatique d’un alias Docker → Podman
+* Vérification que le conteneur est actif
+* Vérification de l’existence des fichiers SQL
+* Exécution automatique des scripts SQL
+* Génération d’un fichier log (`execution.log`)
+* Mesure du temps d’exécution
 
 ---
 
-# ▶ Exécution du script
+## ▶️ Exécution du script
 
-Dans PowerShell :
-
-```powershell id="nhfpk1"
+```bash
 pwsh ./load-db.ps1
 ```
 
-Exemple de sortie :
+Ou avec paramètre :
 
-```id="t3rzsq"
-Chargement de la base de données...
-
-Execution de DDL.sql
-CREATE TABLE
-
-Execution de DML.sql
-INSERT 0 3
-
-Execution de DCL.sql
-GRANT
-
-Execution de DQL.sql
-Affichage des résultats...
-
-Chargement terminé.
+```bash
+pwsh ./load-db.ps1 postgres-lab
 ```
 
 ---
 
-# 🔎 Vérification dans PostgreSQL
+## 🔎 Vérification
 
 Connexion au conteneur :
 
-```bash id="eqksdx"
-podman exec -it postgres psql -U postgres -d ecole
+```bash
+docker exec -it postgres-lab psql -U postgres -d ecole
 ```
 
 Exemple de requête :
 
-```sql id="ijlj4r"
-SELECT * FROM etudiants;
-```
-
-Résultat attendu :
-
-```id="ghxw4g"
- id | nom     | prenom
-----+---------+--------
- 1  | Dupont  | Marie
- 2  | Martin  | Jean
- 3  | Bernard | Sophie
+```sql
+SELECT * FROM CLIENT;
 ```
 
 ---
 
-# 📊 Fonctionnalités démontrées
+## 📄 Fichier de log
 
-✔ Déploiement d’une base PostgreSQL dans un conteneur
-✔ Automatisation avec PowerShell
-✔ Exécution séquentielle de scripts SQL
-✔ Gestion des rôles et permissions
-✔ Validation des données avec des requêtes SQL
+Un fichier `execution.log` est généré automatiquement et contient :
 
----
-
-# 🧠 Technologies utilisées
-
-* PostgreSQL 16
-* Podman
-* PowerShell
-* SQL
-* Git & GitHub
+* Les étapes exécutées
+* Les résultats SQL
+* Les erreurs éventuelles
+* Le temps total d’exécution
 
 ---
 
-# 👩‍💻 Auteur
+## 🧠 Explication technique
 
-**Emeraude Santu**
-Étudiante en informatique
+Le script PowerShell utilise :
 
-Ce projet a été réalisé dans le cadre d’un **laboratoire d’automatisation de base de données**.
+* `Get-Content` → lire les fichiers SQL
+* `docker exec` → exécuter dans le conteneur
+* `psql` → client PostgreSQL
+* `Tee-Object` → afficher et enregistrer les logs
+
+---
+
+## ⚠️ Problèmes courants
+
+### ❌ Podman non démarré
+
+Solution :
+
+```bash
+podman machine start
+```
+
+---
+
+### ❌ Conteneur non actif
+
+```bash
+docker ps
+```
+
+---
+
+### ❌ Fichier SQL manquant
+
+Vérifier la présence des fichiers dans le dossier.
+
+---
+
+## 🎯 Résultats attendus
+
+Après exécution :
+
+* Tables créées
+* Données insérées
+* Requêtes exécutées
+* Fichier log généré
+
+---
+
+## ✅ Avantages de l’automatisation
+
+* Gain de temps
+* Réduction des erreurs humaines
+* Reproductibilité
+* Déploiement rapide
+
+---
+
+## 🧠 Conclusion
+
+Ce laboratoire démontre l’importance de l’automatisation dans la gestion des bases de données.
+
+L’utilisation combinée de **PowerShell** et **Podman** permet de :
+
+* simplifier le déploiement
+* améliorer la productivité
+* garantir la cohérence des opérations
+
+---
