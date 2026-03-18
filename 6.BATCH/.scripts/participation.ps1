@@ -3,10 +3,10 @@
 # New function to test DB loading
 function Test-LoadDB($scriptPath) {
     # Start Postgres container silently
-    $existing = docker ps -a --filter "name=postgres-test" --format "{{.Names}}"
-    if ($existing -ne "postgres-test") {
+    $existing = docker ps -a --filter "name=postgres-lab" --format "{{.Names}}"
+    if ($existing -ne "postgres-lab") {
         docker run -d -q `
-            --name postgres-test `
+            --name postgres-lab `
             -e POSTGRES_PASSWORD=postgres `
             -e POSTGRES_DB=ecole `
             -p 5432:5432 `
@@ -16,13 +16,14 @@ function Test-LoadDB($scriptPath) {
 
     try {
         # Run student script silently
-        pwsh $scriptPath *> $null
+        # pwsh $scriptPath *> $null
+        pwsh $scriptPath *> "$StudentID/$StudentID-db.txt"
         return ":heavy_check_mark:"
     } catch {
         return ":x:"
     } finally {
-        docker stop postgres-test | Out-Null
-        docker rm postgres-test | Out-Null
+        docker stop postgres-lab | Out-Null
+        docker rm postgres-lab | Out-Null
     }
 }
 
