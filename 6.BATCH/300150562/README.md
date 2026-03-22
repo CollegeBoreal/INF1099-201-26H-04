@@ -80,6 +80,9 @@ Le script `load-db.ps1` automatise :
 
 3\. Exécution des scripts SQL dans PostgreSQL
 
+<img width="464" height="362" alt="image" src="https://github.com/user-attachments/assets/268bffb7-8ef6-4b58-b29e-6799ab96ad5e" />
+
+
 4\. Génération d’un fichier de log `execution.log`
 
 
