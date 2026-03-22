@@ -115,3 +115,6 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO app_user;
 
 </body>
 </html>
+
+<img width="975" height="801" alt="image" src="https://github.com/user-attachments/assets/38d7a3ec-3d62-4e83-9f86-1c4c9432fd79" />
+
