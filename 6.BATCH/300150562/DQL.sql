@@ -1,0 +1,8 @@
+SELECT * FROM CLIENT;
+SELECT * FROM COMMANDE;
+SELECT * FROM MAILLOT;
+
+-- Jointure test
+SELECT c.Nom, co.ID_Commande
+FROM CLIENT c
+JOIN COMMANDE co ON c.ID_Client = co.ID_Client;
