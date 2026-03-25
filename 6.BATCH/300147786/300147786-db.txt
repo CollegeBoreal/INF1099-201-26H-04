@@ -1,7 +1,7 @@
 Chargement de la base de données...
 Execution de DDL.sql
-NOTICE:  table "message" does not exist, skipping
 DROP TABLE
+NOTICE:  table "message" does not exist, skipping
 DROP TABLE
 NOTICE:  table "match" does not exist, skipping
 NOTICE:  table "preference" does not exist, skipping
@@ -48,9 +48,9 @@ Execution de DQL.sql
  Diallo | Mamadou |  22 | Montreal
 (1 row)
 
-             contenu              |        date_envoi         | prenom  
-----------------------------------+---------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-03-25 19:25:36.52967 | Mamadou
+             contenu              |         date_envoi         | prenom  
+----------------------------------+----------------------------+---------
+ Salut, ton annonce m’intéresse ! | 2026-03-25 19:31:31.944532 | Mamadou
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
