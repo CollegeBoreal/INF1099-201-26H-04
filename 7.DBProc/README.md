@@ -1,4 +1,28 @@
-# 📝 Leçon Fonctions et Procédures Stockées dans PostgreSQL
+# 📝 Leçon - Languages Procéduraux
+
+* **PL/SQL** (Procedural Language / SQL) a été **développé et popularisé par Oracle** dans les années **1980** pour ajouter des capacités procédurales à SQL.
+
+* Avant PL/SQL, SQL était **strictement déclaratif**, donc limité pour :
+
+  * Boucles, conditions, variables
+  * Gestion d’erreurs avancée
+  * Logique métier côté serveur
+
+* PL/SQL est **intégré à tous les SGBD Oracle**, ce qui permet :
+
+  * Procédures stockées
+  * Fonctions
+  * Triggers
+  * Packages (ensembles de procédures et fonctions)
+
+* Depuis, d’autres SGBD ont créé des langages similaires :
+
+  * PostgreSQL → PL/pgSQL
+  * SQL Server → T-SQL
+  * MySQL → SQL/PSM
+
+💡 En résumé : **Oracle a inventé et popularisé le concept de SQL procédural avec PL/SQL**, et les autres SGBD ont suivi avec leurs propres variantes.
+
 
 ## 1️⃣ Objectifs pédagogiques
 
