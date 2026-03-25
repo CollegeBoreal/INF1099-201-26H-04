@@ -1,5 +1,5 @@
 -- ==================================================================================
--- 03-programmation.sql (VERSION FINALE)
+-- 03-programmation.sql (VERSION ADAPTÉE AU DDL ACTUEL)
 -- ==================================================================================
 
 -- ============================================================
@@ -77,62 +77,7 @@ END;
 $$;
 
 -- ============================================================
--- 3️⃣ Procédure : inscrire_etudiant_cours
--- ============================================================
-
-CREATE OR REPLACE PROCEDURE inscrire_etudiant_cours(etudiant_email TEXT, cours_nom TEXT)
-LANGUAGE plpgsql
-AS $$
-DECLARE
-    v_etudiant_id INT;
-    v_cours_id INT;
-BEGIN
-    -- Vérifier étudiant
-    SELECT id INTO v_etudiant_id
-    FROM etudiants
-    WHERE email = etudiant_email;
-
-    IF v_etudiant_id IS NULL THEN
-        RAISE EXCEPTION 'Étudiant introuvable : %', etudiant_email;
-    END IF;
-
-    -- Vérifier cours
-    SELECT id INTO v_cours_id
-    FROM cours
-    WHERE nom = cours_nom;
-
-    IF v_cours_id IS NULL THEN
-        RAISE EXCEPTION 'Cours introuvable : %', cours_nom;
-    END IF;
-
-    -- Vérifier inscription existante
-    IF EXISTS (
-        SELECT 1 
-        FROM inscriptions 
-        WHERE etudiant_id = v_etudiant_id 
-        AND cours_id = v_cours_id
-    ) THEN
-        RAISE EXCEPTION 'Étudiant déjà inscrit à ce cours';
-    END IF;
-
-    -- Inscription
-    INSERT INTO inscriptions(etudiant_id, cours_id)
-    VALUES (v_etudiant_id, v_cours_id);
-
-    -- Log
-    INSERT INTO logs(action)
-    VALUES ('Inscription : ' || etudiant_email || ' -> ' || cours_nom);
-
-    RAISE NOTICE '✔ Inscription réussie : % -> %', etudiant_email, cours_nom;
-
-EXCEPTION
-    WHEN others THEN
-        RAISE NOTICE '❌ Erreur inscription : %', SQLERRM;
-END;
-$$;
-
--- ============================================================
--- 4️⃣ Trigger validation étudiant
+-- 3️⃣ Trigger validation étudiant
 -- ============================================================
 
 CREATE OR REPLACE FUNCTION valider_etudiant()
@@ -160,7 +105,7 @@ FOR EACH ROW
 EXECUTE FUNCTION valider_etudiant();
 
 -- ============================================================
--- 5️⃣ Trigger log détaillé
+-- 4️⃣ Trigger log détaillé
 -- ============================================================
 
 CREATE OR REPLACE FUNCTION log_action()
@@ -183,14 +128,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger pour etudiants
+-- Trigger pour etudiants uniquement
 CREATE OR REPLACE TRIGGER trg_log_etudiant
 AFTER INSERT OR UPDATE OR DELETE ON etudiants
-FOR EACH ROW
-EXECUTE FUNCTION log_action();
-
--- Trigger pour inscriptions
-CREATE OR REPLACE TRIGGER trg_log_inscription
-AFTER INSERT OR UPDATE OR DELETE ON inscriptions
 FOR EACH ROW
 EXECUTE FUNCTION log_action();
