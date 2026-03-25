@@ -1,4 +1,3 @@
-DROP ROLE IF EXISTS utilisateur_1;
 -- Création d’un utilisateur PostgreSQL
 CREATE USER utilisateur_1 WITH PASSWORD 'password123';
 
