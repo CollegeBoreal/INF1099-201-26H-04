@@ -3,8 +3,6 @@
 **Auteure :** Rabia BOUHALI  
 **Matricule :** 300151469  
 
----
-
 ## 1. Description du projet
 
 Ce projet consiste à concevoir une base de données relationnelle permettant de gérer les rendez-vous pour le test TCF (Test de Connaissance du Français) au Canada.
@@ -16,19 +14,14 @@ La base de données permet :
 - La prise de rendez-vous
 - La gestion des paiements
 
----
-
 ## 2. Étapes de modélisation
 
 La conception de cette base de données a suivi un processus structuré :
-
 - Analyse des besoins (identification des utilisateurs et des données)
 - Modélisation conceptuelle (diagramme Entité-Relation)
 - Modélisation logique (création des tables, clés primaires et étrangères)
 - Normalisation (réduction de la redondance des données)
 - Implémentation SQL (création et manipulation de la base)
-
----
 
 ## 3. Fichiers du projet
 
@@ -40,9 +33,6 @@ La conception de cette base de données a suivi un processus structuré :
 | `DQL.sql` | Requêtes SQL (SELECT, JOIN…) |
 | `DCL.sql` | Gestion des droits et permissions |
 
----
-
-## 4. Diagramme ER
 ## 4. Diagramme ER
 
 ```mermaid
@@ -85,7 +75,6 @@ erDiagram
         int ID_Paiement PK
         decimal Montant
         string Mode_Paiement
-```markdown
         date Date_Paiement
         int ID_RendezVous FK
     }
