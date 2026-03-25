@@ -1,12 +1,12 @@
 Transcript started, output file is execution.txt
 [START] Debut du chargement...
-&: /Users/valiha/Developer/github.com/collegeboreal/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
 Line |
   14 |  $running = & $docker ps --format "{{.Names}}"
      |               ~~~~~~~
-     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized
-     | as a name of a cmdlet, function, script file, or executable program. Check the
-     | spelling of the name, or if a path was included, verify that the path is correct and
-     | try again.
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
 [ERROR] Conteneur non actif
-Transcript stopped, output file is /Users/valiha/Developer/github.com/collegeboreal/INF1099-201-26H-04/6.BATCH/300150562/execution.txt
+Transcript stopped, output file is /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/execution.txt
