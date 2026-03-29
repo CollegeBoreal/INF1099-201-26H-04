@@ -1,5 +1,6 @@
 Chargement de la base de données...
 Execution de DDL.sql
+<<<<<<< HEAD
 DROP TABLE
 NOTICE:  table "message" does not exist, skipping
 DROP TABLE
@@ -10,8 +11,20 @@ DROP TABLE
 NOTICE:  table "match" does not exist, skipping
 NOTICE:  table "preference" does not exist, skipping
 NOTICE:  table "annonce" does not exist, skipping
+=======
+NOTICE:  table "message" does not exist, skipping
+DROP TABLE
+DROP TABLE
+NOTICE:  table "match" does not exist, skipping
+NOTICE:  table "preference" does not exist, skipping
+DROP TABLE
+NOTICE:  table "annonce" does not exist, skipping
+DROP TABLE
+>>>>>>> b7befac014f9d865f6a5cac9359820dbb8d76d9d
 NOTICE:  table "profil" does not exist, skipping
 NOTICE:  table "utilisateur" does not exist, skipping
+DROP TABLE
+DROP TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -50,7 +63,11 @@ Execution de DQL.sql
 
              contenu              |         date_envoi         | prenom  
 ----------------------------------+----------------------------+---------
+<<<<<<< HEAD
  Salut, ton annonce m’intéresse ! | 2026-03-29 21:44:54.565331 | Mamadou
+=======
+ Salut, ton annonce m’intéresse ! | 2026-03-29 21:22:59.321042 | Mamadou
+>>>>>>> b7befac014f9d865f6a5cac9359820dbb8d76d9d
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
