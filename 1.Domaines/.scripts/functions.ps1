@@ -85,6 +85,7 @@ function Write-StudentRow {
         [int]$Index,
         [string]$StudentID,
         [string]$GitHubLink,
+        [string]$ReadmePath,
         [hashtable]$Checks
     )
 

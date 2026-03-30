@@ -29,8 +29,8 @@ foreach ($entry in $STUDENTS) {
         -Index $i `
         -StudentID $StudentID `
         -GitHubLink $url `
-        -Checks $checks `
-        -ReadmePath $paths.README
+        -ReadmePath $paths.README `
+        -Checks $checks
 
     if (Test-AllRequiredFilesPresent -Checks $checks) {
         $s++
