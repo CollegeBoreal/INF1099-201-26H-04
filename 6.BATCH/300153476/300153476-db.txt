@@ -2,35 +2,35 @@ Chargement de la base de données...
 Execution de DDL.sql
 DROP TABLE
 NOTICE:  table "message_chatia" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "session_chatia" does not exist, skipping
 NOTICE:  table "participation_concours" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
 NOTICE:  table "concours" does not exist, skipping
 NOTICE:  table "attribution_recompense" does not exist, skipping
 NOTICE:  table "recompense" does not exist, skipping
 NOTICE:  table "note" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "soumission_devoir" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "devoir" does not exist, skipping
 NOTICE:  table "ressource" does not exist, skipping
 NOTICE:  table "inscription" does not exist, skipping
 NOTICE:  table "session_cours" does not exist, skipping
 NOTICE:  table "cours" does not exist, skipping
-DROP TABLE
 NOTICE:  table "professeur" does not exist, skipping
-DROP TABLE
 NOTICE:  table "enfant" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "parent" does not exist, skipping
 CREATE TABLE
 COMMENT
@@ -127,19 +127,19 @@ Execution de DCL.sql
 DROP ROLE
 NOTICE:  role "admin_diallo" does not exist, skipping
 DROP ROLE
+DROP ROLE
 NOTICE:  role "prof_martin" does not exist, skipping
 NOTICE:  role "parent_tremblay" does not exist, skipping
-DROP ROLE
 NOTICE:  role "enfant_emma" does not exist, skipping
-DROP ROLE
 DROP ROLE
 NOTICE:  role "auditeur_sys" does not exist, skipping
 DROP ROLE
 NOTICE:  role "admin_plateforme" does not exist, skipping
+DROP ROLE
 NOTICE:  role "professeur_role" does not exist, skipping
 DROP ROLE
-DROP ROLE
 NOTICE:  role "parent_role" does not exist, skipping
+DROP ROLE
 NOTICE:  role "enfant_role" does not exist, skipping
 DROP ROLE
 DROP ROLE
