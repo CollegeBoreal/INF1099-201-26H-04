@@ -10,15 +10,22 @@ function Test-ItemExists {
         return ":x:"
     }
 
-    # If no mermaid check requested → just existence
     if (-not $CheckMermaid) {
         return ":heavy_check_mark:"
     }
 
-    # Only check mermaid if it's a README.md (or any file you want)
     $content = Get-Content $Path -Raw
 
-    if ($content -match '```mermaid') {
+    # Check for mermaid block
+    $hasMermaid = $content -match '```mermaid[\s\S]*?```'
+
+    # Check for Markdown image: ![alt](url)
+    $hasMdImage = $content -match '!\[.*?\]\(.*?\)'
+
+    # Check for HTML image: <img src="...">
+    $hasHtmlImage = $content -match '<img\s+[^>]*src\s*=\s*["''][^"'']+["'']'
+
+    if ($hasMermaid -or $hasMdImage -or $hasHtmlImage) {
         return ":compass:"
     }
 
