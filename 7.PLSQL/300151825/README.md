@@ -32,6 +32,7 @@ docker run -d \
   -v $(pwd)/init:/docker-entrypoint-initdb.d \
   postgres:15
 ```
+![Texte alternatif](images/1.png)
 
 ### Explications
 
@@ -303,18 +304,10 @@ AFTER INSERT OR UPDATE OR DELETE ON inscriptions
 FOR EACH ROW
 EXECUTE FUNCTION log_action();
 ```
+![Texte alternatif](images/1.png)
 
 ---
 
-✅ **Résumé pour l’étudiant** :
-
-* Tout le squelette est fourni.
-* **À compléter** :
-
-  * Messages RAISE NOTICE personnalisés
-  * Gestion des exceptions détaillée
-  * Optimisations possibles dans les fonctions et procédures
-  * Eventuellement amélioration des logs (OLD/NEW)
 
 
 
