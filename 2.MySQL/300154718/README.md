@@ -63,6 +63,7 @@ podman machine init
 podman machine start
 podman machine list
 ```
+![wait](https://github.com/user-attachments/assets/cd4371c6-8d44-4775-b325-fdad50ec9ae5")
 
 ---
 
@@ -92,6 +93,7 @@ sakila-db/
 ├── sakila-schema.sql
 └── sakila-data.sql
 ```
+![wait](https://github.com/user-attachments/assets/ec226a10-70c5-4bb4-b644-8db30d1ca8f3")
 
 ---
 
@@ -102,6 +104,7 @@ Création d'un alias pour utiliser la commande `docker` comme raccourci vers `po
 ```powershell
 Set-Alias docker podman
 ```
+![wait](https://github.com/user-attachments/assets/8b2f87f5-a3e5-4c46-836c-490f2f961c31")
 
 ---
 
@@ -115,6 +118,8 @@ docker run -d --name INF1099-mysql `
   -p 3306:3306 `
   mysql:8.0
 ```
+![wait](https://github.com/user-attachments/assets/8abc02da-6e08-402a-bc84-fc34c11e2944")
+
 
 **Vérification du conteneur actif :**
 
@@ -137,6 +142,7 @@ docker exec -it INF1099-mysql mysql -u root -prootpass -e "CREATE DATABASE sakil
 ```powershell
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "SHOW DATABASES;"
 ```
+![wait](https://github.com/user-attachments/assets/69362694-9d9c-44f4-af7f-2b9972fde8e1")
 
 ---
 
@@ -153,6 +159,7 @@ docker exec -it INF1099-mysql mysql -u root -prootpass -e \
 docker exec -it INF1099-mysql mysql -u root -prootpass -e \
   "GRANT ALL PRIVILEGES ON sakila.* TO 'etudiants'@'%'; FLUSH PRIVILEGES;"
 ```
+![wait](https://github.com/user-attachments/assets/5a6a7701-61f4-419b-b41c-433cdac513e4")
 
 ---
 
@@ -169,6 +176,7 @@ Get-Content "$projectDir\sakila-db\sakila-schema.sql" |
 Get-Content "$projectDir\sakila-db\sakila-data.sql" |
   docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 ```
+![wait](https://github.com/user-attachments/assets/6327d2be-d043-431c-b8f6-0efc871fd93f")
 
 ---
 
