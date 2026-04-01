@@ -14,13 +14,16 @@ $ErrorActionPreference = "Stop"
 # $ErrorActionPreference = "Ignore"
 
 function Start-PostgresLab {
-    docker rm -f postgres-lab 2>$null | Out-Null
+    docker rm -f tp_postgres 2>$null | Out-Null
 
-    docker run -d -q `
-        --name postgres-lab `
-        -e POSTGRES_PASSWORD=postgres `
-        -e POSTGRES_DB=ecole `
-        postgres | Out-Null
+    docker run -d `
+        --name tp_postgres `
+        -e POSTGRES_USER=etudiant `
+        -e POSTGRES_PASSWORD=etudiant `
+        -e POSTGRES_DB=tpdb `
+        -p 5432:5432 `
+        -v $(Get-Location)/init:/docker-entrypoint-initdb.d `
+        postgres:15 | Out-Null
 }
 
 function Wait-PostgresReady {
@@ -30,7 +33,7 @@ function Wait-PostgresReady {
     )
 
     for ($i = 0; $i -lt $MaxAttempts; $i++) {
-        $status = docker exec postgres-lab pg_isready 2>$null
+        $status = docker exec tp_postgres pg_isready 2>$null
         if ($status -match "accepting connections") {
             return $true
         }
@@ -42,11 +45,11 @@ function Wait-PostgresReady {
 }
 
 function Initialize-PostgresDatabase {
-    docker exec postgres-lab psql -U postgres -c "CREATE DATABASE ecole;" 2>$null | Out-Null
+    docker exec tp_postgres psql -U postgres -c "CREATE DATABASE ecole;" 2>$null | Out-Null
 }
 
 function Stop-PostgresLab {
-    docker rm -f postgres-lab 2>$null | Out-Null
+    docker rm -f tp_postgres 2>$null | Out-Null
 }
 
 function Test-LoadDB {
