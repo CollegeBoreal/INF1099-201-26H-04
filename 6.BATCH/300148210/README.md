@@ -166,6 +166,9 @@ SELECT * FROM client;
 SELECT * FROM analyse_lab;
 ```
 
+<image src='images/Exécution%20du%20script%20PowerShell%20avec%20résultats%20des%20requêtes%20SQL(1).png' width='50%' height='50%' />
+
+
 ---
 
 ## Version avancée (bonus)
