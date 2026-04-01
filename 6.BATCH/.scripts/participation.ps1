@@ -1,150 +1,54 @@
 #!/usr/bin/env pwsh
 
-# New function to test DB loading
-function Test-LoadDB($scriptPath, $StudentID) {
+$ErrorActionPreference = "Stop"
 
-    $ErrorActionPreference = "Stop"
+# Importer les fonctions
+. .scripts/functions.ps1
+. .scripts/DBfunctions.ps1
 
-    # 🔥 Reset complet du conteneur
-    docker rm -f postgres-lab 2>$null | Out-Null
-
-    docker run -d -q `
-        --name postgres-lab `
-        -e POSTGRES_PASSWORD=postgres `
-        -e POSTGRES_DB=ecole `
-        postgres | Out-Null
-
-    # 🔥 Attendre readiness
-    $ready = $false
-    for ($i=0; $i -lt 15; $i++) {
-        $status = docker exec postgres-lab pg_isready 2>$null
-        if ($status -match "accepting connections") {
-            $ready = $true
-            break
-        }
-        Start-Sleep -Seconds 1
-    }
-
-    if (-not $ready) {
-        return ":x:"
-    }
-
-    # 🔥 Sécurité : créer DB si nécessaire
-    docker exec postgres-lab psql -U postgres -c "CREATE DATABASE ecole;" 2>$null
-
-    try {
-        Push-Location $StudentID
-
-        pwsh ./load-db.ps1 *> "$StudentID-db.txt"
-
-        Pop-Location
-        return ":heavy_check_mark:"
-    }
-    catch {
-        Pop-Location
-        return ":x:"
-    }
-    finally {
-        docker rm -f postgres-lab 2>$null | Out-Null
-    }
-}
-
-# --------------------------------------
-# PowerShell participation script using $STUDENTS array
-# --------------------------------------
-
-# Import variables from another script (students.ps1)
+# Importer la liste des étudiants
 . ../.scripts/students.ps1
+. ../.scripts/commons.ps1
 
-# Header
-Write-Output "# Participation"
-Write-Output ""
+Write-ParticipationHeader
+Write-PresenceHeader
 
-Write-Output "| Table des matières            | Description                                             |"
-Write-Output "|-------------------------------|---------------------------------------------------------|"
-Write-Output "| :a: [Présence](#a-présence)   | L'étudiant.e a fait son travail    :heavy_check_mark:   |"
-Write-Output "| :b: [Précision](#b-précision) | L'étudiant.e a réussi son travail  :tada:               |"
-
-Write-Output ""
-Write-Output "## Légende"
-Write-Output ""
-Write-Output "| Signe              | Signification                 |"
-Write-Output "|--------------------|-------------------------------|"
-Write-Output "| :heavy_check_mark: | Prêt à être corrigé           |"
-Write-Output "| :x:                | Fichier inexistant            |"
-
-Write-Output ""
-Write-Output "## :a: Présence"
-Write-Output ""
-
-Write-Output "|:hash:| Boréal :id: | README.md | images | DDL.sql | DML.sql | DQL.sql | DCL.sql | :mouse_trap: DB | :wood: log |"
-Write-Output "|------|-------------|-----------|--------|---------|---------|---------|---------|-----------------|------------|"
-
-# Initialize counters
 $i = 0
 $s = 0
 
 foreach ($entry in $STUDENTS) {
-
     $parts = $entry -split '\|'
     $StudentID = $parts[0]
     $GitHubID  = $parts[1]
     $AvatarID  = $parts[2]
 
-    $URL = "[<image src='https://avatars0.githubusercontent.com/u/{1}?s=460&v=4' width=20 height=20></image>](https://github.com/{0})" -f $GitHubID, $AvatarID
+    $paths  = Get-StudentPaths -StudentID $StudentID
+    $checks = Get-StudentChecks -Paths $paths
+    $url    = Get-GitHubAvatarLink -GitHubID $GitHubID -AvatarID $AvatarID
 
-    $README  = "$StudentID/README.md"
-    $FOLDER  = "$StudentID/images"
+    $db  = ":x:"
+    $log = ":x:"
 
-    $DDL = "$StudentID/DDL.sql"
-    $DML = "$StudentID/DML.sql"
-    $DQL = "$StudentID/DQL.sql"
-    $DCL = "$StudentID/DCL.sql"
-
-    function Check($path) {
-        if (Test-Path $path) { ":heavy_check_mark:" } else { ":x:" }
-    }
-
-    $r  = Check $README
-    $img = Check $FOLDER
-    $ddl = Check $DDL
-    $dml = Check $DML
-    $dql = Check $DQL
-    $dcl = Check $DCL
-
-    $DBSCRIPT = "$StudentID/load-db.ps1"
-    $db = ":x:"  # default fail
-    $log = ":x:"  # default fail
-
-    if (Test-Path $DBSCRIPT) {
-        $db = Test-LoadDB $DBSCRIPT $StudentID
+    if (Test-Path $paths.DBScript) {
+        $db  = Test-LoadDB -StudentID $StudentID
         $log = "[:wood:](../$StudentID/$StudentID-db.txt)"
     }
 
-    Write-Output "| $i | [$StudentID](../$README) :point_right: $URL | $r | $img | $ddl | $dml | $dql | $dcl | $db | $log |"
+    Write-StudentRow `
+        -Index $i `
+        -StudentID $StudentID `
+        -GitHubLink $url `
+        -Checks $checks `
+        -DbStatus $db `
+        -LogLink $log `
+        -ReadmePath $paths.README
 
-    # Success if ALL files exist
-    if ($r -eq ":heavy_check_mark:" -and
-        $img -eq ":heavy_check_mark:" -and
-        $ddl -eq ":heavy_check_mark:" -and
-        $dml -eq ":heavy_check_mark:" -and
-        $dql -eq ":heavy_check_mark:" -and
-        $dcl -eq ":heavy_check_mark:") {
+    if (Test-AllRequiredFilesPresent -Checks $checks) {
         $s++
     }
 
     $i++
 }
 
-$COUNT = "\$\\frac{$s}{$i}\$"
+Write-Summary -SuccessCount $s -TotalCount $i
 
-if ($i -gt 0) {
-    $STATS = [math]::Round(($s * 100.0 / $i), 2)
-}
-else {
-    $STATS = 0
-}
-
-$SUM = "\$\displaystyle\sum_{i=1}^{$i} s_i\$"
-
-Write-Output "| :abacus: | $COUNT = $STATS% | $SUM = $s |"

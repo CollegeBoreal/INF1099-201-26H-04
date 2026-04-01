@@ -40,7 +40,7 @@ Execution de DQL.sql
 
  id_commande | id_client | id_adresse_livraison | date_commande | statut_commande | total_commande 
 -------------+-----------+----------------------+---------------+-----------------+----------------
-           1 |         1 |                    1 | 2026-03-27    | En cours        |         129.99
+           1 |         1 |                    1 | 2026-04-01    | En cours        |         129.99
 (1 row)
 
  id_maillot | id_categorie | id_pays_origine |    nom_maillot     |           description            |  prix  |   statut   | taille | couleur | marque | saison 

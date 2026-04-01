@@ -5,13 +5,13 @@ DROP TABLE
 NOTICE:  table "message" does not exist, skipping
 NOTICE:  table "match" does not exist, skipping
 NOTICE:  table "preference" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "annonce" does not exist, skipping
 NOTICE:  table "profil" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "utilisateur" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -34,8 +34,8 @@ ALTER DEFAULT PRIVILEGES
 Execution de DQL.sql
  id_utilisateur |  nom   | prenom  |       email       | mot_de_passe | telephone  | date_inscription 
 ----------------+--------+---------+-------------------+--------------+------------+------------------
-              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-03-27
-              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-03-27
+              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-04-01
+              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-04-01
 (2 rows)
 
  id_annonce | type_annonce |  ville   | loyer  | date_disponibilite |     description      |   statut   | id_utilisateur 
@@ -48,14 +48,14 @@ Execution de DQL.sql
  Diallo | Mamadou |  22 | Montreal
 (1 row)
 
-             contenu              |        date_envoi         | prenom  
-----------------------------------+---------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-03-27 22:04:28.83831 | Mamadou
+             contenu              |         date_envoi         | prenom  
+----------------------------------+----------------------------+---------
+ Salut, ton annonce m’intéresse ! | 2026-04-01 18:27:17.668115 | Mamadou
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
 ----------+------------+----------+------------------+------------------
-        1 | 2026-03-27 | En cours |                1 |                2
+        1 | 2026-04-01 | En cours |                1 |                2
 (1 row)
 
 Chargement terminé.
