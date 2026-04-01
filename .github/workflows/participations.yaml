@@ -13,11 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-#      - name: Setup tools
-#        run: |
-#          apt-get update
-#          apt-get install -y jq
-
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
 
@@ -82,6 +77,13 @@ jobs:
           ## 
           echo "Evaluating chapter 6.BATCH Participation"
           cd 6.BATCH
+          pwsh .scripts/run.ps1
+          cd ..
+          ##
+          ## Evaluating chapter 7.PLSQL
+          ## 
+          echo "Evaluating chapter 7.PLSQL Participation"
+          cd 7.PLSQL
           pwsh .scripts/run.ps1
           cd ..
 
