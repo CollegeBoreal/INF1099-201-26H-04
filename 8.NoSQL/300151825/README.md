@@ -42,6 +42,7 @@ INSERT INTO etudiants (data) VALUES
 ('{"nom": "Bob", "age": 22, "competences": ["Java", "SQL"]}'),
 ('{"nom": "Charlie", "age": 30, "competences": ["Linux", "Bash", "Python"]}');
 ```
+![Texte alternatif](images/1.png)
 
 ---
 
@@ -52,6 +53,7 @@ INSERT INTO etudiants (data) VALUES
 ```txt id="k1n7rt"
 psycopg2-binary
 ```
+![Texte alternatif](images/2.png)
 
 ---
 
@@ -115,6 +117,7 @@ for row in cur.fetchall():
 cur.close()
 conn.close()
 ```
+![Texte alternatif](images/3.png)
 
 ---
 
