@@ -14,13 +14,28 @@ Construire une mini base NoSQL avec :
 
 # 🧱 1️⃣ Lancer PostgreSQL avec Docker
 
+- [ ] 🪟 Windows (PowerShell)
+
+```bash id="d6kq7x"
+docker run --name postgres-nosql `
+  -e POSTGRES_USER=postgres `
+  -e POSTGRES_PASSWORD=postgres `
+  -e POSTGRES_DB=ecole `
+  -p 5432:5432 `
+  -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql `
+  -d postgres
+```
+
+
+- [ ] 🐧 *nix 
+
 ```bash id="d6kq7x"
 docker run --name postgres-nosql \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_DB=ecole \
   -p 5432:5432 \
-  -v $(pwd)/init.sql:/docker-entrypoint-initdb.d/init.sql \
+  -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql \
   -d postgres
 ```
 
