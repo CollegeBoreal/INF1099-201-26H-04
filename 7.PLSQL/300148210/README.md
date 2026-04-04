@@ -19,7 +19,7 @@ tp_postgres/
 
 ### 🐧 Linux / macOS
 ```bash
-docker run -d \
+docker container run -d \
   --name tp_postgres \
   -e POSTGRES_USER=etudiant \
   -e POSTGRES_PASSWORD=etudiant \
@@ -31,7 +31,7 @@ docker run -d \
 
 ### 🪟 PowerShell (Windows)
 ```powershell
-docker run -d `
+docker container run -d `
   --name tp_postgres `
   -e POSTGRES_USER=etudiant `
   -e POSTGRES_PASSWORD=etudiant `
@@ -48,7 +48,7 @@ docker run -d `
 ## Se connecter au conteneur
 
 ```bash
-docker exec -it tp_postgres psql -U etudiant -d tpdb
+docker container exec -it tp_postgres psql -U etudiant -d tpdb
 ```
 
 ---
@@ -56,7 +56,7 @@ docker exec -it tp_postgres psql -U etudiant -d tpdb
 ## Lancer les tests
 
 ```bash
-docker exec -i tp_postgres psql -U etudiant -d tpdb < tests/test.sql
+docker container exec -i tp_postgres psql -U etudiant -d tpdb < tests/test.sql
 ```
 
 ---
