@@ -31,13 +31,13 @@ Execution de DCL.sql
 CREATE ROLE
 CREATE ROLE
 ERROR:  database "reparation_smartphones" does not exist
-ERROR:  role "technicien_user" cannot be dropped because some objects depend on it
-DETAIL:  privileges for schema boutique
 GRANT
 GRANT
 GRANT
 GRANT
 REVOKE
+ERROR:  role "technicien_user" cannot be dropped because some objects depend on it
+DETAIL:  privileges for schema boutique
 ERROR:  role "gestionnaire_user" cannot be dropped because some objects depend on it
 DETAIL:  privileges for schema boutique
 privileges for sequence boutique.marque_id_marque_seq
