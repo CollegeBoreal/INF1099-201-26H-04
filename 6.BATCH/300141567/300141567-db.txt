@@ -35,5 +35,5 @@ Execution de DQL.sql
 (1 row)
 
 Base chargée avec succès
-Temps d'execution : 00:00:00.7595820
-00.7595820
+Temps d'execution : 00:00:00.7776560
+00.7776560
