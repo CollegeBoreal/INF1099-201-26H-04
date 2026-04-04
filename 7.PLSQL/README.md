@@ -293,7 +293,7 @@ docker run -d \
   -e POSTGRES_PASSWORD=etudiant \
   -e POSTGRES_DB=tpdb \
   -p 5432:5432 \
-  -v $(pwd)/init:/docker-entrypoint-initdb.d \
+  -v ${PWD}/init:/docker-entrypoint-initdb.d \
   postgres:15
 ```
 
