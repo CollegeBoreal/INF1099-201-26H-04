@@ -15,12 +15,12 @@ NOTICE:  table "stock" does not exist, skipping
 NOTICE:  table "crampon" does not exist, skipping
 DROP TABLE
 NOTICE:  table "categorie" does not exist, skipping
-DROP TABLE
 NOTICE:  table "marque" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "adresse" does not exist, skipping
 NOTICE:  table "client" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
 DROP TABLE
 CREATE TABLE
 CREATE TABLE
