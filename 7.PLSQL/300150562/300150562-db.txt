@@ -1,8 +1,8 @@
 NOTICE:  Etudiant ajouté : Ali
 NOTICE:  Erreur : Age invalide pour Bob
-CALL
-DO
 ERROR:  function nombre_etudiants() does not exist
 LINE 17: SELECT nombre_etudiants();
                 ^
 HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+CALL
+DO
