@@ -36,6 +36,7 @@ GRANT
 GRANT
 GRANT
 REVOKE
+Execution de DQL.sql
 ERROR:  role "technicien_user" cannot be dropped because some objects depend on it
 DETAIL:  privileges for schema boutique
 ERROR:  role "gestionnaire_user" cannot be dropped because some objects depend on it
@@ -61,7 +62,6 @@ privileges for sequence boutique.paiement_id_paiement_seq
 privileges for table boutique.paiement
 privileges for sequence boutique.garantie_id_garantie_seq
 privileges for table boutique.garantie
-Execution de DQL.sql
  id_marque | nom_marque 
 -----------+------------
          1 | Apple
