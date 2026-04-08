@@ -58,6 +58,8 @@ SELECT * FROM logs;
 Chaque insertion dans `etudiants` génère automatiquement une entrée dans `logs` grâce au trigger.
 
 ---
+<img width="816" height="401" alt="PLSQL2027" src="https://github.com/user-attachments/assets/9ba19abb-df39-4725-b672-e0ad2ca5cfb1" />
+
 
 ## 🔧 Technologies
 
