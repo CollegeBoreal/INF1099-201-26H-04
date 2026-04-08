@@ -1,7 +1,10 @@
 Chargement de la base de données...
 Execution de DDL.sql
 DROP TABLE
+<<<<<<< HEAD
 DROP TABLE
+=======
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
 NOTICE:  table "message" does not exist, skipping
 NOTICE:  table "match" does not exist, skipping
 DROP TABLE
@@ -12,6 +15,14 @@ DROP TABLE
 DROP TABLE
 NOTICE:  table "profil" does not exist, skipping
 NOTICE:  table "utilisateur" does not exist, skipping
+<<<<<<< HEAD
+=======
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -48,9 +59,15 @@ Execution de DQL.sql
  Diallo | Mamadou |  22 | Montreal
 (1 row)
 
+<<<<<<< HEAD
              contenu              |        date_envoi         | prenom  
 ----------------------------------+---------------------------+---------
  Salut, ton annonce m’intéresse ! | 2026-04-08 15:42:40.83311 | Mamadou
+=======
+             contenu              |         date_envoi         | prenom  
+----------------------------------+----------------------------+---------
+ Salut, ton annonce m’intéresse ! | 2026-04-08 15:35:53.440099 | Mamadou
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 

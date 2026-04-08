@@ -2,7 +2,13 @@ Execution de DDL.sql...
   >> DROP TABLE
   >> DROP TABLE
   >> DROP TABLE
+<<<<<<< HEAD
   >> NOTICE:  table "payement" does not exist, skipping
+=======
+  >> DROP TABLE
+  >> DROP TABLE
+  >> DROP TABLE
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
   >> NOTICE:  table "rendez_vous" does not exist, skipping
   >> NOTICE:  table "modele" does not exist, skipping
   >> NOTICE:  table "service" does not exist, skipping

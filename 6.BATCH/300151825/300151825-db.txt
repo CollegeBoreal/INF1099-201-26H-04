@@ -5,7 +5,10 @@ DROP TABLE
 DROP TABLE
 DROP TABLE
 DROP TABLE
+<<<<<<< HEAD
 DROP TABLE
+=======
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
 NOTICE:  table "avis" does not exist, skipping
 NOTICE:  table "livraison" does not exist, skipping
 NOTICE:  table "paiement" does not exist, skipping
@@ -22,6 +25,10 @@ DROP TABLE
 DROP TABLE
 DROP TABLE
 DROP TABLE
+<<<<<<< HEAD
+=======
+DROP TABLE
+>>>>>>> de414ab488f6100b978954838cb874f5dc54bb8e
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
