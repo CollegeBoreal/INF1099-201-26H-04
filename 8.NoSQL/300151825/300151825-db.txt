@@ -1,8 +1,8 @@
 Traceback (most recent call last):
-  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300151825/app.py", line 4, in <module>
+  File "/Users/valiha/Developer/boreal/INF1099-201-26H-04/8.NoSQL/300151825/app.py", line 4, in <module>
     conn = psycopg2.connect(
            ^^^^^^^^^^^^^^^^^
-  File "/home/runner/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 psycopg2.OperationalError: connection to server at "localhost" (::1), port 5433 failed: Connection refused

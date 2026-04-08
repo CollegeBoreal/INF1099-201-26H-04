@@ -1,0 +1,18 @@
+Chargement de la base de données...
+Execution de DDL.sql
+CREATE TABLE
+Execution de DML.sql
+INSERT 0 5
+Execution de DCL.sql
+GRANT
+Execution de DQL.sql
+ id |   nom   |    programme    
+----+---------+-----------------
+  1 | Alice   | Informatique
+  2 | Bob     | Réseau
+  3 | Charlie | Cybersécurité
+  4 | Diana   | Programmation
+  5 | Ethan   | Base de données
+(5 rows)
+
+Chargement terminé.
