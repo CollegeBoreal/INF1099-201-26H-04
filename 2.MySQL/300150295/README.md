@@ -56,7 +56,10 @@ docker info
 Étape 5 : Vérifier le fonctionnement de Docker
 ```powershell
 docker ps -a
+
 ```
+<img width="942" height="279" alt="image" src="https://github.com/user-attachments/assets/2b84417f-f81a-49c9-b2f0-052a2890bef0" />
+
 📋 Output
 ---
 Étape 6 : Lancer le conteneur MySQL
