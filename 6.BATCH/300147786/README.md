@@ -102,6 +102,4 @@ Write-Output "Base de données chargée avec succès."
 
 ---
 
-## 📝 8. Travail demandé
 
-1️⃣ Créer les fichiers SQL :
