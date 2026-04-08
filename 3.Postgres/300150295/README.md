@@ -41,7 +41,7 @@ docker run -d `
   postgres:16
 ```
 
-
+![wait](https://github.com/user-attachments/assets/dc10b721-0e76-42af-80f6-1954115d1fd3)
 
 **Explications :**
 
