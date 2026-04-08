@@ -1,0 +1,668 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260325135444
+Username: DESKTOP-2EB47MS\corne
+RunAs User: DESKTOP-2EB47MS\corne
+Configuration Name: 
+Machine: DESKTOP-2EB47MS (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11024
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+[INFO] Copie des fichiers...
+
+
+
+
+[INFO] Execution DDL.sql
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+[INFO] Execution DML.sql
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+[INFO] Execution DCL.sql
+psql:/DCL.sql:1: ERROR:  role "app_user" already exists
+GRANT
+[INFO] Execution DQL.sql
+ id_client |  nom  | pr├⌐nom  | postnom |  t├⌐l├⌐phone   |           email           | mot_de_passe
+-----------+-------+---------+---------+--------------+---------------------------+---------------
+         1 | Ekofo | Corneil | Wema    | 437-518-8443 | corneilekofo003@gmail.com | motdepasse123
+(1 row)
+
+ id_commande | id_client | id_adresse_livraison | date_commande | statut_commande | total_commande
+-------------+-----------+----------------------+---------------+-----------------+----------------
+           1 |         1 |                    1 | 2026-03-25    | En cours        |         129.99
+(1 row)
+
+ id_maillot | id_categorie | id_pays_origine |    nom_maillot     |           description            |  prix  |   statut   | taille | couleur | marque | saison
+------------+--------------+-----------------+--------------------+----------------------------------+--------+------------+--------+---------+--------+--------
+          1 |            1 |               1 | Maillot FC Toronto | Maillot officiel FC Toronto 2026 | 129.99 | Disponible | M      | Rouge   | Adidas | 2026
+(1 row)
+
+  nom  | id_commande
+-------+-------------
+ Ekofo |           1
+(1 row)
+
+[OK] Termine avec succes !
+**********************
+Windows PowerShell transcript end
+End time: 20260325135446
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325175634
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6125
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325175635
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325180017
+Username: runnervmrg6be\runner
+RunAs User: runnervmrg6be\runner
+Configuration Name: 
+Machine: runnervmrg6be (Unix 6.17.0.1008)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6078
+PSVersion: 7.4.14
+PSEdition: Core
+GitCommitId: 7.4.14
+OS: Ubuntu 24.04.4 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325180017
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325181728
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6120
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325181728
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325182928
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6117
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325182929
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325184126
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6125
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325184126
+**********************
+﻿**********************
+PowerShell transcript start
+<<<<<<< HEAD
+Start time: 20260325153504
+Username: ankarana\valiha
+RunAs User: ankarana\valiha
+Configuration Name: 
+Machine: ankarana (Unix 26.3.1)
+Host Application: /usr/local/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 15195
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Darwin 25.3.0 Darwin Kernel Version 25.3.0: Wed Jan 28 20:56:34 PST 2026; root:xnu-12377.91.3~2/RELEASE_ARM64_T8112
+=======
+Start time: 20260325184343
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6126
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+>>>>>>> 2d4810ed98cfdb9d308675d20088e51db3aaff4f
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+<<<<<<< HEAD
+&: /Users/valiha/Developer/github.com/collegeboreal/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+=======
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+>>>>>>> 2d4810ed98cfdb9d308675d20088e51db3aaff4f
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+<<<<<<< HEAD
+&: /Users/valiha/Developer/github.com/collegeboreal/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized
+     | as a name of a cmdlet, function, script file, or executable program. Check the
+     | spelling of the name, or if a path was included, verify that the path is correct and
+     | try again.
+=======
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+>>>>>>> 2d4810ed98cfdb9d308675d20088e51db3aaff4f
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+<<<<<<< HEAD
+End time: 20260325153504
+=======
+End time: 20260325184344
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325191519
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6159
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325191519
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325192436
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6109
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325192437
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325192545
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6123
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325192545
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325193140
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6118
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325193141
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325193318
+Username: runnervm46oaq\runner
+RunAs User: runnervm46oaq\runner
+Configuration Name: 
+Machine: runnervm46oaq (Unix 6.14.0.1017)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6130
+PSVersion: 7.4.13
+PSEdition: Core
+GitCommitId: 7.4.13
+OS: Ubuntu 24.04.3 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325193319
+>>>>>>> 2d4810ed98cfdb9d308675d20088e51db3aaff4f
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325193640
+Username: runnervmrg6be\runner
+RunAs User: runnervmrg6be\runner
+Configuration Name: 
+Machine: runnervmrg6be (Unix 6.17.0.1008)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6117
+PSVersion: 7.4.14
+PSEdition: Core
+GitCommitId: 7.4.14
+OS: Ubuntu 24.04.4 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325193640
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325194049
+Username: runnervmrg6be\runner
+RunAs User: runnervmrg6be\runner
+Configuration Name: 
+Machine: runnervmrg6be (Unix 6.17.0.1008)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6127
+PSVersion: 7.4.14
+PSEdition: Core
+GitCommitId: 7.4.14
+OS: Ubuntu 24.04.4 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325194049
+**********************
+﻿**********************
+PowerShell transcript start
+Start time: 20260325194757
+Username: runnervmrg6be\runner
+RunAs User: runnervmrg6be\runner
+Configuration Name: 
+Machine: runnervmrg6be (Unix 6.17.0.1008)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll ./load-db.ps1
+Process ID: 6120
+PSVersion: 7.4.14
+PSEdition: Core
+GitCommitId: 7.4.14
+OS: Ubuntu 24.04.4 LTS
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is execution.txt
+[START] Debut du chargement...
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+&: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300150562/load-db.ps1:14
+Line |
+  14 |  $running = & $docker ps --format "{{.Names}}"
+     |               ~~~~~~~
+     | The term 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' is
+     | not recognized as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or if a path was
+     | included, verify that the path is correct and try again.
+
+[ERROR] Conteneur non actif
+**********************
+PowerShell transcript end
+End time: 20260325194757
+**********************
