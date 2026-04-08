@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-﻿CALL
-DO
- nombre_etudiants 
-------------------
-                2
-(1 row)
-
- id |           action           |        date_action         
-----+----------------------------+----------------------------
-  1 | INSERT sur etudiants : Ali | 2026-04-08 18:50:42.537557
-  2 | Ajout ├®tudiant : Ali       | 2026-04-08 18:50:42.537557
-(2 rows)
-
-=======
 NOTICE:  Etudiant ajouté avec succès : Ali
 NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob
 CALL
@@ -24,8 +9,7 @@ DO
 
  id |           action           |        date_action         
 ----+----------------------------+----------------------------
-  1 | INSERT sur etudiants : Ali | 2026-04-08 18:55:05.826531
-  2 | Ajout étudiant : Ali       | 2026-04-08 18:55:05.826531
+  1 | INSERT sur etudiants : Ali | 2026-04-08 18:58:04.154362
+  2 | Ajout étudiant : Ali       | 2026-04-08 18:58:04.154362
 (2 rows)
 
->>>>>>> 5164732d042d488f04d83f6ba7c8bde9eed89ed9
