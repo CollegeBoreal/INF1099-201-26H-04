@@ -6,11 +6,13 @@ Le système permet de suivre les clients, véhicules, expéditions, ports et tra
 
 
 🔹 2. Modélisation
+
 📌 Étapes
 Analyse des besoins : identification des entités et règles d’affaires
 Modélisation conceptuelle : diagramme Entité-Relation
 Modélisation logique : transformation en tables relationnelles
 Modélisation physique : implémentation sous PostgreSQL
+
 📌 Entités principales
 Client
 Vehicule
@@ -20,6 +22,7 @@ Transporteur
 
 
 🔹 3. Implémentation SQL
+
 🧱 DDL (Structure)
 CREATE TABLE Client (
     id_client SERIAL PRIMARY KEY,
@@ -35,18 +38,24 @@ CREATE TABLE Vehicule (
     id_client INT,
     id_expedition INT
 );
+
+
 📥 DML (Manipulation)
 INSERT INTO Client (nom, telephone)
 VALUES ('Bah', '5141234567');
 
 INSERT INTO Vehicule (marque, modele, annee, id_client, id_expedition)
 VALUES ('Toyota', 'Corolla', 2018, 1, 1);
+
+
 🔍 DQL (Requêtes)
 SELECT * FROM Vehicule;
 
 SELECT c.nom, v.marque, v.modele
 FROM Client c
 JOIN Vehicule v ON c.id_client = v.id_client;
+
+
 🔐 DCL (Sécurité)
 GRANT SELECT ON Vehicule TO utilisateur;
 REVOKE DELETE ON Vehicule FROM utilisateur;
