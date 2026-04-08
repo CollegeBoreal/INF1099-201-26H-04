@@ -46,6 +46,8 @@ podman exec -it tp_postgres psql -U etudiant -d tpdb
 SELECT * FROM etudiants;
 SELECT COUNT(*) FROM etudiants;  -- 10
 ```
+<img width="829" height="440" alt="PLSQL2026" src="https://github.com/user-attachments/assets/53a9ac8e-ecea-46a5-b032-f17fdc2cc164" />
+
 
 **Table `logs` — Trigger actif à chaque INSERT**
 
