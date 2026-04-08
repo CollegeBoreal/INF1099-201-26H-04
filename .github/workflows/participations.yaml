@@ -49,14 +49,14 @@ jobs:
           ## 
           echo "Evaluating chapter 2.MySQL Participation"
           cd 2.MySQL
-          bash .scripts/run.sh
+          pwsh .scripts/run.ps1
           cd ..
           ##
           ## Evaluating chapter 3.Postgres
           ## 
           echo "Evaluating chapter 3.Postgres Participation"
           cd 3.Postgres
-          bash .scripts/run.sh
+          pwsh .scripts/run.ps1
           cd ..
           ##
           ## Evaluating chapter 4.DCL
