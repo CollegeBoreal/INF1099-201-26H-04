@@ -46,6 +46,8 @@ docker --version
 ---
 Étape 4 : Vérifier Docker Desktop
 S'assurer que Docker Desktop est démarré et fonctionnel :
+<img width="950" height="96" alt="image" src="https://github.com/user-attachments/assets/dfb7fe6b-2048-48b2-837c-f786f8ea051b" />
+
 ```powershell
 docker info
 ```
