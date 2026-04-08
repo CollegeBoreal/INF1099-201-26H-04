@@ -1,6 +1,14 @@
 import psycopg2
 import json
+import os
 
+conn = psycopg2.connect(
+    dbname="ecole",
+    user="postgres",
+    password="postgres",
+    host="localhost",
+    port=int(os.environ.get("DB_PORT", 5432))  # 5432 par défaut
+)
 conn = psycopg2.connect(
     dbname="ecole",
     user="postgres",
