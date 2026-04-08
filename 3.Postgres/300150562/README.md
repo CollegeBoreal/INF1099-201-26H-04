@@ -23,6 +23,8 @@ public | payment        | table | postgres
 ```
 <img width="975" height="801" alt="image" src="https://github.com/user-attachments/assets/5258f377-7dde-492d-9ef4-e34885b3aaed" />
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f55cf870-2e68-4d95-b0da-582d354b8c69" />
+
 
 
 
