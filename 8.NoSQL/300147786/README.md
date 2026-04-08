@@ -48,21 +48,6 @@ docker run --name postgres-nosql `
   -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql `
   -d postgres
 ```
-
-**Linux / macOS**
-```bash
-docker run --name postgres-nosql \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=ecole \
-  -p 5432:5432 \
-  -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql \
-  -d postgres
-```
-
-> 📸 *Capture attendue — conteneur lancé avec succès :*
-> ![Docker run](images/01_docker_run.png)
-
 ---
 
 ### 2. Vérifier que le conteneur tourne
@@ -72,42 +57,17 @@ docker ps
 docker logs postgres-nosql
 ```
 
-> 📸 *Capture attendue — `docker ps` montre le conteneur actif :*
-> ![Docker ps](images/02_docker_ps.png)
-
-> 📸 *Capture attendue — logs confirmant le chargement de `init.sql` :*
-> ![Docker logs](images/03_docker_logs.png)
-
----
-
 ### 3. Installer les dépendances Python
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> 📸 *Capture attendue — installation de `psycopg2-binary` :*
-> ![Pip install](images/04_pip_install.png)
-
----
-
 ### 4. Lancer le script
 
 ```bash
 python app.py
 ```
-
-> 📸 *Capture attendue — résultat du SELECT ALL :*
-> ![Select all](images/05_select_all.png)
-
-> 📸 *Capture attendue — résultat de la recherche filtrée :*
-> ![Search nom](images/06_search_nom.png)
-
-> 📸 *Capture attendue — sortie complète du script Python :*
-> ![Python output](images/07_python_output.png)
-
----
-
 ---
 
 
