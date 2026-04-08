@@ -74,7 +74,7 @@ Un conteneur PostgreSQL est utilisé :
 Le script `load-db.ps1` automatise :
 \---
 <img width="939" height="684" alt="image" src="https://github.com/user-attachments/assets/67c7ed52-50eb-44dc-b640-6f5dacd71724" />
-\---
+\--
 
 
 
@@ -87,7 +87,7 @@ Le script `load-db.ps1` automatise :
 
 <img width="464" height="362" alt="image" src="https://github.com/user-attachments/assets/268bffb7-8ef6-4b58-b29e-6799ab96ad5e" />
 
-\---
+---
 4\. Génération d’un fichier de log `execution.log`
 
 
@@ -168,10 +168,10 @@ Write-Host "✅ Terminé ! Vérifie execution.log"
 
 docker start postgres-maillot
 \---
-
+---
 <img width="929" height="600" alt="image" src="https://github.com/user-attachments/assets/3b201862-5967-47b2-9ef0-4047a834e897" />
 
-\---
+---
 
 
 2\. Lancer le script PowerShell
@@ -182,7 +182,7 @@ powershell -ExecutionPolicy Bypass -File .\\load-db.ps1
 
 <img width="967" height="814" alt="image" src="https://github.com/user-attachments/assets/a9162cbb-bc67-45f6-b587-3e8cafade907" />
 
-
+---
 
 
 🧪 Vérification de la base

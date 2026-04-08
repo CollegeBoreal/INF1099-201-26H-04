@@ -1,14 +1,13 @@
-2FN (Suppression des dépendances partielles)
+ETUDIANT(id_etudiant,nom,prenom,email,telephone)
 
-Les seules clés composées sont dans ORDER_ITEM : (order_id, product_id)
+PROFESSEUR(id_professeur,nom,prenom,email,nom_departement)
 
-- quantity dépend de (order_id, product_id)
-- price dépend de (order_id, product_id)
+SESSION(id_session,nom_session,date_debut,date_fin)
 
-Donc aucune dépendance partielle.
-Le modèle reste identique à la 1FN.
+COURS(id_cours,titre,description,credits,id_professeur)
 
-CUSTOMER(id PK, name, email)
-ORDER(id PK, orderDate, status, customer_id FK)
-PRODUCT(id PK, name, price)
-ORDER_ITEM(order_id FK, product_id FK, quantity, price, PK(order_id, product_id))
+STATUT(id_statut,libelle)
+
+INSCRIPTION(id_inscription,date_inscription,id_etudiant,id_session,id_statut)
+
+DETAIL_INSCRIPTION(id_detail,id_inscription,id_cours,note_finale)

@@ -1,22 +1,15 @@
-3FN (Suppression des dépendances transitives)
+ETUDIANT(id_etudiant,nom,prenom,email,telephone)
 
-Aucune dépendance transitive détectée :
+PROFESSEUR(id_professeur,nom,prenom,email,id_departement)
 
-- Les infos du client (name, email) sont uniquement dans CUSTOMER.
-- Les infos produit (name, price) sont uniquement dans PRODUCT.
-- ORDER contient uniquement ses attributs + customer_id.
-- ORDER_ITEM contient uniquement les attributs liés à la ligne de commande.
+DEPARTEMENT(id_departement,nom_departement)
 
-Remarque :
-ORDER_ITEM.price représente le prix du produit au moment de la commande (historique).
+SESSION(id_session,nom_session,date_debut,date_fin)
 
-Schéma final (3FN) :
+COURS(id_cours,titre,description,credits,id_professeur)
 
-CUSTOMER(id PK, name, email)
-ORDER(id PK, orderDate, status, customer_id FK -> CUSTOMER(id))
-PRODUCT(id PK, name, price)
-ORDER_ITEM(order_id FK -> ORDER(id),
-           product_id FK -> PRODUCT(id),
-           quantity,
-           price,
-           PK(order_id, product_id))
+STATUT(id_statut,libelle)
+
+INSCRIPTION(id_inscription,date_inscription,id_etudiant,id_session,id_statut)
+
+DETAIL_INSCRIPTION(id_detail,id_inscription,id_cours,note_finale)

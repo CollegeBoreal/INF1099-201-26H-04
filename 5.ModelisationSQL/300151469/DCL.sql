@@ -1,0 +1,9 @@
+USE tcf_canada_300151469;
+
+CREATE USER IF NOT EXISTS 'etudiant300151469'@'localhost' IDENTIFIED BY 'Password123!';
+
+GRANT SELECT, INSERT, UPDATE
+ON tcf_canada_300151469.*
+TO 'etudiant300151469'@'localhost';
+
+FLUSH PRIVILEGES;
