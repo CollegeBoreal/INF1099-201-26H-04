@@ -41,7 +41,7 @@
 ### 📌 01 — Structure du projet
  
 
-![Structure du projet](images/01-structure-projet.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/Screenshot%202026-04-08%20142647.png)
 
 ---
 
@@ -49,15 +49,14 @@
 
  
 
-![Fichiers SQL](images/02-fichiers-sql.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/Screenshot%202026-04-08%20142842.png)
 
 ---
 
 ### 📌 03 — PostgreSQL lancé avec Podman
 
  
-
-![PostgreSQL lancé](images/03-postgres-lance.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%203.png)
 
 ---
 
@@ -65,24 +64,18 @@
 
  
 
-![Tables créées](images/04-tables-postgres.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%205.png)
 
 ---
 
 ### 📌 05 — Tests exécutés
 
  
-
-![Tests exécutés](images/05-tests.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%206.png)
 
 ---
 
-### 📌 06 — Résultat final (logs)
  
-
-![Résultat final - Logs](images/06-logs-finaux.png)
-
----
 
 ## 🗂️ Concepts Utilisés
 
