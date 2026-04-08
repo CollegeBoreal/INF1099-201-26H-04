@@ -41,7 +41,7 @@ docker run -d `
   postgres:16
 ```
 
-
+![wait](https://github.com/user-attachments/assets/dc10b721-0e76-42af-80f6-1954115d1fd3)
 
 **Explications :**
 
@@ -68,14 +68,14 @@ docker logs postgres
 wget https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-schema.sql
 wget https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql
 ```
-
+![wait](https://github.com/user-attachments/assets/0cf446bd-fc87-4b50-bf6c-e8f28334b313)
 ### Étape 2 : Copier les fichiers dans le conteneur
 
 ```bash
 docker cp postgres-sakila-schema.sql postgres:/schema.sql
 docker cp postgres-sakila-insert-data.sql postgres:/data.sql
 ```
-
+![wait](https://github.com/user-attachments/assets/eabe2289-daf7-4f55-a3bc-dcdc4aa99c6b)
 ### Étape 3 : Exécuter les fichiers SQL dans PostgreSQL
 
 ```bash
@@ -90,7 +90,7 @@ docker exec -it postgres psql -U postgres -d appdb -f /data.sql
 SELECT COUNT(*) FROM film;
 SELECT COUNT(*) FROM actor;
 ```
-
+![wait](https://github.com/user-attachments/assets/d3dc1430-68e9-4cab-9be0-e4fb468911e1)
 ---
 
 ## 3️⃣ Installer pgAdmin 4 avec Chocolatey (Windows)
@@ -257,5 +257,6 @@ SELECT * FROM film WHERE title ILIKE '%star%';
 ---
 
 # :books: References
-
+![wait](https://github.com/user-attachments/assets/ef53e845-a497-49a3-883f-9345db9452ec)
+![wait](https://github.com/user-attachments/assets/6c3ffa19-41cd-4dd1-b0b0-dd0274e01977)
 

@@ -1,92 +1,79 @@
- Conception d’une Base de Données
-🔹 SAVOIRS
-1.1 Étapes de modélisation
+README — Système de Transit de Véhicules (Montréal → Conakry)
 
-La conception d’une base de données suit un processus structuré :
 
-Analyse des besoins
+🔹 1. Description
 
-Identifier les utilisateurs
-Déterminer les données à stocker
-Définir les règles d’affaires
-Cette étape est essentielle pour éviter les erreurs de conception.
-Modélisation conceptuelle
+Ce projet vise à concevoir une base de données relationnelle pour gérer le transit de véhicules entre Montréal et Conakry.
+Le système permet de suivre les clients, véhicules, expéditions, ports et transporteurs.
 
-Création d’un diagramme Entité-Relation (ER)
-Identification des entités, attributs et relations
-Modélisation logique
 
-Transformation du modèle ER en tables
-Définition des clés primaires et étrangères
-Application de la normalisation (1FN, 2FN, 3FN)
-Modélisation physique
+🔹 2. Modélisation
 
-Choix du SGBD (Postgres)
-Définition des types de données
-Indexation et optimisation des performances
-Implémentation et tests
+📌 Étapes
+Analyse des besoins : identification des entités et règles d’affaires
+Modélisation conceptuelle : diagramme Entité-Relation
+Modélisation logique : transformation en tables relationnelles
+Modélisation physique : implémentation sous PostgreSQL
 
-Création des tables
-Tests des requêtes
-Validation avec les utilisateurs
-👉 Les erreurs proviennent souvent d’un manque de clarification des besoins.
+📌 Entités principales
+Client
+Vehicule
+Expedition
+Port
+Transporteur
 
-1.2 Importance de la communication
-Une bonne communication permet :
 
-D’éviter les erreurs d’interprétation
-D’assurer la cohérence du modèle
-De valider les règles d’affaires
-De faciliter la maintenance future
-La collaboration est essentielle :
+🔹 3. Implémentation SQL
 
-Entre analystes, développeurs et utilisateurs
-Tout au long du cycle de vie du projet
-🔹 SAVOIR-FAIRE
-1.3 Choix du SGBD
-Le choix dépend du type de projet :
+🧱 DDL (Structure)
+CREATE TABLE Client (
+    id_client SERIAL PRIMARY KEY,
+    nom VARCHAR(50),
+    telephone VARCHAR(20)
+);
 
-PostgreSQL : données relationnelles complexes et transactions ACID
-Critères de sélection :
+CREATE TABLE Vehicule (
+    id_vehicule SERIAL PRIMARY KEY,
+    marque VARCHAR(50),
+    modele VARCHAR(50),
+    annee INT,
+    id_client INT,
+    id_expedition INT
+);
 
-Volume de données
-Type de requêtes
-Performance attendue
-Évolutivité
-1.4 Minimiser le dédoublement
-Techniques utilisées :
 
-Normalisation (jusqu’à la 3FN)
-Séparation des entités
-Utilisation de clés étrangères
-Indexation stratégique
-Objectifs :
+📥 DML (Manipulation)
+INSERT INTO Client (nom, telephone)
+VALUES ('Bah', '5141234567');
 
-Éviter la redondance
-Assurer l’intégrité des données
-1.5 Choix et justification du diagramme
-Diagramme recommandé :
+INSERT INTO Vehicule (marque, modele, annee, id_client, id_expedition)
+VALUES ('Toyota', 'Corolla', 2018, 1, 1);
 
-Diagramme Entité-Relation (ER) pour l’analyse conceptuelle
-Pourquoi ce choix :
 
-Représentation claire des entités et relations
-Modèle compréhensible avant l’implémentation technique
-La justification doit démontrer :
+🔍 DQL (Requêtes)
+SELECT * FROM Vehicule;
 
-La clarté du modèle
-Le niveau d’abstraction
-L’adaptation au public
-Important :
+SELECT c.nom, v.marque, v.modele
+FROM Client c
+JOIN Vehicule v ON c.id_client = v.id_client;
 
-La conception est itérative et évolue selon les tests et besoins
-🔹 SAVOIR-ÊTRE
-Pensée critique et objectivité
-Il est important de :
 
-Comparer plusieurs solutions
-Justifier les choix avec des critères techniques
-Évaluer les compromis
-Exemple de justification :
+🔐 DCL (Sécurité)
+GRANT SELECT ON Vehicule TO utilisateur;
+REVOKE DELETE ON Vehicule FROM utilisateur;
 
-« PostgreSQL a été choisi en raison de son support des transactions complexes et de l’intégrité relation
+
+🔹 4. Bonnes pratiques
+Normalisation (jusqu’à 3FN)
+Utilisation de clés primaires et étrangères
+Réduction de la redondance
+Optimisation des requêtes
+
+
+🔹 5. Conclusion
+
+Cette base de données permet une gestion efficace du transit international de véhicules en garantissant :
+
+la cohérence des données
+la performance
+la sécurité

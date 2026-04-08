@@ -71,6 +71,8 @@ function Test-LoadDB {
 
         Initialize-PostgresDatabase
 
+        New-Item -ItemType File -Path "$StudentID-db.txt" -Force | Out-Null
+
         $sqlContent = Get-Content -Path "tests/test.sql" -Raw
         docker exec -i tp_postgres psql -U etudiant -d tpdb -c "$sqlContent" *> "$StudentID-db.txt"
 
