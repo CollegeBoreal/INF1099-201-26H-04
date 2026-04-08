@@ -105,6 +105,5 @@ la mise en place de contrôles automatiques
 L’utilisation de Docker a permis de travailler dans un environnement stable et efficace.
 
 <img src="images/Capture d'écran 2026-04-08 144519.png" width="600">
-<img src="images/Capture d'écran 2026-04-08 145111.png
-" width="600">
+<img src="images/Capture d'écran 2026-04-08 145111.png" width="600">
 <img src="images/Capture d'écran 2026-04-08 144505.png" width="600">
