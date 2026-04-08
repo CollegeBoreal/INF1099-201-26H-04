@@ -1,0 +1,51 @@
+Chargement de la base de données...
+Execution de DDL.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+Execution de DML.sql
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 2
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+Execution de DCL.sql
+CREATE ROLE
+GRANT
+GRANT
+REVOKE
+Execution de DQL.sql
+ id_vehicule | marque | modele  | annee | kilometrage | etat |   statut   | id_vendeur 
+-------------+--------+---------+-------+-------------+------+------------+------------
+           1 | Toyota | Corolla |  2018 |       65000 | Bon  | Disponible |          1
+(1 row)
+
+ id_transit | marque | modele  |  nom   | prenom 
+------------+--------+---------+--------+--------
+          1 | Toyota | Corolla | Diallo | Amadou
+(1 row)
+
+ id_paiement | date_paiement | montant | mode_paiement | statut_paiement | reference_paiement | id_transit 
+-------------+---------------+---------+---------------+-----------------+--------------------+------------
+           1 | 2026-03-03    | 2500.00 | Carte         | Payé            | REF12345           |          1
+(1 row)
+
+     nom_port     | nom_pays 
+------------------+----------
+ Port de Montreal | Canada
+ Port de Conakry  | Guinee
+(2 rows)
+
+Chargement terminé.

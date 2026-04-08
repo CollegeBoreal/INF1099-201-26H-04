@@ -1,10 +1,10 @@
 Chargement base laboratoire...
 Execution de DDL.sql
-Error: no container with name or ID "labo-postgres" found: no such container
+Error response from daemon: No such container: labo-postgres
 Execution de DML.sql
-Error: no container with name or ID "labo-postgres" found: no such container
+Error response from daemon: No such container: labo-postgres
 Execution de DCL.sql
-Error: no container with name or ID "labo-postgres" found: no such container
+Error response from daemon: No such container: labo-postgres
 Execution de DQL.sql
-Error: no container with name or ID "labo-postgres" found: no such container
+Error response from daemon: No such container: labo-postgres
 Chargement terminé.
