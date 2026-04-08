@@ -5,7 +5,7 @@
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-DDL%20%7C%20DML%20%7C%20DCL-orange)
+![SQL](https://img.shields.io/badge/SQL-DDL%20%7C%20DML%20%7C%20DQL%20%7C%20DCL-orange)
 ![Status](https://img.shields.io/badge/Status-Complété-success)
 ![Étudiant](https://img.shields.io/badge/Étudiant-Hocine_Adjaoud_300148450-lightgrey)
 
@@ -22,6 +22,7 @@
 - [🚀 Démarrage rapide](#-démarrage-rapide)
 - [🏗️ DDL — Définition des structures](#️-ddl--définition-des-structures)
 - [📝 DML — Manipulation des données](#-dml--manipulation-des-données)
+- [🔍 DQL — Interrogation des données](#-dql--interrogation-des-données)
 - [🔐 DCL — Contrôle des accès](#-dcl--contrôle-des-accès)
 
 ---
@@ -45,12 +46,13 @@ Le domaine choisi est la **gestion d'une bibliothèque**. Ce projet permet de mo
 ```
 TP_SQL/
 ├── 📄 README.md
-├── 📄 ddl.sql          ← Création des tables
-├── 📄 dml.sql          ← Insertion, lecture, modification, suppression
-└── 📄 dcl.sql          ← Gestion des droits
+├── 📄 DDL.sql          ← Création des tables
+├── 📄 DML.sql          ← Insertion, modification, suppression
+├── 📄 DQL.sql          ← Requêtes de consultation
+└── 📄 DCL.sql          ← Gestion des droits
 ```
 
-> ⚠️ **Ordre d'exécution obligatoire :** `ddl.sql` → `dml.sql` → `dcl.sql`
+> ⚠️ **Ordre d'exécution obligatoire :** `DDL.sql` → `DML.sql` → `DQL.sql` → `DCL.sql`
 
 ---
 
@@ -156,9 +158,10 @@ CREATE DATABASE gestion_bibliotheque;
 \c gestion_bibliotheque
 
 # 4. Exécuter les fichiers dans l'ordre
-\i ddl.sql
-\i dml.sql
-\i dcl.sql
+\i DDL.sql
+\i DML.sql
+\i DQL.sql
+\i DCL.sql
 ```
 
 ---
@@ -215,12 +218,12 @@ CREATE TABLE bibliotheque.Exemplaire (
 );
 
 CREATE TABLE bibliotheque.Emprunt (
-    ID_Emprunt        SERIAL PRIMARY KEY,
-    Date_Emprunt      DATE NOT NULL,
+    ID_Emprunt         SERIAL PRIMARY KEY,
+    Date_Emprunt       DATE NOT NULL,
     Date_Retour_Prevue DATE NOT NULL,
-    Date_Retour       DATE,
-    ID_Exemplaire     INT NOT NULL REFERENCES bibliotheque.Exemplaire(ID_Exemplaire),
-    ID_Membre         INT NOT NULL REFERENCES bibliotheque.Membre(ID_Membre)
+    Date_Retour        DATE,
+    ID_Exemplaire      INT NOT NULL REFERENCES bibliotheque.Exemplaire(ID_Exemplaire),
+    ID_Membre          INT NOT NULL REFERENCES bibliotheque.Membre(ID_Membre)
 );
 ```
 
@@ -284,71 +287,23 @@ INSERT INTO bibliotheque.Emprunt (Date_Emprunt, Date_Retour_Prevue, Date_Retour,
 
 ---
 
-### Étape 5 : Lire les données (SELECT)
+### Étape 5 : Modifier des données (UPDATE)
 
 ```sql
--- Liste des emprunts en cours avec membre et livre
-SELECT
-    e.ID_Emprunt,
-    m.Nom        AS Membre,
-    l.Titre      AS Livre,
-    e.Date_Emprunt,
-    e.Date_Retour_Prevue,
-    e.Date_Retour
-FROM bibliotheque.Emprunt e
-JOIN bibliotheque.Membre     m ON e.ID_Membre     = m.ID_Membre
-JOIN bibliotheque.Exemplaire x ON e.ID_Exemplaire = x.ID_Exemplaire
-JOIN bibliotheque.Livre      l ON x.ID_Livre      = l.ID_Livre;
-```
-
-<details>
-<summary>📋 Output attendu</summary>
-
-```
- id_emprunt |  membre  |      livre       | date_emprunt | date_retour_prevue | date_retour
-------------+----------+------------------+--------------+--------------------+-------------
-          1 | Adjaoud  | 1984             | 2024-03-01   | 2024-03-15         |
-          2 | Leblanc  | Le Petit Prince  | 2024-02-10   | 2024-02-24         | 2024-02-22
-```
-</details>
-
----
-
-### Étape 6 : Modifier des données (UPDATE)
-
-```sql
--- Marquer un emprunt comme retourné
 UPDATE bibliotheque.Emprunt
 SET Date_Retour = '2024-03-14'
 WHERE ID_Emprunt = 1;
 
--- Mettre à jour le statut de l'exemplaire
 UPDATE bibliotheque.Exemplaire
 SET Statut = 'Disponible'
 WHERE ID_Exemplaire = 2;
-
--- Vérifier
-SELECT ID_Emprunt, Date_Retour FROM bibliotheque.Emprunt;
 ```
-
-<details>
-<summary>📋 Output attendu</summary>
-
-```
-UPDATE 1
- id_emprunt | date_retour
-------------+-------------
-          1 | 2024-03-14
-          2 | 2024-02-22
-```
-</details>
 
 ---
 
-### Étape 7 : Supprimer des données (DELETE)
+### Étape 6 : Supprimer des données (DELETE)
 
 ```sql
--- Supprimer un emprunt terminé
 DELETE FROM bibliotheque.Emprunt WHERE ID_Emprunt = 2;
 
 -- Vérifier
@@ -368,6 +323,98 @@ DELETE 1
 
 ---
 
+## 🔍 DQL — Interrogation des données
+
+### Étape 7 : SELECT simples
+
+```sql
+-- Tous les membres
+SELECT * FROM bibliotheque.Membre;
+
+-- Tous les livres disponibles
+SELECT l.Titre, l.Auteur, l.Categorie
+FROM bibliotheque.Livre l
+JOIN bibliotheque.Exemplaire e ON l.ID_Livre = e.ID_Livre
+WHERE e.Statut = 'Disponible';
+```
+
+---
+
+### Étape 8 : SELECT avec JOIN
+
+```sql
+-- Liste complète des emprunts avec membre et livre
+SELECT
+    e.ID_Emprunt,
+    m.Nom            AS Membre,
+    l.Titre          AS Livre,
+    e.Date_Emprunt,
+    e.Date_Retour_Prevue,
+    e.Date_Retour
+FROM bibliotheque.Emprunt e
+JOIN bibliotheque.Membre     m ON e.ID_Membre     = m.ID_Membre
+JOIN bibliotheque.Exemplaire x ON e.ID_Exemplaire = x.ID_Exemplaire
+JOIN bibliotheque.Livre      l ON x.ID_Livre      = l.ID_Livre;
+```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+ id_emprunt |  membre  |      livre      | date_emprunt | date_retour_prevue | date_retour
+------------+----------+-----------------+--------------+--------------------+-------------
+          1 | Adjaoud  | 1984            | 2024-03-01   | 2024-03-15         | 2024-03-14
+```
+</details>
+
+---
+
+### Étape 9 : SELECT avec GROUP BY et agrégats
+
+```sql
+-- Nombre d'emprunts par membre
+SELECT
+    m.Nom,
+    m.Prenom,
+    COUNT(e.ID_Emprunt) AS Nb_Emprunts
+FROM bibliotheque.Membre m
+LEFT JOIN bibliotheque.Emprunt e ON m.ID_Membre = e.ID_Membre
+GROUP BY m.ID_Membre, m.Nom, m.Prenom
+ORDER BY Nb_Emprunts DESC;
+
+-- Nombre d'exemplaires par livre
+SELECT
+    l.Titre,
+    COUNT(x.ID_Exemplaire)                                    AS Total_Exemplaires,
+    COUNT(CASE WHEN x.Statut = 'Disponible' THEN 1 END)       AS Disponibles,
+    COUNT(CASE WHEN x.Statut = 'Emprunté'   THEN 1 END)       AS Empruntés
+FROM bibliotheque.Livre l
+LEFT JOIN bibliotheque.Exemplaire x ON l.ID_Livre = x.ID_Livre
+GROUP BY l.ID_Livre, l.Titre
+ORDER BY l.Titre;
+```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+-- Emprunts par membre
+   nom    | prenom | nb_emprunts
+----------+--------+-------------
+ Adjaoud  | Hocine |           1
+ Leblanc  | Sophie |           0
+
+-- Exemplaires par livre
+      titre       | total_exemplaires | disponibles | empruntés
+------------------+-------------------+-------------+-----------
+ 1984             |                 1 |           1 |         0
+ L'Étranger       |                 1 |           1 |         0
+ Le Petit Prince  |                 1 |           1 |         0
+```
+</details>
+
+---
+
 ## 🔐 DCL — Contrôle des accès
 
 ### Matrice des permissions
@@ -382,25 +429,19 @@ DELETE 1
 
 ---
 
-### Étape 8 : Créer les utilisateurs
+### Étape 10 : Créer les utilisateurs
 
 ```sql
--- Membre : lecture seule
 CREATE USER membre_user WITH PASSWORD 'membre123';
-
--- Bibliothécaire : accès complet
 CREATE USER bibliothecaire_user WITH PASSWORD 'biblio123';
 ```
 
 ---
 
-### Étape 9 : Donner les droits (GRANT)
+### Étape 11 : Donner les droits (GRANT)
 
 ```sql
--- Connexion à la base
 GRANT CONNECT ON DATABASE gestion_bibliotheque TO membre_user, bibliothecaire_user;
-
--- Accès au schéma
 GRANT USAGE ON SCHEMA bibliotheque TO membre_user, bibliothecaire_user;
 
 -- Membre : lecture seule
@@ -413,7 +454,7 @@ GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA bibliotheque TO bibliothe
 
 ---
 
-### Étape 10 : Tester les droits du membre
+### Étape 12 : Tester les droits du membre
 
 ```powershell
 \q
@@ -421,10 +462,10 @@ psql -U membre_user -d gestion_bibliotheque
 ```
 
 ```sql
-SELECT * FROM bibliotheque.Emprunt;                       -- ✅ OK
+SELECT * FROM bibliotheque.Emprunt;                  -- ✅ OK
 
 INSERT INTO bibliotheque.Livre (Titre, Auteur)
-VALUES ('Test', 'Test');                                   -- ❌ Doit échouer
+VALUES ('Test', 'Test');                              -- ❌ Doit échouer
 ```
 
 <details>
@@ -437,7 +478,7 @@ ERROR:  permission denied for table livre
 
 ---
 
-### Étape 11 : Tester les droits du bibliothécaire
+### Étape 13 : Tester les droits du bibliothécaire
 
 ```powershell
 \q
@@ -446,17 +487,17 @@ psql -U bibliothecaire_user -d gestion_bibliotheque
 
 ```sql
 INSERT INTO bibliotheque.Livre (Titre, Auteur, Categorie, Annee_Publication)
-VALUES ('Dune', 'Frank Herbert', 'Science-fiction', 1965);  -- ✅ OK
+VALUES ('Dune', 'Frank Herbert', 'Science-fiction', 1965);   -- ✅ OK
 
 UPDATE bibliotheque.Exemplaire SET Statut = 'En réparation'
-WHERE ID_Exemplaire = 3;                                    -- ✅ OK
+WHERE ID_Exemplaire = 3;                                     -- ✅ OK
 
-SELECT * FROM bibliotheque.Livre;                           -- ✅ OK
+SELECT * FROM bibliotheque.Livre;                            -- ✅ OK
 ```
 
 ---
 
-### Étape 12 : Retirer des droits (REVOKE)
+### Étape 14 : Retirer des droits (REVOKE)
 
 ```powershell
 \q
@@ -484,7 +525,7 @@ ERROR:  permission denied for table emprunt
 
 ---
 
-### Étape 13 : Supprimer les utilisateurs (DROP USER)
+### Étape 15 : Supprimer les utilisateurs (DROP USER)
 
 ```sql
 \c - postgres
