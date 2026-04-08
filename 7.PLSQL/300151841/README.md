@@ -1,6 +1,6 @@
 # 🗄️ TP PostgreSQL — Stored Procedures
 ### Fonctions, Procédures Stockées et Triggers
-> **Cours :** INF1099 · **Étudiant :** Massi
+> **Cours :** INF1099 · **Étudiant :** Massinissa Mameri
 
 ---
 
@@ -39,52 +39,43 @@
 ## 🖼️ Captures d'écran
 
 ### 📌 01 — Structure du projet
+ 
 
-> **👉 Colle ici ta capture montrant l'arborescence du dossier `300151841/` dans ton explorateur de fichiers ou dans le terminal.**
-
-![Structure du projet](images/01-structure-projet.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/Screenshot%202026-04-08%20142647.png)
 
 ---
 
 ### 📌 02 — Fichiers SQL
 
-> **👉 Colle ici une capture montrant tes trois fichiers SQL ouverts dans ton éditeur (VS Code, DBeaver, etc.).**
+ 
 
-![Fichiers SQL](images/02-fichiers-sql.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/Screenshot%202026-04-08%20142842.png)
 
 ---
 
 ### 📌 03 — PostgreSQL lancé avec Podman
 
-> **👉 Colle ici la capture du terminal montrant la commande `podman run ...` exécutée avec succès (le conteneur `tp_postgres` actif).**
-
-![PostgreSQL lancé](images/03-postgres-lance.png)
+ 
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%203.png)
 
 ---
 
 ### 📌 04 — Tables créées dans PostgreSQL
 
-> **👉 Colle ici la capture montrant le résultat de `\dt` ou l'affichage des tables (`etudiants`, `cours`, `inscriptions`, `logs`) dans psql ou DBeaver.**
+ 
 
-![Tables créées](images/04-tables-postgres.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%205.png)
 
 ---
 
 ### 📌 05 — Tests exécutés
 
-> **👉 Colle ici la capture du terminal après l'exécution de `test.sql` via la commande `Get-Content ... | podman exec ...`.**
-
-![Tests exécutés](images/05-tests.png)
-
----
-
-### 📌 06 — Résultat final (logs)
-
-> **👉 Colle ici la capture du résultat de `SELECT * FROM logs ORDER BY date_action;` montrant que les logs ont bien été enregistrés automatiquement.**
-
-![Résultat final - Logs](images/06-logs-finaux.png)
+ 
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/7.PLSQL/300151841/images/psql%206.png)
 
 ---
+
+ 
 
 ## 🗂️ Concepts Utilisés
 
