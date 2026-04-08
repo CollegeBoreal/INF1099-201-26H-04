@@ -1,1 +1,0 @@
-INSERT INTO etudiants (nom) VALUES ('Yahia');
