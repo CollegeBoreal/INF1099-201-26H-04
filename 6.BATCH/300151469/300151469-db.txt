@@ -21,6 +21,6 @@ Execution de DQL.sql ...
 \connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
 
 ========================================
- Chargement termine en 0.52 secondes.
+ Chargement termine en 0.51 secondes.
  Log sauvegarde dans : execution.log
 ========================================
