@@ -108,15 +108,8 @@ python app.py
 
 ---
 
-## ✅ Ce que fait le projet
-
-- Crée une table `etudiants` avec un champ `JSONB`
-- Ajoute un index `GIN` pour les recherches rapides
-- Insère, lit et filtre des documents JSON via Python
-
 ---
 
-## 🎯 Travail demandé (TP)
 
 ### 🟢 Partie 1 — Docker
 - Lancer le conteneur PostgreSQL
@@ -132,16 +125,4 @@ python app.py
 - INSERT d'un document JSON
 - SELECT ALL et recherche filtrée
 
-### 🟣 Bonus
-- Supprimer un étudiant
-- Mettre à jour un champ JSON
-- Utiliser correctement `->` et `->>`
 
----
-
-## 🎓 Compétences visées
-
-- Déploiement d'un conteneur PostgreSQL
-- Stockage NoSQL avec JSONB
-- Backend Python simple
-- Gestion propre des dépendances (`requirements.txt`)
