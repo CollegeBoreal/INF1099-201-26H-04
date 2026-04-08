@@ -22,9 +22,9 @@ INF1099 (201) - Administration de base de données
 | :three: | 23-Feb | [3.Postgres](3.Postgres)               | [🎉](3.Postgres/.scripts/Participation.md) 👉  â Noter :x: (Migration et récupération)/(Administration) |
 | :four:  | 16-Mar | [4.DCL](4.DCL)                         | [🎉](4.DCL/.scripts/Participation.md) 👉  â Noter :x:|
 | :five:  | 23-Mar | [5.ModelisationSQL](5.ModelisationSQL) | [🎉](5.ModelisationSQL/.scripts/Participation.md) 👉  â Noter :x:|
-| :six:   |        | [6.BATCH](6.BATCH)                     | [🎉](6.BATCH/.scripts/Participation.md) 👉  â Noter :x:|
-| :seven:   |        | [7.PLSQL](7.PLSQL)                     | [🎉](7.PLSQL/.scripts/Participation.md) 👉  â Noter :x:|
-| :eight:   |        | [8.NoSQL](8.NoSQL)                     | [🎉](8.NoSQL/.scripts/Participation.md) 👉  â Noter :x:|
+| :six:   | 30-Mar | [6.BATCH](6.BATCH)                     | [🎉](6.BATCH/.scripts/Participation.md) 👉  â Noter :x:|
+| :seven:   | 30-Mar | [7.PLSQL](7.PLSQL)                     | [🎉](7.PLSQL/.scripts/Participation.md) 👉  â Noter :x:|
+| :eight:   | 30-Mar | [8.NoSQL](8.NoSQL)                     | [🎉](8.NoSQL/.scripts/Participation.md) 👉  â Noter :x:|
 
 ### :abacus: Évaluation
 
@@ -59,9 +59,9 @@ Le déroulement peut être modifié au besoin. La personne étudiante sera avis�
 | 23-Feb | 7️⃣ | [6.BATCH](6.BATCH) 
 | 02-Mar | 📚 |
 | 09-Mar | 8️⃣ |
-| 16-Mar | 9️⃣ |
+| 16-Mar | 9️⃣ | [7.PLSQL](7.PLSQL) 
 | 23-Mar | 1️⃣0️⃣ |
-| 30-Mar | 1️⃣1️⃣ |
+| 30-Mar | 1️⃣1️⃣ | [8.NoSQL](8.NoSQL) 
 | 06-Apr | 1️⃣2️⃣ |
 | 13-Apr | 1️⃣3️⃣ |
 | 20-Apr | 1️⃣4️⃣ |
