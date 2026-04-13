@@ -3,6 +3,7 @@ Execution de DDL.sql
 DROP TABLE
 NOTICE:  table "message" does not exist, skipping
 DROP TABLE
+DROP TABLE
 NOTICE:  table "match" does not exist, skipping
 NOTICE:  table "preference" does not exist, skipping
 DROP TABLE
@@ -10,7 +11,6 @@ NOTICE:  table "annonce" does not exist, skipping
 NOTICE:  table "profil" does not exist, skipping
 DROP TABLE
 NOTICE:  table "utilisateur" does not exist, skipping
-DROP TABLE
 DROP TABLE
 CREATE TABLE
 CREATE TABLE
@@ -50,7 +50,7 @@ Execution de DQL.sql
 
              contenu              |         date_envoi         | prenom  
 ----------------------------------+----------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-04-13 17:27:23.904923 | Mamadou
+ Salut, ton annonce m’intéresse ! | 2026-04-13 19:29:58.027429 | Mamadou
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
