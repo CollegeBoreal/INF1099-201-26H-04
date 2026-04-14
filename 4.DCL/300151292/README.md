@@ -4,6 +4,7 @@
 
 Ce TP a pour objectif de comprendre la gestion des utilisateurs et des permissions dans PostgreSQL à l’aide des commandes DCL.
 
+
 Nous avons appris à :
 
 créer des utilisateurs
@@ -13,7 +14,9 @@ retirer des permissions
 supprimer des utilisateurs
 🏋️ Présentation – BorealFit
 
+
 BorealFit est une plateforme de réservation de séances de sport destinée aux étudiants.
+
 
 Elle permet de :
 
@@ -147,6 +150,9 @@ Ces commandes permettent de sécuriser l’accès aux données.
 👤 Auteur
 
 Nom : Kahil Amine
+
 Numéro étudiant : 300151292
+
 Cours : INF1099
+
 Année : 2026
