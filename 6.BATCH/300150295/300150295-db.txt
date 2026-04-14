@@ -1,22 +1,22 @@
-[2026-04-14 21:27:01] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
-[2026-04-14 21:27:01] [INFO] V�rification du conteneur postgres-lab...
-[2026-04-14 21:27:01] [INFO] Conteneur actif detecte
-[2026-04-14 21:27:01] [INFO] Debut du chargement des scripts...
-[2026-04-14 21:27:01] [INFO] Traitement de DDL.sql...
-[2026-04-14 21:27:01] [INFO] SUCCES: DDL.sql execute
-[2026-04-14 21:27:01] [INFO] Traitement de DML.sql...
-[2026-04-14 21:27:02] [INFO] SUCCES: DML.sql execute
-[2026-04-14 21:27:02] [INFO] Traitement de DCL.sql...
-[2026-04-14 21:27:02] [INFO] SUCCES: DCL.sql execute
-[2026-04-14 21:27:02] [INFO] Traitement de DQL.sql...
-[2026-04-14 21:27:02] [INFO] SUCCES: DQL.sql execute
-[2026-04-14 21:27:02] [INFO] === RAPPORT FINAL ===
-[2026-04-14 21:27:02] [INFO] Scripts reussis: 4
-[2026-04-14 21:27:02] [INFO] Scripts en erreur: 0
-[2026-04-14 21:27:02] [INFO] Temps d'execution: 0.4446202 secondes
+[2026-04-14 21:31:59] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
+[2026-04-14 21:31:59] [INFO] V�rification du conteneur postgres-lab...
+[2026-04-14 21:31:59] [INFO] Conteneur actif detecte
+[2026-04-14 21:31:59] [INFO] Debut du chargement des scripts...
+[2026-04-14 21:31:59] [INFO] Traitement de DDL.sql...
+[2026-04-14 21:31:59] [ERROR] ERREUR SQL dans DDL.sql : psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory 	Is the server running locally and accepting connections on that socket?
+[2026-04-14 21:31:59] [INFO] Traitement de DML.sql...
+[2026-04-14 21:31:59] [INFO] SUCCES: DML.sql execute
+[2026-04-14 21:31:59] [INFO] Traitement de DCL.sql...
+[2026-04-14 21:31:59] [INFO] SUCCES: DCL.sql execute
+[2026-04-14 21:31:59] [INFO] Traitement de DQL.sql...
+[2026-04-14 21:31:59] [INFO] SUCCES: DQL.sql execute
+[2026-04-14 21:31:59] [INFO] === RAPPORT FINAL ===
+[2026-04-14 21:31:59] [INFO] Scripts reussis: 3
+[2026-04-14 21:31:59] [INFO] Scripts en erreur: 1
+[2026-04-14 21:31:59] [INFO] Temps d'execution: 0.475691 secondes
 
 Resume:
-- Succes: 4
-- Erreurs: 0
-- Duree: 0.4446202s
+- Succes: 3
+- Erreurs: 1
+- Duree: 0.475691s
 - Log: execution.log
