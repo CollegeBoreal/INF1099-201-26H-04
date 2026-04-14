@@ -32,7 +32,9 @@ Vérifier les informations système
 
 docker info
 
-1=
+<img width="266" height="362" alt="1" src="https://github.com/user-attachments/assets/1dcdc84e-8a9e-465a-95fe-de9669489d56" />
+
+<img width="434" height="106" alt="2" src="https://github.com/user-attachments/assets/916d2eb7-0b58-489a-88ee-cf276249e295" />
 
 
 
@@ -62,7 +64,7 @@ docker container run -d `
 
 postgres:16
 
-2=
+<img width="434" height="106" alt="2" src="https://github.com/user-attachments/assets/55d4aee8-7d9d-47d3-bf38-9698e7448ad5" />
 
 
 
@@ -70,7 +72,8 @@ postgres:16
 
 docker container ls
 
-3=
+<img width="443" height="74" alt="3" src="https://github.com/user-attachments/assets/99db16b7-3ebe-48cc-b85c-1b6963e849b3" />
+
 
 
 
@@ -92,9 +95,7 @@ Message attendu :
 
 database system is ready to accept connections
 
-
-
-4=
+<img width="436" height="299" alt="4" src="https://github.com/user-attachments/assets/7ef89279-c8cb-4c83-b4ec-b2a74980da11" />
 
 
 
@@ -108,9 +109,8 @@ mkdir sakila\_pg
 
 cd sakila\_pg
 
+<img width="368" height="115" alt="5" src="https://github.com/user-attachments/assets/f5cf4a07-df0d-433f-b163-d8f9e0b7241e" />
 
-
-5=
 
 
 
@@ -134,9 +134,8 @@ Vérification
 
 dir
 
+<img width="442" height="191" alt="6" src="https://github.com/user-attachments/assets/27cb36dd-bd2c-41ae-b607-5ed9381a8270" />
 
-
-6=
 
 
 
@@ -154,7 +153,8 @@ docker container cp .\\postgres-sakila-insert-data.sql postgres:/data.sql
 
 
 
-7=
+<img width="440" height="65" alt="7" src="https://github.com/user-attachments/assets/a8f68bfa-71b2-4a72-94b3-8ded1ee05a07" />
+
 
 
 
@@ -163,8 +163,8 @@ docker container cp .\\postgres-sakila-insert-data.sql postgres:/data.sql
 docker container exec -it postgres psql -U postgres -d appdb -f /schema.sql
 
 
+<img width="438" height="374" alt="8" src="https://github.com/user-attachments/assets/a057d75d-0e12-4c70-b098-e716f9f85f2e" />
 
-8=
 
 
 
@@ -177,8 +177,8 @@ docker container exec -it postgres psql -U postgres -d appdb -f /schema.sql
 docker container exec -it postgres psql -U postgres -d appdb -f /data.sql
 
 
+<img width="451" height="229" alt="9" src="https://github.com/user-attachments/assets/c665169d-f879-49b8-8b70-4808fd8ab134" />
 
-9=
 
 
 
@@ -204,9 +204,8 @@ Lister les tables :
 
 \\dt
 
+<img width="435" height="264" alt="10" src="https://github.com/user-attachments/assets/8e069f88-4553-4c44-9cbb-990c3f1c0227" />
 
-
-10=
 
 
 
@@ -234,9 +233,8 @@ SELECT COUNT(\*) FROM actor;
 
 Résultat : 200 acteurs
 
+<img width="298" height="131" alt="11" src="https://github.com/user-attachments/assets/2c70a16e-4a52-44ab-aa17-a5caf8f76791" />
 
-
-11=
 
 
 
@@ -246,7 +244,8 @@ choco install pgadmin4 -y
 
 
 
-12=
+<img width="739" height="505" alt="12" src="https://github.com/user-attachments/assets/1986352f-d42f-4866-aeea-356b66dd6c02" />
+
 
 
 
@@ -272,9 +271,11 @@ Username : postgres
 
 Password : postgres
 
+<img width="452" height="58" alt="13-1" src="https://github.com/user-attachments/assets/63247d4a-f765-406a-83a0-2d970cd73a55" />
 
 
-13=
+<img width="434" height="502" alt="13-2" src="https://github.com/user-attachments/assets/458ecb79-58f4-4fa0-b2b2-e1187da74450" />
+
 
 
 
@@ -294,7 +295,7 @@ Servers → Postgres Docker → Databases → appdb → Schemas → public → T
 
 
 
-14=
+<img width="438" height="509" alt="14" src="https://github.com/user-attachments/assets/bdf39bf6-2153-41ef-bfa8-260e7fdfa674" />
 
 
 
@@ -323,8 +324,8 @@ STAR OPERATION
 TURN STAR
 
 
+<img width="766" height="493" alt="15" src="https://github.com/user-attachments/assets/e0a21d85-217e-4cdc-8f58-f5056fc8fec7" />
 
-15=
 
 
 
