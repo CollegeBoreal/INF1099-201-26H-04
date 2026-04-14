@@ -1,13 +1,6 @@
-<div align="center">
-
 # 🏢 TP Modélisation SQL
 
 ## Gestion des ventes d’appartements
-
-**Nom : Mazigh Bareche**
-**Code étudiant : 300150271**
-
-</div>
 
 ---
 
@@ -133,19 +126,19 @@ INSERT INTO Vente VALUES (DEFAULT,'2024-02-15',2,2);
 
 ## 📸 Captures
 
-### Tables créées
+### Tables
 
 ![Tables](images/2.png)
 
-### Données insérées
+### Données
 
 ![Insert](images/3.png)
 
-### Résultat SELECT
+### Résultat
 
 ![Select](images/4.png)
 
-### Requête JOIN
+### Jointure
 
 ![Join](images/5.png)
 
@@ -159,5 +152,3 @@ Ce projet m’a permis de comprendre :
 * La conception d’un modèle relationnel
 * L’utilisation de SQL
 * L’importance de structurer les données correctement
-
----
