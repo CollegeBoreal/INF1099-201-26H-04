@@ -9,11 +9,11 @@ NOTICE:  Inscription reussie
 CALL
  id |  nom  | age |      email      |       date_creation        
 ----+-------+-----+-----------------+----------------------------
-  1 | Massi |  21 | massi@email.com | 2026-04-14 07:27:13.966664
-  2 | Alice |  22 | alice@email.com | 2026-04-14 07:27:13.966664
-  3 | Karim |  24 | karim@email.com | 2026-04-14 07:27:13.966664
-  4 | Sofia |  20 | sofia@email.com | 2026-04-14 07:27:13.966664
-  5 | Nadia |  23 | nadia@email.com | 2026-04-14 07:27:14.423583
+  1 | Massi |  21 | massi@email.com | 2026-04-14 07:33:03.774588
+  2 | Alice |  22 | alice@email.com | 2026-04-14 07:33:03.774588
+  3 | Karim |  24 | karim@email.com | 2026-04-14 07:33:03.774588
+  4 | Sofia |  20 | sofia@email.com | 2026-04-14 07:33:03.774588
+  5 | Nadia |  23 | nadia@email.com | 2026-04-14 07:33:04.234855
 (5 rows)
 
  id |       nom        | credits 
@@ -26,13 +26,13 @@ CALL
 
  id | etudiant_id | cours_id |      date_inscription      
 ----+-------------+----------+----------------------------
-  1 |           2 |        1 | 2026-04-14 07:27:14.423583
+  1 |           2 |        1 | 2026-04-14 07:33:04.234855
 (1 row)
 
  id |                      action                       |        date_action         
 ----+---------------------------------------------------+----------------------------
-  1 | INSERT etudiants                                  | 2026-04-14 07:27:14.423583
-  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-14 07:27:14.423583
-  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-14 07:27:14.423583
+  1 | INSERT etudiants                                  | 2026-04-14 07:33:04.234855
+  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-14 07:33:04.234855
+  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-14 07:33:04.234855
 (3 rows)
 
