@@ -1,9 +1,193 @@
 Execution de DDL.sql...
-  >> psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+  >> DROP TABLE
+  >> DROP TABLE
+  >> DROP TABLE
+  >> DROP TABLE
+  >> DROP TABLE
+  >> DROP TABLE
+  >> NOTICE:  table "payement" does not exist, skipping
+  >> NOTICE:  table "rendez_vous" does not exist, skipping
+  >> NOTICE:  table "modele" does not exist, skipping
+  >> NOTICE:  table "service" does not exist, skipping
+  >> NOTICE:  table "coiffeuse" does not exist, skipping
+  >> NOTICE:  table "client" does not exist, skipping
+  >> CREATE TABLE
+  >> CREATE TABLE
+  >> CREATE TABLE
+  >> CREATE TABLE
+  >> CREATE TABLE
+  >> CREATE TABLE
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
+  >> CREATE INDEX
 Execution de DML.sql...
-  >> psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+  >> INSERT 0 5
+  >> INSERT 0 3
+  >> INSERT 0 6
+  >> INSERT 0 5
+  >> INSERT 0 7
+  >> INSERT 0 7
+  >> UPDATE 1
+  >> UPDATE 1
 Execution de DCL.sql...
-  >> psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+  >> CREATE ROLE
+  >> CREATE ROLE
+  >> CREATE ROLE
+  >> CREATE ROLE
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> REVOKE
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> GRANT
+  >> REVOKE
+  >> REVOKE
 Execution de DQL.sql...
-  >> psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+  >>  id_client |   nom    |  prenom  |  telephone   |           email            
+  >> -----------+----------+----------+--------------+----------------------------
+  >>          4 | Bouchard | Camille  | 514-555-0404 | camille.bouchard@email.com
+  >>          2 | Gagnon   | Sophie   | 514-555-0202 | sophie.gagnon@email.com
+  >>          3 | Lavoie   | Julie    | 514-555-0303 | julie.lavoie@email.com
+  >>          5 | Roy      | Isabelle | 514-555-0505 | isabelle.roy@email.com
+  >>          1 | Tremblay | Marie    | 514-555-0101 | marie.tremblay@email.com
+  >> (5 rows)
+  >> 
+  >>  nom_service  |  prix  
+  >> --------------+--------
+  >>  Meches       | 130.00
+  >>  Coloration   |  90.00
+  >>  Soin profond |  55.00
+  >>  Coupe femme  |  45.00
+  >>  Brushing     |  35.00
+  >>  Coupe homme  |  30.00
+  >> (6 rows)
+  >> 
+  >>    nom    |    specialite     
+  >> ----------+-------------------
+  >>  Beaumont | Coloration
+  >>  Leclerc  | Coupe et brushing
+  >>  Moreau   | Soins capillaires
+  >> (3 rows)
+  >> 
+  >>  id_rdv |  date_rdv  | heure_rdv |  client  |  prenom  | coiffeuse |   service    |  prix  |  modele   
+  >> --------+------------+-----------+----------+----------+-----------+--------------+--------+-----------
+  >>       1 | 2025-11-10 | 09:00:00  | Tremblay | Marie    | Beaumont  | Coupe femme  |  45.00 | Bob carre
+  >>       2 | 2025-11-10 | 11:00:00  | Gagnon   | Sophie   | Leclerc   | Coloration   |  90.00 | Balayage
+  >>       3 | 2025-11-12 | 14:00:00  | Lavoie   | Julie    | Beaumont  | Meches       | 130.00 | Balayage
+  >>       4 | 2025-11-13 | 10:30:00  | Bouchard | Camille  | Moreau    | Soin profond |  55.00 | Boucles
+  >>       5 | 2025-11-14 | 15:00:00  | Roy      | Isabelle | Leclerc   | Coupe homme  |  30.00 | Degrade
+  >>       6 | 2025-11-17 | 09:30:00  | Tremblay | Marie    | Leclerc   | Brushing     |  35.00 | Bob carre
+  >>       7 | 2025-11-18 | 13:00:00  | Gagnon   | Sophie   | Beaumont  | Coloration   |  90.00 | Pixie cut
+  >> (7 rows)
+  >> 
+  >>  id_rdv |  date_rdv  |  client  | nom_service  | montant | mode_payement 
+  >> --------+------------+----------+--------------+---------+---------------
+  >>       2 | 2025-11-10 | Gagnon   | Coloration   |   90.00 | Carte
+  >>       1 | 2025-11-10 | Tremblay | Coupe femme  |   45.00 | Carte
+  >>       3 | 2025-11-12 | Lavoie   | Meches       |  120.00 | Carte
+  >>       4 | 2025-11-13 | Bouchard | Soin profond |   55.00 | Virement
+  >>       5 | 2025-11-14 | Roy      | Coupe homme  |   30.00 | Comptant
+  >>       6 | 2025-11-17 | Tremblay | Brushing     |   35.00 | Carte
+  >>       7 | 2025-11-18 | Gagnon   | Coloration   |   90.00 | Carte
+  >> (7 rows)
+  >> 
+  >>   date_rdv  | heure_rdv |  client  | nom_service 
+  >> ------------+-----------+----------+-------------
+  >>  2025-11-10 | 09:00:00  | Tremblay | Coupe femme
+  >>  2025-11-12 | 14:00:00  | Lavoie   | Meches
+  >>  2025-11-18 | 13:00:00  | Gagnon   | Coloration
+  >> (3 rows)
+  >> 
+  >>    nom    |  prenom  | nb_rendez_vous 
+  >> ----------+----------+----------------
+  >>  Gagnon   | Sophie   |              2
+  >>  Tremblay | Marie    |              2
+  >>  Bouchard | Camille  |              1
+  >>  Lavoie   | Julie    |              1
+  >>  Roy      | Isabelle |              1
+  >> (5 rows)
+  >> 
+  >>  coiffeuse | nb_rdv | ca_total |    panier_moyen     
+  >> -----------+--------+----------+---------------------
+  >>  Beaumont  |      3 |   255.00 | 85.0000000000000000
+  >>  Leclerc   |      3 |   155.00 | 51.6666666666666667
+  >>  Moreau    |      1 |    55.00 | 55.0000000000000000
+  >> (3 rows)
+  >> 
+  >>  nom_service  | nb_reservations | revenus_total 
+  >> --------------+-----------------+---------------
+  >>  Coloration   |               2 |        180.00
+  >>  Brushing     |               1 |         35.00
+  >>  Meches       |               1 |        120.00
+  >>  Soin profond |               1 |         55.00
+  >>  Coupe homme  |               1 |         30.00
+  >>  Coupe femme  |               1 |         45.00
+  >> (6 rows)
+  >> 
+  >>    nom    |  prenom  | total_paye 
+  >> ----------+----------+------------
+  >>  Gagnon   | Sophie   |     180.00
+  >>  Lavoie   | Julie    |     120.00
+  >>  Tremblay | Marie    |      80.00
+  >>  Bouchard | Camille  |      55.00
+  >>  Roy      | Isabelle |      30.00
+  >> (5 rows)
+  >> 
+  >>   date_rdv  | heure_rdv |  client  | nom_service  
+  >> ------------+-----------+----------+--------------
+  >>  2025-11-10 | 09:00:00  | Tremblay | Coupe femme
+  >>  2025-11-10 | 11:00:00  | Gagnon   | Coloration
+  >>  2025-11-12 | 14:00:00  | Lavoie   | Meches
+  >>  2025-11-13 | 10:30:00  | Bouchard | Soin profond
+  >>  2025-11-14 | 15:00:00  | Roy      | Coupe homme
+  >> (5 rows)
+  >> 
+  >>   nom   | prenom | total_paye 
+  >> --------+--------+------------
+  >>  Gagnon | Sophie |     180.00
+  >>  Lavoie | Julie  |     120.00
+  >> (2 rows)
+  >> 
+  >>  id_payement | date_payement | montant |  client  
+  >> -------------+---------------+---------+----------
+  >>            1 | 2025-11-10    |   45.00 | Tremblay
+  >>            2 | 2025-11-10    |   90.00 | Gagnon
+  >>            3 | 2025-11-12    |  120.00 | Lavoie
+  >>            6 | 2025-11-17    |   35.00 | Tremblay
+  >>            7 | 2025-11-18    |   90.00 | Gagnon
+  >> (5 rows)
+  >> 
+  >>  nom | prenom | email 
+  >> -----+--------+-------
+  >> (0 rows)
+  >> 
+  >>  nom_service |  prix  
+  >> -------------+--------
+  >>  Meches      | 130.00
+  >> (1 row)
+  >> 
+  >>  id_rdv |  date_rdv  | montant 
+  >> --------+------------+---------
+  >>       3 | 2025-11-12 |  120.00
+  >>       7 | 2025-11-18 |   90.00
+  >>       2 | 2025-11-10 |   90.00
+  >> (3 rows)
+  >> 
 Chargement terminé. Log sauvegardé dans execution.log

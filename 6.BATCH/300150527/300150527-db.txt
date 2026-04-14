@@ -1,13 +1,135 @@
 Execution de DDL.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+NOTICE:  table "servicesol" does not exist, skipping
+NOTICE:  table "incident" does not exist, skipping
+NOTICE:  table "maintenance" does not exist, skipping
+NOTICE:  table "controlesecurite" does not exist, skipping
+NOTICE:  table "personnel" does not exist, skipping
+NOTICE:  table "bagage" does not exist, skipping
+NOTICE:  table "billet" does not exist, skipping
+NOTICE:  table "reservation" does not exist, skipping
+NOTICE:  table "passager" does not exist, skipping
+NOTICE:  table "vol" does not exist, skipping
+NOTICE:  table "runway" does not exist, skipping
+NOTICE:  table "gate" does not exist, skipping
+NOTICE:  table "terminal" does not exist, skipping
+NOTICE:  table "avion" does not exist, skipping
+NOTICE:  table "compagnieaerienne" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
 Execution de DML.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
-	Is the server running locally and accepting connections on that socket?
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
 Execution de DCL.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
-	Is the server running locally and accepting connections on that socket?
+CREATE ROLE
+GRANT
+GRANT
+GRANT
 Execution de DQL.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
-	Is the server running locally and accepting connections on that socket?
-Temps d'exécution : 00:00:01.0532295
+ id_compagnie |      nom      |  pays   | code_iata 
+--------------+---------------+---------+-----------
+            1 | Air Canada    | Canada  | AC
+            2 | Air France    | France  | AF
+            3 | Lufthansa     | Germany | LH
+            4 | Emirates      | UAE     | EK
+            5 | Qatar Airways | Qatar   | QR
+(5 rows)
+
+   modele    | capacite |      nom      
+-------------+----------+---------------
+ Boeing 737  |      180 | Air Canada
+ Airbus A320 |      160 | Air France
+ Boeing 777  |      300 | Lufthansa
+ Airbus A380 |      500 | Emirates
+ Boeing 787  |      250 | Qatar Airways
+(5 rows)
+
+ numero_vol | origine | destination | code_gate | code_runway 
+------------+---------+-------------+-----------+-------------
+ AC101      | Toronto | Montreal    | G1        | R1
+ AF202      | Paris   | Rome        | G2        | R2
+ LH303      | Berlin  | Madrid      | G3        | R3
+ EK404      | Dubai   | Doha        | G4        | R4
+ QR505      | Doha    | London      | G5        | R5
+(5 rows)
+
+ nom  | prenom | numero_vol 
+------+--------+------------
+ Ali  | Ahmed  | AC101
+ Sara | Ben    | AF202
+ John | Doe    | LH303
+ Anna | Smith  | EK404
+ Omar | Khan   | QR505
+(5 rows)
+
+ count 
+-------
+     5
+(1 row)
+
+ numero_vol | origine | destination 
+------------+---------+-------------
+(0 rows)
+
+ numero_vol | date_depart 
+------------+-------------
+ QR505      | 2026-01-05
+ EK404      | 2026-01-04
+ LH303      | 2026-01-03
+ AF202      | 2026-01-02
+ AC101      | 2026-01-01
+(5 rows)
+
+   description   | numero_vol 
+-----------------+------------
+ Delay           | AC101
+ Technical issue | AF202
+ Weather         | LH303
+ Late boarding   | EK404
+ Fuel issue      | QR505
+(5 rows)
+
+ numero_vol | type_service |  statut  
+------------+--------------+----------
+ AC101      | Nettoyage    | Terminé
+ AF202      | Carburant    | Terminé
+ LH303      | Bagages      | En cours
+ EK404      | Catering     | Terminé
+ QR505      | Maintenance  | En cours
+(5 rows)
+
+   modele    | capacite 
+-------------+----------
+ Boeing 777  |      300
+ Airbus A380 |      500
+ Boeing 787  |      250
+(3 rows)
+
+Temps d'exécution : 00:00:00.4851920
 --- Fin de l'exécution ---

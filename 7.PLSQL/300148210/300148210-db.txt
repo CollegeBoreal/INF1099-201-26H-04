@@ -1,1 +1,3 @@
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tpdb" does not exist
+ERROR:  syntax error at or near "\"
+LINE 6: \echo '=====================================================...
+        ^
