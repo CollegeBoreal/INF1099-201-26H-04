@@ -6,51 +6,68 @@
 Conteneur actif. Debut du chargement...
 
 Execution de DDL.sql ...
-\connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
+   CREATE TABLE
+   CREATE TABLE
+   CREATE TABLE
+   CREATE TABLE
+   CREATE TABLE
 
 Execution de DML.sql ...
-ERROR:  relation "candidat" does not exist
-LINE 1: INSERT INTO candidat (nom, prenom, email, telephone) VALUES
-                    ^
-ERROR:  relation "lieu" does not exist
-LINE 1: INSERT INTO lieu (nom_lieu, adresse) VALUES
-                    ^
-ERROR:  relation "session" does not exist
-LINE 1: INSERT INTO session (date_session, heure_session, type_test,...
-                    ^
-ERROR:  relation "rendezvous" does not exist
-LINE 1: INSERT INTO rendezvous (id_candidat, id_session, statut) VAL...
-                    ^
-ERROR:  relation "paiement" does not exist
-LINE 1: INSERT INTO paiement (montant, mode_paiement, date_paiement,...
-                    ^
+   INSERT 0 3
+   INSERT 0 3
+   INSERT 0 3
+   INSERT 0 3
+   INSERT 0 3
 
 Execution de DCL.sql ...
-ERROR:  relation "candidat" does not exist
    CREATE ROLE
+   GRANT
    GRANT
 
 Execution de DQL.sql ...
-ERROR:  relation "candidat" does not exist
-LINE 1: SELECT * FROM candidat;
-                      ^
-ERROR:  relation "lieu" does not exist
-LINE 1: SELECT * FROM lieu;
-                      ^
-ERROR:  relation "session" does not exist
-LINE 8: FROM session s
-             ^
-ERROR:  relation "rendezvous" does not exist
-LINE 8: FROM rendezvous r
-             ^
-ERROR:  relation "paiement" does not exist
-LINE 8: FROM paiement p
-             ^
-ERROR:  relation "rendezvous" does not exist
-LINE 1: SELECT * FROM rendezvous WHERE statut = 'Confirme';
-                      ^
+    id_candidat |   nom   | prenom |          email          | telephone  
+   -------------+---------+--------+-------------------------+------------
+              1 | Bouhali | Rabia  | rabia.bouhali@email.com | 6471111111
+              2 | Ali     | Sami   | sami.ali@email.com      | 6472222222
+              3 | Ben     | Nora   | nora.ben@email.com      | 6473333333
+   (3 rows)
+   
+    id_lieu |      nom_lieu       |                adresse                
+   ---------+---------------------+---------------------------------------
+          1 | Centre TCF Toronto  | 123 Rue Bloor, Toronto
+          2 | Centre TCF Ottawa   | 456 Avenue King, Ottawa
+          3 | Centre TCF Montreal | 789 Boulevard Rene-Levesque, Montreal
+   (3 rows)
+   
+    id_session | date_session | heure_session | type_test  |      nom_lieu       |                adresse                
+   ------------+--------------+---------------+------------+---------------------+---------------------------------------
+             1 | 2026-04-15   | 09:00:00      | TCF Canada | Centre TCF Toronto  | 123 Rue Bloor, Toronto
+             2 | 2026-04-18   | 13:30:00      | TCF Canada | Centre TCF Ottawa   | 456 Avenue King, Ottawa
+             3 | 2026-04-22   | 10:15:00      | TCF Canada | Centre TCF Montreal | 789 Boulevard Rene-Levesque, Montreal
+   (3 rows)
+   
+    id_rendezvous |   nom   | prenom | date_session | heure_session |   statut   
+   ---------------+---------+--------+--------------+---------------+------------
+                1 | Bouhali | Rabia  | 2026-04-15   | 09:00:00      | Confirme
+                2 | Ali     | Sami   | 2026-04-18   | 13:30:00      | En attente
+                3 | Ben     | Nora   | 2026-04-22   | 10:15:00      | Confirme
+   (3 rows)
+   
+    id_paiement | montant | mode_paiement  | date_paiement |   nom   | prenom 
+   -------------+---------+----------------+---------------+---------+--------
+              1 |  150.00 | Carte bancaire | 2026-04-10    | Bouhali | Rabia
+              2 |  150.00 | Virement       | 2026-04-12    | Ali     | Sami
+              3 |  150.00 | Especes        | 2026-04-14    | Ben     | Nora
+   (3 rows)
+   
+    id_rendezvous | id_candidat | id_session |  statut  
+   ---------------+-------------+------------+----------
+                1 |           1 |          1 | Confirme
+                3 |           3 |          3 | Confirme
+   (2 rows)
+   
 
 ========================================
- Chargement termine en 0.54 secondes.
+ Chargement termine en 0.51 secondes.
  Log sauvegarde dans : execution.log
 ========================================
