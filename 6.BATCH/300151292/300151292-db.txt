@@ -1,2 +1,11 @@
-[16:17:37] Demarrage du chargement BorealFit...
-[16:17:38] ERREUR : conteneur non actif
+[20:18:57] Demarrage du chargement BorealFit...
+[20:18:58] Creation de la base de donnees...
+[20:18:58] Execution de DDL.sql
+Error response from daemon: No such container: postgres
+[20:18:58] Execution de DML.sql
+Error response from daemon: No such container: postgres
+[20:18:58] Execution de DCL.sql
+Error response from daemon: No such container: postgres
+[20:18:58] Execution de DQL.sql
+Error response from daemon: No such container: postgres
+[20:18:58] Termine en 0.19 secondes!
