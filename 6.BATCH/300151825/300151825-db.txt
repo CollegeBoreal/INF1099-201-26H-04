@@ -6,22 +6,22 @@ DROP TABLE
 NOTICE:  table "avis" does not exist, skipping
 NOTICE:  table "livraison" does not exist, skipping
 NOTICE:  table "paiement" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "lignecommande" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
 NOTICE:  table "commande" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "stock" does not exist, skipping
 NOTICE:  table "crampon" does not exist, skipping
 NOTICE:  table "categorie" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "marque" does not exist, skipping
+DROP TABLE
 NOTICE:  table "adresse" does not exist, skipping
 NOTICE:  table "client" does not exist, skipping
-DROP TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
