@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Participation au 15-04-2026 16:50
-=======
-# Participation au 15-04-2026 17:57
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+# Participation au 15-04-2026 18:28
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|

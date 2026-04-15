@@ -1,9 +1,6 @@
 Chargement de la base de données...
 Execution de DDL.sql
-<<<<<<< HEAD
-=======
 DROP TABLE
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 NOTICE:  table "livraison" does not exist, skipping
 NOTICE:  table "paiement" does not exist, skipping
 NOTICE:  table "ligne_commande" does not exist, skipping
@@ -13,10 +10,6 @@ NOTICE:  table "categorie_maillot" does not exist, skipping
 NOTICE:  table "adresse" does not exist, skipping
 NOTICE:  table "client" does not exist, skipping
 NOTICE:  table "livreur" does not exist, skipping
-<<<<<<< HEAD
-DROP TABLE
-=======
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE

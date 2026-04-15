@@ -7,16 +7,9 @@ DO
                 2
 (1 row)
 
-<<<<<<< HEAD
- id |           action           |        date_action        
-----+----------------------------+---------------------------
-  1 | INSERT sur etudiants : Ali | 2026-04-15 16:51:15.64957
-  2 | Ajout etudiant : Ali       | 2026-04-15 16:51:15.64957
-=======
  id |           action           |        date_action         
 ----+----------------------------+----------------------------
-  1 | INSERT sur etudiants : Ali | 2026-04-15 17:58:20.416503
-  2 | Ajout etudiant : Ali       | 2026-04-15 17:58:20.416503
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+  1 | INSERT sur etudiants : Ali | 2026-04-15 18:30:13.538345
+  2 | Ajout etudiant : Ali       | 2026-04-15 18:30:13.538345
 (2 rows)
 

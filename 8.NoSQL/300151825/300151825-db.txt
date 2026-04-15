@@ -1,4 +1,4 @@
-  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300151825/app.py", line 1
-    Set-Content app.py -Encoding UTF8 -Value @"
-                                              ^
-SyntaxError: unterminated string literal (detected at line 1)
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300151825/app.py", line 48
+    "@
+    ^
+SyntaxError: unterminated string literal (detected at line 48)

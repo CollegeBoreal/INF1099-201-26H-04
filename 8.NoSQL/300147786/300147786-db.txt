@@ -1,14 +1,4 @@
-
-📌 Tous les étudiants :
-{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
-{'age': 22, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
-{'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
-{'age': 27, 'nom': 'David', 'competences': ['C++', 'Git', 'Linux']}
-{'age': 24, 'nom': 'Emma', 'competences': ['JavaScript', 'React', 'CSS']}
-{'age': 29, 'nom': 'Fay', 'competences': ['SQL', 'Python', 'AWS']}
-{'age': 23, 'nom': 'George', 'competences': ['Docker', 'Kubernetes', 'Go']}
-{'age': 26, 'nom': 'Hana', 'competences': ['Python', 'Flask', 'PostgreSQL']}
-{'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
-
-🔎 Recherche Alice :
-{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300147786/app.py", line 93
+    >>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+            ^
+SyntaxError: invalid decimal literal

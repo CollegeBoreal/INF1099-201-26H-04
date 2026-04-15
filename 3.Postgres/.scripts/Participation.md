@@ -19,12 +19,8 @@
 | 0 | [300141550](../300141550/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211749528?s=460&v=4' width=20 height=20></image>](https://github.com/emeraudesantu) | :1st_place_medal: | :x: | :five: | 
 | 1 | [300141567](../300141567/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/169725025?s=460&v=4' width=20 height=20></image>](https://github.com/arsprod2001) | :1st_place_medal: | :heavy_check_mark: | :two: | 
 | 2 | [300142242](../300142242/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/131247071?s=460&v=4' width=20 height=20></image>](https://github.com/yahiiiia) | :1st_place_medal: | :heavy_check_mark: | :zero: | 
-<<<<<<< HEAD
-| 3 | [300146667](../300146667/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image>](https://github.com/djaberbenyezza) | :x: | :x: | :zero: | 
-=======
 | 3 | [300146667](../300146667/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994773?s=460&v=4' width=20 height=20></image>](https://github.com/djaberbenyezza) | :2nd_place_medal: | :heavy_check_mark: | :zero: | 
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
-| 4 | [300147786](../300147786/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/231366133?s=460&v=4' width=20 height=20></image>](https://github.com/300786147) | :1st_place_medal: | :heavy_check_mark: | :six: | 
+| 4 | [300147786](../300147786/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/231366133?s=460&v=4' width=20 height=20></image>](https://github.com/300786147) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 5 | [300148210](../300148210/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/233097107?s=460&v=4' width=20 height=20></image>](https://github.com/zianiferiel) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 6 | [300148450](../300148450/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994730?s=460&v=4' width=20 height=20></image>](https://github.com/adjaoud-git) | :2nd_place_medal: | :heavy_check_mark: | :zero: | 
 | 7 | [300150205](../300150205/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image>](https://github.com/blbsblm) | :1st_place_medal: | :heavy_check_mark: | :seven: | 
@@ -38,21 +34,13 @@
 | 15 | [300150524](../300150524/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/206965671?s=460&v=4' width=20 height=20></image>](https://github.com/takieddinechoufa) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 16 | [300150527](../300150527/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/212277460?s=460&v=4' width=20 height=20></image>](https://github.com/akrembouraoui) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 17 | [300150562](../300150562/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994758?s=460&v=4' width=20 height=20></image>](https://github.com/isako29) | :1st_place_medal: | :heavy_check_mark: | :three: | 
-<<<<<<< HEAD
-| 18 | [300151292](../300151292/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image>](https://github.com/akahil521) | :x: | :x: | :zero: | 
-=======
 | 18 | [300151292](../300151292/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994792?s=460&v=4' width=20 height=20></image>](https://github.com/akahil521) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 | 19 | [300151469](../300151469/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/206001876?s=460&v=4' width=20 height=20></image>](https://github.com/Rabia-777) | :2nd_place_medal: | :heavy_check_mark: | :zero: | 
 | 20 | [300151492](../300151492/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/206000307?s=460&v=4' width=20 height=20></image>](https://github.com/hacen19) | :2nd_place_medal: | :x: | :zero: | 
 | 21 | [300151825](../300151825/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image>](https://github.com/FeatFreedy) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 22 | [300151833](../300151833/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/109877652?s=460&v=4' width=20 height=20></image>](https://github.com/raoufbrs15) | :x: | :x: | :zero: | 
-| 23 | [300151841](../300151841/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image>](https://github.com/massi9313) | :1st_place_medal: | :heavy_check_mark: | :seven: | 
+| 23 | [300151841](../300151841/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994823?s=460&v=4' width=20 height=20></image>](https://github.com/massi9313) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 24 | [300153476](../300153476/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image>](https://github.com/dialloramatoulayebah) | :1st_place_medal: | :heavy_check_mark: | :one: | 
-| 25 | [300153747](../300153747/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image>](https://github.com/madjou15) | :1st_place_medal: | :heavy_check_mark: | :nine: | 
+| 25 | [300153747](../300153747/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image>](https://github.com/madjou15) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 26 | [300154718](../300154718/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image>](https://github.com/stephanetidjet) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
-<<<<<<< HEAD
-| :abacus: | \$\frac{21}{27}\$ = 77.78% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 21 |
-=======
 | :abacus: | \$\frac{23}{27}\$ = 85.19% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 23 |
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23

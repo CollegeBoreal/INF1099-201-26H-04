@@ -1,10 +1,5 @@
-Chargement base laboratoire...
-Execution de DDL.sql
-Error response from daemon: No such container: labo-postgres
-Execution de DML.sql
-Error response from daemon: No such container: labo-postgres
-Execution de DCL.sql
-Error response from daemon: No such container: labo-postgres
-Execution de DQL.sql
-Error response from daemon: No such container: labo-postgres
-Chargement terminé.
+ParserError: /home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/6.BATCH/300148210/load-db.ps1:1
+Line |
+   1 |  <<<<<<< HEAD
+     |    ~
+     | Missing file specification after redirection operator.
