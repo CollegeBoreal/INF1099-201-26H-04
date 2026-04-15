@@ -1,0 +1,24 @@
+Chargement de la base de données...
+Execution de DDL.sql
+DROP TABLE
+NOTICE:  table "etudiants" does not exist, skipping
+CREATE TABLE
+Execution de DML.sql
+DELETE 0
+INSERT 0 5
+Execution de DCL.sql
+DO
+GRANT
+GRANT
+GRANT
+Execution de DQL.sql
+ id |   nom   | prenom | age |    programme    
+----+---------+--------+-----+-----------------
+  1 | Dupont  | Alice  |  20 | Informatique
+  2 | Martin  | Bob    |  22 | Réseau
+  3 | Bernard | Claire |  19 | Cybersécurité
+  4 | Petit   | David  |  21 | Base de données
+  5 | Robert  | Emma   |  23 | Programmation
+(5 rows)
+
+Chargement terminé.

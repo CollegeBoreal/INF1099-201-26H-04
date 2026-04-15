@@ -5,6 +5,27 @@ CREATE DATABASE ecole;
 -- Connexion à la base ecole (TRÈS IMPORTANT)
 \c ecole
 
+CREATE SCHEMA tp_dcl;
+
+CREATE TABLE tp_dcl.etudiants (
+    id SERIAL PRIMARY KEY,
+    nom TEXT,
+    moyenne NUMERIC
+);
+
+-- Création
+CREATE USER etudiant_test WITH PASSWORD 'etudiant123';
+CREATE USER prof_test WITH PASSWORD 'prof123';
+
+-- Droits de connexion
+GRANT CONNECT ON DATABASE ecole TO etudiant_test, prof_test;
+GRANT USAGE ON SCHEMA tp_dcl TO etudiant_test, prof_test;
+
+-- Droits sur la table
+GRANT SELECT ON tp_dcl.etudiants TO etudiant_test; -- Lecture seule
+GRANT ALL PRIVILEGES ON tp_dcl.etudiants TO prof_test; -- Tout faire
+
+-- Mon projet-----------
 CREATE SCHEMA eduhome;
 
 CREATE TABLE eduhome.enfant (
