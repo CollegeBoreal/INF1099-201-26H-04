@@ -1,0 +1,157 @@
+import psycopg2
+import json
+
+# ============================================================
+# Connexion à PostgreSQL
+# ============================================================
+conn = psycopg2.connect(
+    dbname="ecole",
+    user="postgres",
+    password="postgres",
+    host="localhost",
+    port=5432
+)
+
+cur = conn.cursor()
+
+print("=" * 50)
+print("  Mini Base NoSQL — PostgreSQL JSONB")
+print("=" * 50)
+
+
+# ============================================================
+# 🔹 PARTIE 2 — Requêtes SQL NoSQL
+# ============================================================
+
+# Afficher tous les étudiants
+print("\n📌 Tous les étudiants (SELECT ALL) :")
+cur.execute("SELECT id, data FROM etudiants ORDER BY id")
+for row in cur.fetchall():
+    print(f"  [{row[0]}] {row[1]}")
+
+# Rechercher par nom (opérateur ->>)
+print("\n🔎 Recherche par nom — Alice (->>) :")
+cur.execute("""
+    SELECT id, data FROM etudiants
+    WHERE data->>'nom' = 'Alice'
+""")
+for row in cur.fetchall():
+    print(f"  [{row[0]}] {row[1]}")
+
+# Rechercher par compétence — Python (opérateur @>)
+print("\n🐍 Étudiants avec la compétence 'Python' (@>) :")
+cur.execute("""
+    SELECT id, data FROM etudiants
+    WHERE data->'competences' @> '["Python"]'
+""")
+for row in cur.fetchall():
+    print(f"  [{row[0]}] {row[1]}")
+
+
+# ============================================================
+# 🔹 PARTIE 3 — Python Backend
+# ============================================================
+
+# INSERT — Ajout d'un nouvel étudiant
+print("\n➕ Insertion d'un nouvel étudiant — Diana :")
+nouvel_etudiant = {
+    "nom": "Diana",
+    "age": 28,
+    "competences": ["DevOps", "Kubernetes"]
+}
+cur.execute(
+    "INSERT INTO etudiants (data) VALUES (%s) RETURNING id",
+    [json.dumps(nouvel_etudiant)]
+)
+new_id = cur.fetchone()[0]
+conn.commit()
+print(f"  ✅ Inséré avec ID = {new_id}")
+
+# Vérification après INSERT
+print("\n📌 Tous les étudiants après insertion :")
+cur.execute("SELECT id, data FROM etudiants ORDER BY id")
+for row in cur.fetchall():
+    print(f"  [{row[0]}] {row[1]}")
+
+
+# ============================================================
+# 🟣 BONUS — UPDATE JSON
+# ============================================================
+print("\n✏️  BONUS — Mise à jour de l'âge d'Alice (UPDATE JSONB) :")
+cur.execute("""
+    UPDATE etudiants
+    SET data = data || '{"age": 26}'::jsonb
+    WHERE data->>'nom' = 'Alice'
+    RETURNING data
+""")
+updated = cur.fetchone()
+conn.commit()
+if updated:
+    print(f"  ✅ Alice mise à jour : {updated[0]}")
+
+# Ajout d'une compétence à Bob via jsonb_set
+print("\n✏️  BONUS — Ajout de 'Docker' aux compétences de Bob :")
+cur.execute("""
+    UPDATE etudiants
+    SET data = jsonb_set(
+        data,
+        '{competences}',
+        (data->'competences') || '["Docker"]'::jsonb
+    )
+    WHERE data->>'nom' = 'Bob'
+    RETURNING data
+""")
+updated_bob = cur.fetchone()
+conn.commit()
+if updated_bob:
+    print(f"  ✅ Bob mis à jour : {updated_bob[0]}")
+
+
+# ============================================================
+# 🟣 BONUS — DELETE
+# ============================================================
+print("\n🗑️  BONUS — Suppression de Diana :")
+cur.execute("""
+    DELETE FROM etudiants
+    WHERE data->>'nom' = 'Diana'
+    RETURNING id, data
+""")
+deleted = cur.fetchone()
+conn.commit()
+if deleted:
+    print(f"  ✅ Supprimé : [{deleted[0]}] {deleted[1]}")
+
+
+# ============================================================
+# 🟣 BONUS — Opérateurs -> vs ->>
+# ============================================================
+print("\n📖 BONUS — Démonstration -> vs ->> :")
+cur.execute("""
+    SELECT
+        data->'nom'   AS nom_json,
+        data->>'nom'  AS nom_texte,
+        data->'age'   AS age_json,
+        data->>'age'  AS age_texte
+    FROM etudiants
+    WHERE data->>'nom' = 'Alice'
+""")
+row = cur.fetchone()
+if row:
+    print(f"  ->  'nom'  (JSON)  : {row[0]}  (type: {type(row[0]).__name__})")
+    print(f"  ->> 'nom'  (texte) : {row[1]}  (type: {type(row[1]).__name__})")
+    print(f"  ->  'age'  (JSON)  : {row[2]}  (type: {type(row[2]).__name__})")
+    print(f"  ->> 'age'  (texte) : {row[3]}  (type: {type(row[3]).__name__})")
+    print("\n  💡 -> retourne du JSONB | ->> retourne du TEXT")
+
+
+# ============================================================
+# État final
+# ============================================================
+print("\n📌 État final de la table :")
+cur.execute("SELECT id, data FROM etudiants ORDER BY id")
+for row in cur.fetchall():
+    print(f"  [{row[0]}] {row[1]}")
+
+cur.close()
+conn.close()
+print("\n✅ Connexion fermée. TP terminé !")

@@ -1,0 +1,79 @@
+Chargement de la base de donnees...
+Execution de DDL.sql
+CREATE SCHEMA
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+Execution de DML.sql
+INSERT 0 3
+INSERT 0 2
+INSERT 0 3
+INSERT 0 4
+INSERT 0 4
+INSERT 0 2
+INSERT 0 4
+Execution de DCL.sql
+CREATE ROLE
+CREATE ROLE
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+REVOKE
+Execution de DQL.sql
+ game_id |     game_name     
+---------+-------------------
+       1 | League of Legends
+       2 | Counter-Strike 2
+       3 | Valorant
+(3 rows)
+
+ tournament_id |  tournament_name   | start_date |  end_date  | format 
+---------------+--------------------+------------+------------+--------
+             1 | World Championship | 2024-10-01 | 2024-10-20 | 5v5
+             2 | CS2 Major          | 2024-11-10 | 2024-11-25 | 5v5
+(2 rows)
+
+ team_id | team_name  
+---------+------------
+       1 | Team Alpha
+       2 | Team Bravo
+       3 | Team Delta
+(3 rows)
+
+ player_id | pseudo  |       email       
+-----------+---------+-------------------
+         1 | Shadow  | shadow@email.com
+         2 | Blaze   | blaze@email.com
+         3 | Phantom | phantom@email.com
+         4 | Nova    | nova@email.com
+(4 rows)
+
+ match_id |  tournament_name   |     round     |   match_datetime    
+----------+--------------------+---------------+---------------------
+        1 | World Championship | Quarter Final | 2024-10-05 18:00:00
+        2 | World Championship | Semi Final    | 2024-10-10 20:00:00
+(2 rows)
+
+ match_id | team_name  | score 
+----------+------------+-------
+        1 | Team Alpha |     2
+        1 | Team Bravo |     1
+        2 | Team Alpha |     2
+        2 | Team Delta |     0
+(4 rows)
+
+ team_id | team_name  | player_id | pseudo  
+---------+------------+-----------+---------
+       1 | Team Alpha |         1 | Shadow
+       1 | Team Alpha |         2 | Blaze
+       2 | Team Bravo |         3 | Phantom
+       2 | Team Bravo |         4 | Nova
+(4 rows)
+
+Chargement termine.

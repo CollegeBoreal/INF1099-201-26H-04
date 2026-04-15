@@ -17,7 +17,11 @@ Construire une mini base NoSQL avec :
 - [ ] 🪟 Windows (PowerShell)
 
 ```bash id="d6kq7x"
+<<<<<<< HEAD
 docker container run --name postgres-nosql `
+=======
+docker run --name postgres-nosql `
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
   -e POSTGRES_USER=postgres `
   -e POSTGRES_PASSWORD=postgres `
   -e POSTGRES_DB=ecole `
@@ -30,7 +34,11 @@ docker container run --name postgres-nosql `
 - [ ] 🐧 *nix 
 
 ```bash id="d6kq7x"
+<<<<<<< HEAD
 docker container run --name postgres-nosql \
+=======
+docker run --name postgres-nosql \
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_DB=ecole \

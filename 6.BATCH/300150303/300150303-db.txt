@@ -1,5 +1,9 @@
 Execution de DDL.sql...
   >> DROP TABLE
+<<<<<<< HEAD
+=======
+  >> DROP TABLE
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
   >> NOTICE:  table "payement" does not exist, skipping
   >> DROP TABLE
   >> DROP TABLE
@@ -10,7 +14,10 @@ Execution de DDL.sql...
   >> NOTICE:  table "coiffeuse" does not exist, skipping
   >> NOTICE:  table "client" does not exist, skipping
   >> DROP TABLE
+<<<<<<< HEAD
   >> DROP TABLE
+=======
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
   >> CREATE TABLE
   >> CREATE TABLE
   >> CREATE TABLE

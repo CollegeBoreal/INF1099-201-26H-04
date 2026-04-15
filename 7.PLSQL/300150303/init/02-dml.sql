@@ -7,6 +7,7 @@
 -- ============================================================
 
 -- Étudiants
+<<<<<<< HEAD
 INSERT INTO etudiants (nom, age, email) VALUES
    ('Dubois', 'Lucas', 21, 'lucas.dubois@gmail.com'),
    ('Martin', 'Sophie', 23, 'sophie.martin@yahoo.com'),
@@ -19,3 +20,7 @@ INSERT INTO cours (nom, credits) VALUES
     ('Reseaux informatiques',   3),
     ('Systemes exploitation',   3),
     ('Programmation Web',       3);
+=======
+INSERT INTO etudiants (nom, age, email)
+VALUES ('Test', 20, 'test@email.com');
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23

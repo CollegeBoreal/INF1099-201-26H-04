@@ -1,0 +1,48 @@
+DROP ROLE IF EXISTS administrateur;
+DROP ROLE IF EXISTS employe;
+DROP ROLE IF EXISTS membre_role;
+
+CREATE ROLE administrateur LOGIN PASSWORD 'Admin123!';
+CREATE ROLE employe LOGIN PASSWORD 'Employe123!';
+CREATE ROLE membre_role LOGIN PASSWORD 'Membre123!';
+
+GRANT CONNECT ON DATABASE gym TO administrateur;
+GRANT CONNECT ON DATABASE gym TO employe;
+GRANT CONNECT ON DATABASE gym TO membre_role;
+
+GRANT USAGE ON SCHEMA public TO administrateur;
+GRANT USAGE ON SCHEMA public TO employe;
+GRANT USAGE ON SCHEMA public TO membre_role;
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO administrateur;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO administrateur;
+
+GRANT SELECT, INSERT, UPDATE ON membre TO employe;
+GRANT SELECT, INSERT, UPDATE ON abonnement TO employe;
+GRANT SELECT, INSERT, UPDATE ON inscription TO employe;
+GRANT SELECT, INSERT, UPDATE ON paiement TO employe;
+GRANT SELECT ON coach TO employe;
+GRANT SELECT ON salle TO employe;
+GRANT SELECT ON cours TO employe;
+GRANT SELECT ON type_abonnement TO employe;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO employe;
+
+GRANT SELECT ON membre TO membre_role;
+GRANT SELECT ON type_abonnement TO membre_role;
+GRANT SELECT ON cours TO membre_role;
+GRANT SELECT ON coach TO membre_role;
+GRANT SELECT ON salle TO membre_role;
+GRANT SELECT ON abonnement TO membre_role;
+GRANT SELECT ON paiement TO membre_role;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT ALL PRIVILEGES ON TABLES TO administrateur;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT ALL PRIVILEGES ON SEQUENCES TO administrateur;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT SELECT, INSERT, UPDATE ON TABLES TO employe;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT SELECT ON TABLES TO membre_role;

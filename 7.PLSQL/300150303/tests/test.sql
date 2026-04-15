@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- ==================================================================================
 -- tests/test.sql
 -- TP PostgreSQL : Tests des procédures, fonctions et triggers
@@ -12,17 +13,28 @@ CALL ajouter_etudiant('Marie', 25, 'marie@email.com');
 -- ============================================================
 -- 2. Test : ajouter_etudiant (age invalide < 18)
 -- ============================================================
+=======
+-- Test insertion valide
+CALL ajouter_etudiant('Ali', 22, 'ali@email.com');
+
+-- Test insertion invalide
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 DO $$
 BEGIN
     BEGIN
         CALL ajouter_etudiant('Bob', 15, 'bob@email.com');
     EXCEPTION
         WHEN others THEN
+<<<<<<< HEAD
             RAISE NOTICE 'Erreur attendue (age invalide) : OK';
+=======
+            RAISE NOTICE 'Erreur attendue OK';
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
     END;
 END;
 $$;
 
+<<<<<<< HEAD
 -- ============================================================
 -- 3. Test : ajouter_etudiant (email invalide)
 -- ============================================================
@@ -93,3 +105,10 @@ JOIN cours c ON c.id = i.cours_id;
 -- 10. Vérifier les logs
 -- ============================================================
 SELECT * FROM logs ORDER BY date_action;
+=======
+-- Test fonction
+SELECT nombre_etudiants();
+
+-- Vérifier logs
+SELECT * FROM logs;
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23

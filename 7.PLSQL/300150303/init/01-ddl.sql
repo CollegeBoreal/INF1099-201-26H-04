@@ -23,6 +23,7 @@ CREATE TABLE logs (
     action TEXT,
     date_action TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+<<<<<<< HEAD
 
 CREATE TABLE cours (
     id SERIAL PRIMARY KEY,
@@ -36,3 +37,5 @@ CREATE TABLE inscriptions (
     date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE(etudiant_id, cours_id)
 );
+=======
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23

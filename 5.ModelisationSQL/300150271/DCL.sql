@@ -1,0 +1,4 @@
+CREATE USER agent WITH PASSWORD '1234';
+
+GRANT SELECT ON Client TO agent;
+GRANT SELECT ON Vente TO agent;
