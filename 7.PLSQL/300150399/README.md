@@ -9,7 +9,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![PL/pgSQL](https://img.shields.io/badge/PL%2FpgSQL-Stored%20Procedures-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Podman](https://img.shields.io/badge/Podman-Container-892CA0?style=for-the-badge&logo=podman&logoColor=white)
-![SQL](https://www.datadoghq.com/dg/monitor/mysql-benefits/?utm_source=google&utm_medium=paid-search&utm_campaign=dg-dbm-na-mysql-db&utm_keyword=monitor%20mysql&utm_matchtype=b&igaag=146321146272&igaat=&igacm=15895795662&igacr=646992148943&igakw=monitor%20mysql&igamt=b&igant=g&utm_campaignid=15895795662&utm_adgroupid=146321146272&gad_source=1&gad_campaignid=15895795662&gbraid=0AAAAADFY9NnQuFrPjYrNgNfFYt3CqqoNO&gclid=CjwKCAjw7vzOBhBxEiwAc7WNr4ySHIBRbv8-8p8hsG2ZTiWS6bBizzRHahlzGkJTE74k8PbAIFLjFRoCkk0QAvD_BwE)
+![SQL](https://img.shields.io/badge/SQL-DDL%20%7C%20DML%20%7C%20Triggers-orange?style=for-the-badge&logo=databricks&logoColor=white)
 
 <!-- BADGES ROW 2 -->
 <br/>
