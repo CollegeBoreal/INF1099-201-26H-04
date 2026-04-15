@@ -1,6 +1,6 @@
 # 🐘 TP PostgreSQL — Automatisation des scripts SQL avec Docker & PowerShell
 
-## 👤 Informations de l’étudiant
+## 👤 Informations de l'étudiant
 - **Nom :** Adjaoud Hocine  
 - **Numéro étudiant :** 300148450  
 
@@ -8,21 +8,21 @@
 
 ## 📌 Description du laboratoire
 
-Ce laboratoire a pour objectif de mettre en pratique l’utilisation des différents types de scripts SQL ainsi que leur automatisation à l’aide d’un script PowerShell dans un environnement Docker.
+Ce laboratoire a pour objectif de mettre en pratique l'utilisation des différents types de scripts SQL ainsi que leur automatisation à l'aide d'un script PowerShell dans un environnement Docker.
 
-L’approche consiste à séparer les opérations SQL en plusieurs fichiers selon leur rôle (DDL, DML, DCL, DQL), puis à automatiser leur exécution dans un conteneur PostgreSQL.
+L'approche consiste à séparer les opérations SQL en plusieurs fichiers selon leur rôle (DDL, DML, DCL, DQL), puis à automatiser leur exécution dans un conteneur PostgreSQL.
 
 ---
 
 ## 🎯 Objectifs pédagogiques
 
-À la fin de ce laboratoire, l’étudiant est capable de :
+À la fin de ce laboratoire, l'étudiant est capable de :
 
 - Comprendre les différents types de scripts SQL  
 - Utiliser Docker pour exécuter PostgreSQL  
-- Écrire un script PowerShell d’automatisation  
+- Écrire un script PowerShell d'automatisation  
 - Charger automatiquement plusieurs scripts SQL  
-- Vérifier le bon fonctionnement d’une base de données  
+- Vérifier le bon fonctionnement d'une base de données  
 
 ---
 
@@ -72,11 +72,17 @@ docker container run -d `
   postgres
 ```
 
+**Capture 1 — Lancement du conteneur :**  
+![docker run](1.png)
+
 ### 🔹 Vérification
 
 ```powershell
 docker container ls
 ```
+
+**Capture 2 — Vérification du conteneur actif :**  
+![docker ls](2.png)
 
 ---
 
@@ -94,7 +100,7 @@ DDL → DML → DCL → DQL
 - Vérifie que les fichiers existent  
 - Exécute chaque script SQL  
 - Génère un fichier de log  
-- Mesure le temps d’exécution  
+- Mesure le temps d'exécution  
 
 ---
 
@@ -110,6 +116,9 @@ Ou avec paramètre :
 pwsh ./load-db.ps1 -Container postgres-lab
 ```
 
+**Capture 3 — Exécution complète de `load-db.ps1` :**  
+![load-db execution](3.png)
+
 ---
 
 ## 🧪 Résultats attendus
@@ -118,29 +127,6 @@ pwsh ./load-db.ps1 -Container postgres-lab
 - Insertion des données (DML)  
 - Attribution des permissions (DCL)  
 - Affichage des données (DQL)  
-
-Exemple de sortie :
-
-```
-Chargement de la base de données...
-
-Execution de DDL.sql
-CREATE TABLE
-
-Execution de DML.sql
-INSERT 0 5
-
-Execution de DCL.sql
-GRANT
-
-Execution de DQL.sql
- id | nom
-----+------
- 1  | Alice
- 2  | Bob
-
-Chargement terminé.
-```
 
 ---
 
@@ -156,11 +142,25 @@ Puis :
 SELECT * FROM tp_sql.etudiants;
 ```
 
+**Capture 4 — Connexion psql et vérification des données :**  
+![psql verify](4.png)
+
+---
+
+## 📋 Fichier de log généré
+
+```powershell
+Get-Content ./execution.log
+```
+
+**Capture 5 — Contenu du fichier `execution.log` :**  
+![execution log](5.png)
+
 ---
 
 ## ⚠️ Points importants
 
-- L’ordre des scripts est essentiel  
+- L'ordre des scripts est essentiel  
 - Le conteneur Docker doit être actif  
 - Tous les fichiers doivent être présents  
 - Les permissions doivent être correctement définies  
@@ -169,11 +169,11 @@ SELECT * FROM tp_sql.etudiants;
 
 ## 🧠 Analyse
 
-Ce laboratoire démontre l’importance de :
+Ce laboratoire démontre l'importance de :
 
 - La séparation des responsabilités dans les scripts SQL  
-- L’automatisation pour éviter les erreurs humaines  
-- L’utilisation de Docker pour un environnement reproductible  
+- L'automatisation pour éviter les erreurs humaines  
+- L'utilisation de Docker pour un environnement reproductible  
 - La gestion des permissions pour sécuriser les données  
 
 ---
@@ -196,10 +196,12 @@ Ce TP permet de combiner plusieurs compétences essentielles :
 - Utilisation de Docker  
 - Organisation et structuration de projets  
 
-Il constitue une base solide pour des environnements professionnels où l’automatisation et la sécurité sont indispensables.
+Il constitue une base solide pour des environnements professionnels où l'automatisation et la sécurité sont indispensables.
 
 ---
 
 ## 📎 Remarque
 
-Ce travail a été réalisé dans un contexte pédagogique afin de maîtriser les concepts fondamentaux liés à PostgreSQL et à l’automatisation des scripts SQL.
+Ce travail a été réalisé dans un contexte pédagogique afin de maîtriser les concepts fondamentaux liés à PostgreSQL et à l'automatisation des scripts SQL.
+
+**Étudiant :** Adjaoud Hocine — **No. étudiant :** 300148450
