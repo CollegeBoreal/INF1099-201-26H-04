@@ -311,6 +311,15 @@ Chargement terminé.
  <img width="1366" height="727" alt="9" src="https://github.com/user-attachments/assets/d85b5ae3-b098-4b9c-80cd-bbf183470d10" />
 
 ---------------------------
+<img width="774" height="77" alt="10" src="https://github.com/user-attachments/assets/1d5d8628-4e47-4a7a-bf6c-1b4ab5f92244" />
+
+----------------------
+<img width="1366" height="728" alt="11" src="https://github.com/user-attachments/assets/b65fd01a-2d23-44a0-a89e-d97848732ec0" />
+
+-----------------------
+<img width="1366" height="729" alt="12" src="https://github.com/user-attachments/assets/07d0d947-f8a9-4393-a85e-ddc048ca4d5d" />
+
+-----------------------
 
 ## 🎯 Objectif de cette étape
 
@@ -320,3 +329,160 @@ Chargement terminé.
 * Valider le bon fonctionnement global
 
 ---
+
+## ⚙️ Étape 9 — Script PowerShell (Automatisation)
+
+### 🔹 Script complet
+
+```powershell
+param(
+    [string]$Container = "postgres-lab"
+)
+
+$Database = "ecole"
+$User = "postgres"
+
+$Files = "DDL.sql","DML.sql","DCL.sql","DQL.sql"
+
+$LogFile = "execution.log"
+
+$StartTime = Get-Date
+
+"--- Début de l'exécution ---" | Out-File $LogFile
+
+$containerRunning = docker ps --format "{{.Names}}" | Select-String $Container
+
+if (-not $containerRunning) {
+    "ERREUR : le conteneur $Container n'est pas actif !" | Tee-Object -FilePath $LogFile
+    exit
+}
+
+foreach ($file in $Files) {
+
+    if (-not (Test-Path $file)) {
+        "ERREUR : fichier manquant : $file" | Tee-Object -FilePath $LogFile -Append
+        exit
+    }
+
+    "Execution de $file" | Tee-Object -FilePath $LogFile -Append
+
+    Get-Content $file |
+    docker exec -i $Container psql -U $User -d $Database |
+    Tee-Object -FilePath $LogFile -Append
+}
+
+$EndTime = Get-Date
+$Duration = $EndTime - $StartTime
+
+"Temps d'exécution : $Duration" | Tee-Object -FilePath $LogFile -Append
+"--- Fin de l'exécution ---" | Tee-Object -FilePath $LogFile -Append
+```
+
+-------------------------
+<img width="1366" height="731" alt="16" src="https://github.com/user-attachments/assets/6f40449f-9069-4f85-8062-6d177d4a8f83" />
+
+---
+
+## ▶️ Exécution
+
+```powershell
+.\load-db.ps1
+```
+
+ou
+
+```powershell
+.\load-db.ps1 postgres-lab
+```
+---------------------
+<img width="1366" height="729" alt="17" src="https://github.com/user-attachments/assets/32449def-c71f-4bdb-bbac-60d8215a5c36" />
+
+-------------
+<img width="1366" height="727" alt="18" src="https://github.com/user-attachments/assets/401f4bee-4b28-4ece-a163-a5597a7d212b" />
+
+----------------
+<img width="1366" height="729" alt="19" src="https://github.com/user-attachments/assets/11b6d56e-87a4-4973-9bbc-1750d2e7b44f" />
+
+----------------
+
+## ⚠️ Gestion des erreurs
+
+### 🔹 Conteneur arrêté
+
+```text
+ERREUR : le conteneur postgres-lab n'est pas actif !
+```
+
+Solution :
+
+```powershell
+docker start postgres-lab
+```
+
+---
+
+### 🔹 Fichier manquant
+
+```text
+ERREUR : fichier manquant : DDL.sql
+```
+
+✔ Vérification automatique
+
+---------------------
+<img width="1366" height="720" alt="13" src="https://github.com/user-attachments/assets/1f424777-5c37-4d39-afaa-e73437e7ae3a" />
+
+-----------------
+<img width="1366" height="199" alt="14" src="https://github.com/user-attachments/assets/3d2f78f9-af74-428f-9417-e726ea7f0d92" />
+
+-------------------
+<img width="1366" height="726" alt="15" src="https://github.com/user-attachments/assets/bed6339f-d124-4403-b63d-b47d789917c9" />
+
+
+### 🔹 Rôle existant
+
+```text
+ERROR: role "agent_consultation" already exists
+```
+
+✔ Non bloquant
+
+---
+
+## 🧾 Fichier LOG
+
+```powershell
+notepad execution.log
+```
+-------------
+<img width="1366" height="728" alt="20" src="https://github.com/user-attachments/assets/b923499d-235d-4eeb-9613-28054367d2b1" />
+
+--------------
+
+## 🎯 Objectifs atteints
+
+✔ Automatisation complète
+✔ Docker + PostgreSQL
+✔ Scripts SQL complets
+✔ Sécurité (DCL)
+✔ Requêtes avancées
+✔ Script PowerShell robuste
+✔ Gestion des erreurs
+✔ Journalisation (LOG)
+✔ Mesure de performance
+
+---
+
+## 🏁 Conclusion
+
+Ce projet démontre la mise en place d’un système automatisé professionnel pour la gestion d’une base de données PostgreSQL avec Docker.
+
+La solution est :
+
+* fiable
+* réutilisable
+* automatisée
+* prête pour un usage réel
+
+Elle représente une base solide pour des projets plus avancés en DevOps et gestion de bases de données.
+
