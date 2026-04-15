@@ -1,6 +1,6 @@
 -- ==================================================================================
 -- 01-ddl.sql
--- Création des tables de la base de données tpdb
+-- Création des tables — fourni par le professeur
 -- ==================================================================================
 
 CREATE TABLE etudiants (
@@ -9,18 +9,6 @@ CREATE TABLE etudiants (
     age            INT,
     email          TEXT UNIQUE,
     date_creation  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE cours (
-    id    SERIAL PRIMARY KEY,
-    nom   TEXT NOT NULL UNIQUE
-);
-
-CREATE TABLE inscriptions (
-    id           SERIAL PRIMARY KEY,
-    etudiant_id  INT REFERENCES etudiants(id) ON DELETE CASCADE,
-    cours_id     INT REFERENCES cours(id)     ON DELETE CASCADE,
-    UNIQUE (etudiant_id, cours_id)
 );
 
 CREATE TABLE logs (

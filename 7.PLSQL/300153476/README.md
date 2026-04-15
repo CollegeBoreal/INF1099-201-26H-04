@@ -3,22 +3,19 @@
 ## 📁 Structure du projet
 
 ```
-tp_postgres/
-│
+300153476/
 ├── init/
-│   ├── 01-ddl.sql            → Création des tables
-│   ├── 02-dml.sql            → Données initiales
-│   └── 03-programmation.sql  → Fonctions, procédures et triggers
-│
+│   ├── 01-ddl.sql            → Création des tables (fourni par le prof)
+│   ├── 02-dml.sql            → Données initiales (fourni par le prof)
+│   └── 03-programmation.sql  → Fonctions, procédures et triggers (complété)
 ├── tests/
-│   └── test.sql              → Jeu de tests complet
-│
+│   └── test.sql              → Jeu de tests
 └── README.md
 ```
 
 ---
 
-## 🐳 Lancer PostgreSQL avec Docker
+## 🐳 Lancer PostgreSQL avec Docker / Podman
 
 ### 🪟 Windows (PowerShell)
 
@@ -33,7 +30,7 @@ docker run -d `
   postgres:15
 ```
 
-### 🐧 Linux / macOS
+### 🐧 Linux / WSL
 
 ```bash
 docker run -d \
@@ -45,8 +42,6 @@ docker run -d \
   -v ${PWD}/init:/docker-entrypoint-initdb.d \
   postgres:15
 ```
-
-> 💡 Les fichiers SQL dans `init/` sont exécutés **automatiquement** au démarrage dans l'ordre alphabétique.
 
 ---
 
@@ -66,7 +61,7 @@ docker exec -it tp_postgres psql -U etudiant -d tpdb
 Get-Content tests/test.sql | docker exec -i tp_postgres psql -U etudiant -d tpdb
 ```
 
-### 🐧 Linux / macOS
+### 🐧 Linux / WSL
 
 ```bash
 docker exec -i tp_postgres psql -U etudiant -d tpdb < tests/test.sql
@@ -74,23 +69,11 @@ docker exec -i tp_postgres psql -U etudiant -d tpdb < tests/test.sql
 
 ---
 
-## 📋 Ce que contient `03-programmation.sql`
+## 📋 Contenu de `03-programmation.sql`
 
 | Élément | Type | Description |
 |---|---|---|
 | `ajouter_etudiant` | PROCEDURE | Ajoute un étudiant avec validation âge/email et journalisation |
 | `nombre_etudiants_par_age` | FUNCTION | Retourne le nombre d'étudiants dans une tranche d'âge |
-| `inscrire_etudiant_cours` | PROCEDURE | Inscrit un étudiant à un cours avec vérifications |
-| `valider_etudiant` | TRIGGER (BEFORE INSERT) | Bloque toute insertion invalide dans `etudiants` |
-| `log_action` | TRIGGER (AFTER INSERT/UPDATE/DELETE) | Journalise toutes les modifications dans `logs` |
-
----
-
-## 🗄️ Tables de la base
-
-| Table | Description |
-|---|---|
-| `etudiants` | Données des étudiants |
-| `cours` | Liste des cours disponibles |
-| `inscriptions` | Liens entre étudiants et cours |
-| `logs` | Journal automatique de toutes les actions |
+| `valider_etudiant` | TRIGGER BEFORE INSERT | Bloque toute insertion invalide dans `etudiants` |
+| `log_action` | TRIGGER AFTER INSERT/UPDATE/DELETE | Journalise toutes les modifications dans `logs` |
