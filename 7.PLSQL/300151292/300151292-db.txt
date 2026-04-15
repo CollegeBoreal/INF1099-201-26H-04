@@ -23,23 +23,23 @@ DO
 DO
  id |      nom       | age |            email            |       date_creation        
 ----+----------------+-----+-----------------------------+----------------------------
-  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-15 21:35:25.54508
-  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-15 21:35:25.54508
-  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-15 21:35:25.54508
-  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-15 21:35:25.54508
-  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-15 21:35:26.041857
+  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-15 21:41:28.025168
+  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-15 21:41:28.025168
+  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-15 21:41:28.025168
+  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-15 21:41:28.025168
+  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-15 21:41:28.51067
 (5 rows)
 
- id | utilisateur_id | activite_id |      date_reservation      |  statut   
-----+----------------+-------------+----------------------------+-----------
-  1 |              5 |           1 | 2026-04-15 21:35:26.041857 | confirmee
+ id | utilisateur_id | activite_id |     date_reservation      |  statut   
+----+----------------+-------------+---------------------------+-----------
+  1 |              5 |           1 | 2026-04-15 21:41:28.51067 | confirmee
 (1 row)
 
- id |                       action                        |        date_action         
-----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur utilisateurs : 5                         | 2026-04-15 21:35:26.041857
-  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-15 21:35:26.041857
-  3 | INSERT sur reservations : 1                         | 2026-04-15 21:35:26.041857
-  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-15 21:35:26.041857
+ id |                       action                        |        date_action        
+----+-----------------------------------------------------+---------------------------
+  1 | INSERT sur utilisateurs : 5                         | 2026-04-15 21:41:28.51067
+  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-15 21:41:28.51067
+  3 | INSERT sur reservations : 1                         | 2026-04-15 21:41:28.51067
+  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-15 21:41:28.51067
 (4 rows)
 
