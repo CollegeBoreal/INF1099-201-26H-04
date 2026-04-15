@@ -1,61 +1,10 @@
 Chargement de la base de données...
 Execution de DDL.sql
-DROP TABLE
-DROP TABLE
-DROP TABLE
-NOTICE:  table "message" does not exist, skipping
-NOTICE:  table "match" does not exist, skipping
-NOTICE:  table "preference" does not exist, skipping
-NOTICE:  table "annonce" does not exist, skipping
-DROP TABLE
-NOTICE:  table "profil" does not exist, skipping
-NOTICE:  table "utilisateur" does not exist, skipping
-DROP TABLE
-DROP TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
+Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
 Execution de DML.sql
-INSERT 0 2
-INSERT 0 1
-INSERT 0 1
-INSERT 0 1
-INSERT 0 1
-INSERT 0 1
+Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
 Execution de DCL.sql
-CREATE ROLE
-GRANT
-GRANT
-GRANT
-ALTER DEFAULT PRIVILEGES
+Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
 Execution de DQL.sql
- id_utilisateur |  nom   | prenom  |       email       | mot_de_passe | telephone  | date_inscription 
-----------------+--------+---------+-------------------+--------------+------------+------------------
-              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-04-14
-              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-04-14
-(2 rows)
-
- id_annonce | type_annonce |  ville   | loyer  | date_disponibilite |     description      |   statut   | id_utilisateur 
-------------+--------------+----------+--------+--------------------+----------------------+------------+----------------
-          1 | Colocation   | Montreal | 750.00 | 2026-02-01         | Chambre proche metro | Disponible |              2
-(1 row)
-
-  nom   | prenom  | age |  ville   
---------+---------+-----+----------
- Diallo | Mamadou |  22 | Montreal
-(1 row)
-
-             contenu              |         date_envoi         | prenom  
-----------------------------------+----------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-04-14 23:45:13.897968 | Mamadou
-(1 row)
-
- id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
-----------+------------+----------+------------------+------------------
-        1 | 2026-04-14 | En cours |                1 |                2
-(1 row)
-
+Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
 Chargement terminé.

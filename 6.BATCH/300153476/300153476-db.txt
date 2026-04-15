@@ -1,16 +1,11 @@
 Chargement de la base de données...
 Execution de DDL.sql
 NOTICE:  table "message_chatia" does not exist, skipping
-DROP TABLE
 NOTICE:  table "session_chatia" does not exist, skipping
+DROP TABLE
+DROP TABLE
 NOTICE:  table "participation_concours" does not exist, skipping
 NOTICE:  table "concours" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
 DROP TABLE
 DROP TABLE
 DROP TABLE
@@ -21,15 +16,20 @@ NOTICE:  table "recompense" does not exist, skipping
 NOTICE:  table "note" does not exist, skipping
 NOTICE:  table "soumission_devoir" does not exist, skipping
 NOTICE:  table "devoir" does not exist, skipping
+DROP TABLE
+DROP TABLE
 NOTICE:  table "ressource" does not exist, skipping
+DROP TABLE
 NOTICE:  table "inscription" does not exist, skipping
+DROP TABLE
 NOTICE:  table "session_cours" does not exist, skipping
+DROP TABLE
 NOTICE:  table "cours" does not exist, skipping
 DROP TABLE
 NOTICE:  table "professeur" does not exist, skipping
 DROP TABLE
-DROP TABLE
 NOTICE:  table "enfant" does not exist, skipping
+DROP TABLE
 NOTICE:  table "parent" does not exist, skipping
 DROP TABLE
 CREATE TABLE
@@ -125,23 +125,23 @@ DELETE 1
 DELETE 0
 Execution de DCL.sql
 NOTICE:  role "admin_diallo" does not exist, skipping
-DROP ROLE
 NOTICE:  role "prof_martin" does not exist, skipping
-DROP ROLE
-DROP ROLE
-DROP ROLE
 NOTICE:  role "parent_tremblay" does not exist, skipping
 NOTICE:  role "enfant_emma" does not exist, skipping
-DROP ROLE
-DROP ROLE
-DROP ROLE
-DROP ROLE
 NOTICE:  role "auditeur_sys" does not exist, skipping
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
+DROP ROLE
 NOTICE:  role "admin_plateforme" does not exist, skipping
 NOTICE:  role "professeur_role" does not exist, skipping
 NOTICE:  role "parent_role" does not exist, skipping
-DROP ROLE
-DROP ROLE
 NOTICE:  role "enfant_role" does not exist, skipping
 NOTICE:  role "lecture_seule" does not exist, skipping
 CREATE ROLE
@@ -337,12 +337,13 @@ Execution de DQL.sql
 
            titre_devoir            |        titre_cours        | date_limite | jours_restants 
 -----------------------------------+---------------------------+-------------+----------------
- Vocabulary quiz                   | English for beginners     | 2026-04-17  |              3
- Résumé de lecture                 | Lecture et compréhension  | 2026-04-18  |              4
- Rapport expérience                | Introduction aux sciences | 2026-04-19  |              5
- Exercices additions/soustractions | Arithmétique de base      | 2026-04-20  |              6
- Animation Scratch                 | Programmation Scratch     | 2026-04-21  |              7
-(5 rows)
+ Vocabulary quiz                   | English for beginners     | 2026-04-17  |              2
+ Résumé de lecture                 | Lecture et compréhension  | 2026-04-18  |              3
+ Rapport expérience                | Introduction aux sciences | 2026-04-19  |              4
+ Exercices additions/soustractions | Arithmétique de base      | 2026-04-20  |              5
+ Animation Scratch                 | Programmation Scratch     | 2026-04-21  |              6
+ Problèmes algébriques             | Algèbre niveau secondaire | 2026-04-22  |              7
+(6 rows)
 
         titre_cours        | nb_evaluations | moyenne_generale | note_min | note_max 
 ---------------------------+----------------+------------------+----------+----------
