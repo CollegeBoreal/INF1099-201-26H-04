@@ -1,4 +1,4 @@
-=== Début : 04/15/2026 22:02:25 ===
+=== Début : 04/15/2026 22:06:53 ===
 Execution de DDL.sql
 CREATE TABLE
 CREATE TABLE
@@ -54,4 +54,4 @@ Execution de DQL.sql
  Isabelle Côté  |               1
 (5 rows)
 
-=== Terminé : 04/15/2026 22:02:26 | Durée : 0.5036792 secondes ===
+=== Terminé : 04/15/2026 22:06:54 | Durée : 0.433177 secondes ===
