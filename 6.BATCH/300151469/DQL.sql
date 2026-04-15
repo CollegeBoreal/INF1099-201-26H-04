@@ -2,8 +2,6 @@
 -- Auteure : Rabia BOUHALI | Matricule : 300151469
 -- Requêtes de consultation TCF Canada
 
-\c tcf_canada_300151469;
-
 -- 1. Tous les candidats
 SELECT * FROM candidat;
 

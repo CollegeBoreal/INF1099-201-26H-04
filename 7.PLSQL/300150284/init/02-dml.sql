@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+INSERT INTO etudiants (nom, age, email)
+VALUES ('Test', 20, 'test@email.com');
+
+INSERT INTO cours (nom) VALUES
+('Math'),
+('Informatique'),
+('Physique');
+=======
 -- ============================================================
 -- 02-dml.sql
 -- TP PostgreSQL — Procédures, Fonctions et Triggers
@@ -19,3 +28,4 @@ INSERT INTO cours (nom, credits) VALUES
     ('Administration reseau', 3),
     ('Programmation Python', 3),
     ('Securite informatique', 3);
+>>>>>>> f650d2d5a543182bc73855a0024af6ff9f85c796
