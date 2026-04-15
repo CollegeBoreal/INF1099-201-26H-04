@@ -1,32 +1,12 @@
-==================================================
-  TP NoSQL - PostgreSQL JSONB
-==================================================
+Traceback (most recent call last):
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300150295/app.py", line 4, in <module>
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
 
- INSERT - Ajout de Diana
-   Diana ajoutee avec succes.
-
- SELECT ALL - Tous les etudiants :
-   [1] Alice (25 ans) - Python, Docker
-   [2] Bob (22 ans) - Java, SQL
-   [3] Charlie (30 ans) - Linux, Bash, Python
-   [4] Diana (28 ans) - DevOps, Kubernetes
-
- SEARCH - Recherche Alice :
-   Trouve : {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
-
- SEARCH - Etudiants maitrisant Python :
-   Alice
-   Charlie
-
- BONUS UPDATE - Modifier age de Bob a 23 ans :
-   Bob mis a jour : {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
-
- BONUS DELETE - Supprimer Diana :
-   1 etudiant(e) supprime(e).
-
- Etat final :
-   [1] Alice - 25 ans
-   [2] Bob - 23 ans
-   [3] Charlie - 30 ans
-
- Connexion fermee. TP termine.

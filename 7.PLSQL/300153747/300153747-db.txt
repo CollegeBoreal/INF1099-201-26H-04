@@ -1,15 +1,4 @@
-NOTICE:  Etudiant ajouté : Ali
-NOTICE:  Erreur lors de l’ajout : Age invalide pour Bob
-CALL
-DO
- nombre_etudiants 
-------------------
-                2
-(1 row)
-
- id |        action        |        date_action         
-----+----------------------+----------------------------
-  1 | Ajout étudiant : Ali | 2026-04-15 15:42:07.236715
-  2 | Ajout étudiant : Ali | 2026-04-15 15:42:07.236715
-(2 rows)
-
+ERROR:  procedure ajouter_etudiant(unknown, integer, unknown) does not exist
+LINE 2: CALL ajouter_etudiant('Ali', 22, 'ali@email.com');
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
