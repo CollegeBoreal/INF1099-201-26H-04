@@ -6,18 +6,21 @@
 Conteneur actif. Debut du chargement...
 
 Execution de DDL.sql ...
-Error response from daemon: container f04d64d9d9ccad1e14e1f67dd1a56078d22898cc45e131f79b868e9a88353837 is not running
+ERROR:  syntax error at or near "NOT"
+LINE 1: CREATE DATABASE IF NOT EXISTS tcf_canada_300151469;
+                           ^
+\connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
 
 Execution de DML.sql ...
-Error response from daemon: container f04d64d9d9ccad1e14e1f67dd1a56078d22898cc45e131f79b868e9a88353837 is not running
+\connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
 
 Execution de DCL.sql ...
-Error response from daemon: container f04d64d9d9ccad1e14e1f67dd1a56078d22898cc45e131f79b868e9a88353837 is not running
+\connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
 
 Execution de DQL.sql ...
-Error response from daemon: container f04d64d9d9ccad1e14e1f67dd1a56078d22898cc45e131f79b868e9a88353837 is not running
+\connect: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tcf_canada_300151469" does not exist
 
 ========================================
- Chargement termine en 0.26 secondes.
+ Chargement termine en 0.49 secondes.
  Log sauvegarde dans : execution.log
 ========================================

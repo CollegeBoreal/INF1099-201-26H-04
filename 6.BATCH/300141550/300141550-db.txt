@@ -1,1 +1,30 @@
-ERREUR : le conteneur postgres-lab n'est pas actif.
+Execution de DDL.sql
+Execution de DML.sql
+Execution de DCL.sql
+Execution de DQL.sql
+ id_client |  nom  | prenom | post_nom | telephone |     email      | date_creation 
+-----------+-------+--------+----------+-----------+----------------+---------------
+         1 | Doe   | John   |          | 123456789 | john@email.com | 2026-04-15
+         2 | Smith | Anna   |          | 987654321 | anna@email.com | 2026-04-15
+(2 rows)
+
+ nom | id_commande | total_commande 
+-----+-------------+----------------
+ Doe |           1 |          28.49
+(1 row)
+
+ id_commande |   nom_plat    | quantite 
+-------------+---------------+----------
+           1 | Poulet Moambe |        1
+           1 | Sushi         |        1
+(2 rows)
+
+ id_livraison | nom  | statut_livraison 
+--------------+------+------------------
+            1 | Mike | Livré
+(1 row)
+
+Temps d'exécution : 00:00:00.4334709
+Temps d'exécution : 00:00:00.4334709
+=== Chargement terminé avec succès ===
+=== Fin ===

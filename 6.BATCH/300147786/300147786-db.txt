@@ -1,10 +1,61 @@
 Chargement de la base de données...
 Execution de DDL.sql
-Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
+NOTICE:  table "message" does not exist, skipping
+NOTICE:  table "match" does not exist, skipping
+DROP TABLE
+DROP TABLE
+NOTICE:  table "preference" does not exist, skipping
+NOTICE:  table "annonce" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+NOTICE:  table "profil" does not exist, skipping
+NOTICE:  table "utilisateur" does not exist, skipping
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
 Execution de DML.sql
-Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
 Execution de DCL.sql
-Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
+CREATE ROLE
+GRANT
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
 Execution de DQL.sql
-Error response from daemon: container 7922fbcaf3356fca6a6b4d3a94ca9ce2915314eaa57a9381ec32b37a447011c9 is not running
+ id_utilisateur |  nom   | prenom  |       email       | mot_de_passe | telephone  | date_inscription 
+----------------+--------+---------+-------------------+--------------+------------+------------------
+              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-04-15
+              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-04-15
+(2 rows)
+
+ id_annonce | type_annonce |  ville   | loyer  | date_disponibilite |     description      |   statut   | id_utilisateur 
+------------+--------------+----------+--------+--------------------+----------------------+------------+----------------
+          1 | Colocation   | Montreal | 750.00 | 2026-02-01         | Chambre proche metro | Disponible |              2
+(1 row)
+
+  nom   | prenom  | age |  ville   
+--------+---------+-----+----------
+ Diallo | Mamadou |  22 | Montreal
+(1 row)
+
+             contenu              |         date_envoi         | prenom  
+----------------------------------+----------------------------+---------
+ Salut, ton annonce m’intéresse ! | 2026-04-15 02:09:52.763944 | Mamadou
+(1 row)
+
+ id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
+----------+------------+----------+------------------+------------------
+        1 | 2026-04-15 | En cours |                1 |                2
+(1 row)
+
 Chargement terminé.

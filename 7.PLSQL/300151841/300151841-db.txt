@@ -1,4 +1,38 @@
-ERROR:  procedure ajouter_etudiant(unknown, integer, unknown) does not exist
-LINE 1: CALL ajouter_etudiant('Nadia', 23, 'nadia@email.com');
-             ^
-HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+NOTICE:  Etudiant ajoute avec succes : Nadia
+CALL
+NOTICE:  Inscription reussie
+ nombre_etudiants_par_age 
+--------------------------
+                        5
+(1 row)
+
+CALL
+ id |  nom  | age |      email      |       date_creation        
+----+-------+-----+-----------------+----------------------------
+  1 | Massi |  21 | massi@email.com | 2026-04-15 02:10:56.920587
+  2 | Alice |  22 | alice@email.com | 2026-04-15 02:10:56.920587
+  3 | Karim |  24 | karim@email.com | 2026-04-15 02:10:56.920587
+  4 | Sofia |  20 | sofia@email.com | 2026-04-15 02:10:56.920587
+  5 | Nadia |  23 | nadia@email.com | 2026-04-15 02:10:57.381857
+(5 rows)
+
+ id |       nom        | credits 
+----+------------------+---------
+  1 | Bases de donnees |       3
+  2 | Programmation    |       4
+  3 | Reseautique      |       3
+  4 | Systemes         |       4
+(4 rows)
+
+ id | etudiant_id | cours_id |      date_inscription      
+----+-------------+----------+----------------------------
+  1 |           2 |        1 | 2026-04-15 02:10:57.381857
+(1 row)
+
+ id |                      action                       |        date_action         
+----+---------------------------------------------------+----------------------------
+  1 | INSERT etudiants                                  | 2026-04-15 02:10:57.381857
+  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-15 02:10:57.381857
+  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-15 02:10:57.381857
+(3 rows)
+
