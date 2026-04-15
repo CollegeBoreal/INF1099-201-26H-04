@@ -1,16 +1,36 @@
 param([string]$Container = "postgres-immo")
 
-$Database="immobilier"
-$User="postgres"
+$Database = "ecole"
+$User     = "postgres"
+$LogFile  = "execution.log"
 
-Write-Host "Execution DDL"
-Get-Content DDL.sql | docker exec -i $Container psql -U $User -d $Database
+$Files = @("DDL.sql","DML.sql","DCL.sql","DQL.sql")
 
-Write-Host "Execution DML"
-Get-Content DML.sql | docker exec -i $Container psql -U $User -d $Database
+$start = Get-Date
 
-Write-Host "Execution DCL"
-Get-Content DCL.sql | docker exec -i $Container psql -U $User -d $Database
+"Début du chargement..." | Out-File $LogFile
 
-Write-Host "Execution DQL"
-Get-Content DQL.sql | docker exec -i $Container psql -U $User -d $Database
+# Vérifier si conteneur actif
+$running = docker ps --format "{{.Names}}" | Select-String $Container
+if (-not $running) {
+    "ERREUR : conteneur non actif" | Tee-Object -FilePath $LogFile -Append
+    exit
+}
+
+foreach ($file in $Files) {
+
+    if (-not (Test-Path $file)) {
+        "ERREUR : fichier manquant $file" | Tee-Object -FilePath $LogFile -Append
+        exit
+    }
+
+    "Execution de $file" | Tee-Object -FilePath $LogFile -Append
+
+    Get-Content $file | docker exec -i $Container psql -U $User -d $Database |
+    Tee-Object -FilePath $LogFile -Append
+}
+
+$end = Get-Date
+$duree = ($end - $start).TotalSeconds
+
+"Terminé en $duree secondes" | Tee-Object -FilePath $LogFile -Append
