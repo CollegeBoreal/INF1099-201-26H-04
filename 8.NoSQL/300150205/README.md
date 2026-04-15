@@ -212,7 +212,7 @@ Connexion fermee.
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Python](images/NOSQL3.PNG)
+![Python](images/3.png)
 
 </details>
 
