@@ -107,3 +107,4 @@ DROP USER technicien_user;
 DROP USER gestionnaire_user;
 
 Resultat : ERROR role cannot be dropped because some objects depend on it
+Mise à jour finale
