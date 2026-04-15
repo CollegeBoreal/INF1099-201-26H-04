@@ -1,12 +1,12 @@
 Execution de DDL.sql...
   >> NOTICE:  table "payement" does not exist, skipping
   >> NOTICE:  table "rendez_vous" does not exist, skipping
-  >> DROP TABLE
-  >> DROP TABLE
   >> NOTICE:  table "modele" does not exist, skipping
   >> NOTICE:  table "service" does not exist, skipping
   >> NOTICE:  table "coiffeuse" does not exist, skipping
   >> NOTICE:  table "client" does not exist, skipping
+  >> DROP TABLE
+  >> DROP TABLE
   >> DROP TABLE
   >> DROP TABLE
   >> DROP TABLE
