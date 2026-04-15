@@ -1,12 +1,12 @@
 Chargement de la base de données...
 Execution de DDL.sql
+DROP TABLE
 NOTICE:  table "livraison" does not exist, skipping
 NOTICE:  table "paiement" does not exist, skipping
 NOTICE:  table "ligne_commande" does not exist, skipping
 NOTICE:  table "commande" does not exist, skipping
 NOTICE:  table "maillot" does not exist, skipping
 NOTICE:  table "categorie_maillot" does not exist, skipping
-DROP TABLE
 NOTICE:  table "adresse" does not exist, skipping
 NOTICE:  table "client" does not exist, skipping
 NOTICE:  table "livreur" does not exist, skipping
