@@ -4,8 +4,8 @@ Execution de DCL.sql
 Execution de DQL.sql
  id_client |  nom  | prenom | post_nom | telephone |     email      | date_creation 
 -----------+-------+--------+----------+-----------+----------------+---------------
-         1 | Doe   | John   |          | 123456789 | john@email.com | 2026-04-14
-         2 | Smith | Anna   |          | 987654321 | anna@email.com | 2026-04-14
+         1 | Doe   | John   |          | 123456789 | john@email.com | 2026-04-15
+         2 | Smith | Anna   |          | 987654321 | anna@email.com | 2026-04-15
 (2 rows)
 
  nom | id_commande | total_commande 
@@ -24,7 +24,7 @@ Execution de DQL.sql
             1 | Mike | Livré
 (1 row)
 
-Temps d'exécution : 00:00:00.4306294
-Temps d'exécution : 00:00:00.4306294
+Temps d'exécution : 00:00:00.4264665
+Temps d'exécution : 00:00:00.4264665
 === Chargement terminé avec succès ===
 === Fin ===
