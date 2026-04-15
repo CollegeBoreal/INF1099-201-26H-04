@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # INF1099-201-26H-04 ( ✅ Mercredi 13:30pm S208 )
 
 INF1099 (201) - Administration de base de données
@@ -73,5 +71,3 @@ Le déroulement peut être modifié au besoin. La personne étudiante sera avis�
 ---
 
 # :books: References
->>>>>>> 8cc3632d8195d02e563d6338bb59b1ccda9a249d
-
