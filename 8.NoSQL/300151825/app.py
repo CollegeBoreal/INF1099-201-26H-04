@@ -1,4 +1,3 @@
-Set-Content app.py -Encoding UTF8 -Value @"
 import psycopg2
 import json
 import os
@@ -8,7 +7,6 @@ conn = psycopg2.connect(
     user="postgres",
     password="postgres",
     host="localhost",
-    port=int(os.environ.get("DB_PORT", 5432))
 )
 
 cur = conn.cursor()
