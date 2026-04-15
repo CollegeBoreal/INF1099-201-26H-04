@@ -7,13 +7,13 @@ DROP TABLE
 DROP TABLE
 DROP TABLE
 DROP TABLE
+DROP TABLE
+DROP TABLE
 NOTICE:  table "lignecommande" does not exist, skipping
 NOTICE:  table "commande" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "stock" does not exist, skipping
 NOTICE:  table "crampon" does not exist, skipping
+DROP TABLE
 NOTICE:  table "categorie" does not exist, skipping
 NOTICE:  table "marque" does not exist, skipping
 NOTICE:  table "adresse" does not exist, skipping
