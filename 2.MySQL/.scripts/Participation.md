@@ -26,7 +26,7 @@
 | 7 | [300150205](../300150205/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994753?s=460&v=4' width=20 height=20></image>](https://github.com/blbsblm) | :1st_place_medal: | :heavy_check_mark: | :four: | 
 | 8 | [300150271](../300150271/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994932?s=460&v=4' width=20 height=20></image>](https://github.com/mazighs) | :2nd_place_medal: | :heavy_check_mark: | :zero: | 
 | 9 | [300150284](../300150284/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994902?s=460&v=4' width=20 height=20></image>](https://github.com/aroua-git) | :2nd_place_medal: | :heavy_check_mark: | :zero: | 
-| 10 | [300150293](../300150293/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image>](https://github.com/amir1450) | :x: | :x: | :zero: | 
+| 10 | [300150293](../300150293/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/212635146?s=460&v=4' width=20 height=20></image>](https://github.com/amir1450) | :x: | :heavy_check_mark: | :zero: | 
 | 11 | [300150295](../300150295/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/205994740?s=460&v=4' width=20 height=20></image>](https://github.com/lounasallouti1) | :1st_place_medal: | :heavy_check_mark: | :seven: | 
 | 12 | [300150303](../300150303/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211592293?s=460&v=4' width=20 height=20></image>](https://github.com/jessmaud) | :1st_place_medal: | :x: | :five: | 
 | 13 | [300150399](../300150399/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/195236786?s=460&v=4' width=20 height=20></image>](https://github.com/chkips) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
@@ -43,4 +43,4 @@
 | 24 | [300153476](../300153476/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/129418622?s=460&v=4' width=20 height=20></image>](https://github.com/dialloramatoulayebah) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 25 | [300153747](../300153747/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/211754108?s=460&v=4' width=20 height=20></image>](https://github.com/madjou15) | :1st_place_medal: | :heavy_check_mark: | :keycap_ten: | 
 | 26 | [300154718](../300154718/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/243453409?s=460&v=4' width=20 height=20></image>](https://github.com/stephanetidjet) | :1st_place_medal: | :heavy_check_mark: | :seven: | 
-| :abacus: | \$\frac{19}{27}\$ = 70.37% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 19 |
+| :abacus: | \$\frac{20}{27}\$ = 74.07% | \$\displaystyle\sum_{i=1}^{27} s_i\$ = 20 |

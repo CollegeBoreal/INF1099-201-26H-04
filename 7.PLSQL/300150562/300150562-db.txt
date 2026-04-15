@@ -9,7 +9,7 @@ DO
 
  id |        action        |        date_action         
 ----+----------------------+----------------------------
-  1 | INSERT sur etudiants | 2026-04-15 18:56:12.864397
-  2 | Ajout étudiant : Ali | 2026-04-15 18:56:12.864397
+  1 | INSERT sur etudiants | 2026-04-15 18:58:54.991506
+  2 | Ajout étudiant : Ali | 2026-04-15 18:58:54.991506
 (2 rows)
 
