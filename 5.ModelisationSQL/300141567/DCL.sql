@@ -1,7 +1,7 @@
 CREATE USER etudiant WITH PASSWORD '1234';
 CREATE USER admin WITH PASSWORD 'admin123';
 
-GRANT CONNECT ON DATABASE cours TO etudiant, admin;
+GRANT CONNECT ON DATABASE ecole TO etudiant, admin;
 
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO etudiant;
 
