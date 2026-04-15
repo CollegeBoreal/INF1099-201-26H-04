@@ -14,6 +14,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Sync with remote
+        run: |
+          git pull --rebase origin main
+
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
 
@@ -39,6 +43,10 @@ jobs:
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git commit -am "Vérification de la participation" || echo "No changes"
+
+      - name: Final rebase safety
+        run: |
+          git pull --rebase origin main
 
       - name: Push changes
         run: |
