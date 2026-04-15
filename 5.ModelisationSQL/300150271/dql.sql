@@ -1,11 +1,7 @@
--- SELECT simple
 SELECT * FROM Client;
+SELECT * FROM Immeuble;
+SELECT * FROM Appartement;
+SELECT * FROM Vente;
 
--- SELECT avec jointure
-SELECT 
-    c.Nom,
-    a.NumAppartement,
-    v.DateVente
-FROM Vente v
-JOIN Client c ON v.IdClient = c.IdClient
-JOIN Appartement a ON v.IdAppartement = a.IdAppartement;
+SELECT Nom FROM Client;
+SELECT Ville FROM Immeuble;
