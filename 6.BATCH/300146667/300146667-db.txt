@@ -1,10 +1,10 @@
-[03:20:59] Demarrage du chargement...
-[03:20:59] Execution de DDL.sql
+[03:25:31] Demarrage du chargement...
+[03:25:31] Execution de DDL.sql
 Error response from daemon: No such container: postgres
-[03:20:59] Execution de DML.sql
+[03:25:31] Execution de DML.sql
 Error response from daemon: No such container: postgres
-[03:20:59] Execution de DCL.sql
+[03:25:31] Execution de DCL.sql
 Error response from daemon: No such container: postgres
-[03:20:59] Execution de DQL.sql
+[03:25:32] Execution de DQL.sql
 Error response from daemon: No such container: postgres
-[03:20:59] Termine en 0.18 secondes!
+[03:25:32] Termine en 0.15 secondes!
