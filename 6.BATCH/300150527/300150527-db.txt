@@ -1,6 +1,5 @@
 Execution de DDL.sql
 NOTICE:  table "servicesol" does not exist, skipping
-DROP TABLE
 NOTICE:  table "incident" does not exist, skipping
 NOTICE:  table "maintenance" does not exist, skipping
 NOTICE:  table "controlesecurite" does not exist, skipping
@@ -15,6 +14,7 @@ NOTICE:  table "gate" does not exist, skipping
 NOTICE:  table "terminal" does not exist, skipping
 NOTICE:  table "avion" does not exist, skipping
 NOTICE:  table "compagnieaerienne" does not exist, skipping
+DROP TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -131,5 +131,5 @@ Execution de DQL.sql
  Boeing 787  |      250
 (3 rows)
 
-Temps d'exécution : 00:00:00.5057295
+Temps d'exécution : 00:00:00.4997497
 --- Fin de l'exécution ---
