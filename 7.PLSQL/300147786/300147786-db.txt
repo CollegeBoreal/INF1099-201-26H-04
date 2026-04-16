@@ -1,8 +1,8 @@
 NOTICE:  ❌ Erreur ajout étudiant Ali : column reference "email" is ambiguous
 NOTICE:  ❌ Erreur ajout étudiant Bob : Age invalide (<18) pour Bob
+CALL
 ERROR:  function nombre_etudiants() does not exist
 LINE 17: SELECT nombre_etudiants();
                 ^
 HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
-CALL
 DO
