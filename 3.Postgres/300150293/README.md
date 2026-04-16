@@ -60,7 +60,7 @@ docker container ls
 
 ```
 
-!\[Capture 1 - Conteneur actif](images/etape2.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape2.png)
 
 
 
@@ -126,9 +126,9 @@ podman container exec postgres psql -U postgres -d appdb -c "SELECT COUNT(\*) FR
 
 ```
 
-!\[Capture 2 - Liste des tables](images/etape3.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape3.png)
 
-!\[Capture 3 et 4 - COUNT film et actor](images/etape4.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape4.png)
 
 
 
@@ -164,15 +164,15 @@ choco install pgadmin4 -y
 
 
 
-!\[Capture 5 - Configuration pgAdmin](images/etape 5.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape%205.png)
 
 
 
 \### Étape 9 — Explorer la base Sakila
 
-!\[Capture 6 - Dashboard pgAdmin](images/etape6.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape6.png)
 
-!\[Capture 7 - Tables Sakila](images/etape7.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape7.png)
 
 
 
@@ -192,7 +192,7 @@ SELECT title FROM film WHERE title ILIKE '%Star%';
 
 ```
 
-!\[Résultat Ex.1](images/etape8.1.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape8.1.png)
 
 
 
@@ -204,7 +204,7 @@ SELECT COUNT(\*) FROM actor;
 
 ```
 
-!\[Résultat Ex.2](images/etape8.2.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape8.2.png)
 
 
 
@@ -220,5 +220,5 @@ LIMIT 5;
 
 ```
 
-!\[Résultat Ex.3](images/etape8.3.png)
+![wait](https://github.com/CollegeBoreal/INF1099-201-26H-04/blob/main/3.Postgres/300150293/images/etape8.3.png)
 
