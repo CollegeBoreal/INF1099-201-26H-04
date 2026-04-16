@@ -1,15 +1,15 @@
 Chargement de la base de données...
 Execution de DDL.sql
-DROP TABLE
-DROP TABLE
 NOTICE:  table "message" does not exist, skipping
 NOTICE:  table "match" does not exist, skipping
+DROP TABLE
+DROP TABLE
 NOTICE:  table "preference" does not exist, skipping
+DROP TABLE
+DROP TABLE
 NOTICE:  table "annonce" does not exist, skipping
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "profil" does not exist, skipping
+DROP TABLE
 NOTICE:  table "utilisateur" does not exist, skipping
 DROP TABLE
 CREATE TABLE
@@ -48,9 +48,9 @@ Execution de DQL.sql
  Diallo | Mamadou |  22 | Montreal
 (1 row)
 
-             contenu              |        date_envoi         | prenom  
-----------------------------------+---------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-04-16 00:23:30.32933 | Mamadou
+             contenu              |         date_envoi         | prenom  
+----------------------------------+----------------------------+---------
+ Salut, ton annonce m’intéresse ! | 2026-04-16 00:27:21.343442 | Mamadou
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
