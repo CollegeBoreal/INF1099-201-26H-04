@@ -1,7 +1,7 @@
 Chargement de la base de données...
 Execution de DDL.sql
-DROP TABLE
 NOTICE:  table "livraison" does not exist, skipping
+DROP TABLE
 NOTICE:  table "paiement" does not exist, skipping
 NOTICE:  table "ligne_commande" does not exist, skipping
 NOTICE:  table "commande" does not exist, skipping
@@ -40,7 +40,7 @@ Execution de DQL.sql
 
  id_commande | id_client | id_adresse_livraison | date_commande | statut_commande | total_commande 
 -------------+-----------+----------------------+---------------+-----------------+----------------
-           1 |         1 |                    1 | 2026-04-16    | En cours        |         129.99
+           1 |         1 |                    1 | 2026-04-17    | En cours        |         129.99
 (1 row)
 
  id_maillot | id_categorie | id_pays_origine |    nom_maillot     |           description            |  prix  |   statut   | taille | couleur | marque | saison 
