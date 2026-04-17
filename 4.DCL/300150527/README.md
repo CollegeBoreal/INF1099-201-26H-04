@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🐘 TP PostgreSQL – Gestion des utilisateurs et permissions (DCL)
 
 ---
@@ -822,6 +821,3 @@ Les commandes principales utilisées sont :
 * 🗑️ DROP USER
 
 Ces commandes permettent de **contrôler précisément l’accès à une base de données**.
-
----
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
