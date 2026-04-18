@@ -1,13 +1,13 @@
 NOTICE:  Trigger validation OK pour : Ali
 NOTICE:  Étudiant ajouté avec succès : Ali (age : 22, email : ali@email.com)
-CALL
-DO
 NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob : l'âge minimum est 18 ans (age fourni : 15)
 NOTICE:  Erreur lors de l'ajout de Clara : Email invalide pour Clara : format attendu exemple@domaine.com (email fourni : emailsansarobas.com)
+CALL
+DO
 NOTICE:  Trigger validation OK pour : Ali2
 NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
-NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
 DO
+NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
 NOTICE:  TEST 6 OK — Erreur attendue capturée : Plage d'âge invalide : min_age (30) ne peut pas être supérieur à max_age (18)
 CALL
  etudiants_18_30 
@@ -26,10 +26,10 @@ CALL
 CALL
  id |                       action                        |        date_action         
 ----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 00:16:24.356939
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 00:16:24.356939
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 00:16:24.356939
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 00:16:24.356939
+  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 00:20:02.926112
+  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 00:20:02.926112
+  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 00:20:02.926112
+  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 00:20:02.926112
 (4 rows)
 
   nom  | age |      email      |       cours       
