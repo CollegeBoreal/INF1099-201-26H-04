@@ -6,32 +6,32 @@ DROP TABLE
 NOTICE:  table "message_chatia" does not exist, skipping
 NOTICE:  table "session_chatia" does not exist, skipping
 NOTICE:  table "participation_concours" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "concours" does not exist, skipping
 NOTICE:  table "attribution_recompense" does not exist, skipping
 NOTICE:  table "recompense" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "note" does not exist, skipping
 NOTICE:  table "soumission_devoir" does not exist, skipping
-DROP TABLE
 NOTICE:  table "devoir" does not exist, skipping
 DROP TABLE
-NOTICE:  table "ressource" does not exist, skipping
 DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+NOTICE:  table "ressource" does not exist, skipping
 NOTICE:  table "inscription" does not exist, skipping
 DROP TABLE
+DROP TABLE
 NOTICE:  table "session_cours" does not exist, skipping
-DROP TABLE
 NOTICE:  table "cours" does not exist, skipping
-DROP TABLE
 NOTICE:  table "professeur" does not exist, skipping
-DROP TABLE
 NOTICE:  table "enfant" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "parent" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
 CREATE TABLE
 COMMENT
 COMMENT
@@ -124,26 +124,26 @@ DELETE 1
 DELETE 1
 DELETE 0
 Execution de DCL.sql
-DROP ROLE
-DROP ROLE
-DROP ROLE
 NOTICE:  role "admin_diallo" does not exist, skipping
 NOTICE:  role "prof_martin" does not exist, skipping
 NOTICE:  role "parent_tremblay" does not exist, skipping
+DROP ROLE
+DROP ROLE
+DROP ROLE
 NOTICE:  role "enfant_emma" does not exist, skipping
+DROP ROLE
 NOTICE:  role "auditeur_sys" does not exist, skipping
+DROP ROLE
 NOTICE:  role "admin_plateforme" does not exist, skipping
+DROP ROLE
 NOTICE:  role "professeur_role" does not exist, skipping
+DROP ROLE
 NOTICE:  role "parent_role" does not exist, skipping
+DROP ROLE
+DROP ROLE
+DROP ROLE
 NOTICE:  role "enfant_role" does not exist, skipping
 NOTICE:  role "lecture_seule" does not exist, skipping
-DROP ROLE
-DROP ROLE
-DROP ROLE
-DROP ROLE
-DROP ROLE
-DROP ROLE
-DROP ROLE
 CREATE ROLE
 COMMENT
 CREATE ROLE

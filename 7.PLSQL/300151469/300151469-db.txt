@@ -2,32 +2,34 @@ NOTICE:  Trigger validation OK pour : Ali
 NOTICE:  Étudiant ajouté avec succès : Ali (age : 22, email : ali@email.com)
 NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob : l'âge minimum est 18 ans (age fourni : 15)
 NOTICE:  Erreur lors de l'ajout de Clara : Email invalide pour Clara : format attendu exemple@domaine.com (email fourni : emailsansarobas.com)
-NOTICE:  Trigger validation OK pour : Ali2
 CALL
-DO
+NOTICE:  Trigger validation OK pour : Ali2
 NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
 DO
 NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
-CALL
 NOTICE:  TEST 6 OK — Erreur attendue capturée : Plage d'âge invalide : min_age (30) ne peut pas être supérieur à max_age (18)
+DO
+CALL
 NOTICE:  Inscription réussie : ali@email.com → cours "Réseaux"
  etudiants_18_30 
 -----------------
                4
 (1 row)
 
-NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Réseaux : L'étudiant ali@email.com est déjà inscrit au cours Réseaux
 DO
+NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Réseaux : L'étudiant ali@email.com est déjà inscrit au cours Réseaux
+CALL
+NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : Étudiant non trouvé avec l'email : inconnu@email.com
+NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant
 CALL
 CALL
 CALL
-CALL
- id |                       action                        |        date_action         
-----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 01:13:28.652165
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 01:13:28.652165
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 01:13:28.652165
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 01:13:28.652165
+ id |                       action                        |        date_action        
+----+-----------------------------------------------------+---------------------------
+  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 21:21:30.81135
+  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 21:21:30.81135
+  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 21:21:30.81135
+  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 21:21:30.81135
 (4 rows)
 
   nom  | age |      email      |       cours       
@@ -39,5 +41,3 @@ CALL
  Test  |  20 | test@email.com  | Programmation Web
 (5 rows)
 
-NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : Étudiant non trouvé avec l'email : inconnu@email.com
-NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant

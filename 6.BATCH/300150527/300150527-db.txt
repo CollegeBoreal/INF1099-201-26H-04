@@ -131,5 +131,5 @@ Execution de DQL.sql
  Boeing 787  |      250
 (3 rows)
 
-Temps d'exécution : 00:00:00.4874037
+Temps d'exécution : 00:00:00.4920760
 --- Fin de l'exécution ---
