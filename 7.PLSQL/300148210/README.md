@@ -60,8 +60,7 @@ docker run -d `
 ```powershell
 docker ps
 ```
-
-Tu dois voir `tp_postgres` avec le statut `Up`.
+<img width="909" height="177" alt="image" src="https://github.com/user-attachments/assets/071ae9a1-3803-4677-86a6-80c6b8a2c0ea" />
 
 ---
 
@@ -74,6 +73,8 @@ docker exec -it tp_postgres psql -U etudiant -d tpdb
 Une fois connecté, tu peux exécuter des requêtes SQL directement dans le terminal.
 
 ---
+<img width="918" height="476" alt="image" src="https://github.com/user-attachments/assets/c133ab41-3fe5-4c93-b641-62bd823d4aa6" />
+
 
 ## 🧪 Lancer les tests
 
@@ -84,6 +85,7 @@ Get-Content tests/test.sql | docker exec -i tp_postgres psql -U etudiant -d tpdb
 Les résultats des procédures, fonctions et triggers s'affichent directement dans le terminal.
 
 ---
+<img width="915" height="424" alt="image" src="https://github.com/user-attachments/assets/727341b6-1dbe-4bfe-b4fe-1ae533e9e4ca" />
 
 ## ✏️ Travail demandé
 
@@ -97,6 +99,8 @@ Compléter le fichier `init/03-programmation.sql` avec les éléments suivants :
 | `valider_etudiant` | Trigger BEFORE INSERT : validation âge et email |
 | `log_action` | Trigger AFTER INSERT/UPDATE/DELETE : journalisation automatique |
 
+<img width="794" height="113" alt="image" src="https://github.com/user-attachments/assets/a447cc71-5f33-4fbb-9e31-6c951195a60e" />
+
 ---
 
 ## 🔁 Relancer après modification
@@ -108,6 +112,8 @@ docker rm -f tp_postgres
 ```
 
 Puis relancer la commande `docker run` (étape 3).
+<img width="913" height="421" alt="image" src="https://github.com/user-attachments/assets/a52901af-75f3-4afe-bf51-61c6be35bde1" />
+<img width="899" height="437" alt="image" src="https://github.com/user-attachments/assets/24f52f34-bff7-40a3-95be-38c404b6ed5d" />
 
 ---
 
