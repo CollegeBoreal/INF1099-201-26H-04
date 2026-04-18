@@ -5,7 +5,7 @@ import json
 # Connexion a PostgreSQL
 # ============================================================
 conn = psycopg2.connect(
-    dbname="aerovoyage",
+    dbname="ecole",
     user="postgres",
     password="postgres",
     host="localhost",
