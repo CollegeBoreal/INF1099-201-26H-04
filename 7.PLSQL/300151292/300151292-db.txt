@@ -1,13 +1,16 @@
 NOTICE:  Utilisateur ajoute avec succes : Alice Dupont
 NOTICE:  Erreur lors de l ajout de Bob Mineur : Age invalide pour Bob Mineur : doit etre >= 18
+NOTICE:  Erreur lors de l ajout de Claire Email : Email invalide pour Claire Email : email-invalide
 CALL
 DO
-NOTICE:  Erreur lors de l ajout de Claire Email : Email invalide pour Claire Email : email-invalide
+DO
+DO
 NOTICE:  Erreur : email deja utilise pour Marie Doublon : marie.tremblay@borealfit.ca
-DO
-DO
 NOTICE:  Test 6 OK - Erreur attendue : Tranche d age invalide : min_age (30) > max_age (20)
 NOTICE:  Reservation reussie : alice.dupont@borealfit.ca -> Spinning
+NOTICE:  Erreur reservation : Utilisateur alice.dupont@borealfit.ca deja inscrit a l activite Spinning
+NOTICE:  Erreur reservation : Utilisateur non trouve : inconnu@borealfit.ca
+NOTICE:  Test 10 OK - Trigger declenche : Age invalide pour Trop Jeune : doit etre >= 18
  nombre_utilisateurs_par_age 
 -----------------------------
                            4
@@ -16,30 +19,27 @@ NOTICE:  Reservation reussie : alice.dupont@borealfit.ca -> Spinning
 DO
 CALL
 DO
-NOTICE:  Erreur reservation : Utilisateur alice.dupont@borealfit.ca deja inscrit a l activite Spinning
-NOTICE:  Erreur reservation : Utilisateur non trouve : inconnu@borealfit.ca
-NOTICE:  Test 10 OK - Trigger declenche : Age invalide pour Trop Jeune : doit etre >= 18
 DO
 DO
  id |      nom       | age |            email            |       date_creation        
 ----+----------------+-----+-----------------------------+----------------------------
-  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-18 00:23:16.69824
-  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-18 00:23:16.69824
-  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-18 00:23:16.69824
-  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-18 00:23:16.69824
-  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-18 00:23:17.194693
+  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-18 00:26:24.878008
+  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-18 00:26:24.878008
+  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-18 00:26:24.878008
+  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-18 00:26:24.878008
+  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-18 00:26:25.340969
 (5 rows)
 
  id | utilisateur_id | activite_id |      date_reservation      |  statut   
 ----+----------------+-------------+----------------------------+-----------
-  1 |              5 |           1 | 2026-04-18 00:23:17.194693 | confirmee
+  1 |              5 |           1 | 2026-04-18 00:26:25.340969 | confirmee
 (1 row)
 
  id |                       action                        |        date_action         
 ----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur utilisateurs : 5                         | 2026-04-18 00:23:17.194693
-  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-18 00:23:17.194693
-  3 | INSERT sur reservations : 1                         | 2026-04-18 00:23:17.194693
-  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-18 00:23:17.194693
+  1 | INSERT sur utilisateurs : 5                         | 2026-04-18 00:26:25.340969
+  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-18 00:26:25.340969
+  3 | INSERT sur reservations : 1                         | 2026-04-18 00:26:25.340969
+  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-18 00:26:25.340969
 (4 rows)
 
