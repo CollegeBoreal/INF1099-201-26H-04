@@ -38,11 +38,13 @@ Il couvre l'ensemble du cycle SQL : modélisation, création, insertion, consult
 
 ### Diagramme Entité-Relation (ER)
 
-![Diagramme ER — modèle conceptuel](images/diagramme1.png)
+<img width="8192" height="6132" alt="diagramme1" src="https://github.com/user-attachments/assets/a072ce66-eb23-4197-a935-699f4e3d82d1" />
+
 
 ### Diagramme relationnel (modèle logique)
 
-![Diagramme relationnel — modèle logique PostgreSQL](images/diagramme2.png)
+<img width="1384" height="1183" alt="diagramme2" src="https://github.com/user-attachments/assets/86e6839a-fd19-4aff-a282-a4cd756a2eb3" />
+
 
 ---
 
@@ -74,23 +76,30 @@ Avant la démonstration manuelle, tous les scripts ont été exécutés automati
 
 ### DDL.sql — Création automatique du schéma
 
-![Exécution automatique DDL.sql — DROP CASCADE sur 15 tables puis CREATE TABLE](images/7.PNG)
+<img width="588" height="550" alt="7" src="https://github.com/user-attachments/assets/2c415387-70a9-4578-90d7-1e710dc72771" />
+
 
 > PostgreSQL effectue un `DROP CASCADE` sur les 15 objets existants avant de recréer le schéma complet.
 
 ### DML.sql — Insertion automatique des données
 
-![Exécution automatique DML.sql — INSERT 0 2, UPDATE 1, DELETE 1](images/8.PNG)
+<img width="395" height="417" alt="8" src="https://github.com/user-attachments/assets/09bdaef7-b1de-4575-86ca-ab2a03a109cf" />
+
 
 ### DQL.sql — Requêtes automatiques
 
-![Exécution automatique DQL.sql — résultats partie 1](images/9_1.PNG)
+<img width="808" height="693" alt="9" src="https://github.com/user-attachments/assets/b343c2e2-578b-488f-9692-5e5868a15f94" />
 
-![Exécution automatique DQL.sql — résultats partie 2](images/9_2.PNG)
+<img width="711" height="719" alt="9 1" src="https://github.com/user-attachments/assets/ea06cc09-5376-4949-85a1-85e255621b47" />
+
+<img width="676" height="717" alt="9 2" src="https://github.com/user-attachments/assets/add16bb9-0a42-436a-9ea1-a24a7cee0031" />
+
 
 ### DCL.sql — Contrôle des accès automatique
 
-![Exécution automatique DCL.sql — DROP ROLE, CREATE ROLE, GRANT, SET ROLE, REVOKE](images/19_1.PNG)
+<img width="1134" height="724" alt="10" src="https://github.com/user-attachments/assets/3d6929ce-b8b2-405b-b0b1-88222b7d837b" />
+
+<img width="933" height="714" alt="10 1" src="https://github.com/user-attachments/assets/7c915ddd-679f-46db-b5a1-d0c81acdc532" />
 
 ---
 
@@ -107,7 +116,8 @@ CREATE DATABASE aeroport;
 CREATE SCHEMA aeroport;
 ```
 
-![Création de la base de données, connexion et création du schéma](images/6.PNG)
+<img width="786" height="295" alt="11" src="https://github.com/user-attachments/assets/7410bcaa-d1db-4c4a-baa7-ae83266caa59" />
+
 
 > ✅ La base `aeroport` est créée, la connexion est établie et le schéma `aeroport` est initialisé.
 
@@ -148,34 +158,23 @@ CREATE TABLE Gate (
 -- ... (et les 11 autres tables)
 ```
 
-![CREATE TABLE manuel — CompagnieAerienne, Avion, Terminal, Gate, Runway, Vol, Passager, Reservation, Billet, Bagage, Personnel, ControleSecurite](images/11.PNG)
+<img width="1366" height="729" alt="12" src="https://github.com/user-attachments/assets/c13a4825-59f2-402f-b167-57013023893e" />
+
+
 
 ### Vérification — liste des 15 tables créées
 
 ```sql
 \dt aeroport.*
 ```
+<img width="465" height="429" alt="13" src="https://github.com/user-attachments/assets/d9530fd0-fd20-4b67-bd5c-3a28ac10a992" />
 
-![Liste des 15 relations dans le schéma aeroport](images/12.PNG)
 
 > ✅ Les 15 tables sont présentes : `avion`, `bagage`, `billet`, `compagnieaerienne`, `controlesecurite`, `gate`, `incident`, `maintenance`, `passager`, `personnel`, `reservation`, `runway`, `servicesol`, `terminal`, `vol`.
 
 ---
 
 ## Étape 3 — Insertion des données (INSERT)
-
-Les données sont insérées dans le **bon ordre** pour respecter les contraintes de clés étrangères (tables parents avant tables enfants).
-
-### Problème rencontré — erreur d'encodage UTF-8
-
-Lors de la première tentative d'insertion, une erreur d'encodage est survenue :
-
-![Erreur séquence d'octets invalide UTF8 0x82 — puis correction et INSERT réussi](images/13.PNG)
-
-> ⚠️ **Problème :** Le fichier SQL contenait des caractères accentués non compatibles (`é`, `è` encodés incorrectement).  
-> **Solution :** Remplacer par des équivalents ASCII (`Algerie` au lieu de `Algérie`) et sauvegarder le fichier en **UTF-8 sans BOM**.
-
-### Insertion manuelle complète — après correction
 
 ```sql
 INSERT INTO CompagnieAerienne (nom, pays, code_IATA)
@@ -191,7 +190,8 @@ VALUES ('AF123', '2026-05-01', '2026-05-01', 'Paris', 'Alger', 1, 1, 1),
        ('AH456', '2026-05-02', '2026-05-02', 'Alger', 'Lyon', 2, 2, 2);
 ```
 
-![INSERT corrigé — CompagnieAerienne, Avion, Terminal, Gate, Runway, Vol, Passager, Reservation](images/15.PNG)
+<img width="1366" height="730" alt="15" src="https://github.com/user-attachments/assets/80ddeee5-ca09-4786-9a47-3c99ba0e4370" />
+
 
 > ✅ Toutes les données sont insérées avec succès dans les 15 tables en respectant l'ordre des dépendances.
 
@@ -229,22 +229,8 @@ FROM Passager p
 JOIN Reservation res ON p.id_passager = res.id_passager
 JOIN Vol v           ON res.id_vol    = v.id_vol;
 ```
+<img width="1366" height="729" alt="16" src="https://github.com/user-attachments/assets/0425a95c-964d-47cb-adc8-f01a79a5c6be" />
 
-### Résultats — requêtes simples et JOIN
-
-![Résultats SELECT — vols avec avions et capacités, passagers avec réservations et statuts, billets et classes, gates et terminaux, contrôle sécurité, total passagers, vols par origine](images/9.PNG)
-
-### Résultats — agrégations et requêtes avancées
-
-![Résultats SELECT — moyenne capacité avions, incidents par vol, coûts de maintenance, services sol](images/10_1.PNG)
-
-### Résultats — JOIN entre CompagnieAerienne, Vol, Passager
-
-![Résultats SELECT avec JOIN — CompagnieAerienne + Vol + Passager + Reservation](images/16.PNG)
-
-### Résultats complets DQL
-
-![Résultats SELECT complets — passagers, vols, avions, réservations avec tous les statuts](images/10.PNG)
 
 > ✅ Les relations entre tables sont vérifiées : `Passager → Reservation → Vol → Avion → CompagnieAerienne`.
 
@@ -275,7 +261,8 @@ SET statut = 'Annulee'
 WHERE id_reservation = 2;
 ```
 
-![UPDATE Passager nationalite Canadienne + UPDATE Reservation statut Annulee + SELECT de vérification avant/après](images/17.PNG)
+<img width="844" height="589" alt="17" src="https://github.com/user-attachments/assets/5d8beae8-5394-4359-ab6f-6a6e66a10365" />
+
 
 ### UPDATE avec jointure — valider les réservations vers Lyon
 
@@ -290,7 +277,8 @@ WHERE r.id_vol = v.id_vol
 SELECT id_reservation, statut FROM Reservation;
 ```
 
-![UPDATE Reservation avec JOIN Vol — statut Validee pour destination Lyon + SELECT de vérification](images/17_1.PNG)
+<img width="491" height="296" alt="17 1" src="https://github.com/user-attachments/assets/a5a0ac98-27cc-4cc9-8622-95e9142e6ebe" />
+
 
 > ✅ Chaque UPDATE est immédiatement vérifié avec un `SELECT` pour confirmer la modification.
 
@@ -311,7 +299,8 @@ DELETE FROM Bagage WHERE poids < 18;
 SELECT * FROM aeroport.Bagage;
 ```
 
-![DELETE Bagage poids inférieur à 18 — avant 2 bagages, après 1 bagage (sac 15kg supprimé)](images/18.PNG)
+<img width="545" height="285" alt="18" src="https://github.com/user-attachments/assets/76530fcb-7d93-4951-ae72-5628d3dcc652" />
+
 
 > ✅ Avant : 2 bagages (Valise 20.5kg + Sac 15kg). Après : 1 bagage (Valise 20.5kg uniquement).
 
