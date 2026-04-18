@@ -1,364 +1,372 @@
 <div align="center">
 
-#  TP Batch — PowerShell & PostgreSQL
+# ⚙️ TP Batch — PowerShell & PostgreSQL
+### Boutique de Réparation de Smartphones
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=750&lines=Chargement+automatique+de+PostgreSQL;Scripts+SQL+%3A+DDL+%7C+DML+%7C+DCL+%7C+DQL;PowerShell+%2B+Docker+%2B+PostgreSQL+%F0%9F%90%B3" />
+![Étudiant](https://img.shields.io/badge/Étudiant-Boualem_BELBESSAI_300150205-lightgrey)
 
-<br/>
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Conteneur-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-Script-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-Compatible-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
-<br/>
-
-> **Automatisation complète du chargement d'une base de données PostgreSQL**
-> via un script PowerShell et un conteneur Docker.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=20&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Chargement+automatique+de+PostgreSQL;Scripts+SQL+%3A+DDL+%7C+DML+%7C+DCL+%7C+DQL;PowerShell+%2B+Docker+%2B+PostgreSQL;%23300150205" />
+</p>
 
 </div>
 
 ---
 
-##  Table des matières
+## 🎯 Objectifs
 
-- [🎯 Objectifs](#-objectifs)
-- [📁 Structure du projet](#-structure-du-projet)
-- [🗂️ Types de scripts SQL](#️-types-de-scripts-sql)
-- [🐳 Démarrer avec Docker](#-démarrer-avec-docker)
-- [⚡ Exécution rapide](#-exécution-rapide)
-- [📝 Scripts SQL](#-scripts-sql)
-- [🔧 Script PowerShell](#-script-powershell)
-- [📊 Résultat](#-résultat)
-- [🏆 Fonctionnalités bonus](#-fonctionnalités-bonus)
-- [✅ Vérification](#-vérification)
+À la fin de ce laboratoire, l'étudiant sera capable de :
+
+| # | Objectif |
+|---|----------|
+| 1 | Comprendre les types de scripts SQL |
+| 2 | Utiliser Docker pour exécuter PostgreSQL |
+| 3 | Écrire un script PowerShell d'automatisation |
+| 4 | Charger plusieurs scripts SQL automatiquement |
 
 ---
 
-##  Objectifs
+## 📁 Structure du projet
 
-| # | Objectif | Statut |
-|---|----------|--------|
-| 1 | Comprendre les types de scripts SQL (DDL, DML, DCL, DQL) | ✅ |
-| 2 | Utiliser Docker pour exécuter PostgreSQL | ✅ |
-| 3 | Écrire un script PowerShell d'automatisation | ✅ |
-| 4 | Charger plusieurs scripts SQL automatiquement | ✅ |
-| 5 | Bonus : paramètre, log, chronomètre | ✅ |
+```
+300150205/
+├── 📄 DDL.sql
+├── 📄 DML.sql
+├── 📄 DCL.sql
+├── 📄 DQL.sql
+├── 📄 load-db.ps1
+└── 📄 load-db-advanced.ps1
+```
+
+> ⚠️ **Ordre d'exécution obligatoire :** `DDL` → `DML` → `DCL` → `DQL`
 
 ---
 
-##  Structure du projet
+## 🗂️ Types de scripts SQL
 
-```
-📦 lab-batch/
- ┣ 📄 DDL.sql              ← Création des tables
- ┣ 📄 DML.sql              ← Insertion des données
- ┣ 📄 DCL.sql              ← Permissions et rôles
- ┣ 📄 DQL.sql              ← Requêtes SELECT
- ┣ 📄 load-db.ps1          ← Script d'automatisation
- ┣ 📄 execution.log        ← Log généré automatiquement
- ┗ 📄 README.md
-```
-
-> **Ordre d'exécution obligatoire :** `DDL` → `DML` → `DCL` → `DQL`
+| Type | Signification | Exemple | Fichier |
+|------|--------------|---------|---------|
+| **DDL** | Data Definition Language | `CREATE TABLE` | `DDL.sql` |
+| **DML** | Data Manipulation Language | `INSERT`, `UPDATE`, `DELETE` | `DML.sql` |
+| **DCL** | Data Control Language | `GRANT`, `REVOKE` | `DCL.sql` |
+| **DQL** | Data Query Language | `SELECT` | `DQL.sql` |
 
 ---
 
-##  Types de scripts SQL
+## 🐳 Démarrer PostgreSQL avec Docker
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  DDL → DML → DCL → DQL                                  │
-│                                                         │
-│  CREATE TABLE    INSERT    GRANT    SELECT               │
-└─────────────────────────────────────────────────────────┘
-```
-
-| Type | Signification | Commandes | Fichier |
-|------|--------------|-----------|---------|
-| 🏗️ **DDL** | Data Definition Language | `CREATE`, `DROP`, `ALTER` | `DDL.sql` |
-| 📥 **DML** | Data Manipulation Language | `INSERT`, `UPDATE`, `DELETE` | `DML.sql` |
-| 🔐 **DCL** | Data Control Language | `GRANT`, `REVOKE` | `DCL.sql` |
-| 🔍 **DQL** | Data Query Language | `SELECT` | `DQL.sql` |
-
----
-
-##  Démarrer avec Docker
-
-### 1. Lancer le conteneur PostgreSQL
+### Étape 1 : Créer et lancer le conteneur
 
 ```powershell
-docker container run -d `
-  --name postgres-lab `
+docker run -d `
+  --name postgres2 `
   -e POSTGRES_PASSWORD=postgres `
-  -e POSTGRES_DB=ecole `
+  -e POSTGRES_DB=reparation_smartphones `
   -p 5432:5432 `
   postgres
 ```
 
-### 2. Créer la base de données
-
-```powershell
-docker exec -it postgres-lab psql -U postgres -c "CREATE DATABASE ecole;"
-```
-
-### 3. Vérifier que le conteneur tourne
+### Étape 2 : Vérifier que le conteneur est actif
 
 ```powershell
 docker container ls
 ```
 
+<details>
+<summary>📋 Output attendu</summary>
+
 ```
-CONTAINER ID   IMAGE      STATUS       PORTS                    NAMES
-a1b2c3d4e5f6   postgres   Up 5 secs    0.0.0.0:5432->5432/tcp   postgres-lab
+CONTAINER ID   IMAGE      STATUS        PORTS                    NAMES
+a1b2c3d4e5f6   postgres   Up 1 second   0.0.0.0:5432->5432/tcp   postgres2
 ```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape Docker](images/1.png)
+
+</details>
 
 ---
 
-##  Exécution rapide
+## 📝 Script de base — `load-db.ps1`
+
+### Étape 3 : Créer le fichier `load-db.ps1`
 
 ```powershell
-# Étape 1 — Autoriser les scripts
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+# -----------------------------------------------
+# Script PowerShell pour charger PostgreSQL
+# Boutique de réparation de smartphones
+# #300150205
+# -----------------------------------------------
 
-# Étape 2 — Lancer le script
-.\load-db.ps1
+$Container = "postgres2"
+$Database  = "reparation_smartphones"
+$User      = "postgres"
 
-# Ou avec le nom du conteneur en paramètre (bonus)
-.\load-db.ps1 postgres-lab
-```
+$Files = @(
+    "DDL.sql",
+    "DML.sql",
+    "DCL.sql",
+    "DQL.sql"
+)
 
----
+Write-Output "Chargement de la base de données..."
 
-##  Scripts SQL
-
-<details>
-<summary><b>🏗️ DDL.sql — Création des tables</b></summary>
-
-```sql
-CREATE TABLE IF NOT EXISTS etudiants (
-    id      SERIAL PRIMARY KEY,
-    nom     VARCHAR(100) NOT NULL,
-    prenom  VARCHAR(100) NOT NULL,
-    email   VARCHAR(150) UNIQUE,
-    age     INT
-);
-
-CREATE TABLE IF NOT EXISTS cours (
-    id      SERIAL PRIMARY KEY,
-    titre   VARCHAR(200) NOT NULL,
-    credits INT DEFAULT 3
-);
-
-CREATE TABLE IF NOT EXISTS inscriptions (
-    id          SERIAL PRIMARY KEY,
-    etudiant_id INT REFERENCES etudiants(id),
-    cours_id    INT REFERENCES cours(id)
-);
-```
-
-</details>
-
-<details>
-<summary><b>📥 DML.sql — Insertion des données</b></summary>
-
-```sql
-INSERT INTO etudiants (nom, prenom, email, age) VALUES
-    ('Tremblay', 'Alice',   'alice@ecole.ca',  20),
-    ('Gagnon',   'Bob',     'bob@ecole.ca',    22),
-    ('Roy',      'Claire',  'claire@ecole.ca', 21),
-    ('Cote',     'David',   'david@ecole.ca',  23),
-    ('Bouchard', 'Emma',    'emma@ecole.ca',   19);
-
-INSERT INTO cours (titre, credits) VALUES
-    ('Bases de donnees',  3),
-    ('Reseaux',           3),
-    ('Programmation Web', 3);
-
-INSERT INTO inscriptions (etudiant_id, cours_id) VALUES
-    (1,1),(2,1),(3,2),(4,3),(5,1);
-```
-
-</details>
-
-<details>
-<summary><b>🔐 DCL.sql — Permissions</b></summary>
-
-```sql
-CREATE ROLE lecteur LOGIN PASSWORD 'lecteur123';
-GRANT CONNECT ON DATABASE ecole TO lecteur;
-GRANT USAGE ON SCHEMA public TO lecteur;
-GRANT SELECT ON etudiants, cours, inscriptions TO lecteur;
-```
-
-</details>
-
-<details>
-<summary><b>🔍 DQL.sql — Requêtes</b></summary>
-
-```sql
-SELECT * FROM etudiants;
-SELECT * FROM cours;
-
-SELECT e.nom, e.prenom, c.titre AS cours
-FROM inscriptions i
-JOIN etudiants e ON e.id = i.etudiant_id
-JOIN cours     c ON c.id = i.cours_id
-ORDER BY e.nom;
-```
-
-</details>
-
----
-
-##  Script PowerShell
-
-```powershell
-# ============================================================
-# load-db.ps1 — Chargement automatique de PostgreSQL
-# Usage : .\load-db.ps1 [nom-du-conteneur]
-# ============================================================
-
-param([string]$Container = "postgres-lab")
-
-$Database = "ecole"
-$User     = "postgres"
-$LogFile  = "execution.log"
-$Files    = @("DDL.sql", "DML.sql", "DCL.sql", "DQL.sql")
-
-function Write-Log {
-    param([string]$Message)
-    $line = "[$(Get-Date -Format 'HH:mm:ss')] $Message"
-    Write-Output $line
-    Add-Content -Path $LogFile -Value $line
-}
-
-$start = Get-Date
-Write-Log "Demarrage du chargement..."
-
-# Vérification du conteneur
-$running = docker ps --format "{{.Names}}" | Select-String $Container
-if (-not $running) {
-    Write-Log "ERREUR : conteneur '$Container' non actif!"
-    exit 1
-}
-
-# Exécution de chaque fichier SQL
 foreach ($file in $Files) {
-    if (-not (Test-Path $file)) {
-        Write-Log "ERREUR : fichier manquant : $file"
-        exit 1
+
+    if (Test-Path $file) {
+
+        Write-Output "Execution de $file"
+
+        Get-Content $file | docker exec -i $Container psql -U $User -d $Database
+
     }
-    Write-Log "Execution de $file"
-    Get-Content $file | docker exec -i $Container psql -U $User -d $Database
+    else {
+
+        Write-Output "ERREUR : fichier $file introuvable"
+    }
+
 }
 
-$duree = ((Get-Date) - $start).TotalSeconds
-Write-Log "Termine en $([math]::Round($duree, 2)) secondes!"
+Write-Output "Chargement terminé."
 ```
 
-### Explication des commandes clés
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Script de base](images/2.png)
+
+</details>
+
+---
+
+## 🚀 Exécuter le script
+
+### Étape 4 : Lancer le script dans PowerShell
+
+> ℹ️ **Note :** La commande `pwsh` nécessite PowerShell 7+. Si elle n'est pas reconnue, utilisez `powershell` à la place (PowerShell 5.1, préinstallé sur Windows).
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\load-db.ps1
+```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+Chargement de la base de données...
+
+Execution de DDL.sql
+CREATE SCHEMA
+CREATE TABLE
+...
+
+Execution de DML.sql
+INSERT 0 3
+INSERT 0 2
+...
+
+Execution de DCL.sql
+CREATE ROLE
+GRANT
+...
+
+Execution de DQL.sql
+ id_marque | nom_marque
+-----------+------------
+         1 | Apple
+         2 | Samsung
+         3 | Google
+
+Chargement terminé.
+```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Exécution du script](images/3.png)
+
+</details>
+
+---
+
+## 🔍 Explication du script
+
+### Liste des fichiers
+
+```powershell
+$Files = @(
+    "DDL.sql",
+    "DML.sql",
+    "DCL.sql",
+    "DQL.sql"
+)
+```
+
+Tableau PowerShell contenant les scripts SQL dans l'ordre d'exécution.
+
+---
+
+### Vérification du fichier
+
+```powershell
+Test-Path $file
+```
+
+Permet de vérifier que le fichier existe avant de l'envoyer. Évite les erreurs silencieuses.
+
+---
+
+### Envoi du script dans le conteneur
+
+```powershell
+Get-Content $file | docker exec -i $Container psql -U $User -d $Database
+```
 
 | Commande | Rôle |
 |----------|------|
-| `param(...)` | Accepte le nom du conteneur en argument |
-| `Test-Path` | Vérifie qu'un fichier existe |
-| `Get-Content` | Lit le contenu d'un fichier SQL |
-| `docker exec -i` | Exécute une commande dans le conteneur |
-| `psql` | Client PostgreSQL qui reçoit le SQL |
-| `Add-Content` | Écrit dans le fichier log |
+| `Get-Content` | Lit le contenu du fichier SQL |
+| `\|` | Redirige le contenu vers la commande suivante |
+| `docker exec -i` | Exécute une commande dans le conteneur actif |
+| `psql` | Client PostgreSQL qui reçoit et exécute le SQL |
 
 ---
 
-##  Résultat
+## 🔥 Version avancée — `load-db-advanced.ps1`
 
-```
-[14:19:11] Demarrage du chargement...
-[14:19:11] Execution de DDL.sql
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-[14:19:11] Execution de DML.sql
-INSERT 0 5
-INSERT 0 3
-INSERT 0 5
-[14:19:12] Execution de DCL.sql
-GRANT
-[14:19:12] Execution de DQL.sql
+> ✅ **Script recommandé** — même résultat que la version de base, avec en plus la vérification du conteneur, un fichier log horodaté et le chronomètre.
 
- id |   nom    | prenom |      email      | age
-----+----------+--------+-----------------+-----
-  1 | Tremblay | Alice  | alice@ecole.ca  |  20
-  2 | Gagnon   | Bob    | bob@ecole.ca    |  22
-  3 | Roy      | Claire | claire@ecole.ca |  21
-  4 | Cote     | David  | david@ecole.ca  |  23
-  5 | Bouchard | Emma   | emma@ecole.ca   |  19
+| Bonus | Description |
+|-------|-------------|
+| 🧩 **Paramètre** | Nom du conteneur passé en argument CLI |
+| 📋 **Fichier log** | Toutes les étapes horodatées dans `execution.log` |
+| ⏱️ **Chronomètre** | Temps d'exécution par fichier et au total |
 
-   nom    | prenom |       cours
-----------+--------+-------------------
- Bouchard | Emma   | Bases de donnees
- Cote     | David  | Programmation Web
- Gagnon   | Bob    | Bases de donnees
- Roy      | Claire | Reseaux
- Tremblay | Alice  | Bases de donnees
-
-[14:19:13] Termine en 1.97 secondes!
-```
-
----
-
-##  Fonctionnalités bonus
-
-###  1. Conteneur en paramètre
-```powershell
-.\load-db.ps1 mon-conteneur
-```
-
-###  2. Fichier log horodaté — `execution.log`
-```
-[14:19:11] Demarrage du chargement...
-[14:19:11] Execution de DDL.sql
-[14:19:11] Execution de DML.sql
-[14:19:12] Execution de DCL.sql
-[14:19:12] Execution de DQL.sql
-[14:19:13] Termine en 1.97 secondes!
-```
-
-###  3. Temps d'exécution
-Le script affiche automatiquement le temps total d'exécution en secondes.
-
----
-
-##  Vérification
-
-Se connecter dans le conteneur :
+### Étape 5 : Exécuter la version avancée
 
 ```powershell
-docker exec -it postgres-lab psql -U postgres -d ecole
+# Conteneur par défaut (postgres2)
+powershell -ExecutionPolicy Bypass -File .\load-db-advanced.ps1
+
+# Conteneur personnalisé
+powershell -ExecutionPolicy Bypass -File .\load-db-advanced.ps1 mon-conteneur
 ```
 
-Puis tester dans psql :
+
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Script avancé](images/4.png)
+
+</details>
+
+---
+
+## ✅ Vérification
+
+### Étape 6 : Se connecter dans le conteneur
+
+```powershell
+docker container exec -it postgres2 psql -U postgres -d reparation_smartphones
+```
+
+### Vérifier les tables créées
 
 ```sql
-SELECT * FROM etudiants;
-SELECT * FROM cours;
-\q
+\dt boutique.*
+```
+
+### Vérifier les données insérées
+
+```sql
+SELECT * FROM boutique.Marque;
+SELECT * FROM boutique.Client;
+SELECT * FROM boutique.Reparation;
+```
+
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Vérification](images/5.png)
+
+</details>
+
+---
+
+## 🏆 Défi bonus
+
+### 1️⃣ Conteneur en paramètre
+
+```powershell
+param (
+    [string]$Container = "postgres2"
+)
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\load-db-advanced.ps1 mon-conteneur
 ```
 
 ---
 
-##  Conclusion
+### 2️⃣ Fichier log `execution.log`
 
-Ce laboratoire démontre comment automatiser le chargement d'une base de données PostgreSQL avec PowerShell et Docker. Les quatre types de scripts SQL ont été exécutés avec succès en moins de **2 secondes**, avec journalisation complète dans `execution.log`.
+```powershell
+function Write-Log {
+    param ([string]$Message)
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $line = "[$timestamp] $Message"
+    Write-Output $line
+    Add-Content -Path $LogFile -Value $line
+}
+```
+
+Chaque étape est horodatée et sauvegardée dans `execution.log`.
 
 ---
+
+### 3️⃣ Temps d'exécution
+
+```powershell
+$startTime = Get-Date
+# ... exécution ...
+$totalSeconds = ($endTime - $startTime).TotalSeconds
+Write-Log "Temps total : $([math]::Round($totalSeconds, 2)) secondes."
+```
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Défi bonus](images/6.png)
+
+</details>
+
+---
+
+## 📌 Conclusion
+
+Ce laboratoire m'a permis de mettre en pratique l'automatisation du chargement
+d'une base de données PostgreSQL via un script PowerShell et Docker.
+
+Les quatre types de scripts SQL (DDL, DML, DCL, DQL) ont été exécutés avec succès
+en **4.1 secondes** sur le conteneur `postgres2`, avec journalisation complète
+dans `execution.log`.
+
+---
+
+<details>
+<summary>👤 Auteur</summary>
 
 <div align="center">
 
-![SQL](https://img.shields.io/badge/SQL-DDL%20%7C%20DML%20%7C%20DCL%20%7C%20DQL-orange?style=flat-square)
-![Status](https://img.shields.io/badge/Statut-Complété%20✅-brightgreen?style=flat-square)
+![Coder Cat](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
 
-*Laboratoire BATCH — Automatisation PostgreSQL avec Docker & PowerShell*
+*Rédigé par un humain... probablement.* 
 
 </div>
 
