@@ -1,0 +1,10 @@
+
+📌 Tous les étudiants :
+{'age': 25, 'nom': 'Alice', 'email': 'alice@ecole.ca', 'notes': {'INF1007': 78, 'INF1099': 85}, 'ville': 'Montreal', 'statut': 'temps plein', 'competences': ['Python', 'Docker']}
+{'age': 22, 'nom': 'Bob', 'email': 'bob@ecole.ca', 'notes': {'INF1010': 80, 'INF1099': 72}, 'ville': 'Toronto', 'statut': 'temps partiel', 'competences': ['Java', 'SQL']}
+{'age': 30, 'nom': 'Charlie', 'email': 'charlie@ecole.ca', 'notes': {'INF1099': 90, 'INF2010': 88}, 'ville': 'Quebec', 'statut': 'temps plein', 'competences': ['Linux', 'Bash', 'Python']}
+{'age': 27, 'nom': 'Diana', 'email': 'diana@ecole.ca', 'notes': {'INF1099': 95}, 'ville': 'Laval', 'statut': 'temps plein', 'competences': ['JavaScript', 'Node.js', 'MongoDB']}
+{'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
+
+🔎 Recherche Alice :
+{'age': 25, 'nom': 'Alice', 'email': 'alice@ecole.ca', 'notes': {'INF1007': 78, 'INF1099': 85}, 'ville': 'Montreal', 'statut': 'temps plein', 'competences': ['Python', 'Docker']}

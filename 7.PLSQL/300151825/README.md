@@ -304,7 +304,7 @@ AFTER INSERT OR UPDATE OR DELETE ON inscriptions
 FOR EACH ROW
 EXECUTE FUNCTION log_action();
 ```
-![Texte alternatif](images/1.png)
+![Texte alternatif](images/2.png)
 
 ---
 

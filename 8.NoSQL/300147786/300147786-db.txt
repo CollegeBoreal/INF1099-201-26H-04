@@ -1,0 +1,4 @@
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300147786/app.py", line 93
+    >>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+            ^
+SyntaxError: invalid decimal literal

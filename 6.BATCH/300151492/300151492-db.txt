@@ -1,0 +1,43 @@
+Chargement de la base de données...
+Execution de DDL.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+Execution de DML.sql
+INSERT 0 5
+INSERT 0 3
+INSERT 0 5
+Execution de DCL.sql
+DO
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+Execution de DQL.sql
+ id |   nom    | prenom |      email      | age 
+----+----------+--------+-----------------+-----
+  1 | Tremblay | Alice  | alice@ecole.ca  |  20
+  2 | Gagnon   | Bob    | bob@ecole.ca    |  22
+  3 | Roy      | Claire | claire@ecole.ca |  21
+  4 | Côté     | David  | david@ecole.ca  |  23
+  5 | Bouchard | Emma   | emma@ecole.ca   |  19
+(5 rows)
+
+ id |       titre       |            description            | credits 
+----+-------------------+-----------------------------------+---------
+  1 | Bases de données  | Introduction à SQL et PostgreSQL  |       3
+  2 | Réseaux           | Protocoles et architecture réseau |       3
+  3 | Programmation Web | HTML, CSS, JavaScript             |       3
+(3 rows)
+
+   nom    | prenom |       cours       
+----------+--------+-------------------
+ Bouchard | Emma   | Bases de données
+ Côté     | David  | Programmation Web
+ Gagnon   | Bob    | Bases de données
+ Roy      | Claire | Réseaux
+ Tremblay | Alice  | Bases de données
+(5 rows)
+
+Chargement terminé.

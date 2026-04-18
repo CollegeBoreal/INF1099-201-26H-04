@@ -41,7 +41,8 @@ mysql -u root
 SHOW DATABASES;
 USE sakila;
 SHOW TABLES;
-
+```
+<img width="400" height="576" alt="sakila_database" src="https://github.com/user-attachments/assets/48469f82-0fae-49dc-853f-c99a6d688df1" />
 
 
 

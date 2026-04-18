@@ -24,6 +24,7 @@ INF1099 (201) - Administration de base de données
 | :five:  | 23-Mar | [5.ModelisationSQL](5.ModelisationSQL) | [🎉](5.ModelisationSQL/.scripts/Participation.md) 👉  â Noter :x:|
 | :six:   |        | [6.BATCH](6.BATCH)                     | [🎉](6.BATCH/.scripts/Participation.md) 👉  â Noter :x:|
 | :seven:   |        | [7.PLSQL](7.PLSQL)                     | [🎉](7.PLSQL/.scripts/Participation.md) 👉  â Noter :x:|
+| :eight:   |        | [8.NoSQL](8.NoSQL)                     | [🎉](8.NoSQL/.scripts/Participation.md) 👉  â Noter :x:|
 
 ### :abacus: Évaluation
 

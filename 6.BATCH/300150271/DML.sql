@@ -1,0 +1,12 @@
+INSERT INTO client VALUES
+(1,'Ali','5141111111'),
+(2,'Sara','5142222222');
+
+INSERT INTO immeuble VALUES
+(1,'Montreal','QC');
+
+INSERT INTO appartement VALUES
+(1,101,80,250000,1);
+
+INSERT INTO vente VALUES
+(1,'2024-01-10',1,1);

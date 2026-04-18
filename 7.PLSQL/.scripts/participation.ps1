@@ -29,10 +29,10 @@ foreach ($entry in $STUDENTS) {
     $db  = ":x:"
     $log = ":x:"
 
-    # if (Test-Path $paths.DBScript) {
-    #     $db  = Test-LoadDB -StudentID $StudentID
-    #     $log = "[:wood:](../$StudentID/$StudentID-db.txt)"
-    # }
+    if (Test-Path $paths.TEST) {
+        $db  = Test-LoadDB -StudentID $StudentID
+        $log = "[:wood:](../$StudentID/$StudentID-db.txt)"
+    }
 
     Write-StudentRow `
         -Index $i `

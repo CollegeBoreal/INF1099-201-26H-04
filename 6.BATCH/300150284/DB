@@ -1,0 +1,36 @@
+
+DROP TABLE IF EXISTS etudiants;
+
+
+CREATE TABLE etudiants (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    age INT,
+    programme VARCHAR(100)
+);
+
+
+INSERT INTO etudiants (nom, prenom, age, programme) VALUES
+('Dupont', 'Alice', 20, 'Informatique'),
+('Martin', 'Bob', 22, 'Réseau'),
+('Bernard', 'Claire', 19, 'Cybersécurité'),
+('Petit', 'David', 21, 'Base de données'),
+('Robert', 'Emma', 23, 'Programmation');
+
+
+DO $$
+BEGIN
+   IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'prof') THEN
+      CREATE ROLE prof LOGIN PASSWORD 'prof123';
+   END IF;
+END
+$$;
+
+
+GRANT CONNECT ON DATABASE ecole TO prof;
+GRANT USAGE ON SCHEMA public TO prof;
+GRANT SELECT ON etudiants TO prof;
+
+
+SELECT * FROM etudiants;

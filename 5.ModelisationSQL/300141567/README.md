@@ -43,6 +43,10 @@ erDiagram
     EQUIPE ||--o{ TECHNICIEN : regroupe
 ```
 
+<<<<<<< HEAD
+![alt text](images/image.png)
+=======
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 ---
 
 ### 3️⃣ Modélisation logique

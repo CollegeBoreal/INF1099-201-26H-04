@@ -43,6 +43,10 @@ sudo systemctl start docker
 # Vérification de l'installation
 docker --version
 ```
+<<<<<<< HEAD
+=======
+![alt text](images/image.png)
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 
 ## 🚀 Démarrage rapide
 
@@ -66,6 +70,10 @@ sudo apt install unzip -y
 # Extraction
 unzip sakila-db.zip
 ```
+<<<<<<< HEAD
+=======
+![alt text](images/image-1.png)
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 
 ### 3. Déploiement du conteneur MySQL
 
@@ -77,6 +85,11 @@ docker run -d \
   mysql:8.0
 ```
 
+<<<<<<< HEAD
+=======
+![alt text](images/image-2.png)
+
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 **Paramètres expliqués :**
 - `-d` : exécution en mode détaché
 - `--name` : nom du conteneur
@@ -107,7 +120,11 @@ docker exec -it INF1099-mysql \
 mysql -u root -prootpass \
 -e "FLUSH PRIVILEGES;"
 ```
+<<<<<<< HEAD
 
+=======
+![alt text](images/image-3.png)
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 ### 5. Importation des données Sakila
 
 ```bash
@@ -121,6 +138,10 @@ cat sakila-db/sakila-data.sql | \
 docker exec -i INF1099-mysql \
 mysql -u etudiants -petudiants_1 sakila
 ```
+<<<<<<< HEAD
+=======
+![alt text](images/image-4.png)
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
 
 ### 6. Vérification
 

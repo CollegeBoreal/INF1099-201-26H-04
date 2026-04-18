@@ -1,0 +1,9 @@
+
+📌 Tous les étudiants :
+{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+{'age': 22, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+{'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
+{'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
+
+🔎 Recherche Alice :
+{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}

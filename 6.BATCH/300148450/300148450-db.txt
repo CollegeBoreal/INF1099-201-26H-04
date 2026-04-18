@@ -1,0 +1,38 @@
+===== Début d'exécution : 04/18/2026 01:11:51 =====
+Exécution de DDL.sql
+Exécution de DDL.sql
+CREATE SCHEMA
+CREATE TABLE
+Exécution de DML.sql
+Exécution de DML.sql
+INSERT 0 5
+Exécution de DCL.sql
+Exécution de DCL.sql
+DO
+GRANT
+GRANT
+GRANT
+GRANT
+Exécution de DQL.sql
+Exécution de DQL.sql
+ id |   nom   |    programme    | note_finale 
+----+---------+-----------------+-------------
+  1 | Alice   | Informatique    |       89.50
+  2 | Bob     | Réseautique     |       76.00
+  3 | Charlie | Cybersécurité   |       91.25
+  4 | Diana   | Programmation   |       84.75
+  5 | Ethan   | Base de données |       79.00
+(5 rows)
+
+   nom   | note_finale 
+---------+-------------
+ Charlie |       91.25
+ Alice   |       89.50
+ Diana   |       84.75
+(3 rows)
+
+===== Fin d'exécution : 04/18/2026 01:11:52 =====
+Temps total : 0.4603727 secondes
+Base de données chargée avec succès.
+Log généré : execution.log
+Temps d'exécution : 0.4603727 secondes

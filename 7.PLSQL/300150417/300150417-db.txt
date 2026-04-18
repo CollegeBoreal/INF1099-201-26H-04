@@ -1,0 +1,115 @@
+SET
+NOTICE:  Client ajoute avec succes : Abdelatif Nemous
+ id_client |   nom    | prenom  | telephone  |         email          
+-----------+----------+---------+------------+------------------------
+         1 | Rahmani  | Chakib  | 6471112222 | chakib@gmail.com
+         2 | Benali   | Sofiane | 6473334444 | sofiane@gmail.com
+         3 | Dupont   | Marie   | 4165556666 | marie.dupont@gmail.com
+         4 | Martin   | Paul    | 4377778888 | paul.martin@gmail.com
+         5 | Haddad   | Yasmine | 9059990000 | yasmine@gmail.com
+         6 | Khelifi  | Amine   | 6471234567 | amine@gmail.com
+         7 | Bouraoui | Akrem   | 6472223333 | akrem@gmail.com
+         8 | Nathalie | Robert  | 4168889999 | nathalie@gmail.com
+         9 | Mahfuzur | Rahman  | 9054445555 | mahfuzur@gmail.com
+        10 | Kero     | Slimani | 6475556666 | kero@gmail.com
+(10 rows)
+
+ id_transaction |  date_transaction   | montant_initial | montant_converti |   statut   | id_client | id_devise_source | id_devise_cible | id_taux 
+----------------+---------------------+-----------------+------------------+------------+-----------+------------------+-----------------+---------
+              1 | 2026-02-01 10:00:00 |         1000.00 |           740.00 | PAYEE      |         1 |                1 |               2 |       1
+              2 | 2026-02-01 11:00:00 |         2000.00 |          1360.00 | PAYEE      |         2 |                1 |               3 |       2
+              3 | 2026-02-02 09:30:00 |          500.00 |           735.00 | PAYEE      |         3 |                2 |               1 |       3
+              4 | 2026-02-02 15:00:00 |         1000.00 |           920.00 | EN_ATTENTE |         4 |                2 |               3 |       4
+              5 | 2026-02-03 08:20:00 |          300.00 |         48150.00 | PAYEE      |         5 |                2 |               5 |       5
+              6 | 2026-02-03 12:00:00 |          700.00 |           756.00 | PAYEE      |         6 |                3 |               2 |       6
+              7 | 2026-02-04 14:10:00 |          600.00 |           960.00 | ANNULEE    |         7 |                3 |               4 |       7
+              8 | 2026-02-04 16:00:00 |        10000.00 |            72.00 | PAYEE      |         8 |                7 |               2 |       8
+              9 | 2026-02-05 10:45:00 |         1500.00 |           210.00 | PAYEE      |         9 |               10 |               3 |       9
+             10 | 2026-02-05 18:30:00 |          800.00 |           528.00 | PAYEE      |        10 |                9 |               2 |      10
+(10 rows)
+
+ id_historique |     date_action     |       action        | id_transaction 
+---------------+---------------------+---------------------+----------------
+             1 | 2026-02-01 10:00:00 | Transaction creee   |              1
+             2 | 2026-02-01 10:05:00 | Paiement effectue   |              1
+             3 | 2026-02-01 11:00:00 | Transaction creee   |              2
+             4 | 2026-02-01 11:05:00 | Paiement effectue   |              2
+             5 | 2026-02-02 09:30:00 | Transaction creee   |              3
+             6 | 2026-02-02 09:35:00 | Paiement effectue   |              3
+             7 | 2026-02-02 15:00:00 | Transaction creee   |              4
+             8 | 2026-02-03 08:20:00 | Transaction creee   |              5
+             9 | 2026-02-04 14:10:00 | Transaction annulee |              7
+            10 | 2026-02-05 18:30:00 | Transaction validee |             10
+(10 rows)
+
+CALL
+NOTICE:  Erreur ajout client : Email deja utilise : chakib@gmail.com
+NOTICE:  Erreur attendue OK : Email deja utilise : chakib@gmail.com
+ id_client |  nom   |  prenom   | telephone  |           email            
+-----------+--------+-----------+------------+----------------------------
+        11 | Nemous | Abdelatif | 6471230000 | abdelatif.nemous@gmail.com
+(1 row)
+
+DO
+ total_transactions_client_1 
+-----------------------------
+                           1
+(1 row)
+
+CALL
+NOTICE:  Transaction ajoutee : ID=11
+NOTICE:  Erreur ajout transaction : Montant initial invalide : -50.00
+NOTICE:  Erreur attendue OK : Montant initial invalide : -50.00
+NOTICE:  Erreur ajout transaction : Client introuvable : 999
+ id_transaction |     date_transaction      | montant_initial | montant_converti |   statut   | id_client | id_devise_source | id_devise_cible | id_taux 
+----------------+---------------------------+-----------------+------------------+------------+-----------+------------------+-----------------+---------
+             11 | 2026-04-18 01:13:21.91509 |          250.00 |           185.00 | EN_ATTENTE |         1 |                1 |               2 |       1
+             10 | 2026-02-05 18:30:00       |          800.00 |           528.00 | PAYEE      |        10 |                9 |               2 |      10
+              9 | 2026-02-05 10:45:00       |         1500.00 |           210.00 | PAYEE      |         9 |               10 |               3 |       9
+              8 | 2026-02-04 16:00:00       |        10000.00 |            72.00 | PAYEE      |         8 |                7 |               2 |       8
+              7 | 2026-02-04 14:10:00       |          600.00 |           960.00 | ANNULEE    |         7 |                3 |               4 |       7
+              6 | 2026-02-03 12:00:00       |          700.00 |           756.00 | PAYEE      |         6 |                3 |               2 |       6
+              5 | 2026-02-03 08:20:00       |          300.00 |         48150.00 | PAYEE      |         5 |                2 |               5 |       5
+              4 | 2026-02-02 15:00:00       |         1000.00 |           920.00 | EN_ATTENTE |         4 |                2 |               3 |       4
+              3 | 2026-02-02 09:30:00       |          500.00 |           735.00 | PAYEE      |         3 |                2 |               1 |       3
+              2 | 2026-02-01 11:00:00       |         2000.00 |          1360.00 | PAYEE      |         2 |                1 |               3 |       2
+              1 | 2026-02-01 10:00:00       |         1000.00 |           740.00 | PAYEE      |         1 |                1 |               2 |       1
+(11 rows)
+
+ id_historique |        date_action        |             action              | id_transaction 
+---------------+---------------------------+---------------------------------+----------------
+            12 | 2026-04-18 01:13:21.91509 | Transaction creee par procedure |             11
+            11 | 2026-04-18 01:13:21.91509 | INSERT transaction              |             11
+            10 | 2026-02-05 18:30:00       | Transaction validee             |             10
+             9 | 2026-02-04 14:10:00       | Transaction annulee             |              7
+             8 | 2026-02-03 08:20:00       | Transaction creee               |              5
+             7 | 2026-02-02 15:00:00       | Transaction creee               |              4
+             6 | 2026-02-02 09:35:00       | Paiement effectue               |              3
+             5 | 2026-02-02 09:30:00       | Transaction creee               |              3
+             4 | 2026-02-01 11:05:00       | Paiement effectue               |              2
+             3 | 2026-02-01 11:00:00       | Transaction creee               |              2
+             2 | 2026-02-01 10:05:00       | Paiement effectue               |              1
+             1 | 2026-02-01 10:00:00       | Transaction creee               |              1
+(12 rows)
+
+DO
+NOTICE:  Erreur attendue OK : Client introuvable : 999
+DO
+UPDATE 1
+ id_historique |        date_action        |             action              | id_transaction 
+---------------+---------------------------+---------------------------------+----------------
+            13 | 2026-04-18 01:13:21.91509 | UPDATE transaction              |             11
+            12 | 2026-04-18 01:13:21.91509 | Transaction creee par procedure |             11
+            11 | 2026-04-18 01:13:21.91509 | INSERT transaction              |             11
+            10 | 2026-02-05 18:30:00       | Transaction validee             |             10
+             9 | 2026-02-04 14:10:00       | Transaction annulee             |              7
+             8 | 2026-02-03 08:20:00       | Transaction creee               |              5
+             7 | 2026-02-02 15:00:00       | Transaction creee               |              4
+             6 | 2026-02-02 09:35:00       | Paiement effectue               |              3
+             5 | 2026-02-02 09:30:00       | Transaction creee               |              3
+             4 | 2026-02-01 11:05:00       | Paiement effectue               |              2
+             3 | 2026-02-01 11:00:00       | Transaction creee               |              2
+             2 | 2026-02-01 10:05:00       | Paiement effectue               |              1
+             1 | 2026-02-01 10:00:00       | Transaction creee               |              1
+(13 rows)
+

@@ -1,17 +1,17 @@
 Chargement de la base de données...
 Execution de DDL.sql
+DROP TABLE
+DROP TABLE
 NOTICE:  table "message" does not exist, skipping
 NOTICE:  table "match" does not exist, skipping
 NOTICE:  table "preference" does not exist, skipping
 DROP TABLE
-DROP TABLE
-DROP TABLE
-DROP TABLE
 NOTICE:  table "annonce" does not exist, skipping
+DROP TABLE
+DROP TABLE
 NOTICE:  table "profil" does not exist, skipping
+DROP TABLE
 NOTICE:  table "utilisateur" does not exist, skipping
-DROP TABLE
-DROP TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -34,8 +34,8 @@ ALTER DEFAULT PRIVILEGES
 Execution de DQL.sql
  id_utilisateur |  nom   | prenom  |       email       | mot_de_passe | telephone  | date_inscription 
 ----------------+--------+---------+-------------------+--------------+------------+------------------
-              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-04-01
-              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-04-01
+              1 | Diallo | Mamadou | mamadou@email.com | 123456       | 5141234567 | 2026-04-18
+              2 | Dupont | Jean    | jean@email.com    | abcdef       | 4389876543 | 2026-04-18
 (2 rows)
 
  id_annonce | type_annonce |  ville   | loyer  | date_disponibilite |     description      |   statut   | id_utilisateur 
@@ -50,12 +50,12 @@ Execution de DQL.sql
 
              contenu              |         date_envoi         | prenom  
 ----------------------------------+----------------------------+---------
- Salut, ton annonce m’intéresse ! | 2026-04-01 19:14:24.764526 | Mamadou
+ Salut, ton annonce m’intéresse ! | 2026-04-18 01:11:47.721252 | Mamadou
 (1 row)
 
  id_match | date_match |  statut  | id_utilisateur_1 | id_utilisateur_2 
 ----------+------------+----------+------------------+------------------
-        1 | 2026-04-01 | En cours |                1 |                2
+        1 | 2026-04-18 | En cours |                1 |                2
 (1 row)
 
 Chargement terminé.

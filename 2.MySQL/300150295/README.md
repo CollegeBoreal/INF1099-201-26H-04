@@ -46,6 +46,8 @@ docker --version
 ---
 Étape 4 : Vérifier Docker Desktop
 S'assurer que Docker Desktop est démarré et fonctionnel :
+<img width="950" height="96" alt="image" src="https://github.com/user-attachments/assets/dfb7fe6b-2048-48b2-837c-f786f8ea051b" />
+
 ```powershell
 docker info
 ```
@@ -54,7 +56,10 @@ docker info
 Étape 5 : Vérifier le fonctionnement de Docker
 ```powershell
 docker ps -a
+
 ```
+<img width="942" height="279" alt="image" src="https://github.com/user-attachments/assets/2b84417f-f81a-49c9-b2f0-052a2890bef0" />
+
 📋 Output
 ---
 Étape 6 : Lancer le conteneur MySQL
@@ -78,12 +83,16 @@ docker exec -it INF1099-mysql mysql -u root -prootpass -e "SHOW DATABASES;"
 ```
 📋 Output  
 🖼️ Capture d'écran
+<img width="937" height="651" alt="image" src="https://github.com/user-attachments/assets/ce59fe32-9ede-4ffb-914d-4448fe587437" />
+
 ---
 Étape 8 : Créer l'utilisateur etudiants
 Créer l'utilisateur :
 ```powershell
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "CREATE USER 'etudiants'@'localhost' IDENTIFIED BY 'etudiants_1';"
 ```
+<img width="937" height="651" alt="image" src="https://github.com/user-attachments/assets/c485baf6-e30d-4360-843f-113aa540a96b" />
+
 Accorder les privilèges :
 ```powershell
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "GRANT ALL PRIVILEGES ON *.* TO 'etudiants'@'localhost' WITH GRANT OPTION;"
@@ -92,6 +101,8 @@ Vérifier la création :
 ```powershell
 docker exec -it INF1099-mysql mysql -u root -prootpass -e "SELECT User, Host FROM mysql.user;"
 ```
+<img width="937" height="651" alt="image" src="https://github.com/user-attachments/assets/9a02d5a2-ed20-4884-864e-18a1716ab229" />
+
 📋 Output  
 🖼️ Capture d'écran
 ---
@@ -106,6 +117,8 @@ Charger les données :
 ```powershell
 Get-Content "$projectDir\sakila-db\sakila-data.sql" | docker exec -i INF1099-mysql mysql -u etudiants -petudiants_1 sakila
 ```
+<img width="955" height="671" alt="image" src="https://github.com/user-attachments/assets/5e4df096-b4d9-41c1-8445-b55d9763095c" />
+
 ---
 Étape 11 : Vérifier l'importation
 Afficher les tables :
@@ -114,6 +127,8 @@ docker exec -it INF1099-mysql mysql -u etudiants -petudiants_1 -e "USE sakila; S
 ```
 📋 Output  
 🖼️ Capture d'écran
+<img width="955" height="671" alt="image" src="https://github.com/user-attachments/assets/a973c422-0b36-4897-8b0a-39960ced0718" />
+
 ---
 Étape 12 : Tester quelques requêtes SQL
 Se connecter de manière interactive :

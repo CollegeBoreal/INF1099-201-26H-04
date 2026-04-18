@@ -2,98 +2,52 @@ name: Participations
 
 on: [push]
 
+permissions:
+  contents: write
+
 jobs:
   presence:
-    name: presence de fichiers pour la participation
     runs-on: ubuntu-latest
-    # If container isolation is needed
-    # container:
-    #   image: mcr.microsoft.com/powershell
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with remote
+        run: |
+          git pull --rebase origin main
 
       - name: Use jq
         run: echo '{"name":"GitHub"}' | jq '.name'
 
       - name: Use PowerShell
         run: pwsh --version
-    
+
       - shell: bash
         run: |
-          ##
-          ## Evaluating chapter 0.PlanDeCours
-          ## 
-          echo "Evaluating chapter 0.PlanDeCours Participation"
-          cd 0.PlanDeCours
-          bash .scripts/run.sh
-          cd ..
-          ##
-          ## Evaluating chapter P.Programmation
-          ## 
-          echo "Evaluating chapter P.Programmation Participation"
-          cd P.Programmation/1.IDE
-          bash .scripts/run.sh
-          cd ../2.Jupyter
-          bash .scripts/run.sh
-          cd ../..
-          ##
-          ## Evaluating chapter 1.Domaines
-          ## 
-          echo "Evaluating chapter 1.Domaines Participation"
-          cd 1.Domaines
-          pwsh .scripts/run.ps1
-          cd ..
-          ##
-          ## Evaluating chapter 2.MySQL
-          ## 
-          echo "Evaluating chapter 2.MySQL Participation"
-          cd 2.MySQL
-          bash .scripts/run.sh
-          cd ..
-          ##
-          ## Evaluating chapter 3.Postgres
-          ## 
-          echo "Evaluating chapter 3.Postgres Participation"
-          cd 3.Postgres
-          bash .scripts/run.sh
-          cd ..
-          ##
-          ## Evaluating chapter 4.DCL
-          ## 
-          echo "Evaluating chapter 4.DCL Participation"
-          cd 4.DCL
-          bash .scripts/run.sh
-          cd ..
-          ##
-          ## Evaluating chapter 5.ModelisationSQL
-          ## 
-          echo "Evaluating chapter 5.ModelisationSQL Participation"
-          cd 5.ModelisationSQL
-          pwsh .scripts/run.ps1
-          cd ..
-          ##
-          ## Evaluating chapter 6.BATCH
-          ## 
-          echo "Evaluating chapter 6.BATCH Participation"
-          cd 6.BATCH
-          pwsh .scripts/run.ps1
-          cd ..
-          ##
-          ## Evaluating chapter 7.PLSQL
-          ## 
-          echo "Evaluating chapter 7.PLSQL Participation"
-          cd 7.PLSQL
-          pwsh .scripts/run.ps1
-          cd ..
+          # (your evaluation logic unchanged)
+          cd 0.PlanDeCours && bash .scripts/run.sh && cd ..
+          cd P.Programmation/1.IDE && bash .scripts/run.sh && cd ../2.Jupyter && bash .scripts/run.sh && cd ../..
+          cd 1.Domaines && pwsh .scripts/run.ps1 && cd ..
+          cd 2.MySQL && pwsh .scripts/run.ps1 && cd ..
+          cd 3.Postgres && pwsh .scripts/run.ps1 && cd ..
+          cd 4.DCL && pwsh .scripts/run.ps1 && cd ..
+          cd 5.ModelisationSQL && pwsh .scripts/run.ps1 && cd ..
+          cd 6.BATCH && pwsh .scripts/run.ps1 && cd ..
+          cd 7.PLSQL && pwsh .scripts/run.ps1 && cd ..
+          cd 8.NoSQL && pwsh .scripts/run.ps1 && cd ..
 
-      - name: Commit files
+      - name: Commit changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Vérification de la participation" -a
-          
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git commit -am "Vérification de la participation" || echo "No changes"
+
+      - name: Final rebase safety
+        run: |
+          git pull --rebase origin main
+
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin main

@@ -1,0 +1,27 @@
+Etudiant Diana ajoute avec succes.
+
+Tous les etudiants :
+  [1] {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+  [2] {'age': 22, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+  [3] {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
+  [4] {'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
+
+Recherche par nom (Alice) :
+  {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+
+Etudiants avec la competence Python :
+  {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+  {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
+
+Mise a jour age de Bob (22 -> 23) :
+  {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+
+Suppression de Charlie :
+  Charlie supprime.
+
+Etat final de la table :
+  [1] {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+  [4] {'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
+  [2] {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+
+Connexion fermee.

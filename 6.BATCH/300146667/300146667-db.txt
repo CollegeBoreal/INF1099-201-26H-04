@@ -1,0 +1,102 @@
+Chargement de la base de données...
+Execution de DDL.sql
+CREATE SCHEMA
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+Execution de DML.sql
+INSERT 0 3
+INSERT 0 3
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+UPDATE 1
+UPDATE 1
+DELETE 1
+Execution de DCL.sql
+CREATE ROLE
+CREATE ROLE
+ERROR:  database "reparation_smartphones" does not exist
+GRANT
+GRANT
+GRANT
+GRANT
+REVOKE
+ERROR:  role "technicien_user" cannot be dropped because some objects depend on it
+DETAIL:  privileges for schema boutique
+ERROR:  role "gestionnaire_user" cannot be dropped because some objects depend on it
+DETAIL:  privileges for schema boutique
+privileges for sequence boutique.marque_id_marque_seq
+privileges for table boutique.marque
+privileges for sequence boutique.modele_id_modele_seq
+privileges for table boutique.modele
+privileges for sequence boutique.client_id_client_seq
+privileges for table boutique.client
+privileges for sequence boutique.adresse_id_adresse_seq
+privileges for table boutique.adresse
+privileges for sequence boutique.technicien_id_technicien_seq
+privileges for table boutique.technicien
+privileges for table boutique.appareil
+privileges for sequence boutique.reparation_id_reparation_seq
+privileges for table boutique.reparation
+privileges for sequence boutique.piece_rechange_id_piece_seq
+privileges for table boutique.piece_rechange
+privileges for sequence boutique.ligne_reparation_id_ligne_seq
+privileges for table boutique.ligne_reparation
+privileges for sequence boutique.paiement_id_paiement_seq
+privileges for table boutique.paiement
+privileges for sequence boutique.garantie_id_garantie_seq
+privileges for table boutique.garantie
+Execution de DQL.sql
+ id_marque | nom_marque 
+-----------+------------
+         1 | Apple
+         2 | Samsung
+         3 | Google
+(3 rows)
+
+ id_reparation |  client  | technicien |    num_imei     | date_depot |  statut  
+---------------+----------+------------+-----------------+------------+----------
+             2 | Gagnon   | Roy        | 352999222222222 | 2024-03-05 | Terminée
+             1 | Tremblay | Côté       | 351756111111111 | 2024-03-01 | Terminée
+(2 rows)
+
+ id_reparation |  client  |      nom_piece      | prix_unitaire | prix_mo | total_ligne 
+---------------+----------+---------------------+---------------+---------+-------------
+             1 | Tremblay | Écran iPhone 14     |        149.99 |   50.00 |      199.99
+             2 | Gagnon   | Batterie Galaxy S23 |         54.99 |   40.00 |       94.99
+(2 rows)
+
+ id_reparation |  client  | date_depot |  statut  
+---------------+----------+------------+----------
+             1 | Tremblay | 2024-03-01 | Terminée
+             2 | Gagnon   | 2024-03-05 | Terminée
+(2 rows)
+
+  client  | prenom | total_paye 
+----------+--------+------------
+ Tremblay | Marie  |     199.99
+ Gagnon   | Luc    |      99.99
+(2 rows)
+
+    num_imei     | couleur |   etat_general   | nom_modele | nom_marque 
+-----------------+---------+------------------+------------+------------
+ 351756111111111 | Noir    | Écran fissuré    | iPhone 14  | Apple
+ 352999222222222 | Blanc   | Ne s'allume plus | Galaxy S23 | Samsung
+(2 rows)
+
+Chargement terminé.

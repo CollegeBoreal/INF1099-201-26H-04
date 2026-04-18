@@ -1,5 +1,7 @@
 # 🧪 TP : NoSQL 
 
+[:tada: Participation](.scripts/Participation.md)
+
 ## 🎯 Objectif
 
 Construire une mini base NoSQL avec :
@@ -12,13 +14,36 @@ Construire une mini base NoSQL avec :
 
 # 🧱 1️⃣ Lancer PostgreSQL avec Docker
 
+- [ ] 🪟 Windows (PowerShell)
+
 ```bash id="d6kq7x"
+<<<<<<< HEAD
+docker container run --name postgres-nosql `
+=======
+docker run --name postgres-nosql `
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+  -e POSTGRES_USER=postgres `
+  -e POSTGRES_PASSWORD=postgres `
+  -e POSTGRES_DB=ecole `
+  -p 5432:5432 `
+  -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql `
+  -d postgres
+```
+
+
+- [ ] 🐧 *nix 
+
+```bash id="d6kq7x"
+<<<<<<< HEAD
+docker container run --name postgres-nosql \
+=======
 docker run --name postgres-nosql \
+>>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_DB=ecole \
   -p 5432:5432 \
-  -v $(pwd)/init.sql:/docker-entrypoint-initdb.d/init.sql \
+  -v ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql \
   -d postgres
 ```
 

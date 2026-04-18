@@ -62,8 +62,8 @@ function Write-PresenceHeader {
     Write-Output "## :a: Présence"
     Write-Output ""
 
-    Write-Output "|:hash:| Boréal :id: | README.md | images | 01-ddl.sql | 02-dml.sql | 03-programmation.sql  | test.sql  |"
-    Write-Output "|------|-------------|-----------|--------|------------|------------|-----------------------|-----------|"
+    Write-Output "|:hash:| Boréal :id: | README.md | images | 01-ddl.sql | 02-dml.sql | 03-programmation.sql  | :mouse_trap: DB | :wood: log |"
+    Write-Output "|------|-------------|-----------|--------|------------|------------|-----------------------|-----------------|------------|"
 }
 
 
@@ -78,6 +78,6 @@ function Write-StudentRow {
         [string]$ReadmePath
     )
 
-    Write-Output "| $Index | [$StudentID](../$ReadmePath) :point_right: $GitHubLink | $($Checks.README) | $($Checks.Images) | $($Checks.DDL) | $($Checks.DML) | $($Checks.PROG) | $($Checks.TEST) | $DbStatus | $LogLink |"
+    Write-Output "| $Index | [$StudentID](../$ReadmePath) :point_right: $GitHubLink | $($Checks.README) | $($Checks.Images) | $($Checks.DDL) | $($Checks.DML) | $($Checks.PROG) | $DbStatus | $LogLink |"
 }
 

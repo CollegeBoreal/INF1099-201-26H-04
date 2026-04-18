@@ -1,0 +1,10 @@
+Chargement de la base de données...
+Execution de DDL.sql
+Error: no container with name or ID "postgres-lab" found: no such container
+Execution de DML.sql
+Error: no container with name or ID "postgres-lab" found: no such container
+Execution de DCL.sql
+Error: no container with name or ID "postgres-lab" found: no such container
+Execution de DQL.sql
+Error: no container with name or ID "postgres-lab" found: no such container
+Chargement terminé.

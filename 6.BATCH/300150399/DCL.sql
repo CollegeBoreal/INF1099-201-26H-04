@@ -1,5 +1,0 @@
-CREATE ROLE vendeur LOGIN PASSWORD 'vendeur123';
-
-GRANT USAGE ON SCHEMA boutique TO vendeur;
-
-GRANT SELECT,INSERT ON ALL TABLES IN SCHEMA boutique TO vendeur;

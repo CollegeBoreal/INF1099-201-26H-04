@@ -67,7 +67,20 @@ function Test-LoadDB {
         Push-Location $StudentID
         try {
             pwsh ./load-db.ps1 *> "$StudentID-db.txt"
+
+            # Check for errors in the generated file
+            if (Test-Path "$StudentID-db.txt") {
+                $content = Get-Content "$StudentID-db.txt" -ErrorAction SilentlyContinue
+                $hasError = $content | Where-Object { $_ -match '(?i)error|exception ' }
+                
+                if ($hasError) {
+                    # Write-Host "Errors found in $StudentID-db.txt"
+                    return ":boom:"
+                }
+            }
+
             return ":heavy_check_mark:"
+
         }
         finally {
             Pop-Location

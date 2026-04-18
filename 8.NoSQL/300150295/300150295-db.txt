@@ -1,0 +1,32 @@
+==================================================
+  TP NoSQL - PostgreSQL JSONB
+==================================================
+
+ INSERT - Ajout de Diana
+   Diana ajoutee avec succes.
+
+ SELECT ALL - Tous les etudiants :
+   [1] Alice (25 ans) - Python, Docker
+   [2] Bob (22 ans) - Java, SQL
+   [3] Charlie (30 ans) - Linux, Bash, Python
+   [4] Diana (28 ans) - DevOps, Kubernetes
+
+ SEARCH - Recherche Alice :
+   Trouve : {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+
+ SEARCH - Etudiants maitrisant Python :
+   Alice
+   Charlie
+
+ BONUS UPDATE - Modifier age de Bob a 23 ans :
+   Bob mis a jour : {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+
+ BONUS DELETE - Supprimer Diana :
+   1 etudiant(e) supprime(e).
+
+ Etat final :
+   [1] Alice - 25 ans
+   [2] Bob - 23 ans
+   [3] Charlie - 30 ans
+
+ Connexion fermee. TP termine.

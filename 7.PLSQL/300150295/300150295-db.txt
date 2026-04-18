@@ -1,0 +1,15 @@
+NOTICE:  Etudiant ajoute avec succes : Ali
+NOTICE:  Erreur lors de l ajout de Bob : Age invalide pour Bob
+CALL
+DO
+ nombre_etudiants 
+------------------
+                2
+(1 row)
+
+ id |           action           |        date_action         
+----+----------------------------+----------------------------
+  1 | INSERT sur etudiants : Ali | 2026-04-18 01:13:02.980211
+  2 | Ajout etudiant : Ali       | 2026-04-18 01:13:02.980211
+(2 rows)
+
