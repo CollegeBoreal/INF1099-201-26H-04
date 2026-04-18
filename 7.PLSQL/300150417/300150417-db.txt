@@ -1,5 +1,4 @@
 SET
-NOTICE:  Client ajoute avec succes : Abdelatif Nemous
  id_client |   nom    | prenom  | telephone  |         email          
 -----------+----------+---------+------------+------------------------
          1 | Rahmani  | Chakib  | 6471112222 | chakib@gmail.com
@@ -10,6 +9,7 @@ NOTICE:  Client ajoute avec succes : Abdelatif Nemous
          6 | Khelifi  | Amine   | 6471234567 | amine@gmail.com
          7 | Bouraoui | Akrem   | 6472223333 | akrem@gmail.com
          8 | Nathalie | Robert  | 4168889999 | nathalie@gmail.com
+NOTICE:  Client ajoute avec succes : Abdelatif Nemous
          9 | Mahfuzur | Rahman  | 9054445555 | mahfuzur@gmail.com
         10 | Kero     | Slimani | 6475556666 | kero@gmail.com
 (10 rows)
@@ -60,9 +60,13 @@ NOTICE:  Transaction ajoutee : ID=11
 CALL
  id_transaction |      date_transaction      | montant_initial | montant_converti |   statut   | id_client | id_devise_source | id_devise_cible | id_taux 
 ----------------+----------------------------+-----------------+------------------+------------+-----------+------------------+-----------------+---------
-             11 | 2026-04-18 21:42:48.695862 |          250.00 |           185.00 | EN_ATTENTE |         1 |                1 |               2 |       1
+             11 | 2026-04-18 22:11:56.944456 |          250.00 |           185.00 | EN_ATTENTE |         1 |                1 |               2 |       1
              10 | 2026-02-05 18:30:00        |          800.00 |           528.00 | PAYEE      |        10 |                9 |               2 |      10
               9 | 2026-02-05 10:45:00        |         1500.00 |           210.00 | PAYEE      |         9 |               10 |               3 |       9
+NOTICE:  Erreur ajout transaction : Montant initial invalide : -50.00
+NOTICE:  Erreur attendue OK : Montant initial invalide : -50.00
+NOTICE:  Erreur ajout transaction : Client introuvable : 999
+NOTICE:  Erreur attendue OK : Client introuvable : 999
               8 | 2026-02-04 16:00:00        |        10000.00 |            72.00 | PAYEE      |         8 |                7 |               2 |       8
               7 | 2026-02-04 14:10:00        |          600.00 |           960.00 | ANNULEE    |         7 |                3 |               4 |       7
               6 | 2026-02-03 12:00:00        |          700.00 |           756.00 | PAYEE      |         6 |                3 |               2 |       6
@@ -70,17 +74,13 @@ CALL
               4 | 2026-02-02 15:00:00        |         1000.00 |           920.00 | EN_ATTENTE |         4 |                2 |               3 |       4
               3 | 2026-02-02 09:30:00        |          500.00 |           735.00 | PAYEE      |         3 |                2 |               1 |       3
               2 | 2026-02-01 11:00:00        |         2000.00 |          1360.00 | PAYEE      |         2 |                1 |               3 |       2
-NOTICE:  Erreur ajout transaction : Montant initial invalide : -50.00
-NOTICE:  Erreur attendue OK : Montant initial invalide : -50.00
-NOTICE:  Erreur ajout transaction : Client introuvable : 999
-NOTICE:  Erreur attendue OK : Client introuvable : 999
               1 | 2026-02-01 10:00:00        |         1000.00 |           740.00 | PAYEE      |         1 |                1 |               2 |       1
 (11 rows)
 
  id_historique |        date_action         |             action              | id_transaction 
 ---------------+----------------------------+---------------------------------+----------------
-            12 | 2026-04-18 21:42:48.695862 | Transaction creee par procedure |             11
-            11 | 2026-04-18 21:42:48.695862 | INSERT transaction              |             11
+            12 | 2026-04-18 22:11:56.944456 | Transaction creee par procedure |             11
+            11 | 2026-04-18 22:11:56.944456 | INSERT transaction              |             11
             10 | 2026-02-05 18:30:00        | Transaction validee             |             10
              9 | 2026-02-04 14:10:00        | Transaction annulee             |              7
              8 | 2026-02-03 08:20:00        | Transaction creee               |              5
@@ -98,9 +98,9 @@ DO
 UPDATE 1
  id_historique |        date_action         |             action              | id_transaction 
 ---------------+----------------------------+---------------------------------+----------------
-            13 | 2026-04-18 21:42:48.695862 | UPDATE transaction              |             11
-            12 | 2026-04-18 21:42:48.695862 | Transaction creee par procedure |             11
-            11 | 2026-04-18 21:42:48.695862 | INSERT transaction              |             11
+            13 | 2026-04-18 22:11:56.944456 | UPDATE transaction              |             11
+            12 | 2026-04-18 22:11:56.944456 | Transaction creee par procedure |             11
+            11 | 2026-04-18 22:11:56.944456 | INSERT transaction              |             11
             10 | 2026-02-05 18:30:00        | Transaction validee             |             10
              9 | 2026-02-04 14:10:00        | Transaction annulee             |              7
              8 | 2026-02-03 08:20:00        | Transaction creee               |              5

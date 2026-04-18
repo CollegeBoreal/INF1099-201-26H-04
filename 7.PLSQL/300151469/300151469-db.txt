@@ -3,33 +3,33 @@ NOTICE:  Étudiant ajouté avec succès : Ali (age : 22, email : ali@email.com)
 NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob : l'âge minimum est 18 ans (age fourni : 15)
 NOTICE:  Erreur lors de l'ajout de Clara : Email invalide pour Clara : format attendu exemple@domaine.com (email fourni : emailsansarobas.com)
 NOTICE:  Trigger validation OK pour : Ali2
-NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
 CALL
 DO
-DO
+NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
 NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
+DO
 NOTICE:  TEST 6 OK — Erreur attendue capturée : Plage d'âge invalide : min_age (30) ne peut pas être supérieur à max_age (18)
 CALL
-NOTICE:  Inscription réussie : ali@email.com → cours "Réseaux"
  etudiants_18_30 
 -----------------
                4
 (1 row)
 
+NOTICE:  Inscription réussie : ali@email.com → cours "Réseaux"
 DO
-CALL
 CALL
 NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Réseaux : L'étudiant ali@email.com est déjà inscrit au cours Réseaux
 NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : Étudiant non trouvé avec l'email : inconnu@email.com
+CALL
 NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant
 CALL
 CALL
  id |                       action                        |        date_action         
 ----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 21:42:55.321717
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 21:42:55.321717
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 21:42:55.321717
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 21:42:55.321717
+  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-18 22:12:03.617997
+  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-18 22:12:03.617997
+  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-18 22:12:03.617997
+  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-18 22:12:03.617997
 (4 rows)
 
   nom  | age |      email      |       cours       

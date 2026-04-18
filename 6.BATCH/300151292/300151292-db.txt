@@ -1,4 +1,4 @@
-=== Début : 04/18/2026 21:41:39 ===
+=== Début : 04/18/2026 22:10:46 ===
 Execution de DDL.sql
 CREATE TABLE
 CREATE TABLE
@@ -11,8 +11,8 @@ INSERT 0 5
 INSERT 0 5
 Execution de DCL.sql
 CREATE ROLE
-CREATE ROLE
 [31;1mERROR:  database "borealfit" does not exist[0m
+CREATE ROLE
 GRANT
 GRANT
 GRANT
@@ -54,4 +54,4 @@ Execution de DQL.sql
  Isabelle Côté  |               1
 (5 rows)
 
-=== Terminé : 04/18/2026 21:41:39 | Durée : 0.504747 secondes ===
+=== Terminé : 04/18/2026 22:10:46 | Durée : 0.5194771 secondes ===
