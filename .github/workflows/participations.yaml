@@ -38,6 +38,9 @@ jobs:
           cd 7.PLSQL && pwsh .scripts/run.ps1 && cd ..
           cd 8.NoSQL && pwsh .scripts/run.ps1 && cd ..
 
+      - name: Grade Students
+        run: pwsh .scripts/push_grades.ps1
+
       - name: Commit changes
         run: |
           git config user.email "action@github.com"
