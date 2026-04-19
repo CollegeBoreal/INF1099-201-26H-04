@@ -1,3 +1,1 @@
-ERROR:  Age invalide (doit être >= 18)
-CONTEXT:  PL/pgSQL function ajouter_etudiant(character varying,integer,character varying) line 5 at RAISE
-CALL
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tpdb" does not exist

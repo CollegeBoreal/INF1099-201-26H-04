@@ -1,9 +1,12 @@
+Traceback (most recent call last):
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300150562/app.py", line 4, in <module>
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
 
-📌 Tous les étudiants :
-{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
-{'age': 22, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
-{'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
-{'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
-
-🔎 Recherche Alice :
-{'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
