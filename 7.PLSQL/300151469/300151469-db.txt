@@ -1,43 +1,4 @@
-NOTICE:  Trigger validation OK pour : Ali
-NOTICE:  Étudiant ajouté avec succès : Ali (age : 22, email : ali@email.com)
-NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob : l'âge minimum est 18 ans (age fourni : 15)
-NOTICE:  Erreur lors de l'ajout de Clara : Email invalide pour Clara : format attendu exemple@domaine.com (email fourni : emailsansarobas.com)
-NOTICE:  Trigger validation OK pour : Ali2
-NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
-CALL
-DO
-DO
-NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
-NOTICE:  TEST 6 OK — Erreur attendue capturée : Plage d'âge invalide : min_age (30) ne peut pas être supérieur à max_age (18)
-CALL
-NOTICE:  Inscription réussie : ali@email.com → cours "Réseaux"
- etudiants_18_30 
------------------
-               4
-(1 row)
-
-DO
-CALL
-CALL
-NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Réseaux : L'étudiant ali@email.com est déjà inscrit au cours Réseaux
-NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : Étudiant non trouvé avec l'email : inconnu@email.com
-NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant
-CALL
-CALL
- id |                       action                        |        date_action         
-----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-19 14:21:47.576537
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-19 14:21:47.576537
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-19 14:21:47.576537
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-19 14:21:47.576537
-(4 rows)
-
-  nom  | age |      email      |       cours       
--------+-----+-----------------+-------------------
- Ali   |  22 | ali@email.com   | Réseaux
- Jean  |  25 | jean@email.com  | Réseaux
- Marie |  21 | marie@email.com | Bases de données
- Test  |  20 | test@email.com  | Bases de données
- Test  |  20 | test@email.com  | Programmation Web
-(5 rows)
-
+ERROR:  procedure ajouter_etudiant(unknown, integer, unknown) does not exist
+LINE 10: CALL ajouter_etudiant('Ali', 22, 'ali@email.com');
+              ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.

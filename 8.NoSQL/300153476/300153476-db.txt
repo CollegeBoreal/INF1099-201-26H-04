@@ -1,10 +1,12 @@
+Traceback (most recent call last):
+  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300153476/app.py", line 5, in <module>
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
 
-📌 Tous les étudiants :
-{'age': 25, 'nom': 'Alice', 'email': 'alice@ecole.ca', 'notes': {'INF1007': 78, 'INF1099': 85}, 'ville': 'Montreal', 'statut': 'temps plein', 'competences': ['Python', 'Docker']}
-{'age': 22, 'nom': 'Bob', 'email': 'bob@ecole.ca', 'notes': {'INF1010': 80, 'INF1099': 72}, 'ville': 'Toronto', 'statut': 'temps partiel', 'competences': ['Java', 'SQL']}
-{'age': 30, 'nom': 'Charlie', 'email': 'charlie@ecole.ca', 'notes': {'INF1099': 90, 'INF2010': 88}, 'ville': 'Quebec', 'statut': 'temps plein', 'competences': ['Linux', 'Bash', 'Python']}
-{'age': 27, 'nom': 'Diana', 'email': 'diana@ecole.ca', 'notes': {'INF1099': 95}, 'ville': 'Laval', 'statut': 'temps plein', 'competences': ['JavaScript', 'Node.js', 'MongoDB']}
-{'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
-
-🔎 Recherche Alice :
-{'age': 25, 'nom': 'Alice', 'email': 'alice@ecole.ca', 'notes': {'INF1007': 78, 'INF1099': 85}, 'ville': 'Montreal', 'statut': 'temps plein', 'competences': ['Python', 'Docker']}
