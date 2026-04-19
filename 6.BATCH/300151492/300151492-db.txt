@@ -1,43 +1,10 @@
 Chargement de la base de données...
 Execution de DDL.sql
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
+Error response from daemon: container 39a5d4421b054e339f354a1aaccc71c5ebeaee94d0d14e0b48ba26d5988979a9 is not running
 Execution de DML.sql
-INSERT 0 5
-INSERT 0 3
-INSERT 0 5
+Error response from daemon: container 39a5d4421b054e339f354a1aaccc71c5ebeaee94d0d14e0b48ba26d5988979a9 is not running
 Execution de DCL.sql
-DO
-GRANT
-GRANT
-GRANT
-GRANT
-GRANT
+Error response from daemon: container 39a5d4421b054e339f354a1aaccc71c5ebeaee94d0d14e0b48ba26d5988979a9 is not running
 Execution de DQL.sql
- id |   nom    | prenom |      email      | age 
-----+----------+--------+-----------------+-----
-  1 | Tremblay | Alice  | alice@ecole.ca  |  20
-  2 | Gagnon   | Bob    | bob@ecole.ca    |  22
-  3 | Roy      | Claire | claire@ecole.ca |  21
-  4 | Côté     | David  | david@ecole.ca  |  23
-  5 | Bouchard | Emma   | emma@ecole.ca   |  19
-(5 rows)
-
- id |       titre       |            description            | credits 
-----+-------------------+-----------------------------------+---------
-  1 | Bases de données  | Introduction à SQL et PostgreSQL  |       3
-  2 | Réseaux           | Protocoles et architecture réseau |       3
-  3 | Programmation Web | HTML, CSS, JavaScript             |       3
-(3 rows)
-
-   nom    | prenom |       cours       
-----------+--------+-------------------
- Bouchard | Emma   | Bases de données
- Côté     | David  | Programmation Web
- Gagnon   | Bob    | Bases de données
- Roy      | Claire | Réseaux
- Tremblay | Alice  | Bases de données
-(5 rows)
-
+Error response from daemon: container 39a5d4421b054e339f354a1aaccc71c5ebeaee94d0d14e0b48ba26d5988979a9 is not running
 Chargement terminé.

@@ -1,7 +1,7 @@
 Chargement de la base de données...
 Execution de DDL.sql
-NOTICE:  table "etudiants" does not exist, skipping
 DROP TABLE
+NOTICE:  table "etudiants" does not exist, skipping
 CREATE TABLE
 Execution de DML.sql
 DELETE 0
