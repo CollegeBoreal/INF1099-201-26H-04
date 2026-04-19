@@ -1,23 +1,48 @@
 #!/usr/bin/env pwsh
 
-function Num-ToEmoji {
+function Convert-EmojiScore {
+    [CmdletBinding()]
     param (
-        [int]$n
+        [Parameter(Mandatory)]
+        [object]$Value
     )
 
-    switch ($n) {
-        0 { ":zero:" }
-        1 { ":one:" }
-        2 { ":two:" }
-        3 { ":three:" }
-        4 { ":four:" }
-        5 { ":five:" }
-        6 { ":six:" }
-        7 { ":seven:" }
-        8 { ":eight:" }
-        9 { ":nine:" }
-        default { ":keycap_ten:" }
+    $EmojiToScore = @{
+        ':zero:'        = 0
+        ':one:'         = 1
+        ':two:'         = 2
+        ':three:'       = 3
+        ':four:'        = 4
+        ':five:'        = 5
+        ':six:'         = 6
+        ':seven:'       = 7
+        ':eight:'       = 8
+        ':nine:'        = 9
+        ':keycap_ten:'  = 10
     }
+
+    # Build reverse map
+    $ScoreToEmoji = @{}
+    foreach ($kvp in $EmojiToScore.GetEnumerator()) {
+        $ScoreToEmoji[$kvp.Value] = $kvp.Key
+    }
+
+    # Emoji -> Number
+    if ($Value -is [string]) {
+        if ($EmojiToScore.ContainsKey($Value)) {
+            return $EmojiToScore[$Value]
+        }
+        throw "Unknown emoji score: $Value"
+    }
+
+    # Number -> Emoji (CLAMPED)
+    if ($Value -is [int]) {
+        if ($Value -le 0) { return ':zero:' }
+        if ($Value -ge 10) { return ':keycap_ten:' }
+        return $ScoreToEmoji[$Value]
+    }
+
+    throw "Unsupported value type: $($Value.GetType().Name)"
 }
 
 function Test-CommonItemExists {

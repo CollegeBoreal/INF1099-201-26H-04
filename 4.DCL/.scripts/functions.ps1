@@ -61,10 +61,10 @@ function Write-StudentRow {
         [string]$StudentID,
         [string]$GitHubLink,
         [hashtable]$Checks,
-        [string]$ImagesCount,
+        [int]$ImagesCount,
         [string]$ReadmePath
     )
 
-    Write-Output "| $Index | [$StudentID](../$ReadmePath) :point_right: $GitHubLink | $($Checks.README) | $($Checks.Images) | $(Num-ToEmoji $($ImagesCount)) | "
+    Write-Output "| $Index | [$StudentID](../$ReadmePath) :point_right: $GitHubLink | $($Checks.README) | $($Checks.Images) | $(Convert-EmojiScore $($ImagesCount)) | "
 }
 

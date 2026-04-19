@@ -2,13 +2,13 @@
 
 $ErrorActionPreference = "Stop"
 
-# Importer les fonctions
-. .scripts/functions.ps1
-. .scripts/EXfunctions.ps1
-
 # Importer la liste des étudiants
 . ../.scripts/students.ps1
 . ../.scripts/commons.ps1
+
+# Importer les fonctions
+. .scripts/functions.ps1
+. .scripts/EXfunctions.ps1
 
 Write-ParticipationHeader
 Write-PresenceHeader
