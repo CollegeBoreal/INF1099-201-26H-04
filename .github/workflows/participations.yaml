@@ -39,6 +39,10 @@ jobs:
           cd 8.NoSQL && pwsh .scripts/run.ps1 && cd ..
 
       - name: Grade Students
+        shell: pwsh
+        env:
+          LMS_URL: ${{ secrets.LMS_URL }}            # GitHub variable
+          API_SYNC_TOKEN: ${{ secrets.API_SYNC_TOKEN }} # GitHub secret
         run: pwsh .scripts/push_grades.ps1
 
       - name: Commit changes
