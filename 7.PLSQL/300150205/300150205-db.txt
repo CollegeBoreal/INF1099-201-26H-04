@@ -1,9 +1,9 @@
 NOTICE:  Étudiant ajouté avec succès : Bob Martin (23 ans)
 NOTICE:  Erreur lors de l'ajout de Junior Trop Jeune : Age invalide pour Junior Trop Jeune : 15 ans (minimum 18 ans requis)
 NOTICE:  Erreur lors de l'ajout de Sans Email : Email invalide pour Sans Email : pas-un-email
+NOTICE:  Erreur : l'email alice.tremblay@email.com est déjà utilisé.
 CALL
 DO
-NOTICE:  Erreur : l'email alice.tremblay@email.com est déjà utilisé.
 DO
 CALL
 NOTICE:  5 étudiant(s) trouvé(s) entre 18 et 25 ans
@@ -19,22 +19,22 @@ NOTICE:  Erreur attendue (tranche invalide) : Tranche d'âge invalide : min (30)
                         0
 (1 row)
 
+NOTICE:  Inscription réussie : alice.tremblay@email.com → Bases de donnees
+NOTICE:  Erreur inscription : L'étudiant alice.tremblay@email.com est déjà inscrit au cours Bases de donnees
 DO
+NOTICE:  Erreur inscription : Étudiant non trouvé avec l'email : fantome@email.com
+NOTICE:  Trigger declenche : Trigger — Age invalide pour Trop Jeune Direct : 16 ans (minimum 18 ans)
 CALL
 DO
 DO
 DO
-NOTICE:  Inscription réussie : alice.tremblay@email.com → Bases de donnees
-NOTICE:  Erreur inscription : L'étudiant alice.tremblay@email.com est déjà inscrit au cours Bases de donnees
-NOTICE:  Erreur inscription : Étudiant non trouvé avec l'email : fantome@email.com
-NOTICE:  Trigger declenche : Trigger — Age invalide pour Trop Jeune Direct : 16 ans (minimum 18 ans)
  id |      nom       | age |          email           |       date_creation        
 ----+----------------+-----+--------------------------+----------------------------
-  1 | Alice Tremblay |  22 | alice.tremblay@email.com | 2026-04-20 04:35:55.921201
-  2 | Luc Gagnon     |  25 | luc.gagnon@email.com     | 2026-04-20 04:35:55.921201
-  3 | Marie Côté     |  20 | marie.cote@email.com     | 2026-04-20 04:35:55.921201
-  4 | Test Valide    |  19 | test@email.com           | 2026-04-20 04:35:55.921201
-  5 | Bob Martin     |  23 | bob.martin@email.com     | 2026-04-20 04:35:56.389955
+  1 | Alice Tremblay |  22 | alice.tremblay@email.com | 2026-04-20 04:42:14.902242
+  2 | Luc Gagnon     |  25 | luc.gagnon@email.com     | 2026-04-20 04:42:14.902242
+  3 | Marie Côté     |  20 | marie.cote@email.com     | 2026-04-20 04:42:14.902242
+  4 | Test Valide    |  19 | test@email.com           | 2026-04-20 04:42:14.902242
+  5 | Bob Martin     |  23 | bob.martin@email.com     | 2026-04-20 04:42:15.380611
 (5 rows)
 
  id |          nom          | credits 
@@ -47,14 +47,14 @@ NOTICE:  Trigger declenche : Trigger — Age invalide pour Trop Jeune Direct : 1
 
  id | etudiant_id | cours_id |      date_inscription      
 ----+-------------+----------+----------------------------
-  1 |           1 |        1 | 2026-04-20 04:35:56.389955
+  1 |           1 |        1 | 2026-04-20 04:42:15.380611
 (1 row)
 
  id |                          action                           |        date_action         
 ----+-----------------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : id=5                               | 2026-04-20 04:35:56.389955
-  2 | INSERT étudiant : Bob Martin (bob.martin@email.com)       | 2026-04-20 04:35:56.389955
-  3 | INSERT sur inscriptions : id=1                            | 2026-04-20 04:35:56.389955
-  4 | INSCRIPTION : alice.tremblay@email.com → Bases de donnees | 2026-04-20 04:35:56.389955
+  1 | INSERT sur etudiants : id=5                               | 2026-04-20 04:42:15.380611
+  2 | INSERT étudiant : Bob Martin (bob.martin@email.com)       | 2026-04-20 04:42:15.380611
+  3 | INSERT sur inscriptions : id=1                            | 2026-04-20 04:42:15.380611
+  4 | INSCRIPTION : alice.tremblay@email.com → Bases de donnees | 2026-04-20 04:42:15.380611
 (4 rows)
 
