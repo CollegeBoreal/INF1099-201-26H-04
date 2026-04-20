@@ -1,1 +1,38 @@
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+NOTICE:  Etudiant ajoute avec succes : Nadia
+NOTICE:  Inscription reussie
+CALL
+ nombre_etudiants_par_age 
+--------------------------
+                        5
+(1 row)
+
+CALL
+ id |  nom  | age |      email      |       date_creation        
+----+-------+-----+-----------------+----------------------------
+  1 | Massi |  21 | massi@email.com | 2026-04-20 00:09:41.885662
+  2 | Alice |  22 | alice@email.com | 2026-04-20 00:09:41.885662
+  3 | Karim |  24 | karim@email.com | 2026-04-20 00:09:41.885662
+  4 | Sofia |  20 | sofia@email.com | 2026-04-20 00:09:41.885662
+  5 | Nadia |  23 | nadia@email.com | 2026-04-20 00:09:42.343446
+(5 rows)
+
+ id |       nom        | credits 
+----+------------------+---------
+  1 | Bases de donnees |       3
+  2 | Programmation    |       4
+  3 | Reseautique      |       3
+  4 | Systemes         |       4
+(4 rows)
+
+ id | etudiant_id | cours_id |      date_inscription      
+----+-------------+----------+----------------------------
+  1 |           2 |        1 | 2026-04-20 00:09:42.343446
+(1 row)
+
+ id |                      action                       |        date_action         
+----+---------------------------------------------------+----------------------------
+  1 | INSERT etudiants                                  | 2026-04-20 00:09:42.343446
+  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-20 00:09:42.343446
+  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-20 00:09:42.343446
+(3 rows)
+

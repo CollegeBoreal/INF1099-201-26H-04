@@ -1,12 +1,38 @@
-Traceback (most recent call last):
-  File "/home/runner/work/INF1099-201-26H-04/INF1099-201-26H-04/8.NoSQL/300150303/app.py", line 7, in <module>
-    conn = psycopg2.connect(
-           ^^^^^^^^^^^^^^^^^
-  File "/home/runner/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
 
+➕ INSERT - Ajout de Diana :
+   Diana ajoutee avec succes !
+
+📌 SELECT ALL - Tous les etudiants :
+   ID 1 -> {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+   ID 2 -> {'age': 22, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+   ID 3 -> {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
+   ID 4 -> {'age': 28, 'nom': 'Diana', 'competences': ['DevOps', 'Kubernetes']}
+
+🔎 SEARCH - Recherche par nom (Alice) :
+   Trouve : {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+
+🔎 SEARCH - Etudiants avec la competence Python :
+   Trouve : {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+   Trouve : {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python']}
+
+✏️  UPDATE - Modifier l'age de Bob (22 -> 23) :
+   Apres update : {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+
+✏️  UPDATE - Ajouter 'Docker' aux competences de Charlie :
+   Apres update : {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python', 'Docker']}
+
+🗑️  DELETE - Suppression de Diana :
+   Diana supprimee !
+
+✅ ETAT FINAL - Tous les etudiants :
+   ID 1 -> {'age': 25, 'nom': 'Alice', 'competences': ['Python', 'Docker']}
+   ID 2 -> {'age': 23, 'nom': 'Bob', 'competences': ['Java', 'SQL']}
+   ID 3 -> {'age': 30, 'nom': 'Charlie', 'competences': ['Linux', 'Bash', 'Python', 'Docker']}
+
+📖 DEMO operateurs -> et ->> :
+   nom_texte | age_json | age_texte
+   ----------------------------------------
+   Alice      |       25 | 25
+   Bob        |       23 | 23
+
+🎉 Script termine avec succes !

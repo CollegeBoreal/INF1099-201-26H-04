@@ -1,26 +1,26 @@
 Chargement de la base de données...
 Execution de DDL.sql
-DROP TABLE
-DROP TABLE
 NOTICE:  table "avis" does not exist, skipping
 NOTICE:  table "livraison" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
 NOTICE:  table "paiement" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "lignecommande" does not exist, skipping
+DROP TABLE
 NOTICE:  table "commande" does not exist, skipping
 DROP TABLE
 NOTICE:  table "stock" does not exist, skipping
-DROP TABLE
 NOTICE:  table "crampon" does not exist, skipping
-DROP TABLE
 NOTICE:  table "categorie" does not exist, skipping
 NOTICE:  table "marque" does not exist, skipping
-DROP TABLE
-DROP TABLE
 NOTICE:  table "adresse" does not exist, skipping
-DROP TABLE
 NOTICE:  table "client" does not exist, skipping
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
 DROP TABLE
 CREATE TABLE
 CREATE TABLE
@@ -115,11 +115,11 @@ GRANT ROLE
 Execution de DQL.sql
  id_client |   nom   | prenom  |            email             | telephone  | date_inscription 
 -----------+---------+---------+------------------------------+------------+------------------
-         3 | Bernard | Théo    | theo.bernard@email.com       | 0654321098 | 2026-04-19
-         1 | Dupont  | Lucas   | lucas.dupont@email.com       | 0612345678 | 2026-04-19
-         4 | Leroy   | Camille | camille.leroy@email.com      | 0623456789 | 2026-04-19
-         2 | Martin  | Emma    | emma.martin@email.com        | 0698765432 | 2026-04-19
-         5 | Moreau  | Antoine | antoine.moreau2025@email.com | 0687654321 | 2026-04-19
+         3 | Bernard | Théo    | theo.bernard@email.com       | 0654321098 | 2026-04-20
+         1 | Dupont  | Lucas   | lucas.dupont@email.com       | 0612345678 | 2026-04-20
+         4 | Leroy   | Camille | camille.leroy@email.com      | 0623456789 | 2026-04-20
+         2 | Martin  | Emma    | emma.martin@email.com        | 0698765432 | 2026-04-20
+         5 | Moreau  | Antoine | antoine.moreau2025@email.com | 0687654321 | 2026-04-20
 (5 rows)
 
    marque    |       modele       |       surface        | pointure |   couleur   |  prix  | quantite_disponible | etat_stock 

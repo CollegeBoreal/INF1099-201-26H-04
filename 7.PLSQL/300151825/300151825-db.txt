@@ -1,1 +1,15 @@
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "tpdb" does not exist
+NOTICE:  Etudiant ajouté avec succès : Ali
+NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob
+CALL
+DO
+ nombre_etudiants 
+------------------
+                2
+(1 row)
+
+ id |           action           |        date_action         
+----+----------------------------+----------------------------
+  1 | INSERT sur etudiants : Ali | 2026-04-20 00:09:40.669936
+  2 | Ajout étudiant : Ali       | 2026-04-20 00:09:40.669936
+(2 rows)
+

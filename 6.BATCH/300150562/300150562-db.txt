@@ -1,23 +1,56 @@
 Chargement de la base de données...
 Execution de DDL.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is shutting down
+NOTICE:  table "livraison" does not exist, skipping
+DROP TABLE
+NOTICE:  table "paiement" does not exist, skipping
+NOTICE:  table "ligne_commande" does not exist, skipping
+NOTICE:  table "commande" does not exist, skipping
+NOTICE:  table "maillot" does not exist, skipping
+NOTICE:  table "categorie_maillot" does not exist, skipping
+NOTICE:  table "adresse" does not exist, skipping
+NOTICE:  table "client" does not exist, skipping
+NOTICE:  table "livreur" does not exist, skipping
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
 Execution de DML.sql
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
-	Is the server running locally and accepting connections on that socket?
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
 Execution de DCL.sql
 CREATE ROLE
 GRANT
 Execution de DQL.sql
-ERROR:  relation "client" does not exist
-LINE 1: SELECT * FROM CLIENT;
-                      ^
-ERROR:  relation "commande" does not exist
-LINE 1: SELECT * FROM COMMANDE;
-                      ^
-ERROR:  relation "maillot" does not exist
-LINE 1: SELECT * FROM MAILLOT;
-                      ^
-ERROR:  relation "client" does not exist
-LINE 2: FROM CLIENT c
-             ^
+ id_client |  nom  | prénom  | postnom |  téléphone   |           email           | mot_de_passe  
+-----------+-------+---------+---------+--------------+---------------------------+---------------
+         1 | Ekofo | Corneil | Wema    | 437-518-8443 | corneilekofo003@gmail.com | motdepasse123
+(1 row)
+
+ id_commande | id_client | id_adresse_livraison | date_commande | statut_commande | total_commande 
+-------------+-----------+----------------------+---------------+-----------------+----------------
+           1 |         1 |                    1 | 2026-04-20    | En cours        |         129.99
+(1 row)
+
+ id_maillot | id_categorie | id_pays_origine |    nom_maillot     |           description            |  prix  |   statut   | taille | couleur | marque | saison 
+------------+--------------+-----------------+--------------------+----------------------------------+--------+------------+--------+---------+--------+--------
+          1 |            1 |               1 | Maillot FC Toronto | Maillot officiel FC Toronto 2026 | 129.99 | Disponible | M      | Rouge   | Adidas | 2026
+(1 row)
+
+  nom  | id_commande 
+-------+-------------
+ Ekofo |           1
+(1 row)
+
 Chargement terminé.
