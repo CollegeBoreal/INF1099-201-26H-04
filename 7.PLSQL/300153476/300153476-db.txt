@@ -6,8 +6,8 @@ NOTICE:  Erreur : l'adresse "ali@email.com" est déjà enregistrée dans la base
 DO
 DO
 NOTICE:  Nombre d'étudiants entre 18 et 25 ans : 2
-NOTICE:  Erreur attendue OK : Plage d'âge invalide : min (30) ne peut pas être supérieur à max (20)
 DO
+NOTICE:  Erreur attendue OK : Plage d'âge invalide : min (30) ne peut pas être supérieur à max (20)
  nombre_etudiants_par_age 
 --------------------------
                         2
@@ -16,7 +16,7 @@ DO
 DO
  id |                action                |        date_action         
 ----+--------------------------------------+----------------------------
-  1 | INSERT sur etudiants — nouveau : Ali | 2026-04-20 22:32:58.444446
-  2 | Ajout étudiant : Ali (ali@email.com) | 2026-04-20 22:32:58.444446
+  1 | INSERT sur etudiants — nouveau : Ali | 2026-04-20 23:36:25.294127
+  2 | Ajout étudiant : Ali (ali@email.com) | 2026-04-20 23:36:25.294127
 (2 rows)
 
