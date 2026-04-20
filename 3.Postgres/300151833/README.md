@@ -4,10 +4,10 @@
 
 ## 🎯 Objectif
 
-- Installer PostgreSQL avec Docker  
-- Charger la base de données Sakila  
-- Explorer la base avec pgAdmin  
-- Exécuter des requêtes SQL  
+- Installer PostgreSQL avec Docker
+- Charger la base de données Sakila
+- Explorer la base avec pgAdmin
+- Exécuter des requêtes SQL
 
 ---
 
@@ -55,7 +55,7 @@ Database : appdb
 📚 Projet personnel : Bibliothèque universitaire
 🎯 Description
 
-Système de gestion d’une bibliothèque universitaire permettant :
+Système permettant :
 
 Gestion des membres
 Gestion des livres
@@ -83,26 +83,4 @@ Emprunt(id_emprunt, date_emprunt, id_membre)
 
 3FN
 
-Livre(id_livre, titre, id_categorie)
-
-👨‍🎓 Auteur
-
-Projet réalisé dans le cadre du cours de bases de données.
-
-
----
-
-# ⚠️ IMPORTANT
-
-👉 Avant de déposer sur GitHub :
-
-Assure-toi que ton dossier contient :
-
-
-images/
-tables.png
-actor.png
-film.png
-star.png
-customer.png
-pgadmin.png
+Livre(id_livre, titre, id_categorie
