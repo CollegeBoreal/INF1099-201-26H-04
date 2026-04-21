@@ -13,6 +13,7 @@ NOTICE:  table "runway" does not exist, skipping
 NOTICE:  table "gate" does not exist, skipping
 NOTICE:  table "terminal" does not exist, skipping
 NOTICE:  table "avion" does not exist, skipping
+NOTICE:  table "compagnieaerienne" does not exist, skipping
 DROP TABLE
 CREATE TABLE
 CREATE TABLE
@@ -20,7 +21,6 @@ CREATE TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
-NOTICE:  table "compagnieaerienne" does not exist, skipping
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
@@ -131,5 +131,5 @@ Execution de DQL.sql
  Boeing 787  |      250
 (3 rows)
 
-Temps d'exécution : 00:00:00.4990564
+Temps d'exécution : 00:00:00.4669894
 --- Fin de l'exécution ---

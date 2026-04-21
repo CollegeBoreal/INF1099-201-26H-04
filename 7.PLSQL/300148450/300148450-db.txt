@@ -13,9 +13,9 @@ DO
 CALL
  id | nom  | age |     email      |       date_creation        
 ----+------+-----+----------------+----------------------------
-  1 | Test |  20 | test@email.com | 2026-04-21 00:57:14.570203
-  2 | Sara |  23 | sara@email.com | 2026-04-21 00:57:14.570203
-  3 | Ali  |  22 | ali@email.com  | 2026-04-21 00:57:15.020634
+  1 | Test |  20 | test@email.com | 2026-04-21 01:02:15.449026
+  2 | Sara |  23 | sara@email.com | 2026-04-21 01:02:15.449026
+  3 | Ali  |  22 | ali@email.com  | 2026-04-21 01:02:15.931653
 (3 rows)
 
  id | etudiant_id | cours_id | date_inscription 
@@ -24,10 +24,10 @@ CALL
 
  id |                                             action                                              |        date_action         
 ----+-------------------------------------------------------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants | nouvelle valeur : Ali                                                    | 2026-04-21 00:57:15.020634
-  2 | Ajout manuel d'un etudiant : Ali (ali@email.com)                                                | 2026-04-21 00:57:15.020634
-  3 | Erreur lors de l'ajout de Bob : Age invalide pour Bob : un étudiant doit avoir au moins 18 ans. | 2026-04-21 00:57:15.020634
-  4 | Erreur lors de l'ajout de Karim : Email invalide pour Karim : karim-email-invalide              | 2026-04-21 00:57:15.020634
-  5 | Erreur inscription : record "new" has no field "nom"                                            | 2026-04-21 00:57:15.020634
+  1 | INSERT sur etudiants | nouvelle valeur : Ali                                                    | 2026-04-21 01:02:15.931653
+  2 | Ajout manuel d'un etudiant : Ali (ali@email.com)                                                | 2026-04-21 01:02:15.931653
+  3 | Erreur lors de l'ajout de Bob : Age invalide pour Bob : un étudiant doit avoir au moins 18 ans. | 2026-04-21 01:02:15.931653
+  4 | Erreur lors de l'ajout de Karim : Email invalide pour Karim : karim-email-invalide              | 2026-04-21 01:02:15.931653
+  5 | Erreur inscription : record "new" has no field "nom"                                            | 2026-04-21 01:02:15.931653
 (5 rows)
 
