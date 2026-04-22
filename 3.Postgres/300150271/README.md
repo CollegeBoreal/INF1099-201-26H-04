@@ -99,6 +99,7 @@ docker exec -it postgres psql -U postgres -d appdb
 ```sql
 \dt
 ```
+<img width="357" height="321" alt="Screenshot 2026-04-22 152733" src="https://github.com/user-attachments/assets/2981ab68-0efd-4761-a069-4b6a97d39d61" />
 
 <details>
 <summary>🖼️ Capture d'écran</summary>
@@ -109,6 +110,8 @@ docker exec -it postgres psql -U postgres -d appdb
 
 ```sql
 SELECT COUNT(*) FROM film;
+<img width="284" height="92" alt="Screenshot 2026-04-22 152744" src="https://github.com/user-attachments/assets/3bb0ebab-358b-4eb9-9d9c-237351c7900f" />
+
 SELECT COUNT(*) FROM actor;
 ```
 
@@ -120,6 +123,7 @@ SELECT COUNT(*) FROM actor;
 </details>
 
 ---
+<img width="314" height="93" alt="Screenshot 2026-04-22 152721" src="https://github.com/user-attachments/assets/1035d0a3-442e-42f7-919a-8f06eaee7c4b" />
 
 ### Étape 7 : Installer pgAdmin 4
 
@@ -140,6 +144,7 @@ choco install pgadmin4 -y
    - Password : `postgres`
    - Database : `appdb`
 4. Cliquer sur **Save**
+<img width="690" height="526" alt="Screenshot 2026-04-22 152802" src="https://github.com/user-attachments/assets/6b692813-91d8-47b0-847f-767b8bbf5837" />
 
 <details>
 <summary>🖼️ Capture d'écran</summary>
