@@ -1,3 +1,32 @@
+function Get-RubricLevelIdFromReadmeEmoji {
+    param (
+        [Parameter(Mandatory)]
+        [string]$Emoji,
+
+        [Parameter(Mandatory)]
+        [int[]]$Levels  # [fail, silver, gold]
+    )
+
+    if ($Levels.Count -ne 3) {
+        throw "Levels must contain exactly 3 values: [fail, silver, gold]"
+    }
+
+    $fail   = $Levels[0]
+    $silver = $Levels[1]
+    $gold   = $Levels[2]
+
+    $Emoji = $Emoji.Trim()
+
+    switch -Regex ($Emoji) {
+        ':x:|❌'                   { return $fail }
+        ':2nd_place_medal:|🥈'     { return $silver }
+        ':1st_place_medal:|🥇'     { return $gold }
+        default {
+            throw "Unknown README emoji: $Emoji"
+        }
+    }
+}
+
 function Get-RubricLevelIdFromEmoji {
     param (
         [Parameter(Mandatory)]
@@ -17,51 +46,6 @@ function Get-RubricLevelIdFromEmoji {
     }
 
     return $PassLevelId
-}
-
-function Get-ParticipationGrades {
-    param (
-        [Parameter(Mandatory)]
-        [string]$Path
-    )
-
-    $lines = Get-Content $Path
-    $results = @()
-
-    foreach ($line in $lines) {
-
-        # Only data rows start with "| <number> |"
-        if ($line -match '^\|\s*\d+\s*\|') {
-
-            $cols = $line -split '\|'
-
-            # Columns (0 is empty):
-            # 1 = index
-            # 2 = Boréal ID link column
-            # 5 = abacus emoji
-
-            if ($cols.Count -lt 6) { continue }
-
-            if ($cols[2] -match '(\d{9})') {
-                $borealId = $matches[1]
-            } else {
-                continue
-            }
-
-            $emoji = ($cols[5]).Trim()
-
-            $score = $EmojiToScore[$emoji]
-
-            if ($null -eq $score) { continue }
-
-            $results += [PSCustomObject]@{
-                borealId = $borealId
-                score    = $score
-            }
-        }
-    }
-
-    return $results
 }
 
 function Get-LMSGradableUsers {
@@ -115,5 +99,75 @@ function Get-LMSStudentInfo {
     }
 
     return $LMSStudents
+}
+
+# ---------------------
+# Grading
+# ---------------------
+function Send-LMSRubricGrade {
+    param (
+        [Parameter(Mandatory)]
+        [string]$LMS_URL,
+
+        [Parameter(Mandatory)]
+        [string]$TOKEN,
+
+        [Parameter(Mandatory)]
+        [int]$AssignmentId,
+
+        [Parameter(Mandatory)]
+        [int]$UserId,
+
+        [Parameter(Mandatory)]
+        [array]$Rubric,
+
+        [int]$AttemptNumber = 0,
+
+        [string]$WorkflowState = "graded"
+    )
+
+    # -------------------------
+    # BUILD BASE PAYLOAD
+    # -------------------------
+    $body = @{
+        wstoken            = $TOKEN
+        wsfunction         = "local_gradesaver_save_grade"
+        moodlewsrestformat = "json"
+        assignmentid       = $AssignmentId
+        userid             = $UserId
+        attemptnumber      = $AttemptNumber
+        workflowstate      = $WorkflowState
+    }
+
+    # -------------------------
+    # ADD RUBRIC DYNAMICALLY
+    # -------------------------
+    for ($i = 0; $i -lt $Rubric.Count; $i++) {
+        $entry = $Rubric[$i]
+
+        if (-not $entry.criterionid -or -not $entry.levelid) {
+            throw "Invalid rubric entry at index $i"
+        }
+
+        $body["rubric[criteria][$i][criterionid]"] = $entry.criterionid
+        $body["rubric[criteria][$i][levelid]"]     = $entry.levelid
+        $body["rubric[criteria][$i][remark]"]      = $entry.remark
+    }
+
+    if ($DEBUG) { $body | ConvertTo-Json -Depth 10 }
+
+    # -------------------------
+    # CALL MOODLE API
+    # -------------------------
+    try {
+        $response = Invoke-RestMethod -Method Post `
+            -Uri "https://$LMS_URL/webservice/rest/server.php" `
+            -Body $body
+
+        return $response
+    }
+    catch {
+        throw "Moodle API call failed: $($_.Exception.Message)"
+    }
 }
 
