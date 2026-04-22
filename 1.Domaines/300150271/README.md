@@ -1,68 +1,129 @@
-<<<<<<< HEAD
-🏢 Projet – Normalisation d’une Base de Données Immobilière
-🎯 Domaine
+# 🏢 Projet — Normalisation d'une Base de Données Immobilière
 
-Système de gestion des ventes d’appartements dans des immeubles.
+**Nom : Mazigh Bareche**
+**Code étudiant : 300150271**
+**Cours : INF1099 — Bases de données**
+**Session : Hiver 2026**
 
-Ce projet illustre le passage d’une table non normalisée vers une base de données en 1FN, 2FN et 3FN, avec un diagramme Entité/Relation (E/R) final.
+---
 
-📌 1ère Forme Normale (1FN)
-🔎 Description
+## 🎯 Description du projet
 
-En 1FN, toutes les données sont stockées dans une seule table VENTE.
-Chaque champ contient une valeur atomique.
+Ce projet consiste à concevoir une base de données pour la gestion des ventes d'appartements dans des immeubles.
 
-📄 Structure
+L'objectif est de démontrer :
+
+- La transformation d'une table non normalisée
+- L'application des formes normales (1FN, 2FN, 3FN)
+- La création d'un modèle relationnel optimisé
+- La modélisation avec un diagramme Entité/Relation (E/R)
+
+---
+
+## 📌 Étape 1 : Table non normalisée (0FN)
+
+### 🔎 Description
+
+Toutes les données sont regroupées dans une seule table VENTE.
+
+### 📄 Structure
+
+```sql
 VENTE
 ---------------------------------------------------------
 IdVente (PK) | NomClient | TelClient | AdresseImmeuble |
 Ville | NumAppartement | Surface | Prix | DateVente
+```
 
-⚠️ Problèmes
+### ⚠️ Problèmes
 
-Redondance des informations client
+- Redondance des informations client
+- Redondance des informations immeuble
+- Difficulté de mise à jour
+- Anomalies d'insertion et de suppression
 
-Redondance des informations immeuble
+---
 
-Difficulté de mise à jour
+## 📌 Étape 2 : Première Forme Normale (1FN)
 
-Anomalies d’insertion et de suppression
+### 🔎 Objectif
 
-📌 2ème Forme Normale (2FN)
-🔎 Description
+- Données atomiques
+- Pas de groupes répétitifs
 
-Séparation des données selon leurs dépendances fonctionnelles.
+### ✅ Résultat
 
-🧱 Entités créées :
+Structure validée : chaque champ contient une seule valeur atomique.
 
-CLIENT
+---
 
-IMMEUBLE
+## 📌 Étape 3 : Deuxième Forme Normale (2FN)
 
-APPARTEMENT
+### 🔎 Objectif
 
-VENTE
+Éliminer les dépendances partielles.
 
-Les dépendances partielles sont éliminées.
+### 🧱 Décomposition
 
-📌 3ème Forme Normale (3FN)
-🔎 Description
+```sql
+CLIENT(IdClient, NomClient, TelClient)
 
-Élimination des dépendances transitives.
-
-Chaque attribut dépend uniquement de la clé primaire de sa table.
-
-✅ Structure finale
-
-CLIENT(IdClient, Nom, Telephone)
-
-IMMEUBLE(IdImmeuble, Adresse, Ville)
+IMMEUBLE(IdImmeuble, AdresseImmeuble, Ville)
 
 APPARTEMENT(IdAppartement, NumAppartement, Surface, Prix, IdImmeuble)
 
 VENTE(IdVente, DateVente, IdClient, IdAppartement)
+```
 
-📊 Diagramme Entité / Relation (E/R)
+### ✅ Avantages
+
+- Réduction des redondances
+- Meilleure organisation
+- Données mieux structurées
+
+---
+
+## 📌 Étape 4 : Troisième Forme Normale (3FN)
+
+### 🔎 Objectif
+
+Supprimer les dépendances transitives.
+
+### ✅ Structure finale
+
+```sql
+CLIENT (
+    IdClient SERIAL PRIMARY KEY,
+    Nom TEXT,
+    Telephone TEXT
+);
+
+IMMEUBLE (
+    IdImmeuble SERIAL PRIMARY KEY,
+    Adresse TEXT,
+    Ville TEXT
+);
+
+APPARTEMENT (
+    IdAppartement SERIAL PRIMARY KEY,
+    NumAppartement INT,
+    Surface NUMERIC,
+    Prix NUMERIC,
+    IdImmeuble INT REFERENCES IMMEUBLE(IdImmeuble)
+);
+
+VENTE (
+    IdVente SERIAL PRIMARY KEY,
+    DateVente DATE,
+    IdClient INT REFERENCES CLIENT(IdClient),
+    IdAppartement INT REFERENCES APPARTEMENT(IdAppartement)
+);
+```
+
+---
+
+## 📊 Diagramme Entité / Relation (E/R)
+
 ```mermaid
 erDiagram
     CLIENT {
@@ -97,149 +158,77 @@ erDiagram
     IMMEUBLE ||--o{ APPARTEMENT : contient
 ```
 
-🔗 Relations
+---
 
-Un client peut acheter plusieurs appartements.
+## 🔗 Relations
 
-Un appartement appartient à un seul immeuble.
+- Un client peut acheter plusieurs appartements
+- Un appartement appartient à un seul immeuble
+- Une vente relie un client et un appartement
+- Un immeuble contient plusieurs appartements
 
-Une vente associe un client et un appartement.
+---
 
-Un immeuble contient plusieurs appartements.
+## 🧪 Exemple de requêtes SQL
 
-🛠 Technologies
+### Ajouter un client
 
-Modélisation conceptuelle
-
-Normalisation 1FN → 3FN
-
-Diagramme E/R avec Mermaid
-
-👨‍🎓 Auteur
-
-Mazigh Bareche
-Projet académique – Base de données
-
-=======
-🏢 Projet – Normalisation d’une Base de Données Immobilière
-🎯 Domaine
-
-Système de gestion des ventes d’appartements dans des immeubles.
-
-Ce projet illustre le passage d’une table non normalisée vers une base de données en 1FN, 2FN et 3FN, avec un diagramme Entité/Relation (E/R) final.
-
-📌 1ère Forme Normale (1FN)
-🔎 Description
-
-En 1FN, toutes les données sont stockées dans une seule table VENTE.
-Chaque champ contient une valeur atomique.
-
-📄 Structure
-VENTE
----------------------------------------------------------
-IdVente (PK) | NomClient | TelClient | AdresseImmeuble |
-Ville | NumAppartement | Surface | Prix | DateVente
-
-⚠️ Problèmes
-
-Redondance des informations client
-
-Redondance des informations immeuble
-
-Difficulté de mise à jour
-
-Anomalies d’insertion et de suppression
-
-📌 2ème Forme Normale (2FN)
-🔎 Description
-
-Séparation des données selon leurs dépendances fonctionnelles.
-
-🧱 Entités créées :
-
-CLIENT
-
-IMMEUBLE
-
-APPARTEMENT
-
-VENTE
-
-Les dépendances partielles sont éliminées.
-
-📌 3ème Forme Normale (3FN)
-🔎 Description
-
-Élimination des dépendances transitives.
-
-Chaque attribut dépend uniquement de la clé primaire de sa table.
-
-✅ Structure finale
-
-CLIENT(IdClient, Nom, Telephone)
-
-IMMEUBLE(IdImmeuble, Adresse, Ville)
-
-APPARTEMENT(IdAppartement, NumAppartement, Surface, Prix, IdImmeuble)
-
-VENTE(IdVente, DateVente, IdClient, IdAppartement)
-
-📊 Diagramme Entité / Relation (E/R)
-```mermaid
-erDiagram
-    CLIENT {
-        int IdClient PK
-        string Nom
-        string Telephone
-    }
-
-    IMMEUBLE {
-        int IdImmeuble PK
-        string Adresse
-        string Ville
-    }
-
-    APPARTEMENT {
-        int IdAppartement PK
-        int NumAppartement
-        float Surface
-        float Prix
-        int IdImmeuble FK
-    }
-
-    VENTE {
-        int IdVente PK
-        date DateVente
-        int IdClient FK
-        int IdAppartement FK
-    }
-
-    CLIENT ||--o{ VENTE : achete
-    APPARTEMENT ||--o{ VENTE : est_vendu_dans
-    IMMEUBLE ||--o{ APPARTEMENT : contient
+```sql
+INSERT INTO CLIENT (Nom, Telephone)
+VALUES ('Mazigh', '5140000000');
 ```
 
-🔗 Relations
+### Ajouter un immeuble
 
-Un client peut acheter plusieurs appartements.
+```sql
+INSERT INTO IMMEUBLE (Adresse, Ville)
+VALUES ('123 Rue Toronto', 'Toronto');
+```
 
-Un appartement appartient à un seul immeuble.
+### Ajouter un appartement
 
-Une vente associe un client et un appartement.
+```sql
+INSERT INTO APPARTEMENT (NumAppartement, Surface, Prix, IdImmeuble)
+VALUES (101, 75, 250000, 1);
+```
 
-Un immeuble contient plusieurs appartements.
+### Créer une vente
 
-🛠 Technologies
+```sql
+INSERT INTO VENTE (DateVente, IdClient, IdAppartement)
+VALUES ('2026-04-08', 1, 1);
+```
 
-Modélisation conceptuelle
+### Voir les ventes
 
-Normalisation 1FN → 3FN
+```sql
+SELECT c.Nom, a.NumAppartement, v.DateVente
+FROM VENTE v
+JOIN CLIENT c ON v.IdClient = c.IdClient
+JOIN APPARTEMENT a ON v.IdAppartement = a.IdAppartement;
+```
 
-Diagramme E/R avec Mermaid
+---
 
-👨‍🎓 Auteur
+## 🛠 Technologies utilisées
 
-Mazigh Bareche
-Projet académique – Base de données
+- PostgreSQL
+- SQL
+- Docker
+- pgAdmin
+- Mermaid (diagrammes)
 
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+---
+
+## ✅ Conclusion
+
+Ce projet m'a permis de :
+
+- Comprendre l'importance de la normalisation
+- Structurer efficacement les données
+- Réduire les anomalies et redondances
+- Créer un modèle relationnel optimisé
+
+---
+
+🔥 Projet réalisé dans le cadre du cours INF1099 — Bases de données
