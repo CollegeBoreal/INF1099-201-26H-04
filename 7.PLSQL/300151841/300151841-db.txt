@@ -1,6 +1,6 @@
 NOTICE:  Etudiant ajoute avec succes : Nadia
-NOTICE:  Inscription reussie
 CALL
+NOTICE:  Inscription reussie
  nombre_etudiants_par_age 
 --------------------------
                         5
@@ -9,11 +9,11 @@ CALL
 CALL
  id |  nom  | age |      email      |       date_creation        
 ----+-------+-----+-----------------+----------------------------
-  1 | Massi |  21 | massi@email.com | 2026-04-22 19:53:03.617318
-  2 | Alice |  22 | alice@email.com | 2026-04-22 19:53:03.617318
-  3 | Karim |  24 | karim@email.com | 2026-04-22 19:53:03.617318
-  4 | Sofia |  20 | sofia@email.com | 2026-04-22 19:53:03.617318
-  5 | Nadia |  23 | nadia@email.com | 2026-04-22 19:53:04.20732
+  1 | Massi |  21 | massi@email.com | 2026-04-22 19:57:57.824121
+  2 | Alice |  22 | alice@email.com | 2026-04-22 19:57:57.824121
+  3 | Karim |  24 | karim@email.com | 2026-04-22 19:57:57.824121
+  4 | Sofia |  20 | sofia@email.com | 2026-04-22 19:57:57.824121
+  5 | Nadia |  23 | nadia@email.com | 2026-04-22 19:57:58.305888
 (5 rows)
 
  id |       nom        | credits 
@@ -24,15 +24,15 @@ CALL
   4 | Systemes         |       4
 (4 rows)
 
- id | etudiant_id | cours_id |     date_inscription      
-----+-------------+----------+---------------------------
-  1 |           2 |        1 | 2026-04-22 19:53:04.20732
+ id | etudiant_id | cours_id |      date_inscription      
+----+-------------+----------+----------------------------
+  1 |           2 |        1 | 2026-04-22 19:57:58.305888
 (1 row)
 
- id |                      action                       |        date_action        
-----+---------------------------------------------------+---------------------------
-  1 | INSERT etudiants                                  | 2026-04-22 19:53:04.20732
-  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-22 19:53:04.20732
-  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-22 19:53:04.20732
+ id |                      action                       |        date_action         
+----+---------------------------------------------------+----------------------------
+  1 | INSERT etudiants                                  | 2026-04-22 19:57:58.305888
+  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-22 19:57:58.305888
+  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-22 19:57:58.305888
 (3 rows)
 
