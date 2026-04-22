@@ -30,8 +30,8 @@ DELETE 1
 Execution de DCL.sql
 CREATE ROLE
 CREATE ROLE
-GRANT
 ERROR:  database "reparation_smartphones" does not exist
+GRANT
 GRANT
 GRANT
 GRANT
