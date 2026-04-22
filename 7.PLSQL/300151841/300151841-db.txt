@@ -1,6 +1,6 @@
 NOTICE:  Etudiant ajoute avec succes : Nadia
-CALL
 NOTICE:  Inscription reussie
+CALL
  nombre_etudiants_par_age 
 --------------------------
                         5
@@ -9,11 +9,11 @@ NOTICE:  Inscription reussie
 CALL
  id |  nom  | age |      email      |       date_creation        
 ----+-------+-----+-----------------+----------------------------
-  1 | Massi |  21 | massi@email.com | 2026-04-22 20:49:54.072815
-  2 | Alice |  22 | alice@email.com | 2026-04-22 20:49:54.072815
-  3 | Karim |  24 | karim@email.com | 2026-04-22 20:49:54.072815
-  4 | Sofia |  20 | sofia@email.com | 2026-04-22 20:49:54.072815
-  5 | Nadia |  23 | nadia@email.com | 2026-04-22 20:49:54.551754
+  1 | Massi |  21 | massi@email.com | 2026-04-22 20:55:45.792768
+  2 | Alice |  22 | alice@email.com | 2026-04-22 20:55:45.792768
+  3 | Karim |  24 | karim@email.com | 2026-04-22 20:55:45.792768
+  4 | Sofia |  20 | sofia@email.com | 2026-04-22 20:55:45.792768
+  5 | Nadia |  23 | nadia@email.com | 2026-04-22 20:55:46.276012
 (5 rows)
 
  id |       nom        | credits 
@@ -26,13 +26,13 @@ CALL
 
  id | etudiant_id | cours_id |      date_inscription      
 ----+-------------+----------+----------------------------
-  1 |           2 |        1 | 2026-04-22 20:49:54.551754
+  1 |           2 |        1 | 2026-04-22 20:55:46.276012
 (1 row)
 
  id |                      action                       |        date_action         
 ----+---------------------------------------------------+----------------------------
-  1 | INSERT etudiants                                  | 2026-04-22 20:49:54.551754
-  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-22 20:49:54.551754
-  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-22 20:49:54.551754
+  1 | INSERT etudiants                                  | 2026-04-22 20:55:46.276012
+  2 | Ajout etudiant : Nadia (nadia@email.com)          | 2026-04-22 20:55:46.276012
+  3 | Inscription : alice@email.com -> Bases de donnees | 2026-04-22 20:55:46.276012
 (3 rows)
 
