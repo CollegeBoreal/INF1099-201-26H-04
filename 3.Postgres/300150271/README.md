@@ -1,56 +1,78 @@
-<<<<<<< HEAD
-
-=======
-# 🛠️ TP PostgreSQL avec Docker – Base Sakila
+# 🐘 TP PostgreSQL avec Docker — Base Sakila
 
 **Nom : Mazigh Bareche**
-**Code étudiant : 300150205**
+**Code étudiant : 300150271**
+**Cours : INF1099 — Bases de données**
+**Session : Hiver 2026**
 
 ---
 
 ## 🎯 Objectifs
 
-* Installer PostgreSQL avec Docker
-* Importer la base Sakila
-* Utiliser pgAdmin
-* Exécuter des requêtes SQL
+1. Installer PostgreSQL dans Docker
+2. Charger la base de données Sakila dans PostgreSQL
+3. Installer pgAdmin 4
+4. Utiliser pgAdmin 4 pour se connecter et explorer la base de données
 
 ---
 
-## 🚀 Étapes
+## 🖥️ Environnement utilisé
 
-### 1. Lancer PostgreSQL
+- Windows 10/11
+- PowerShell (mode administrateur)
+- Docker
+- PostgreSQL 16 (conteneur)
+- pgAdmin 4
+
+---
+
+## 🚀 Étapes du laboratoire
+
+### Étape 1 : Créer et lancer le conteneur PostgreSQL
 
 ```powershell
 docker run -d `
---name postgres `
--e POSTGRES_USER=postgres `
--e POSTGRES_PASSWORD=postgres `
--e POSTGRES_DB=appdb `
--p 5432:5432 `
--v postgres_data:/var/lib/postgresql/data `
-postgres:16
+  --name postgres `
+  -e POSTGRES_USER=postgres `
+  -e POSTGRES_PASSWORD=postgres `
+  -e POSTGRES_DB=appdb `
+  -p 5432:5432 `
+  -v postgres_data:/var/lib/postgresql/data `
+  postgres:16
 ```
 
 ---
 
-### 2. Télécharger Sakila
+### Étape 2 : Vérifier que PostgreSQL fonctionne
 
 ```powershell
-Invoke-WebRequest `
-https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-schema.sql `
--OutFile schema.sql
+docker ps
 ```
 
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![docker ps](images/mysql%201.png)
+
+</details>
+
+---
+
+### Étape 3 : Télécharger les fichiers Sakila
+
 ```powershell
 Invoke-WebRequest `
-https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql `
--OutFile data.sql
+  https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-schema.sql `
+  -OutFile schema.sql
+
+Invoke-WebRequest `
+  https://raw.githubusercontent.com/jOOQ/sakila/master/postgres-sakila-db/postgres-sakila-insert-data.sql `
+  -OutFile data.sql
 ```
 
 ---
 
-### 3. Copier dans Docker
+### Étape 4 : Copier les fichiers dans le conteneur
 
 ```powershell
 docker cp schema.sql postgres:/schema.sql
@@ -59,7 +81,7 @@ docker cp data.sql postgres:/data.sql
 
 ---
 
-### 4. Exécuter SQL
+### Étape 5 : Exécuter les fichiers SQL dans PostgreSQL
 
 ```powershell
 docker exec -it postgres psql -U postgres -d appdb -f /schema.sql
@@ -68,29 +90,64 @@ docker exec -it postgres psql -U postgres -d appdb -f /data.sql
 
 ---
 
-### 5. Vérification
+### Étape 6 : Vérifier que les tables Sakila sont présentes
+
+```powershell
+docker exec -it postgres psql -U postgres -d appdb
+```
 
 ```sql
 \dt
+```
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Tables Sakila](images/mysql%203.png)
+
+</details>
+
+```sql
 SELECT COUNT(*) FROM film;
 SELECT COUNT(*) FROM actor;
 ```
 
----
+<details>
+<summary>🖼️ Capture d'écran</summary>
 
-## 📸 Captures
+![COUNT film et actor](images/mysql%204.png)
 
-* docker ps
-* téléchargement fichiers
-* docker cp
-* création tables
-* insertion données
-* \dt
-* COUNT
+</details>
 
 ---
 
-## ✅ Conclusion
+### Étape 7 : Installer pgAdmin 4
 
-Ce TP m’a permis de comprendre comment utiliser Docker avec PostgreSQL, importer une base de données et exécuter des requêtes SQL.
->>>>>>> 0f43d13a6d857fb06ce0359fb8c617a37ec59a23
+```powershell
+choco install pgadmin4 -y
+```
+
+---
+
+### Étape 8 : Configurer la connexion dans pgAdmin 4
+
+1. Cliquer sur **Add New Server**
+2. **Onglet General :** Name → `Postgres Docker`
+3. **Onglet Connection :**
+   - Host : `localhost`
+   - Port : `5432`
+   - Username : `postgres`
+   - Password : `postgres`
+   - Database : `appdb`
+4. Cliquer sur **Save**
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![pgAdmin](images/mysql%205.png)
+
+</details>
+
+---
+
+## 📂 Structure du projet
