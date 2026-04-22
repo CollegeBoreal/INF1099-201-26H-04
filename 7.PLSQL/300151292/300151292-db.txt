@@ -13,33 +13,33 @@ NOTICE:  Reservation reussie : alice.dupont@borealfit.ca -> Spinning
                            4
 (1 row)
 
-DO
 NOTICE:  Erreur reservation : Utilisateur alice.dupont@borealfit.ca deja inscrit a l activite Spinning
-CALL
 NOTICE:  Erreur reservation : Utilisateur non trouve : inconnu@borealfit.ca
 NOTICE:  Test 10 OK - Trigger declenche : Age invalide pour Trop Jeune : doit etre >= 18
+DO
+CALL
 DO
 DO
 DO
  id |      nom       | age |            email            |       date_creation        
 ----+----------------+-----+-----------------------------+----------------------------
-  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-21 23:57:35.59323
-  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-21 23:57:35.59323
-  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-21 23:57:35.59323
-  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-21 23:57:35.59323
-  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-21 23:57:36.082218
+  1 | Marie Tremblay |  22 | marie.tremblay@borealfit.ca | 2026-04-22 00:03:48.149351
+  2 | Jean Bouchard  |  25 | jean.bouchard@borealfit.ca  | 2026-04-22 00:03:48.149351
+  3 | Sophie Gagnon  |  21 | sophie.gagnon@borealfit.ca  | 2026-04-22 00:03:48.149351
+  4 | Mathieu Lavoie |  28 | mathieu.lavoie@borealfit.ca | 2026-04-22 00:03:48.149351
+  5 | Alice Dupont   |  22 | alice.dupont@borealfit.ca   | 2026-04-22 00:03:48.614716
 (5 rows)
 
  id | utilisateur_id | activite_id |      date_reservation      |  statut   
 ----+----------------+-------------+----------------------------+-----------
-  1 |              5 |           1 | 2026-04-21 23:57:36.082218 | confirmee
+  1 |              5 |           1 | 2026-04-22 00:03:48.614716 | confirmee
 (1 row)
 
  id |                       action                        |        date_action         
 ----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur utilisateurs : 5                         | 2026-04-21 23:57:36.082218
-  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-21 23:57:36.082218
-  3 | INSERT sur reservations : 1                         | 2026-04-21 23:57:36.082218
-  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-21 23:57:36.082218
+  1 | INSERT sur utilisateurs : 5                         | 2026-04-22 00:03:48.614716
+  2 | Ajout utilisateur : Alice Dupont                    | 2026-04-22 00:03:48.614716
+  3 | INSERT sur reservations : 1                         | 2026-04-22 00:03:48.614716
+  4 | Reservation : alice.dupont@borealfit.ca -> Spinning | 2026-04-22 00:03:48.614716
 (4 rows)
 
