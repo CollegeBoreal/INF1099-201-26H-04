@@ -14,9 +14,9 @@ DO
 (1 row)
 
 DO
- id |                action                |        date_action         
-----+--------------------------------------+----------------------------
-  1 | INSERT sur etudiants — nouveau : Ali | 2026-04-22 21:42:27.251507
-  2 | Ajout étudiant : Ali (ali@email.com) | 2026-04-22 21:42:27.251507
+ id |                action                |       date_action        
+----+--------------------------------------+--------------------------
+  1 | INSERT sur etudiants — nouveau : Ali | 2026-04-22 22:59:22.2182
+  2 | Ajout étudiant : Ali (ali@email.com) | 2026-04-22 22:59:22.2182
 (2 rows)
 
