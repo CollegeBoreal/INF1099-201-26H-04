@@ -7,8 +7,8 @@ function Get-RubricLevelIdFromReadmeEmoji {
         [int[]]$Levels  # [fail, silver, gold]
     )
 
-    if ($Levels.Count -ne 3) {
-        throw "Levels must contain exactly 3 values: [fail, silver, gold]"
+    if ([string]::IsNullOrWhiteSpace($Emoji)) {
+        throw "Emoji is empty or null"
     }
 
     $fail   = $Levels[0]

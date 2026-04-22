@@ -40,7 +40,7 @@ function Get-ParticipationGrades {
             $readEmoji = ($cols[3]).Trim()
             $levels = @(81, 82, 83)  # fail, silver, gold
             $readScore = Get-RubricLevelIdFromReadmeEmoji `
-                -Emoji $readmeEmoji `
+                -Emoji $readEmoji `
                 -Levels $levels
 
             $imgEmoji = ($cols[4]).Trim()
@@ -50,7 +50,12 @@ function Get-ParticipationGrades {
                 -PassLevelId 85
 
             $abacusEmoji = ($cols[5]).Trim()
-            $abacusScore = $EmojiToScore[$abacusEmoji]
+            if ($abacusEmoji -match ':zero:' -or $abacusEmoji -match ':one:') {
+                $abacusScore = $EmojiToScore[$abacusEmoji]
+            } else {
+                $abacusEmoji = ':asterisk:'
+                $abacusScore = $EmojiToScore[$abacusEmoji]
+            }
 
             # If images are displayed in README.md
             if ($abacusScore -gt 86) {
@@ -99,7 +104,7 @@ function New-LMSRubricFromEntry {
     $rubric = @(
         @{ criterionid = 36;  levelid = $Entry.readme;    remark = "Quantité README.md " }
         @{ criterionid = 37;  levelid = $Entry.image;     remark = "Présence répertoire images " }
-        @{ criterionid = 38;  levelid = $Entry.model;     remark = "Présence de copies d'écran" }
+        @{ criterionid = 38;  levelid = $Entry.abacus;    remark = "Présence de copies d'écran" }
     )
 
     # Validate level IDs (avoid Moodle crash)

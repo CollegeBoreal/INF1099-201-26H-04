@@ -42,7 +42,11 @@ function Get-ParticipationGrades {
             #           { "id": 31, "score": 1 },
             #           { "id": 32, "score": 2 } 
             $readEmoji = ($cols[3]).Trim()
-            $readScore = $EmojiToScore[$readEmoji]
+            $levels = @(30, 31, 32)  # fail, silver, gold
+            $readScore = Get-RubricLevelIdFromReadmeEmoji `
+                -Emoji $readEmoji `
+                -Levels $levels
+
 
             # "levels": { "id": 71, "score": 0 },
             #           { "id": 72, "score": 1 },
