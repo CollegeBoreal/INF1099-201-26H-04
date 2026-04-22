@@ -48,6 +48,7 @@ podman machine start
 ```
 
 ---
+<img width="749" height="440" alt="Screenshot 2026-04-22 151227" src="https://github.com/user-attachments/assets/e2012112-78b6-440b-b9b1-74158583e72a" />
 
 ### 2️⃣ Alias Docker
 
@@ -56,6 +57,7 @@ Set-Alias docker podman
 ```
 
 ---
+<img width="735" height="454" alt="Screenshot 2026-04-22 151243" src="https://github.com/user-attachments/assets/5d784649-1a43-4703-a3fb-2b149da38900" />
 
 ### 3️⃣ Lancement du conteneur MySQL
 
@@ -64,6 +66,7 @@ docker run -d --name INF1099-mysql -e MYSQL_ROOT_PASSWORD=rootpass -p 3306:3306 
 ```
 
 ---
+<img width="747" height="460" alt="Screenshot 2026-04-22 151257" src="https://github.com/user-attachments/assets/c750670d-faf9-4359-99bf-778b43858279" />
 
 ### 4️⃣ Création de la base de données
 
@@ -137,6 +140,7 @@ Les captures suivantes sont incluses dans le dossier `images/` :
 ```
 
 ---
+<img width="742" height="295" alt="Screenshot 2026-04-22 151310" src="https://github.com/user-attachments/assets/0dcaf7fa-ebb7-4856-ad8f-8e94e146770a" />
 
 ## 🚀 Script d’automatisation
 
