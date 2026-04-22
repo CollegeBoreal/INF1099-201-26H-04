@@ -1,97 +1,105 @@
-# 🐘 TP PostgreSQL
+$readme = @"
+# TP PostgreSQL — Stored Procedures, Fonctions et Triggers
+**Etudiant :** 300148210  
+**Cours :** INF1099-201-26H-04  
+**Date :** 2026-04-20
 
 ---
-### 1. Créer les dossiers (PowerShell)
 
-```powershell
-mkdir 300148210\init
-mkdir 300148210\tests
-cd 300148210
-```
+## Structure du projet
 
-### 2. Placer les fichiers SQL dans `init/`
+\`\`\`
+300148210/
+|
+├── init/
+│   ├── 01-ddl.sql              # Creation des tables
+│   ├── 02-dml.sql              # Donnees initiales
+│   ├── 03-programmation.sql    # Procedures, fonctions, triggers
+│   └── fix_trigger.sql         # Correctif trigger log_action
+|
+├── tests/
+│   └── test.sql                # Tests des procedures et fonctions
+|
+└── README.md
+\`\`\`
 
-Copier les fichiers suivants dans le dossier `init/` :
+---
 
-- `01-ddl.sql`
-- `02-dml.sql`
-- `03-programmation.sql`
+## Lancer le projet avec Docker
 
-### 3. Lancer PostgreSQL
-
-```powershell
-docker run -d `
-  --name tp_postgres `
-  -e POSTGRES_USER=etudiant `
-  -e POSTGRES_PASSWORD=etudiant `
-  -e POSTGRES_DB=tpdb `
-  -p 5432:5432 `
-  -v ${PWD}/init:/docker-entrypoint-initdb.d `
+\`\`\`powershell
+docker run -d \`
+  --name tp_postgres \`
+  -e POSTGRES_USER=etudiant \`
+  -e POSTGRES_PASSWORD=etudiant \`
+  -e POSTGRES_DB=tpdb \`
+  -p 5433:5432 \`
+  -v \${PWD}/init:/docker-entrypoint-initdb.d \`
   postgres:15
-```
-
-> 💡 Les fichiers dans `init/` sont exécutés **automatiquement** au démarrage, dans l'ordre alphabétique.
-
-### 4. Vérifier que le conteneur tourne
-
-```powershell
-docker ps
-```
-<img width="909" height="177" alt="image" src="https://github.com/user-attachments/assets/071ae9a1-3803-4677-86a6-80c6b8a2c0ea" />
+\`\`\`
 
 ---
 
-## 🔌 Se connecter à PostgreSQL
+## Lancer les tests
 
-```powershell
-docker exec -it tp_postgres psql -U etudiant -d tpdb
-```
-
-Une fois connecté, tu peux exécuter des requêtes SQL directement dans le terminal.
-
----
-<img width="918" height="476" alt="image" src="https://github.com/user-attachments/assets/c133ab41-3fe5-4c93-b641-62bd823d4aa6" />
-
-
-## 🧪 Lancer les tests
-
-```powershell
+\`\`\`powershell
 Get-Content tests/test.sql | docker exec -i tp_postgres psql -U etudiant -d tpdb
-```
-
-Les résultats des procédures, fonctions et triggers s'affichent directement dans le terminal.
-
----
-<img width="915" height="424" alt="image" src="https://github.com/user-attachments/assets/727341b6-1dbe-4bfe-b4fe-1ae533e9e4ca" />
-
-## ✏️ Travail demandé
-
-Compléter le fichier `init/03-programmation.sql` avec les éléments suivants :
-
-| Élément | Description |
-|---|---|
-| `ajouter_etudiant` | Procédure : insertion avec validation âge/email + logs |
-| `nombre_etudiants_par_age` | Fonction : retourne le nombre d'étudiants dans une tranche d'âge |
-| `inscrire_etudiant_cours` | Procédure : inscription d'un étudiant à un cours |
-| `valider_etudiant` | Trigger BEFORE INSERT : validation âge et email |
-| `log_action` | Trigger AFTER INSERT/UPDATE/DELETE : journalisation automatique |
-
-<img width="794" height="113" alt="image" src="https://github.com/user-attachments/assets/a447cc71-5f33-4fbb-9e31-6c951195a60e" />
+\`\`\`
 
 ---
 
-## 🔁 Relancer après modification
+## Ce qui a ete implemente
 
-Si tu modifies un fichier SQL, il faut **recréer le conteneur** pour que les changements soient pris en compte :
+### 1. Procedure ajouter_etudiant
+- Valide que l age est >= 18
+- Valide le format de l email
+- Insere l etudiant dans la table
+- Journalise l action dans logs
+- Gere les exceptions avec RAISE NOTICE
 
-```powershell
-docker rm -f tp_postgres
-```
+### 2. Fonction nombre_etudiants_par_age
+- Retourne le nombre d etudiants dans une tranche d age
+- Utilise COUNT(*) avec BETWEEN
 
-Puis relancer la commande `docker run` (étape 3).
-<img width="913" height="421" alt="image" src="https://github.com/user-attachments/assets/a52901af-75f3-4afe-bf51-61c6be35bde1" />
-<img width="899" height="437" alt="image" src="https://github.com/user-attachments/assets/24f52f34-bff7-40a3-95be-38c404b6ed5d" />
+### 3. Procedure inscrire_etudiant_cours
+- Verifie l existence de l etudiant et du cours
+- Verifie que l inscription n existe pas deja
+- Insere dans la table inscriptions
+- Journalise l action
+
+### 4. Trigger trg_valider_etudiant (BEFORE INSERT)
+- Valide age >= 18 avant chaque insertion
+- Valide le format email
+
+### 5. Trigger trg_log_etudiant et trg_log_inscription (AFTER INSERT/UPDATE/DELETE)
+- Journalise automatiquement toutes les modifications
+- Enregistre l operation (INSERT/UPDATE/DELETE), la table et l id
 
 ---
 
+## Resultats des tests
+
+### Capture 1 — Tests initiaux : ajout etudiant, validation age, fonction
+
+<img width="920" height="526" alt="Screenshot 2026-04-20 181958" src="https://github.com/user-attachments/assets/f197b732-4777-40d0-80f3-51e4183d98b7" />
+
+- Etudiant Ali ajoute avec succes
+- Bob rejete car age < 18 (Age invalide pour Bob)
+- nombre_etudiants_par_age retourne 2
+
+### Capture 2 — Logs apres fix du trigger
+
+<img width="928" height="403" alt="Screenshot 2026-04-20 182132" src="https://github.com/user-attachments/assets/d9e2cc43-3a5c-47bc-9fd2-85b67aa95526" />
+
+- Trigger log corrige pour la table inscriptions
+- 4 entrees dans les logs : INSERT etudiants, ajout etudiant, INSERT inscriptions, inscription cours
+
+### Capture 3 — Logs complets finaux
+
+<img width="933" height="583" alt="Screenshot 2026-04-20 182627" src="https://github.com/user-attachments/assets/6dddaa1e-a555-4f47-a95e-4a4e801a0efd" />
+
+- Tous les logs s affichent correctement
+- Trigger et procedures fonctionnent ensemble
+
+---
 

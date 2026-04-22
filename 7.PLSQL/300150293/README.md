@@ -86,7 +86,7 @@ a1b2c3d4e5f6   postgres:15   Up 2 seconds  0.0.0.0:5432->5432/tcp   tp_postgres
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Docker](images/1.png)
+<img width="789" height="67" alt="1" src="https://github.com/user-attachments/assets/deae13cc-e78f-4f39-80f7-09762eaf5c03" />
 
 </details>
 
@@ -178,7 +178,7 @@ Get-Content tests/test.sql | docker exec -i tp_postgres psql -U etudiant -d tpdb
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Tests](images/2.png)
+<img width="839" height="323" alt="2" src="https://github.com/user-attachments/assets/7909b510-c360-4fe7-9eb4-c02aa924a5c4" />
 
 </details>
 
@@ -202,7 +202,8 @@ Get-Content tests/test.sql | docker exec -i tp_postgres psql -U etudiant -d tpdb
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Tests résultats](images/3.png)
+
+<img width="721" height="307" alt="3" src="https://github.com/user-attachments/assets/5a29d126-10f4-48c3-9ad4-5547445e201a" />
 
 </details>
 
@@ -228,6 +229,7 @@ SELECT * FROM logs ORDER BY date_action;
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Vérification](images/4.png)
+
+<img width="656" height="473" alt="4" src="https://github.com/user-attachments/assets/d7b5536c-9b3b-4663-aec1-1c62bbde7d1f" />
 
 </details>
