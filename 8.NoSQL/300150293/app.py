@@ -10,11 +10,11 @@ import json
 
 # Connexion a PostgreSQL
 conn = psycopg2.connect(
-    dbname="centre_sport",
+    dbname="ecole",
     user="postgres",
     password="postgres",
     host="localhost",
-    port=5434
+    port=5432:5432
 )
 
 cur = conn.cursor()
