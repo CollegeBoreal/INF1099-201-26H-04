@@ -20,6 +20,7 @@ psql -U postgres
 <summary>🖼️ Capture d'écran</summary>
 
 ![Étape 0](images/Screenshot_2026-04-22_153919.png)
+<img width="586" height="133" alt="Screenshot 2026-04-22 153919" src="https://github.com/user-attachments/assets/871d0ab4-5a7f-4e62-adcd-1b99981519ff" />
 
 </details>
 
@@ -47,6 +48,7 @@ CREATE SCHEMA
 <summary>🖼️ Capture d'écran</summary>
 
 ![Étape 1](images/Screenshot_2026-04-22_153929.png)
+<img width="500" height="115" alt="Screenshot 2026-04-22 153929" src="https://github.com/user-attachments/assets/9e67cbd7-5c9d-4ff0-9243-0bc5e057304b" />
 
 </details>
 
@@ -74,6 +76,7 @@ CREATE TABLE
 <summary>🖼️ Capture d'écran</summary>
 
 ![Étape 2](images/Screenshot_2026-04-22_153940.png)
+<img width="324" height="114" alt="Screenshot 2026-04-22 153940" src="https://github.com/user-attachments/assets/c2c82cef-78e9-45c6-ae22-da485a157dea" />
 
 </details>
 
@@ -99,6 +102,7 @@ CREATE ROLE
 <summary>🖼️ Capture d'écran</summary>
 
 ![Étape 3](images/Screenshot_2026-04-22_153951.png)
+<img width="471" height="75" alt="Screenshot 2026-04-22 153951" src="https://github.com/user-attachments/assets/68519308-0eb4-4770-9221-1a6743c110c7" />
 
 </details>
 
@@ -130,6 +134,7 @@ GRANT
 <summary>🖼️ Capture d'écran</summary>
 
 ![Étape 4](images/Screenshot_2026-04-22_154002.png)
+<img width="706" height="251" alt="Screenshot 2026-04-22 154002" src="https://github.com/user-attachments/assets/bf843d77-73e4-487e-b0d8-77478e6e378b" />
 
 </details>
 
