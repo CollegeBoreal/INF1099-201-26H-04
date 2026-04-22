@@ -1,3 +1,3 @@
-ERROR:  Age invalide (doit être >= 18)
 CALL
+ERROR:  Age invalide (doit être >= 18)
 CONTEXT:  PL/pgSQL function ajouter_etudiant(character varying,integer,character varying) line 5 at RAISE
