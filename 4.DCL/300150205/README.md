@@ -1,32 +1,34 @@
-# 🔐 TP PostgreSQL — DCL (Data Control Language)
+# TP PostgreSQL - DCL (Data Control Language)
+#Boualem BELBESSAI
 
-**Nom : Mazigh Bareche**
-**Code étudiant : 300150271**
-**Cours : INF1099 — Bases de données**
-**Session : Hiver 2026**
+#300150205
 
 ---
 
-## 🚀 Étapes du laboratoire
+# 🚀 Étapes du laboratoire
 
-### Étape 0 : Connexion au container Docker
+## Étape 0 : Connexion au container Docker
 
 ```bash
 docker container exec --interactive --tty postgres bash
+```
+
+Puis se connecter à PostgreSQL en tant que superutilisateur :
+
+```bash
 psql -U postgres
 ```
 
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Étape 0](images/Screenshot_2026-04-22_153919.png)
-<img width="586" height="133" alt="Screenshot 2026-04-22 153919" src="https://github.com/user-attachments/assets/871d0ab4-5a7f-4e62-adcd-1b99981519ff" />
+![Étape 0 Screenshot](images/1.png)
 
 </details>
 
 ---
 
-### Étape 1 : Créer la base de données et le schéma
+## Étape 1 : Créer la base de données et le schéma
 
 ```sql
 CREATE DATABASE cours;
@@ -47,14 +49,13 @@ CREATE SCHEMA
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Étape 1](images/Screenshot_2026-04-22_153929.png)
-<img width="500" height="115" alt="Screenshot 2026-04-22 153929" src="https://github.com/user-attachments/assets/9e67cbd7-5c9d-4ff0-9243-0bc5e057304b" />
+![Étape 1 Screenshot](images/2.png)
 
 </details>
 
 ---
 
-### Étape 2 : Créer la table
+## Étape 2 : Créer la table
 
 ```sql
 CREATE TABLE tp_dcl.etudiants (
@@ -75,17 +76,19 @@ CREATE TABLE
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Étape 2](images/Screenshot_2026-04-22_153940.png)
-<img width="324" height="114" alt="Screenshot 2026-04-22 153940" src="https://github.com/user-attachments/assets/c2c82cef-78e9-45c6-ae22-da485a157dea" />
+![Étape 2 Screenshot](images/3.png)
 
 </details>
 
 ---
 
-### Étape 3 : Créer les utilisateurs
+## Étape 3 : Créer les utilisateurs
 
 ```sql
+-- Étudiant simple (lecture)
 CREATE USER etudiant WITH PASSWORD 'etudiant123';
+
+-- Professeur (lecture/écriture)
 CREATE USER professeur WITH PASSWORD 'prof123';
 ```
 
@@ -101,20 +104,28 @@ CREATE ROLE
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Étape 3](images/Screenshot_2026-04-22_153951.png)
-<img width="471" height="75" alt="Screenshot 2026-04-22 153951" src="https://github.com/user-attachments/assets/68519308-0eb4-4770-9221-1a6743c110c7" />
+![Étape 3 Screenshot](images/4.png)
 
 </details>
 
 ---
 
-### Étape 4 : Donner les droits (GRANT)
+## Étape 4 : Donner les droits (GRANT)
 
 ```sql
+-- Connexion à la base
 GRANT CONNECT ON DATABASE cours TO etudiant, professeur;
+
+-- Accès au schéma
 GRANT USAGE ON SCHEMA tp_dcl TO etudiant, professeur;
+
+-- Étudiant : lecture seule
 GRANT SELECT ON tp_dcl.etudiants TO etudiant;
+
+-- Professeur : lecture + écriture complète
 GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
+
+-- Droits sur la séquence (nécessaire pour les INSERT avec SERIAL)
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 ```
 
@@ -133,14 +144,15 @@ GRANT
 <details>
 <summary>🖼️ Capture d'écran</summary>
 
-![Étape 4](images/Screenshot_2026-04-22_154002.png)
-<img width="706" height="251" alt="Screenshot 2026-04-22 154002" src="https://github.com/user-attachments/assets/bf843d77-73e4-487e-b0d8-77478e6e378b" />
+![Étape 4 Screenshot](images/5.png)
 
 </details>
 
 ---
 
-### Étape 5 : Tester les droits de l'étudiant
+## Étape 5 : Tester les droits de l'étudiant
+
+Se déconnecter puis reconnecter en tant qu'étudiant :
 
 ```bash
 \q
@@ -148,8 +160,9 @@ psql -U etudiant -d cours
 ```
 
 ```sql
-SELECT * FROM tp_dcl.etudiants;
-INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 85);
+SELECT * FROM tp_dcl.etudiants;  -- ✅ Doit fonctionner
+
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 85);  -- ❌ Doit échouer
 ```
 
 <details>
@@ -164,9 +177,18 @@ ERROR:  permission denied for table etudiants
 ```
 </details>
 
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 5 Screenshot](images/6.png)
+
+</details>
+
 ---
 
-### Étape 6 : Tester les droits du professeur
+## Étape 6 : Tester les droits du professeur
+
+Se déconnecter puis reconnecter en tant que professeur :
 
 ```bash
 \q
@@ -174,9 +196,9 @@ psql -U professeur -d cours
 ```
 
 ```sql
-INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Khaled', 90);
-UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Khaled';
-SELECT * FROM tp_dcl.etudiants;
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Khaled', 90);  -- ✅ OK
+UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Khaled';          -- ✅ OK
+SELECT * FROM tp_dcl.etudiants;                                     -- ✅ OK
 ```
 
 <details>
@@ -192,9 +214,18 @@ UPDATE 1
 ```
 </details>
 
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 6 Screenshot](images/7.png)
+
+</details>
+
 ---
 
-### Étape 7 : Retirer des droits (REVOKE)
+## Étape 7 : Retirer des droits (REVOKE)
+
+Reconnecter en tant que superutilisateur :
 
 ```bash
 \q
@@ -202,9 +233,15 @@ psql -U postgres -d cours
 ```
 
 ```sql
+-- Retirer le droit de lecture à l'étudiant
 REVOKE SELECT ON tp_dcl.etudiants FROM etudiant;
+```
+
+Vérifier que le droit a bien été retiré :
+
+```sql
 \c - etudiant
-SELECT * FROM tp_dcl.etudiants;
+SELECT * FROM tp_dcl.etudiants;  -- ❌ Doit maintenant échouer
 ```
 
 <details>
@@ -216,9 +253,18 @@ ERROR:  permission denied for table etudiants
 ```
 </details>
 
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 7 Screenshot](images/8.png)
+
+</details>
+
 ---
 
-### Étape 8 : Supprimer les utilisateurs (DROP USER)
+## Étape 8 : Supprimer les utilisateurs (DROP USER)
+
+Reconnecter en superutilisateur :
 
 ```bash
 \c - postgres
@@ -229,13 +275,29 @@ DROP USER etudiant;
 DROP USER professeur;
 ```
 
+> ⚠️ PostgreSQL **ne permet pas** de supprimer un utilisateur si celui-ci possède encore des privilèges (tables, schémas). Ici, tout reste dans le schéma `tp_dcl`.
+
 <details>
 <summary>📋 Output attendu</summary>
 
 ```
 ERROR:  role "etudiant" cannot be dropped because some objects depend on it
+DETAIL:  privileges for database cours
+         privileges for schema tp_dcl
+
 ERROR:  role "professeur" cannot be dropped because some objects depend on it
+DETAIL:  privileges for database cours
+         privileges for schema tp_dcl
+         privileges for sequence tp_dcl.etudiants_id_seq
+         privileges for table tp_dcl.etudiants
 ```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 8 Screenshot](images/9.png)
+
 </details>
 
 ---
@@ -255,21 +317,3 @@ Cluster PostgreSQL
 > 1. `GRANT CONNECT` sur la **base**
 > 2. `GRANT USAGE` sur le **schéma**
 > 3. `GRANT SELECT/INSERT/...` sur la **table**
-
----
-
-## ✅ Conclusion
-
-Ce TP m'a permis de :
-
-- Comprendre le DCL (Data Control Language)
-- Créer et gérer des utilisateurs PostgreSQL
-- Attribuer et retirer des permissions
-- Tester les droits avec différents utilisateurs
-
----
-
-## 📌 Références
-
-- https://www.postgresql.org/docs/current/sql-grant.html
-- https://www.postgresql.org/docs/current/sql-revoke.html

@@ -1,262 +1,277 @@
-# 🏢 Projet – Normalisation d’une Base de Données Immobilière
+# 🔐 TP PostgreSQL — DCL (Data Control Language)
 
-## 👨‍🎓 Auteur
-
-Mazigh Bareche
-
----
-
-# 🎯 Description du projet
-
-Ce projet consiste à concevoir une base de données pour la gestion des ventes d’appartements dans des immeubles.
-
-L’objectif est de démontrer :
-
-* La transformation d’une table non normalisée
-* L’application des formes normales (1FN, 2FN, 3FN)
-* La création d’un modèle relationnel optimisé
-* La modélisation avec un diagramme Entité/Relation (E/R)
+**Nom : Mazigh Bareche**
+**Code étudiant : 300150271**
+**Cours : INF1099 — Bases de données**
+**Session : Hiver 2026**
 
 ---
 
-# 🚀 Étapes du projet
+## 🚀 Étapes du laboratoire
 
----
+### Étape 0 : Connexion au container Docker
 
-## 📌 Étape 1 : Table non normalisée
-
-### 🔎 Description
-
-Toutes les données sont regroupées dans une seule table.
-
-### 📄 Structure
-
-```sql
-VENTE
----------------------------------------------------------
-IdVente (PK)
-NomClient
-TelClient
-AdresseImmeuble
-Ville
-NumAppartement
-Surface
-Prix
-DateVente
+```bash
+docker container exec --interactive --tty postgres bash
+psql -U postgres
 ```
 
----
+<details>
+<summary>🖼️ Capture d'écran</summary>
 
-### ⚠️ Problèmes
+![Étape 0](images/Screenshot_2026-04-22_153919.png)
+<img width="500" height="115" alt="Screenshot 2026-04-22 153929" src="https://github.com/user-attachments/assets/d6196ff0-811a-4272-abff-e663dfa20585" />
+<img width="586" height="133" alt="Screenshot 2026-04-22 153919" src="https://github.com/user-attachments/assets/a40b8ffc-e498-4f36-b453-2d613134bf7a" />
 
-* Redondance des clients
-* Redondance des immeubles
-* Difficulté de mise à jour
-* Anomalies d’insertion et de suppression
-
----
-
-## 📌 Étape 2 : Première Forme Normale (1FN)
-
-### 🔎 Objectif
-
-* Données atomiques
-* Pas de groupes répétitifs
-
-### ✅ Résultat
-
-Structure inchangée mais validée :
-
-* chaque champ contient une seule valeur
+</details>
 
 ---
 
-## 📌 Étape 3 : Deuxième Forme Normale (2FN)
-
-### 🔎 Objectif
-
-Éliminer les dépendances partielles
-
----
-
-### 🧱 Décomposition
+### Étape 1 : Créer la base de données et le schéma
 
 ```sql
-CLIENT(IdClient, NomClient, TelClient)
-
-IMMEUBLE(IdImmeuble, AdresseImmeuble, Ville)
-
-APPARTEMENT(IdAppartement, NumAppartement, Surface, Prix, IdImmeuble)
-
-VENTE(IdVente, DateVente, IdClient, IdAppartement)
+CREATE DATABASE cours;
+\c cours
+CREATE SCHEMA tp_dcl;
 ```
 
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+CREATE DATABASE
+You are now connected to database "cours" as user "postgres".
+CREATE SCHEMA
+```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 1](images/Screenshot_2026-04-22_153929.png)
+<img width="324" height="114" alt="Screenshot 2026-04-22 153940" src="https://github.com/user-attachments/assets/99498f56-343e-4301-9f0f-2ee667c36cea" />
+<img width="500" height="115" alt="Screenshot 2026-04-22 153929" src="https://github.com/user-attachments/assets/b249d8bd-6c89-4ef6-861c-5153782949d2" />
+
+</details>
+
 ---
 
-### ✅ Avantages
-
-* Réduction des redondances
-* Meilleure organisation
-* Données mieux structurées
-
----
-
-## 📌 Étape 4 : Troisième Forme Normale (3FN)
-
-### 🔎 Objectif
-
-Supprimer les dépendances transitives
-
----
-
-### ✅ Structure finale
+### Étape 2 : Créer la table
 
 ```sql
-CLIENT (
-    IdClient SERIAL PRIMARY KEY,
-    Nom TEXT,
-    Telephone TEXT
-);
-
-IMMEUBLE (
-    IdImmeuble SERIAL PRIMARY KEY,
-    Adresse TEXT,
-    Ville TEXT
-);
-
-APPARTEMENT (
-    IdAppartement SERIAL PRIMARY KEY,
-    NumAppartement INT,
-    Surface NUMERIC,
-    Prix NUMERIC,
-    IdImmeuble INT REFERENCES IMMEUBLE(IdImmeuble)
-);
-
-VENTE (
-    IdVente SERIAL PRIMARY KEY,
-    DateVente DATE,
-    IdClient INT REFERENCES CLIENT(IdClient),
-    IdAppartement INT REFERENCES APPARTEMENT(IdAppartement)
+CREATE TABLE tp_dcl.etudiants (
+    id SERIAL PRIMARY KEY,
+    nom TEXT,
+    moyenne NUMERIC
 );
 ```
 
----
+<details>
+<summary>📋 Output attendu</summary>
 
-# 📊 Diagramme Entité / Relation (E/R)
-
-```mermaid
-erDiagram
-    CLIENT {
-        int IdClient PK
-        string Nom
-        string Telephone
-    }
-
-    IMMEUBLE {
-        int IdImmeuble PK
-        string Adresse
-        string Ville
-    }
-
-    APPARTEMENT {
-        int IdAppartement PK
-        int NumAppartement
-        float Surface
-        float Prix
-        int IdImmeuble FK
-    }
-
-    VENTE {
-        int IdVente PK
-        date DateVente
-        int IdClient FK
-        int IdAppartement FK
-    }
-
-    CLIENT ||--o{ VENTE : achete
-    APPARTEMENT ||--o{ VENTE : concerne
-    IMMEUBLE ||--o{ APPARTEMENT : contient
 ```
+CREATE TABLE
+```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 2](images/Screenshot_2026-04-22_153940.png)
+<img width="324" height="114" alt="Screenshot 2026-04-22 153940" src="https://github.com/user-attachments/assets/cf0a4dfc-7296-46c5-a5a0-e594be695a8f" />
+
+</details>
 
 ---
 
-# 🔗 Relations
-
-* Un client peut acheter plusieurs appartements
-* Un appartement appartient à un seul immeuble
-* Une vente relie un client et un appartement
-* Un immeuble contient plusieurs appartements
-
----
-
-# 🧪 Exemple de requêtes SQL
-
-### Ajouter un client
+### Étape 3 : Créer les utilisateurs
 
 ```sql
-INSERT INTO CLIENT (Nom, Telephone)
-VALUES ('Mazigh', '5140000000');
+CREATE USER etudiant WITH PASSWORD 'etudiant123';
+CREATE USER professeur WITH PASSWORD 'prof123';
 ```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+CREATE ROLE
+CREATE ROLE
+```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 3](images/Screenshot_2026-04-22_153951.png)
+<img width="471" height="75" alt="Screenshot 2026-04-22 153951" src="https://github.com/user-attachments/assets/3cc9f4fa-4c43-4fd8-9b61-0a9fb0b9ef4e" />
+
+</details>
 
 ---
 
-### Ajouter un immeuble
+### Étape 4 : Donner les droits (GRANT)
 
 ```sql
-INSERT INTO IMMEUBLE (Adresse, Ville)
-VALUES ('123 Rue Toronto', 'Toronto');
+GRANT CONNECT ON DATABASE cours TO etudiant, professeur;
+GRANT USAGE ON SCHEMA tp_dcl TO etudiant, professeur;
+GRANT SELECT ON tp_dcl.etudiants TO etudiant;
+GRANT SELECT, INSERT, UPDATE, DELETE ON tp_dcl.etudiants TO professeur;
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE tp_dcl.etudiants_id_seq TO professeur;
 ```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+```
+</details>
+
+<details>
+<summary>🖼️ Capture d'écran</summary>
+
+![Étape 4](images/Screenshot_2026-04-22_154002.png)
+<img width="706" height="251" alt="Screenshot 2026-04-22 154002" src="https://github.com/user-attachments/assets/c951c14a-7635-46f7-8624-b17379140bd9" />
+
+</details>
 
 ---
 
-### Ajouter un appartement
+### Étape 5 : Tester les droits de l'étudiant
+
+```bash
+\q
+psql -U etudiant -d cours
+```
 
 ```sql
-INSERT INTO APPARTEMENT (NumAppartement, Surface, Prix, IdImmeuble)
-VALUES (101, 75, 250000, 1);
+SELECT * FROM tp_dcl.etudiants;
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Patrick', 85);
 ```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+ id | nom | moyenne
+----+-----+---------
+(0 rows)
+
+ERROR:  permission denied for table etudiants
+```
+</details>
 
 ---
 
-### Créer une vente
+### Étape 6 : Tester les droits du professeur
+
+```bash
+\q
+psql -U professeur -d cours
+```
 
 ```sql
-INSERT INTO VENTE (DateVente, IdClient, IdAppartement)
-VALUES ('2026-04-08', 1, 1);
+INSERT INTO tp_dcl.etudiants(nom, moyenne) VALUES ('Khaled', 90);
+UPDATE tp_dcl.etudiants SET moyenne=95 WHERE nom='Khaled';
+SELECT * FROM tp_dcl.etudiants;
 ```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+INSERT 0 1
+UPDATE 1
+ id |  nom   | moyenne
+----+--------+---------
+  1 | Khaled |      95
+(1 row)
+```
+</details>
 
 ---
 
-### Voir les ventes
+### Étape 7 : Retirer des droits (REVOKE)
+
+```bash
+\q
+psql -U postgres -d cours
+```
 
 ```sql
-SELECT c.Nom, a.NumAppartement, v.DateVente
-FROM VENTE v
-JOIN CLIENT c ON v.IdClient = c.IdClient
-JOIN APPARTEMENT a ON v.IdAppartement = a.IdAppartement;
+REVOKE SELECT ON tp_dcl.etudiants FROM etudiant;
+\c - etudiant
+SELECT * FROM tp_dcl.etudiants;
 ```
 
----
+<details>
+<summary>📋 Output attendu</summary>
 
-# 🛠 Technologies utilisées
-
-* PostgreSQL
-* SQL
-* Docker
-* pgAdmin
-* Mermaid (diagrammes)
-
----
-
-# ✅ Conclusion
-
-Ce projet démontre :
-
-* L’importance de la normalisation
-* La structuration efficace des données
-* La réduction des anomalies
-* La création d’un modèle relationnel optimisé
+```
+REVOKE
+ERROR:  permission denied for table etudiants
+```
+</details>
 
 ---
 
-🔥 Projet réalisé dans le cadre du cours de base de données
+### Étape 8 : Supprimer les utilisateurs (DROP USER)
+
+```bash
+\c - postgres
+```
+
+```sql
+DROP USER etudiant;
+DROP USER professeur;
+```
+
+<details>
+<summary>📋 Output attendu</summary>
+
+```
+ERROR:  role "etudiant" cannot be dropped because some objects depend on it
+ERROR:  role "professeur" cannot be dropped because some objects depend on it
+```
+</details>
+
+---
+
+## 🔑 Rappel : Hiérarchie des droits PostgreSQL
+
+```
+Cluster PostgreSQL
+ ├── Base : cours
+ │     └── Schéma : tp_dcl
+ │           ├── Table : etudiants
+ │           └── Séquence : etudiants_id_seq
+ └── Utilisateurs : etudiant, professeur
+```
+
+> Pour qu'un utilisateur puisse accéder à une table, il faut **3 niveaux de droits** :
+> 1. `GRANT CONNECT` sur la **base**
+> 2. `GRANT USAGE` sur le **schéma**
+> 3. `GRANT SELECT/INSERT/...` sur la **table**
+
+---
+
+## ✅ Conclusion
+
+Ce TP m'a permis de :
+
+- Comprendre le DCL (Data Control Language)
+- Créer et gérer des utilisateurs PostgreSQL
+- Attribuer et retirer des permissions
+- Tester les droits avec différents utilisateurs
+
+---
+
+## 📌 Références
+
+- https://www.postgresql.org/docs/current/sql-grant.html
+- https://www.postgresql.org/docs/current/sql-revoke.html
