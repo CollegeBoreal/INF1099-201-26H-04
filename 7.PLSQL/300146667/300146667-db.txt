@@ -5,6 +5,8 @@ CALL
 DO
 NOTICE:  Erreur : l'email alice.tremblay@email.com est déjà utilisé.
 NOTICE:  5 étudiant(s) trouvé(s) entre 18 et 25 ans
+NOTICE:  0 étudiant(s) trouvé(s) entre 30 et 40 ans
+NOTICE:  Erreur attendue (tranche invalide) : Tranche d'âge invalide : min (30) > max (20)
 DO
 CALL
  nombre_etudiants_par_age 
@@ -12,29 +14,27 @@ CALL
                         5
 (1 row)
 
-NOTICE:  0 étudiant(s) trouvé(s) entre 30 et 40 ans
-NOTICE:  Erreur attendue (tranche invalide) : Tranche d'âge invalide : min (30) > max (20)
  nombre_etudiants_par_age 
 --------------------------
                         0
 (1 row)
 
 NOTICE:  Inscription réussie : alice.tremblay@email.com → Bases de donnees
+NOTICE:  Erreur inscription : L'étudiant alice.tremblay@email.com est déjà inscrit au cours Bases de donnees
 DO
 CALL
 DO
-NOTICE:  Erreur inscription : L'étudiant alice.tremblay@email.com est déjà inscrit au cours Bases de donnees
 NOTICE:  Erreur inscription : Étudiant non trouvé avec l'email : fantome@email.com
 NOTICE:  Trigger declenche : Trigger — Age invalide pour Trop Jeune Direct : 16 ans (minimum 18 ans)
 DO
 DO
  id |      nom       | age |          email           |       date_creation        
 ----+----------------+-----+--------------------------+----------------------------
-  1 | Alice Tremblay |  22 | alice.tremblay@email.com | 2026-04-22 20:54:47.806609
-  2 | Luc Gagnon     |  25 | luc.gagnon@email.com     | 2026-04-22 20:54:47.806609
-  3 | Marie Côté     |  20 | marie.cote@email.com     | 2026-04-22 20:54:47.806609
-  4 | Test Valide    |  19 | test@email.com           | 2026-04-22 20:54:47.806609
-  5 | Bob Martin     |  23 | bob.martin@email.com     | 2026-04-22 20:54:48.302607
+  1 | Alice Tremblay |  22 | alice.tremblay@email.com | 2026-04-22 21:41:29.188383
+  2 | Luc Gagnon     |  25 | luc.gagnon@email.com     | 2026-04-22 21:41:29.188383
+  3 | Marie Côté     |  20 | marie.cote@email.com     | 2026-04-22 21:41:29.188383
+  4 | Test Valide    |  19 | test@email.com           | 2026-04-22 21:41:29.188383
+  5 | Bob Martin     |  23 | bob.martin@email.com     | 2026-04-22 21:41:29.76212
 (5 rows)
 
  id |          nom          | credits 
@@ -45,16 +45,16 @@ DO
   4 | Programmation Web     |       3
 (4 rows)
 
- id | etudiant_id | cours_id |      date_inscription      
-----+-------------+----------+----------------------------
-  1 |           1 |        1 | 2026-04-22 20:54:48.302607
+ id | etudiant_id | cours_id |     date_inscription      
+----+-------------+----------+---------------------------
+  1 |           1 |        1 | 2026-04-22 21:41:29.76212
 (1 row)
 
- id |                          action                           |        date_action         
-----+-----------------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : id=5                               | 2026-04-22 20:54:48.302607
-  2 | INSERT étudiant : Bob Martin (bob.martin@email.com)       | 2026-04-22 20:54:48.302607
-  3 | INSERT sur inscriptions : id=1                            | 2026-04-22 20:54:48.302607
-  4 | INSCRIPTION : alice.tremblay@email.com → Bases de donnees | 2026-04-22 20:54:48.302607
+ id |                          action                           |        date_action        
+----+-----------------------------------------------------------+---------------------------
+  1 | INSERT sur etudiants : id=5                               | 2026-04-22 21:41:29.76212
+  2 | INSERT étudiant : Bob Martin (bob.martin@email.com)       | 2026-04-22 21:41:29.76212
+  3 | INSERT sur inscriptions : id=1                            | 2026-04-22 21:41:29.76212
+  4 | INSCRIPTION : alice.tremblay@email.com → Bases de donnees | 2026-04-22 21:41:29.76212
 (4 rows)
 
