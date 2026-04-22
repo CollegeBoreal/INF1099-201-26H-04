@@ -13,21 +13,21 @@ NOTICE:  Erreur lors de l'inscription : record "new" has no field "nom"
 CALL
  id | nom  | age |     email      |       date_creation        
 ----+------+-----+----------------+----------------------------
-  1 | Test |  20 | test@email.com | 2026-04-22 00:03:02.020698
-  2 | Sara |  23 | sara@email.com | 2026-04-22 00:03:02.020698
-  3 | Ali  |  22 | ali@email.com  | 2026-04-22 00:03:02.521218
+  1 | Test |  20 | test@email.com | 2026-04-22 00:40:12.137676
+  2 | Sara |  23 | sara@email.com | 2026-04-22 00:40:12.137676
+  3 | Ali  |  22 | ali@email.com  | 2026-04-22 00:40:12.60223
 (3 rows)
 
  id | etudiant_id | cours_id | date_inscription 
 ----+-------------+----------+------------------
 (0 rows)
 
- id |                                             action                                              |        date_action         
-----+-------------------------------------------------------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants | nouvelle valeur : Ali                                                    | 2026-04-22 00:03:02.521218
-  2 | Ajout manuel d'un etudiant : Ali (ali@email.com)                                                | 2026-04-22 00:03:02.521218
-  3 | Erreur lors de l'ajout de Bob : Age invalide pour Bob : un étudiant doit avoir au moins 18 ans. | 2026-04-22 00:03:02.521218
-  4 | Erreur lors de l'ajout de Karim : Email invalide pour Karim : karim-email-invalide              | 2026-04-22 00:03:02.521218
-  5 | Erreur inscription : record "new" has no field "nom"                                            | 2026-04-22 00:03:02.521218
+ id |                                             action                                              |        date_action        
+----+-------------------------------------------------------------------------------------------------+---------------------------
+  1 | INSERT sur etudiants | nouvelle valeur : Ali                                                    | 2026-04-22 00:40:12.60223
+  2 | Ajout manuel d'un etudiant : Ali (ali@email.com)                                                | 2026-04-22 00:40:12.60223
+  3 | Erreur lors de l'ajout de Bob : Age invalide pour Bob : un étudiant doit avoir au moins 18 ans. | 2026-04-22 00:40:12.60223
+  4 | Erreur lors de l'ajout de Karim : Email invalide pour Karim : karim-email-invalide              | 2026-04-22 00:40:12.60223
+  5 | Erreur inscription : record "new" has no field "nom"                                            | 2026-04-22 00:40:12.60223
 (5 rows)
 
