@@ -19,51 +19,6 @@ function Get-RubricLevelIdFromEmoji {
     return $PassLevelId
 }
 
-function Get-ParticipationGrades {
-    param (
-        [Parameter(Mandatory)]
-        [string]$Path
-    )
-
-    $lines = Get-Content $Path
-    $results = @()
-
-    foreach ($line in $lines) {
-
-        # Only data rows start with "| <number> |"
-        if ($line -match '^\|\s*\d+\s*\|') {
-
-            $cols = $line -split '\|'
-
-            # Columns (0 is empty):
-            # 1 = index
-            # 2 = Boréal ID link column
-            # 5 = abacus emoji
-
-            if ($cols.Count -lt 6) { continue }
-
-            if ($cols[2] -match '(\d{9})') {
-                $borealId = $matches[1]
-            } else {
-                continue
-            }
-
-            $emoji = ($cols[5]).Trim()
-
-            $score = $EmojiToScore[$emoji]
-
-            if ($null -eq $score) { continue }
-
-            $results += [PSCustomObject]@{
-                borealId = $borealId
-                score    = $score
-            }
-        }
-    }
-
-    return $results
-}
-
 function Get-LMSGradableUsers {
     param (
         [Parameter(Mandatory)]
