@@ -1,7 +1,7 @@
 NOTICE:  ❌ Erreur ajout étudiant Ali : column reference "email" is ambiguous
-NOTICE:  ❌ Erreur ajout étudiant Bob : Age invalide (<18) pour Bob
 CALL
 DO
+NOTICE:  ❌ Erreur ajout étudiant Bob : Age invalide (<18) pour Bob
 ERROR:  function nombre_etudiants() does not exist
 LINE 17: SELECT nombre_etudiants();
                 ^
