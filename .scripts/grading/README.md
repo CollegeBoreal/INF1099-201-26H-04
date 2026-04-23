@@ -18,6 +18,8 @@ https://${LMS_URL}/course/view.php?id=2
 }
 ```
 
+- [ ] Retrieve all assignments from LMS
+
 ```bash
 curl -X POST "https://${LMS_URL}/webservice/rest/server.php" \
 -d "wstoken=${API_SYNC_TOKEN}" \

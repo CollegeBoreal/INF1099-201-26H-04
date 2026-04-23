@@ -1,78 +1,25 @@
 # Setup
 
-## :zero: Class - INF1099-201-26H-04 - Administration de base de données
-
-- [ ] courseids[0]=2
+## :a: LMS Assignment ID = 16
 
 ```
-https://${LMS_URL}/course/view.php?id=2
+https://${LMS_URL}/mod/assign/view.php?id=16
 ```
 
-## :one: LMS Assignment ID = 16
-
-```
-https://${LMS_URL}/mod/assign/view.php?id=5
-```
-
-- [ ] "id": 16 :point_left: Take this as the assignment number !!!
-- [ ] "cmid": 20
-
-```bash
-curl -X POST "https://${LMS_URL}/webservice/rest/server.php" \
--d "wstoken=${API_SYNC_TOKEN}" \
--d "wsfunction=mod_assign_get_assignments" \
--d "moodlewsrestformat=json" \
--d "courseids[0]=2" | jq '.courses[].assignments[] | {id, cmid, name}'
-```
-```
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  1704    0  1587  100   117   2463    181 --:--:-- --:--:-- --:--:--  2645
-```
 ```json
 {
-  "id": 5,
-  "cmid": 9,
-  "name": "1.Domaines"
-}
-{
-  "id": 10,
-  "cmid": 14,
-  "name": "2.MySQL"
-}
-{
-  "id": 11,
-  "cmid": 15,
-  "name": "3.Postgres"
-}
-{
-  "id": 12,
-  "cmid": 16,
-  "name": "4.DCL"
-}
-{
-  "id": 13,
-  "cmid": 17,
-  "name": "5.ModelisationSQL"
-}
-{
-  "id": 14,
-  "cmid": 18,
-  "name": "6.BATCH"
-}
-{
-  "id": 15,
-  "cmid": 19,
-  "name": "7.PLSQL"
-}
-{
-  "id": 16,
-  "cmid": 20,
-  "name": "8.NoSQL"
+  "id": 16,              // Assignment ID
+  "cmid": 20,            // Rubric Definition CMID
+  "name": "8.NoSQL"      // Assignment name
 }
 ```
 
-## :two: Rubric Definition CMID = 20
+## :b: Rubric Definition for
+
+- [ ] cmids[0]=20
+
+- [ ] Retrieve all rubric definitions from LMS
+
 
 ```bash
 curl -X POST "https://${LMS_URL}/webservice/rest/server.php" \
