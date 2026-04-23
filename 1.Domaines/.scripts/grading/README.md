@@ -1,48 +1,25 @@
 # Setup
 
-## :zero: Class - INF1099-201-26H-04 - Administration de base de données
-
-- [ ] courseids[0]=2
-
-```
-https://${LMS_URL}/course/view.php?id=2
-```
-
-## :one: LMS Assignment ID = 5
+## :a: LMS Assignment ID = 5
 
 ```
 https://${LMS_URL}/mod/assign/view.php?id=5
 ```
 
-- [ ] "id": 5 :point_left: Take this as the assignment number !!!
-- [ ] "cmid": 9
-
-```bash
-curl -X POST "https://${LMS_URL}/webservice/rest/server.php" \
--d "wstoken=${API_SYNC_TOKEN}" \
--d "wsfunction=mod_assign_get_assignments" \
--d "moodlewsrestformat=json" \
--d "courseids[0]=2" | jq '.courses[].assignments[] | {id, cmid, name}'
-```
-```
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  1704    0  1587  100   117   2463    181 --:--:-- --:--:-- --:--:--  2645
-```
 ```json
 {
-  "id": 1,
-  "cmid": 2,
-  "name": "0.Plan De Cours"
-}
-{
-  "id": 5,
-  "cmid": 9,
-  "name": "1.Domaines"
+  "id": 5,              // Assignment ID
+  "cmid": 9,            // Rubric Definition CMID
+  "name": "1.Domaines"     // Assignment name
 }
 ```
 
-## :two: Rubric Definition CMID = 13
+## :b: Rubric Definition for
+
+- [ ] cmids[0]=9
+
+- [ ] Retrieve all rubric definitions from LMS
+
 
 ```bash
 curl -X POST "https://${LMS_URL}/webservice/rest/server.php" \
