@@ -16,20 +16,20 @@ NOTICE:  Inscription réussie : ali@email.com → cours "Réseaux"
                4
 (1 row)
 
-DO
-CALL
-CALL
 NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Réseaux : L'étudiant ali@email.com est déjà inscrit au cours Réseaux
+DO
 NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : Étudiant non trouvé avec l'email : inconnu@email.com
+CALL
+CALL
 NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant
 CALL
 CALL
  id |                       action                        |        date_action         
 ----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-23 01:34:21.639229
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-23 01:34:21.639229
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-23 01:34:21.639229
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-23 01:34:21.639229
+  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-23 01:37:55.369096
+  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-23 01:37:55.369096
+  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-23 01:37:55.369096
+  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-23 01:37:55.369096
 (4 rows)
 
   nom  | age |      email      |       cours       
