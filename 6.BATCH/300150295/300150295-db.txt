@@ -1,22 +1,22 @@
-[2026-04-23 01:36:20] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
-[2026-04-23 01:36:20] [INFO] V�rification du conteneur postgres-lab...
-[2026-04-23 01:36:20] [INFO] Conteneur actif detecte
-[2026-04-23 01:36:20] [INFO] Debut du chargement des scripts...
-[2026-04-23 01:36:20] [INFO] Traitement de DDL.sql...
-[2026-04-23 01:36:20] [INFO] SUCCES: DDL.sql execute
-[2026-04-23 01:36:20] [INFO] Traitement de DML.sql...
-[2026-04-23 01:36:20] [INFO] SUCCES: DML.sql execute
-[2026-04-23 01:36:20] [INFO] Traitement de DCL.sql...
-[2026-04-23 01:36:20] [INFO] SUCCES: DCL.sql execute
-[2026-04-23 01:36:20] [INFO] Traitement de DQL.sql...
-[2026-04-23 01:36:21] [INFO] SUCCES: DQL.sql execute
-[2026-04-23 01:36:21] [INFO] === RAPPORT FINAL ===
-[2026-04-23 01:36:21] [INFO] Scripts reussis: 4
-[2026-04-23 01:36:21] [INFO] Scripts en erreur: 0
-[2026-04-23 01:36:21] [INFO] Temps d'execution: 0.4717495 secondes
+[2026-04-23 01:57:03] [INFO] Conteneur: postgres-lab | Base: ecole | Utilisateur: postgres
+[2026-04-23 01:57:03] [INFO] V�rification du conteneur postgres-lab...
+[2026-04-23 01:57:03] [INFO] Conteneur actif detecte
+[2026-04-23 01:57:03] [INFO] Debut du chargement des scripts...
+[2026-04-23 01:57:03] [INFO] Traitement de DDL.sql...
+[2026-04-23 01:57:04] [INFO] SUCCES: DDL.sql execute
+[2026-04-23 01:57:04] [INFO] Traitement de DML.sql...
+[2026-04-23 01:57:04] [INFO] SUCCES: DML.sql execute
+[2026-04-23 01:57:04] [INFO] Traitement de DCL.sql...
+[2026-04-23 01:57:04] [INFO] SUCCES: DCL.sql execute
+[2026-04-23 01:57:04] [INFO] Traitement de DQL.sql...
+[2026-04-23 01:57:04] [INFO] SUCCES: DQL.sql execute
+[2026-04-23 01:57:04] [INFO] === RAPPORT FINAL ===
+[2026-04-23 01:57:04] [INFO] Scripts reussis: 4
+[2026-04-23 01:57:04] [INFO] Scripts en erreur: 0
+[2026-04-23 01:57:04] [INFO] Temps d'execution: 0.52299 secondes
 
 Resume:
 - Succes: 4
 - Erreurs: 0
-- Duree: 0.4717495s
+- Duree: 0.52299s
 - Log: execution.log
