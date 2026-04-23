@@ -1,4 +1,22 @@
+# =====================================================================
+# RUBRIC / EMOJI HELPERS
+# =====================================================================
+# These helper functions translate README or grading emojis into
+# rubric level IDs used by the LMS.
+# =====================================================================
+
 function Get-RubricLevelIdFromReadmeEmoji {
+    <#
+        Maps a README status emoji to a rubric level ID.
+
+        Expected levels order:
+        [0] = Fail
+        [1] = Silver
+        [2] = Gold
+
+        Supports both GitHub emoji codes (:x:, :1st_place_medal:)
+        and native Unicode emojis (❌, 🥈, 🥇).
+    #>
     param (
         [Parameter(Mandatory)]
         [string]$Emoji,
@@ -11,12 +29,14 @@ function Get-RubricLevelIdFromReadmeEmoji {
         throw "Emoji is empty or null"
     }
 
+    # Extract rubric level IDs for clarity
     $fail   = $Levels[0]
     $silver = $Levels[1]
     $gold   = $Levels[2]
 
     $Emoji = $Emoji.Trim()
 
+    # Match against known emoji patterns
     switch -Regex ($Emoji) {
         ':x:|❌'                   { return $fail }
         ':2nd_place_medal:|🥈'     { return $silver }
@@ -28,6 +48,12 @@ function Get-RubricLevelIdFromReadmeEmoji {
 }
 
 function Get-RubricLevelIdFromEmoji {
+    <#
+        Simple pass/fail emoji mapping.
+
+        ❌ or :x:      → Fail level
+        Any other emoji → Pass level
+    #>
     param (
         [Parameter(Mandatory)]
         [string]$Emoji,
@@ -41,20 +67,30 @@ function Get-RubricLevelIdFromEmoji {
 
     $Emoji = $Emoji.Trim()
 
+    # Explicit failure detection
     if ($Emoji -match ':x:' -or $Emoji -match '❌') {
         return $FailLevelId
     }
 
+    # Default to pass
     return $PassLevelId
 }
 
+# =====================================================================
+# LMS INTEGRATION
+# =====================================================================
+
 function Get-LMSGradableUsers {
+    <#
+        Retrieves all gradable users for a given LMS course
+        using Moodle's core_grades_get_gradable_users API.
+    #>
     param (
         [Parameter(Mandatory)]
         [int]$LMS_COURSE
     )
 
-    # Ensure environment variables are set
+    # Ensure required environment variables are present
     if (-not $env:LMS_URL -or -not $env:API_SYNC_TOKEN) {
         throw "LMS_URL or API_SYNC_TOKEN is not set!"
     }
@@ -63,10 +99,10 @@ function Get-LMSGradableUsers {
         $responseLMS = Invoke-RestMethod -Method Post `
             -Uri "https://$($env:LMS_URL)/webservice/rest/server.php" `
             -Body @{
-                wstoken              = $env:API_SYNC_TOKEN
-                wsfunction           = "core_grades_get_gradable_users"
-                courseid             = $LMS_COURSE
-                moodlewsrestformat   = "json"
+                wstoken            = $env:API_SYNC_TOKEN
+                wsfunction         = "core_grades_get_gradable_users"
+                courseid           = $LMS_COURSE
+                moodlewsrestformat = "json"
             }
 
         return $responseLMS
@@ -76,10 +112,22 @@ function Get-LMSGradableUsers {
     }
 }
 
-# ---------------------
-# Populate LMS Students
-# ---------------------
+# =====================================================================
+# STUDENT DATA PROCESSING
+# =====================================================================
+
 function Get-LMSStudentInfo {
+    <#
+        Converts the LMS response into a lookup table keyed by idnumber.
+
+        Output format:
+        @{
+            "studentId" = @{
+                moodleId = 123
+                email    = student@example.com
+            }
+        }
+    #>
     param (
         [Parameter(Mandatory)]
         [object]$LMSResponse
@@ -92,19 +140,29 @@ function Get-LMSStudentInfo {
     }
 
     $LMSResponse.users | Where-Object { $_.idnumber } | ForEach-Object {
-        $LMSStudents[$_.idnumber] = [PSCustomObject]@{
-            moodleId = $_.id
-            email    = $_.email
+            $LMSStudents[$_.idnumber] = [PSCustomObject]@{
+                moodleId = $_.id
+                email    = $_.email
+            }
         }
-    }
 
     return $LMSStudents
 }
 
-# ---------------------
-# Grading
-# ---------------------
+# =====================================================================
+# GRADING / RUBRIC SUBMISSION
+# =====================================================================
+
 function Send-LMSRubricGrade {
+    <#
+        Submits a rubric-based grade to the LMS using a custom
+        local_gradesaver_save_grade endpoint.
+
+        Rubric entries must contain:
+        - criterionid
+        - levelid
+        - remark (optional)
+    #>
     param (
         [Parameter(Mandatory)]
         [string]$LMS_URL,
@@ -127,7 +185,7 @@ function Send-LMSRubricGrade {
     )
 
     # -------------------------
-    # BUILD BASE PAYLOAD
+    # BUILD BASE REQUEST PAYLOAD
     # -------------------------
     $body = @{
         wstoken            = $TOKEN
@@ -140,11 +198,12 @@ function Send-LMSRubricGrade {
     }
 
     # -------------------------
-    # ADD RUBRIC DYNAMICALLY
+    # DYNAMIC RUBRIC POPULATION
     # -------------------------
     for ($i = 0; $i -lt $Rubric.Count; $i++) {
         $entry = $Rubric[$i]
 
+        # Ensure rubric structure is valid
         if (-not $entry.criterionid -or -not $entry.levelid) {
             throw "Invalid rubric entry at index $i"
         }
@@ -157,7 +216,7 @@ function Send-LMSRubricGrade {
     if ($DEBUG) { $body | ConvertTo-Json -Depth 10 }
 
     # -------------------------
-    # CALL MOODLE API
+    # SEND REQUEST TO MOODLE
     # -------------------------
     try {
         $response = Invoke-RestMethod -Method Post `
@@ -170,4 +229,3 @@ function Send-LMSRubricGrade {
         throw "Moodle API call failed: $($_.Exception.Message)"
     }
 }
-
