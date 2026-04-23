@@ -1,15 +1,15 @@
 NOTICE:  Trigger validation OK pour : Ali
 NOTICE:  Étudiant ajouté avec succès : Ali (age : 22, email : ali@email.com)
-CALL
-DO
 NOTICE:  Erreur lors de l'ajout de Bob : Age invalide pour Bob : l'âge minimum est 18 ans (age fourni : 15)
 NOTICE:  Erreur lors de l'ajout de Clara : Email invalide pour Clara : format attendu exemple@domaine.com (email fourni : emailsansarobas.com)
 NOTICE:  Trigger validation OK pour : Ali2
+CALL
 DO
 NOTICE:  Erreur : l'email ali@email.com est déjà utilisé par un autre étudiant.
+DO
 NOTICE:  Nombre d'étudiants entre 18 et 30 ans : 4
-CALL
 NOTICE:  TEST 6 OK — Erreur attendue capturée : Plage d'âge invalide : min_age (30) ne peut pas être supérieur à max_age (18)
+CALL
  etudiants_18_30 
 -----------------
                4
@@ -24,12 +24,12 @@ NOTICE:  Erreur lors de l'inscription de inconnu@email.com au cours Réseaux : �
 NOTICE:  Erreur lors de l'inscription de ali@email.com au cours Cours inexistant : Cours non trouvé : Cours inexistant
 CALL
 CALL
- id |                       action                        |        date_action         
-----+-----------------------------------------------------+----------------------------
-  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-23 12:17:20.632721
-  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-23 12:17:20.632721
-  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-23 12:17:20.632721
-  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-23 12:17:20.632721
+ id |                       action                        |       date_action        
+----+-----------------------------------------------------+--------------------------
+  1 | INSERT sur etudiants : nom=Ali                      | 2026-04-23 12:28:49.7648
+  2 | AJOUT étudiant : Ali (email : ali@email.com)        | 2026-04-23 12:28:49.7648
+  3 | INSERT sur inscriptions : etudiant_id=4, cours_id=3 | 2026-04-23 12:28:49.7648
+  4 | INSCRIPTION : ali@email.com → cours "Réseaux"       | 2026-04-23 12:28:49.7648
 (4 rows)
 
   nom  | age |      email      |       cours       
